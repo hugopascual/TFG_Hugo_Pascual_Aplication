@@ -13,4 +13,16 @@ class BasePresenter {
 	internal var baseRouter: BaseRouterProtocol?
 	internal var baseInteractor: BaseInteractorInputProtocol?
 	
+	required init() {}
+	
+}
+
+extension BasePresenter: BaseRouterDelegate {
+
+	func navigationDone() {
+		
+		// Do something every time a navigation is done
+		// If you cannot, for example, an invalid credentials error is displayed
+		//            BasePresenter.invalidCredentialsError()
+	}
 }

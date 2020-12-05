@@ -14,6 +14,7 @@ protocol HomeInteractorInputProtocol: BaseInteractorInputProtocol {
 class HomeInteractor: BaseInteractor {
 	
 	weak var presenter: HomeInteractorOutputProtocol? { return super.basePresenter as? HomeInteractorOutputProtocol }
+	var provider: HomeProviderProtocol?
 	
 }
 

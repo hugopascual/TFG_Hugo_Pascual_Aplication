@@ -11,4 +11,6 @@ class BaseInteractor {
 	
 	internal weak var basePresenter: BaseInteractorOutputProtocol?
 	
+	required init() {}
+	
 }

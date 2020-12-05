@@ -11,5 +11,14 @@ import UIKit
 class BaseRouter {
 	
 	internal weak var baseView: UIViewController?
+	weak var delegate: BaseRouterDelegate?
 	
+	required init() {}
+	
+	static func setRoot(navigationController: UIViewController) {
+		
+		guard let window = UIApplication.shared.delegate?.window else { return }
+		window?.rootViewController = navigationController
+		window?.makeKeyAndVisible()
+	}
 }
