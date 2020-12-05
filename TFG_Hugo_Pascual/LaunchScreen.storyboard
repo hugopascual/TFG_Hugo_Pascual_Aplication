@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ARU-VD-grT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugo Pascual Adán" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-c6-Yf5" userLabel="TFG Author Label">
+                                <rect key="frame" x="24" y="331" width="366" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_APP Compraventa iOS TFG" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaQ-fI-Sb3" userLabel="TFG Name Label">
+                                <rect key="frame" x="24" y="180" width="366" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etsitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="32Z-Tq-pWJ">
+                                <rect key="frame" x="88" y="534" width="238" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="KJq-D8-2QA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wtC-iy-YSz"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="PaQ-fI-Sb3" firstAttribute="leading" secondItem="wtC-iy-YSz" secondAttribute="leading" constant="24" id="51p-s6-Dd8"/>
+                            <constraint firstItem="wtC-iy-YSz" firstAttribute="bottom" secondItem="32Z-Tq-pWJ" secondAttribute="bottom" constant="88" id="CFu-Kk-je7"/>
+                            <constraint firstItem="PaQ-fI-Sb3" firstAttribute="top" secondItem="wtC-iy-YSz" secondAttribute="top" constant="136" id="E8h-L8-VMk"/>
+                            <constraint firstItem="2yp-c6-Yf5" firstAttribute="trailing" secondItem="PaQ-fI-Sb3" secondAttribute="trailing" id="GoJ-QU-SPp"/>
+                            <constraint firstItem="2yp-c6-Yf5" firstAttribute="top" secondItem="PaQ-fI-Sb3" secondAttribute="bottom" constant="117.5" id="L5K-Oh-vLx"/>
+                            <constraint firstItem="wtC-iy-YSz" firstAttribute="trailing" secondItem="32Z-Tq-pWJ" secondAttribute="trailing" constant="88" id="Rdv-NH-18s"/>
+                            <constraint firstItem="wtC-iy-YSz" firstAttribute="trailing" secondItem="PaQ-fI-Sb3" secondAttribute="trailing" constant="24" id="aup-e0-x3e"/>
+                            <constraint firstItem="32Z-Tq-pWJ" firstAttribute="leading" secondItem="wtC-iy-YSz" secondAttribute="leading" constant="88" id="eHI-w6-cJG"/>
+                            <constraint firstItem="2yp-c6-Yf5" firstAttribute="leading" secondItem="PaQ-fI-Sb3" secondAttribute="leading" id="wuE-eG-XRU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="etsitLogo" width="1537" height="1697"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
