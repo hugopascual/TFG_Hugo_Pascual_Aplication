@@ -6,3 +6,27 @@
 //
 
 import Foundation
+
+protocol BaseViewProtocol: class {
+	
+}
+
+protocol BasePresenterProtocol: class {
+	
+}
+
+protocol BaseInteractorInputProtocol: class {
+	
+}
+
+protocol BaseInteractorOutputProtocol: class {
+	
+}
+
+protocol BaseRouterProtocol: class {
+	
+}
+
+protocol BaseProviderProtocol: class {
+	
+}

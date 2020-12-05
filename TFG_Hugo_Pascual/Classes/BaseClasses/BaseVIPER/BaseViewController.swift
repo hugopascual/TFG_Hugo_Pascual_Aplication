@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-class BaseViewController {
+class BaseViewController: UIViewController {
+	
+	internal var basePresenter: BasePresenterProtocol?
 	
 }

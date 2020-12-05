@@ -1,8 +1,12 @@
 //
 //  BaseModalViewController.swift
-//  App_Compraventa_TFG
+//  TFG_Hugo_Pascual
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
 
 import Foundation
+
+class BaseModelViewController {
+	
+}

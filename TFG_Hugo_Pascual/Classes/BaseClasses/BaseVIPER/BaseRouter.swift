@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+class BaseRouter {
+	
+	internal weak var baseView: UIViewController?
+	
+}

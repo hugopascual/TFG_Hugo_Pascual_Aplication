@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class BaseInteractor {
+	
+	internal weak var basePresenter: BaseInteractorOutputProtocol?
+	
+}

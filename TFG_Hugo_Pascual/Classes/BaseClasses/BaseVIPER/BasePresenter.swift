@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class BasePresenter {
+	
+	internal weak var baseView: BaseViewProtocol?
+	internal var baseRouter: BaseRouterProtocol?
+	internal var baseInteractor: BaseInteractorInputProtocol?
+	
+}
