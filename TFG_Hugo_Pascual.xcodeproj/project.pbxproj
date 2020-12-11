@@ -34,8 +34,6 @@
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
-		FF7846CF257C4B6E00FD4862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7846CE257C4B6E00FD4862 /* ContentView.swift */; };
-		FF7846D2257C4BA200FD4862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7846D1257C4BA200FD4862 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +66,6 @@
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
-		FF7846CE257C4B6E00FD4862 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FF7846D1257C4BA200FD4862 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +82,6 @@
 		FF0F09DF257BCC8B008A35C7 = {
 			isa = PBXGroup;
 			children = (
-				FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */,
 				FF0F09EA257BCC8B008A35C7 /* TFG_Hugo_Pascual */,
 				FF0F09E9257BCC8B008A35C7 /* Products */,
 			);
@@ -103,7 +98,6 @@
 		FF0F09EA257BCC8B008A35C7 /* TFG_Hugo_Pascual */ = {
 			isa = PBXGroup;
 			children = (
-				FF7846D5257C4BED00FD4862 /* AutomaticFiles */,
 				FF0F09EB257BCC8B008A35C7 /* AppDelegate.swift */,
 				FF0F0AD8257C3CA9008A35C7 /* AppInitializer.swift */,
 				FF0F0A19257BCD82008A35C7 /* Classes */,
@@ -117,11 +111,11 @@
 		FF0F0A19257BCD82008A35C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */,
 				FF0F0ADE257C3E65008A35C7 /* Utilities */,
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
 				FF0F0A2C257BCD82008A35C7 /* Modules */,
 				FF0F0A29257BCD82008A35C7 /* Models */,
-				FF0F0A2A257BCD82008A35C7 /* Infrastructure */,
 				FF0F0A28257BCD82008A35C7 /* Providers */,
 			);
 			path = Classes;
@@ -177,21 +171,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0F0A2A257BCD82008A35C7 /* Infrastructure */ = {
-			isa = PBXGroup;
-			children = (
-				FF0F0A2B257BCD82008A35C7 /* Assemblies */,
-			);
-			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		FF0F0A2B257BCD82008A35C7 /* Assemblies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assemblies;
-			sourceTree = "<group>";
-		};
 		FF0F0A2C257BCD82008A35C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,12 +182,12 @@
 		FF0F0A2D257BCD82008A35C7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FF0F0AC7257C149A008A35C7 /* HomeRouter.swift */,
+				FF0F0ADB257C3D31008A35C7 /* HomeAssembly.swift */,
 				FF0F0AC4257C148F008A35C7 /* HomeInteractor.swift */,
+				FF0F0AC7257C149A008A35C7 /* HomeRouter.swift */,
 				FF0F0AC1257C1485008A35C7 /* HomePresenter.swift */,
 				FF0F0A2E257BCD82008A35C7 /* HomeViewController.swift */,
 				FF0F0ACD257C36E8008A35C7 /* HomeViewController.xib */,
-				FF0F0ADB257C3D31008A35C7 /* HomeAssembly.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -221,15 +200,6 @@
 				FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		FF7846D5257C4BED00FD4862 /* AutomaticFiles */ = {
-			isa = PBXGroup;
-			children = (
-				FF7846CE257C4B6E00FD4862 /* ContentView.swift */,
-				FF7846D1257C4BA200FD4862 /* SceneDelegate.swift */,
-			);
-			path = AutomaticFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
-				FF7846CF257C4B6E00FD4862 /* ContentView.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
 				FF0F0AEE257C4244008A35C7 /* BaseProviderDTO.swift in Sources */,
@@ -345,7 +314,6 @@
 				FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */,
 				FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,
-				FF7846D2257C4BA200FD4862 /* SceneDelegate.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,

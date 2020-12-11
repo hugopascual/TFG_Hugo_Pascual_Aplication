@@ -22,14 +22,8 @@ final class HomeAssembly: BaseAssembly {
 										  presenter: HomePresenter.self,
 										  router: HomeRouter.self,
 										  interactor: HomeInteractor.self)
-		viper.interactor.provider = homeProvider(interactor: viper.interactor)
+		viper.interactor.provider = DataAssembly.homeProvider(interactor: viper.interactor)
 		return view
 	}
-	
-	// MARK: Home Provider
-	static func homeProvider(interactor: BaseInteractor) -> HomeProviderProtocol {
-		let provider = HomeProvider()
-		provider.delegate = interactor as? BaseProviderDelegate
-		return provider
-	}
+
 }
