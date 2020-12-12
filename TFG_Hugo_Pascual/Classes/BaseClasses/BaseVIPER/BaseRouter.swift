@@ -21,4 +21,11 @@ class BaseRouter {
 		window?.rootViewController = navigationController
 		window?.makeKeyAndVisible()
 	}
+	
+	// MARK: PRIVATE BASE
+	
+	internal func pushViewController(_ viewControllerToPresent: UIViewController, animated flag: Bool) {
+		self.delegate?.navigationDone()
+		self.baseView?.navigationController?.pushViewController(viewControllerToPresent, animated: flag)
+	}
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="cqm-gX-Acv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25v-ia-XxJ">
+                    <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEP-w7-ERu" userLabel="Profile Label">
+                            <rect key="frame" x="162" y="399" width="90" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <navigationBar contentMode="scaleToFill" barStyle="black" id="8oT-rj-06H">
+                            <rect key="frame" x="0.0" y="490" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem id="V3N-0O-n5A">
+                                    <barButtonItem key="leftBarButtonItem" title="home" id="tqY-iT-7la">
+                                        <connections>
+                                            <action selector="homeNavigationBarButtonPressed:" destination="-1" id="hSL-pO-I8l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="profile" id="9nk-hX-Tbo"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="rEP-w7-ERu" firstAttribute="centerX" secondItem="25v-ia-XxJ" secondAttribute="centerX" id="BHA-J7-7S9"/>
+                        <constraint firstItem="rEP-w7-ERu" firstAttribute="centerY" secondItem="25v-ia-XxJ" secondAttribute="centerY" id="CLJ-So-uNf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="25v-ia-XxJ" secondAttribute="bottom" constant="5" id="IZc-TF-MdQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="25v-ia-XxJ" secondAttribute="trailing" id="SFC-0c-sPA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="25v-ia-XxJ" secondAttribute="top" constant="5" id="ZK4-2z-F5g"/>
+                <constraint firstItem="25v-ia-XxJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mhO-cv-b5z"/>
+            </constraints>
+            <point key="canvasLocation" x="-1" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

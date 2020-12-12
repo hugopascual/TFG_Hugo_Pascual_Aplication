@@ -10,10 +10,5 @@ import Foundation
 struct DataAssembly {
 	
 	// MARK: Home Provider
-	static func homeProvider(interactor: BaseInteractor) -> HomeProviderProtocol {
-		let provider = HomeProvider()
-		provider.delegate = interactor as? BaseProviderDelegate
-		return provider
-	}
 	
 }

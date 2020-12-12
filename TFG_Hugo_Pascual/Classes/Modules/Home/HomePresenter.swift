@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
-	
+	func profileNavigationBarButtonPressed()
 }
 
 protocol HomeInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -18,12 +18,16 @@ protocol HomeInteractorOutputProtocol: BaseInteractorOutputProtocol {
 class HomePresenter: BasePresenter {
 	
 	weak var view: HomeViewProtocol? { return super.baseView as? HomeViewProtocol}
-	var interactor: HomeInteractorOutputProtocol? { return super.baseView as? HomeInteractorOutputProtocol}
-	var router: HomeRouterProtocol? { return super.baseView as? HomeRouterProtocol}
+	var interactor: HomeInteractorOutputProtocol? { return super.baseInteractor as? HomeInteractorOutputProtocol}
+	var router: HomeRouterProtocol? { return super.baseRouter as? HomeRouterProtocol}
 	
 }
 
 extension HomePresenter: HomePresenterProtocol {
+	
+	func profileNavigationBarButtonPressed() {
+		router?.navigateToProfile()
+	}
 	
 }
 

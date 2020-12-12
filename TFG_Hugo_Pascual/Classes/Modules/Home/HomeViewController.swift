@@ -14,6 +14,10 @@ protocol HomeViewProtocol: BaseViewProtocol {
 class HomeViewController: BaseViewController {
 	
 	var presenter: HomePresenterProtocol? { return super.basePresenter as? HomePresenterProtocol}
+		
+	@IBAction func profileNavigationBarButtonPressed(_ sender: Any) {
+		presenter?.profileNavigationBarButtonPressed()
+	}
 	
 }
 

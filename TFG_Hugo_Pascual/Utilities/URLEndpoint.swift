@@ -8,7 +8,7 @@
 import Foundation
 
 struct URLEndpoint {
-	
+	static var none = ""
 	static var home = "getHome"
 	
 }
