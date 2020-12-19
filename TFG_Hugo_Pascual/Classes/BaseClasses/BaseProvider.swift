@@ -47,7 +47,7 @@ struct ProviderDTO {
 		self.acceptType = acceptType
 	}
 }
-class BaseProvider {
+class BaseProvider: NSObject {
 	
 	weak var delegate: BaseProviderDelegate?
 	
