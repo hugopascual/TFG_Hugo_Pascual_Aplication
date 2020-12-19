@@ -34,8 +34,6 @@
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
-		FFC7912725853643008BDBDC /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7912625853643008BDBDC /* NavigationBarModel.swift */; };
-		FFC7912A25853654008BDBDC /* NavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7912925853654008BDBDC /* NavigationBarManager.swift */; };
 		FFC7915D25853D43008BDBDC /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */; };
 		FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */; };
 		FFC7916325853D68008BDBDC /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916225853D68008BDBDC /* ProfileRouter.swift */; };
@@ -81,8 +79,6 @@
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
-		FFC7912625853643008BDBDC /* NavigationBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
-		FFC7912925853654008BDBDC /* NavigationBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarManager.swift; sourceTree = "<group>"; };
 		FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		FFC7916225853D68008BDBDC /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -238,7 +234,6 @@
 		FFC7912325853563008BDBDC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FFC791252585361A008BDBDC /* NavigationBar */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -249,15 +244,6 @@
 				FF0F0A29257BCD82008A35C7 /* Models */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		FFC791252585361A008BDBDC /* NavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				FFC7912625853643008BDBDC /* NavigationBarModel.swift */,
-				FFC7912925853654008BDBDC /* NavigationBarManager.swift */,
-			);
-			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 		FFC7915B25853D2C008BDBDC /* Profile */ = {
@@ -406,7 +392,6 @@
 				FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
-				FFC7912725853643008BDBDC /* NavigationBarModel.swift in Sources */,
 				FF0F0A32257BCD82008A35C7 /* BaseAssembly.swift in Sources */,
 				FF0F0A35257BCD82008A35C7 /* BaseServerModel.swift in Sources */,
 				FF0F0A39257BCD82008A35C7 /* BaseProvider.swift in Sources */,
@@ -422,7 +407,6 @@
 				FFC7918025853FA9008BDBDC /* xViewController.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
-				FFC7912A25853654008BDBDC /* NavigationBarManager.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
 				FFC79183258540DD008BDBDC /* xProvider.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,
