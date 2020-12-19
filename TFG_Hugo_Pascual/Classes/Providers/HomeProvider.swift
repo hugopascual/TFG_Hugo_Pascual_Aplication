@@ -26,7 +26,7 @@ struct HomeDTO: BaseProviderParamsDTO {
 struct HomeProviderRequest {
 	static func getHomeConstants(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
-//						   method: .get,
+						   method: .get,
 //						   urlContext: .backend,
 						   endpoint: URLEndpoint.home)
 	}

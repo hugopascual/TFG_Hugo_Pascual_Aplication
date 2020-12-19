@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,20 +32,15 @@
 		FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AE3257C3F88008A35C7 /* Utils.swift */; };
 		FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */; };
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
-		FF0F0AEE257C4244008A35C7 /* BaseProviderDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */; };
+		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
+		FFA041A2258E899F00C6928A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFA041A1258E899F00C6928A /* Alamofire */; };
 		FFC7915D25853D43008BDBDC /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */; };
 		FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */; };
 		FFC7916325853D68008BDBDC /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916225853D68008BDBDC /* ProfileRouter.swift */; };
 		FFC7916625853D7B008BDBDC /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916525853D7B008BDBDC /* ProfilePresenter.swift */; };
 		FFC7916925853D8D008BDBDC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916825853D8D008BDBDC /* ProfileViewController.swift */; };
 		FFC7916C25853DAB008BDBDC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7916B25853DAB008BDBDC /* ProfileViewController.xib */; };
-		FFC7917425853F00008BDBDC /* xAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7917325853F00008BDBDC /* xAssembly.swift */; };
-		FFC7917725853F08008BDBDC /* xInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7917625853F08008BDBDC /* xInteractor.swift */; };
-		FFC7917A25853F7C008BDBDC /* xRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7917925853F7C008BDBDC /* xRouter.swift */; };
-		FFC7917D25853F90008BDBDC /* xPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7917C25853F90008BDBDC /* xPresenter.swift */; };
-		FFC7918025853FA9008BDBDC /* xViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7917F25853FA9008BDBDC /* xViewController.swift */; };
-		FFC79183258540DD008BDBDC /* xProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC79182258540DD008BDBDC /* xProvider.swift */; };
 		FFC7918725854224008BDBDC /* ProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7918625854224008BDBDC /* ProfileProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +72,7 @@
 		FF0F0AE3257C3F88008A35C7 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
-		FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderDTO.swift; sourceTree = "<group>"; };
+		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
 		FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -85,12 +80,6 @@
 		FFC7916525853D7B008BDBDC /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		FFC7916825853D8D008BDBDC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FFC7916B25853DAB008BDBDC /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		FFC7917325853F00008BDBDC /* xAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xAssembly.swift; sourceTree = "<group>"; };
-		FFC7917625853F08008BDBDC /* xInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xInteractor.swift; sourceTree = "<group>"; };
-		FFC7917925853F7C008BDBDC /* xRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xRouter.swift; sourceTree = "<group>"; };
-		FFC7917C25853F90008BDBDC /* xPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xPresenter.swift; sourceTree = "<group>"; };
-		FFC7917F25853FA9008BDBDC /* xViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xViewController.swift; sourceTree = "<group>"; };
-		FFC79182258540DD008BDBDC /* xProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xProvider.swift; sourceTree = "<group>"; };
 		FFC7918625854224008BDBDC /* ProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA041A2258E899F00C6928A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,13 +114,13 @@
 		FF0F09EA257BCC8B008A35C7 /* TFG_Hugo_Pascual */ = {
 			isa = PBXGroup;
 			children = (
+				FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */,
 				FFC791852585417F008BDBDC /* CoreAPP */,
 				FF0F0A19257BCD82008A35C7 /* Classes */,
 				FF0F0ADE257C3E65008A35C7 /* Utilities */,
 				FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */,
 				FF0F0A02257BCD23008A35C7 /* LaunchScreen.storyboard */,
 				FF0F09F9257BCC8C008A35C7 /* Info.plist */,
-				FFC7916E25853E78008BDBDC /* base */,
 			);
 			path = TFG_Hugo_Pascual;
 			sourceTree = "<group>";
@@ -140,8 +130,6 @@
 			children = (
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
 				FFC79124258535C5008BDBDC /* Common */,
-				FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */,
-				FFC7912325853563008BDBDC /* Managers */,
 				FF0F0A2C257BCD82008A35C7 /* Modules */,
 				FF0F0A28257BCD82008A35C7 /* Providers */,
 			);
@@ -154,7 +142,7 @@
 				FF0F0A1B257BCD82008A35C7 /* BaseVIPER */,
 				FF0F0A26257BCD82008A35C7 /* BaseModalViewController.swift */,
 				FF0F0A27257BCD82008A35C7 /* BaseProvider.swift */,
-				FF0F0AED257C4244008A35C7 /* BaseProviderDTO.swift */,
+				FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -231,13 +219,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		FFC7912325853563008BDBDC /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		FFC79124258535C5008BDBDC /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,19 +238,6 @@
 				FFC7916B25853DAB008BDBDC /* ProfileViewController.xib */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		FFC7916E25853E78008BDBDC /* base */ = {
-			isa = PBXGroup;
-			children = (
-				FFC7917325853F00008BDBDC /* xAssembly.swift */,
-				FFC7917625853F08008BDBDC /* xInteractor.swift */,
-				FFC7917925853F7C008BDBDC /* xRouter.swift */,
-				FFC7917C25853F90008BDBDC /* xPresenter.swift */,
-				FFC7917F25853FA9008BDBDC /* xViewController.swift */,
-				FFC79182258540DD008BDBDC /* xProvider.swift */,
-			);
-			path = base;
 			sourceTree = "<group>";
 		};
 		FFC791852585417F008BDBDC /* CoreAPP */ = {
@@ -298,6 +266,9 @@
 			dependencies = (
 			);
 			name = TFG_Hugo_Pascual;
+			packageProductDependencies = (
+				FFA041A1258E899F00C6928A /* Alamofire */,
+			);
 			productName = TFG_Hugo_Pascual;
 			productReference = FF0F09E8257BCC8B008A35C7 /* TFG_Hugo_Pascual.app */;
 			productType = "com.apple.product-type.application";
@@ -325,6 +296,9 @@
 				Base,
 			);
 			mainGroup = FF0F09DF257BCC8B008A35C7;
+			packageReferences = (
+				FFA041A0258E899F00C6928A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FF0F09E9257BCC8B008A35C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -377,14 +351,12 @@
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
-				FF0F0AEE257C4244008A35C7 /* BaseProviderDTO.swift in Sources */,
+				FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */,
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */,
 				FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */,
 				FFC7916625853D7B008BDBDC /* ProfilePresenter.swift in Sources */,
-				FFC7917425853F00008BDBDC /* xAssembly.swift in Sources */,
-				FFC7917A25853F7C008BDBDC /* xRouter.swift in Sources */,
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
@@ -398,17 +370,13 @@
 				FFC7915D25853D43008BDBDC /* ProfileAssembly.swift in Sources */,
 				FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */,
 				FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */,
-				FFC7917725853F08008BDBDC /* xInteractor.swift in Sources */,
 				FFC7918725854224008BDBDC /* ProfileProvider.swift in Sources */,
 				FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */,
 				FFC7916325853D68008BDBDC /* ProfileRouter.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,
-				FFC7917D25853F90008BDBDC /* xPresenter.swift in Sources */,
-				FFC7918025853FA9008BDBDC /* xViewController.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
-				FFC79183258540DD008BDBDC /* xProvider.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FFA041A0258E899F00C6928A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FFA041A1258E899F00C6928A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFA041A0258E899F00C6928A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF0F09E0257BCC8B008A35C7 /* Project object */;
 }
