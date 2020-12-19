@@ -27,25 +27,21 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <navigationBar contentMode="scaleToFill" barStyle="black" id="8oT-rj-06H">
-                            <rect key="frame" x="0.0" y="490" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem id="V3N-0O-n5A">
-                                    <barButtonItem key="leftBarButtonItem" title="home" id="tqY-iT-7la">
-                                        <connections>
-                                            <action selector="homeNavigationBarButtonPressed:" destination="-1" id="hSL-pO-I8l"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" title="profile" id="9nk-hX-Tbo"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-9Y-n7Y">
+                            <rect key="frame" x="161.5" y="209" width="91" height="30"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Home Button"/>
+                            <connections>
+                                <action selector="homeNavigationBarButtonPressed:" destination="-1" eventType="touchUpInside" id="J5a-Z0-eko"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="rEP-w7-ERu" firstAttribute="centerX" secondItem="25v-ia-XxJ" secondAttribute="centerX" id="BHA-J7-7S9"/>
                         <constraint firstItem="rEP-w7-ERu" firstAttribute="centerY" secondItem="25v-ia-XxJ" secondAttribute="centerY" id="CLJ-So-uNf"/>
+                        <constraint firstItem="xkP-9Y-n7Y" firstAttribute="centerX" secondItem="rEP-w7-ERu" secondAttribute="centerX" id="Kwb-Ny-ZYR"/>
+                        <constraint firstItem="rEP-w7-ERu" firstAttribute="top" secondItem="xkP-9Y-n7Y" secondAttribute="bottom" constant="160" id="VtR-Yi-3hM"/>
                     </constraints>
                 </view>
             </subviews>
@@ -57,12 +53,15 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="25v-ia-XxJ" secondAttribute="top" constant="5" id="ZK4-2z-F5g"/>
                 <constraint firstItem="25v-ia-XxJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mhO-cv-b5z"/>
             </constraints>
-            <point key="canvasLocation" x="-1" y="108"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="107.8125"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
