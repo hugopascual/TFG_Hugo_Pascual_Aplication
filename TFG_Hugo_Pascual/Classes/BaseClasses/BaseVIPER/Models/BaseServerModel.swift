@@ -7,6 +7,6 @@
 
 import Foundation
 
-class BaseServerModel {
+protocol BaseServerModel: Codable {
 	
 }

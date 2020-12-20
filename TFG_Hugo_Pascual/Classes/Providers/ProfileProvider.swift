@@ -27,7 +27,7 @@ struct ProfileProviderRequest {
 	static func getProfile(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .get,
-//						   urlContext: .backend,
+						   urlContext: .local,
 						   endpoint: URLEndpoint.none)
 	}
 }

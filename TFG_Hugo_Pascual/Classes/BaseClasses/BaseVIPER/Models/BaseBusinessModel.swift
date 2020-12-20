@@ -9,4 +9,9 @@ import Foundation
 
 class BaseBusinessModel {
 	
+	init() {}
+	
+	required init(serverModel: BaseServerModel?) {
+		
+	}
 }

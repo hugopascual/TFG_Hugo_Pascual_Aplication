@@ -35,9 +35,11 @@ protocol BaseRouterDelegate: class {
 
 // Delegate used to report actions with web services. It will usually be implemented by the Interactor
 protocol BaseProviderDelegate: class {
-	
+	func requestDone(endpoint: String)
+	func responseGet(endpoint: String)
+	func networkNotReachable(endpoint: String)
 }
 
 protocol BaseProviderProtocol: class {
-	
+
 }
