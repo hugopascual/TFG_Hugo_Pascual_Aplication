@@ -41,7 +41,7 @@ struct HomeProviderRequest {
 	static func getHomeConstants(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .get,
-						   urlContext: .local,
+						   urlContext: .heroku,
 						   endpoint: URLEndpoint.home)
 	}
 }
