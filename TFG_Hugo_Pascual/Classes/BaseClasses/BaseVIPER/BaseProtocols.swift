@@ -20,7 +20,7 @@ protocol BaseInteractorInputProtocol: class {
 }
 
 protocol BaseInteractorOutputProtocol: class {
-	
+	func genericErrorHappened(error: CustomErrorModel) //Method used to notify Presenter that error has happened
 }
 
 // Protocol used to the Presenter can communicate with Router

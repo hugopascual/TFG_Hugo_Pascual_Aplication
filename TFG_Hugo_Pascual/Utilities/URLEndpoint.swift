@@ -27,9 +27,9 @@ extension URLEndpoint {
 		
 		switch urlContext {
 		case .local:
-			return "http://localhost:3000"
+			return "http://localhost:5000"
 		case .heroku:
-			return "https://TFG_Hugo_Pascual_Back.herokuapp.com"
+			return "https://tfg-hugo-pascual-back.herokuapp.com"
 		}
 	}
 	

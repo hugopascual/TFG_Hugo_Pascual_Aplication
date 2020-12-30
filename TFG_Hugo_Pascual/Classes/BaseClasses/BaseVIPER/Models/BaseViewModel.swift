@@ -8,5 +8,10 @@
 import Foundation
 
 class BaseViewModel {
+
+	init() {}
 	
+	required init(businessModel: BaseBusinessModel?) {
+		
+	}
 }

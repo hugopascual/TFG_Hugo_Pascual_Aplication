@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */; };
 		FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F09EB257BCC8B008A35C7 /* AppDelegate.swift */; };
 		FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */; };
 		FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0F0A02257BCD23008A35C7 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,8 @@
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
+		FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF966207259A68C900404DB9 /* HomeServerModel.swift */; };
+		FF96620C259A696C00404DB9 /* HomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */; };
 		FFA041A2258E899F00C6928A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFA041A1258E899F00C6928A /* Alamofire */; };
 		FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */; };
 		FFA041AD258FD77A00C6928A /* KnownErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041AC258FD77A00C6928A /* KnownErrors.swift */; };
@@ -52,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FF0F09E8257BCC8B008A35C7 /* TFG_Hugo_Pascual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFG_Hugo_Pascual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0F09EB257BCC8B008A35C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
+		FF966207259A68C900404DB9 /* HomeServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServerModel.swift; sourceTree = "<group>"; };
+		FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessModel.swift; sourceTree = "<group>"; };
 		FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorModel.swift; sourceTree = "<group>"; };
 		FFA041AC258FD77A00C6928A /* KnownErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownErrors.swift; sourceTree = "<group>"; };
 		FFA041B0258FD7F000C6928A /* ErrorLoginServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoginServerModel.swift; sourceTree = "<group>"; };
@@ -147,7 +153,6 @@
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
 				FFC79124258535C5008BDBDC /* Common */,
 				FF0F0A2C257BCD82008A35C7 /* Modules */,
-				FF0F0A28257BCD82008A35C7 /* Providers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,15 +192,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0F0A28257BCD82008A35C7 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */,
-				FFC7918625854224008BDBDC /* ProfileProvider.swift */,
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
 		FF0F0A29257BCD82008A35C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,12 +211,14 @@
 		FF0F0A2D257BCD82008A35C7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FF0F0ADB257C3D31008A35C7 /* HomeAssembly.swift */,
-				FF0F0AC4257C148F008A35C7 /* HomeInteractor.swift */,
+				FF966206259A689B00404DB9 /* Models */,
 				FF0F0AC7257C149A008A35C7 /* HomeRouter.swift */,
+				FF0F0AC4257C148F008A35C7 /* HomeInteractor.swift */,
 				FF0F0AC1257C1485008A35C7 /* HomePresenter.swift */,
 				FF0F0A2E257BCD82008A35C7 /* HomeViewController.swift */,
 				FF0F0ACD257C36E8008A35C7 /* HomeViewController.xib */,
+				FF0F0ADB257C3D31008A35C7 /* HomeAssembly.swift */,
+				FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -234,6 +232,16 @@
 				FFA041B3258FD8EC00C6928A /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FF966206259A689B00404DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF966207259A68C900404DB9 /* HomeServerModel.swift */,
+				FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */,
+				FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FFA041A5258FD6DB00C6928A /* Helpers */ = {
@@ -291,12 +299,13 @@
 		FFC7915B25853D2C008BDBDC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */,
 				FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */,
 				FFC7916225853D68008BDBDC /* ProfileRouter.swift */,
 				FFC7916525853D7B008BDBDC /* ProfilePresenter.swift */,
 				FFC7916825853D8D008BDBDC /* ProfileViewController.swift */,
 				FFC7916B25853DAB008BDBDC /* ProfileViewController.xib */,
+				FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */,
+				FFC7918625854224008BDBDC /* ProfileProvider.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -412,6 +421,7 @@
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
+				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
 				FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */,
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
@@ -422,6 +432,7 @@
 				FFC7916625853D7B008BDBDC /* ProfilePresenter.swift in Sources */,
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
+				FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* ProfileViewController.swift in Sources */,
 				FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */,
@@ -445,6 +456,7 @@
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
+				FF96620C259A696C00404DB9 /* HomeBusinessModel.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

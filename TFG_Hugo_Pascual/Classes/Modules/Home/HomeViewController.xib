@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
+                <outlet property="titleLabel" destination="XZh-ln-Zih" id="WJ9-LX-7QD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Gxl-BP-Hid"/>
             </connections>
         </placeholder>
@@ -18,30 +19,52 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6" userLabel="Container View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Home Label">
-                            <rect key="frame" x="163.5" y="399" width="87" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Profile Button">
-                            <rect key="frame" x="160" y="209" width="94" height="30"/>
+                            <rect key="frame" x="60" y="209" width="94" height="30"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <state key="normal" title="Profile Button"/>
                             <connections>
                                 <action selector="profileNavigationBarButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-3i-Tlu" userLabel="Provider Button">
+                            <rect key="frame" x="247" y="209" width="107" height="30"/>
+                            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Provider Button"/>
+                            <connections>
+                                <action selector="providerButtonPressed:" destination="-1" eventType="touchUpInside" id="gSc-nT-aZe"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Home Label">
+                            <rect key="frame" x="40" y="399" width="334" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nada ha cambiado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-ln-Zih" userLabel="Title Label">
+                            <rect key="frame" x="40" y="579.5" width="334" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="GAG-8v-wgp" firstAttribute="centerX" secondItem="YLn-mT-7p6" secondAttribute="centerX" id="HzA-aW-P9A"/>
-                        <constraint firstItem="dG4-MB-Xzj" firstAttribute="centerX" secondItem="GAG-8v-wgp" secondAttribute="centerX" id="K9K-w7-Du6"/>
+                        <constraint firstAttribute="trailing" secondItem="bAC-3i-Tlu" secondAttribute="trailing" constant="60" id="2d7-yp-Scm"/>
+                        <constraint firstItem="GAG-8v-wgp" firstAttribute="centerY" secondItem="YLn-mT-7p6" secondAttribute="centerY" id="HgI-tu-oV1"/>
+                        <constraint firstItem="GAG-8v-wgp" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="40" id="Kn2-u7-puF"/>
+                        <constraint firstItem="XZh-ln-Zih" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="40" id="PDc-4b-ZDS"/>
+                        <constraint firstItem="dG4-MB-Xzj" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="60" id="SuL-DT-5LJ"/>
+                        <constraint firstAttribute="trailing" secondItem="XZh-ln-Zih" secondAttribute="trailing" constant="40" id="a4P-EQ-b05"/>
                         <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="dG4-MB-Xzj" secondAttribute="bottom" constant="160" id="anQ-cL-IXJ"/>
-                        <constraint firstItem="GAG-8v-wgp" firstAttribute="centerY" secondItem="YLn-mT-7p6" secondAttribute="centerY" id="slz-fu-hyo"/>
+                        <constraint firstItem="XZh-ln-Zih" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="160" id="eeb-me-AUx"/>
+                        <constraint firstAttribute="trailing" secondItem="GAG-8v-wgp" secondAttribute="trailing" constant="40" id="oML-Bu-OwK"/>
+                        <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="bAC-3i-Tlu" secondAttribute="bottom" constant="160" id="zFS-97-E0U"/>
                     </constraints>
                 </view>
             </subviews>
@@ -57,11 +80,17 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

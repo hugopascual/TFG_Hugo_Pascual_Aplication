@@ -15,6 +15,12 @@ class BasePresenter {
 	
 	required init() {}
 	
+	// MARK: BaseInteractorOutputProtocol
+	func genericErrorHappened(error: CustomErrorModel) {
+		print("ERROR")
+		//self.showError(error: error)
+	}
+	
 }
 
 extension BasePresenter: BaseRouterDelegate {

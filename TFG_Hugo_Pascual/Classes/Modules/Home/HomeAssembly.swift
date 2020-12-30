@@ -22,7 +22,7 @@ final class HomeAssembly: BaseAssembly {
 										  presenter: HomePresenter.self,
 										  router: HomeRouter.self,
 										  interactor: HomeInteractor.self)
-		viper.interactor.provider = homeProvider(interactor: viper.interactor)
+		viper.interactor.homeProvider = homeProvider(interactor: viper.interactor)
 		return view
 	}
 	

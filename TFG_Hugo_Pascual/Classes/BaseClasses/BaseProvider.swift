@@ -78,22 +78,22 @@ class BaseProvider: NSObject {
 		configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
 		configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
 
-		let serverTrustPolicies: [String: ServerTrustPolicy] = [
-			"app-pre..": .pinCertificates(
-				certificates: ServerTrustPolicy.certificates(),
-				validateCertificateChain: true,
-				validateHost: true
-			),
-			"app-pro..": .pinCertificates(
-				certificates: ServerTrustPolicy.certificates(),
-				validateCertificateChain: true,
-				validateHost: true
-			)
-		]
+//		let serverTrustPolicies: [String: ServerTrustPolicy] = [
+//			"app-pre..": .pinCertificates(
+//				certificates: ServerTrustPolicy.certificates(),
+//				validateCertificateChain: true,
+//				validateHost: true
+//			),
+//			"app-pro..": .pinCertificates(
+//				certificates: ServerTrustPolicy.certificates(),
+//				validateCertificateChain: true,
+//				validateHost: true
+//			)
+//		]
 
 		let manager = Alamofire.SessionManager(
-			configuration: configuration,
-			serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+			configuration: configuration
+//			serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
 		)
 
 		return manager
