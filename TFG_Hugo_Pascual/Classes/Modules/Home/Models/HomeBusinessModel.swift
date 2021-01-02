@@ -9,13 +9,13 @@ import Foundation
 
 class HomeBusinessModel: BaseBusinessModel {
 	
-	var title: String?
+	var title: String = ""
 	
 	required init(serverModel: BaseServerModel?) {
 		super.init(serverModel: serverModel)
 		
 		guard let serverModel = serverModel as? HomeServerModel else { return }
 		
-		self.title = serverModel.title
+		self.title = serverModel.titulo
 	}
 }

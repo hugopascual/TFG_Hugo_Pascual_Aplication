@@ -4,6 +4,7 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
+// swiftlint:disable line_length
 
 import UIKit
 import Alamofire
@@ -21,11 +22,7 @@ struct ProviderDTO {
 	var endpoint: String
 	var acceptType = AcceptResponseType.json
 	
-	init(params: [String: Any]?,
-		method: HTTPMethod,
-		urlContext: URLEndpoint.BaseURLContext,
-		endpoint: String,
-		acceptType: AcceptResponseType = .json) {
+	init(params: [String: Any]?, method: HTTPMethod, urlContext: URLEndpoint.BaseURLContext, endpoint: String, acceptType: AcceptResponseType = .json) {
 		
 		self.params = params
 		self.method = method
@@ -34,11 +31,7 @@ struct ProviderDTO {
 		self.acceptType = acceptType
 	}
 	
-	init(arrayParams: [[String: Any]]?,
-		method: HTTPMethod,
-		endpoint: String,
-		urlContext: URLEndpoint.BaseURLContext,
-		acceptType: AcceptResponseType = .json) {
+	init(arrayParams: [[String: Any]]?, method: HTTPMethod, endpoint: String, urlContext: URLEndpoint.BaseURLContext, acceptType: AcceptResponseType = .json) {
 		
 		self.arrayParams = arrayParams
 		self.method = method
@@ -50,18 +43,22 @@ struct ProviderDTO {
 class BaseProvider: NSObject {
 	
 	var task: URLSessionTask?
-	
 	weak var delegate: BaseProviderDelegate?
 
-	static func parseToServerModel<Model: BaseServerModel>(parserModel: Model.Type, data: Data?) -> Model? {
-
-		guard let payload = data, let model = try? JSONDecoder().decode(parserModel, from: payload) else {
+	static func parseToServerModel<ServerModel: BaseServerModel>(parserModel: ServerModel.Type, data: Data?) -> ServerModel? {
+		guard let payload = data /* , let model = try? JSONDecoder().decode(parserModel, from: payload) */ else {
 			return nil
+		}
+		var model: ServerModel?
+		do {
+			model = try JSONDecoder().decode(parserModel, from: payload)
+		} catch {
+			print(error)
 		}
 		return model
 	}
 
-	static func parseArrayToServerModel<Model: BaseServerModel>(parserModel: [Model].Type, data: Data?) -> [Model]? {
+	static func parseArrayToServerModel<ServerModel: BaseServerModel>(parserModel: [ServerModel].Type, data: Data?) -> [ServerModel]? {
 
 		guard let payload = data, let arrayModels = try? JSONDecoder().decode(parserModel, from: payload) else {
 			return nil
@@ -71,43 +68,19 @@ class BaseProvider: NSObject {
 
 	private var manager: Alamofire.SessionManager!
 	private func createManager(timeout: TimeInterval) -> Alamofire.SessionManager {
-
+		
 		// Creamos el manager personalizado.
 		let configuration = URLSessionConfiguration.default
 		configuration.timeoutIntervalForRequest = timeout
 		configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
 		configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
-
-//		let serverTrustPolicies: [String: ServerTrustPolicy] = [
-//			"app-pre..": .pinCertificates(
-//				certificates: ServerTrustPolicy.certificates(),
-//				validateCertificateChain: true,
-//				validateHost: true
-//			),
-//			"app-pro..": .pinCertificates(
-//				certificates: ServerTrustPolicy.certificates(),
-//				validateCertificateChain: true,
-//				validateHost: true
-//			)
-//		]
-
-		let manager = Alamofire.SessionManager(
-			configuration: configuration
-//			serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-		)
-
+		
+		let manager = Alamofire.SessionManager(configuration: configuration)
 		return manager
 	}
 
 	// MARK: INTERNAL
-	internal func request(dto: ProviderDTO,
-						  timeout: TimeInterval = 60,
-						  loader: Bool = true,
-						  printLog: Bool = true,
-						  encrypted: Bool = false,
-						  additionalHeader: [ String: String] = [:],
-						  success: @escaping(Data?) -> Void,
-						  failure: @escaping(CustomErrorModel) -> Void) -> URLSessionTask? {
+	internal func request(dto: ProviderDTO, timeout: TimeInterval = 60, loader: Bool = true, printLog: Bool = true, encrypted: Bool = false, additionalHeader: [String: String] = [:], success: @escaping(Data?) -> Void, failure: @escaping(CustomErrorModel) -> Void) -> URLSessionTask? {
 
 		if !NetworkManager.shared.checkNetwork() {
 			self.delegate?.networkNotReachable(endpoint: dto.endpoint)
@@ -116,14 +89,13 @@ class BaseProvider: NSObject {
 		
 		let baseURL = URLEndpoint.getBaseUrl(urlContext: dto.urlContext)
 		let endpoint = "\(baseURL)/\(dto.endpoint)"
-
-		var headers: [String: String] = [Constants.contentTypeHeader: Constants.jsonMIMEtype]
 		
+		var headers: [String: String] = [Constants.contentTypeHeader: Constants.jsonMIMEtype]
 		headers.merge(Utils.getLanguageHeader()) { (_, new) in new}
 		
 		let parameters: [String: Any]? = dto.params
 
-		//se añaden nuevas cabeceras si el parametro viene lleno
+		//se añaden nuevas cabeceras si el parametro tiene elementos
 		if !additionalHeader.isEmpty {
 			for item in additionalHeader {
 				headers[item.key] = item.value
@@ -131,9 +103,7 @@ class BaseProvider: NSObject {
 		}
 
 		// Crea el manager, en la primera ejecución del provider, o cuando el timeout se modifica.
-		if self.manager == nil ||
-			self.manager.session.configuration.timeoutIntervalForRequest != timeout {
-
+		if self.manager == nil || self.manager.session.configuration.timeoutIntervalForRequest != timeout {
 			self.manager = self.createManager(timeout: timeout)
 		}
 
@@ -144,17 +114,14 @@ class BaseProvider: NSObject {
 										   headers: headers)
 		
 		self.printRequest(dto: dto, endpoint: endpoint, headers: headers, printData: printLog)
-
 		self.delegate?.requestDone(endpoint: dto.endpoint)
 		
 		request.responseJSON { response in
-
+			
 			self.delegate?.responseGet(endpoint: dto.endpoint)
 			
 			if (200..<300).contains(response.response?.statusCode ?? 0) {
-
 				// Gestión del caso correcto
-
 				// Se obtiene la respuesta.
 				guard let data = response.data else {
 					// Si la respuesta no tiene datos, se devuelve un error.
@@ -164,19 +131,12 @@ class BaseProvider: NSObject {
 										  failure: failure)
 					return
 				}
-
 				let decryptedBytes = self.manageResponseData(data: response.data, encrypted: encrypted, printLog: printLog)
-				
 				self.printSuccessResponse(endpoint: endpoint, data: data, decryptedBytes: decryptedBytes, printData: printLog)
-
 				success(decryptedBytes)
-
 			} else {
-
 				let decryptedBytes = self.manageResponseData(data: response.data, encrypted: encrypted, printLog: printLog)
-
 				self.printFailureResponse(endpoint: endpoint, data: response.data, decryptedBytes: decryptedBytes, printData: printLog)
-				
 				self.apiResponseError(loader: loader,
 									  responseData: decryptedBytes,
 									  responseStatusCode: response.response?.statusCode,
@@ -200,10 +160,7 @@ class BaseProvider: NSObject {
 		return nil
 	}
 
-	fileprivate func apiResponseError(loader: Bool = true,
-									  responseData: Data?,
-									  responseStatusCode: Int?,
-									  failure: @escaping (CustomErrorModel) -> Void) {
+	fileprivate func apiResponseError(loader: Bool = true, responseData: Data?, responseStatusCode: Int?, failure: @escaping (CustomErrorModel) -> Void) {
 
 		let errorModel = CustomErrorModel(data: responseData, httpCode: responseStatusCode)
 
@@ -216,12 +173,10 @@ class BaseProvider: NSObject {
 	fileprivate func manageResponseData(data: Data?, encrypted: Bool, printLog: Bool) -> Data? {
 
 		guard let data = data else { return nil }
-
 		var decryptedBytes: Data?
-
+		
 		if encrypted {
 			// Desencriptar
-
 		} else {
 			decryptedBytes = data
 		}
@@ -239,12 +194,10 @@ class BaseProvider: NSObject {
 		case .post, .put, .patch:
 
 			if encrypted && dto.params != nil {
-
 				return CustomGetEncoding(params: dto.params, encrypted: encrypted)
 			}
 
 			if !encrypted && dto.params != nil {
-
 				return JSONEncoding.default
 			}
 
@@ -269,16 +222,12 @@ class BaseProvider: NSObject {
 			self.encrypted = encrypted
 		}
 
-		init(params: [String: Any]?,
-			 encrypted: Bool) {
-
+		init(params: [String: Any]?, encrypted: Bool) {
 			self.params = params
 			self.encrypted = encrypted
 		}
 
-		init(arrayParams: [[String: Any]]?,
-			 encrypted: Bool) {
-
+		init(arrayParams: [[String: Any]]?, encrypted: Bool) {
 			self.arrayParams = arrayParams
 			self.encrypted = encrypted
 		}
@@ -320,34 +269,37 @@ class BaseProvider: NSObject {
 			? try? JSONSerialization.data(withJSONObject: (dto.arrayParams ?? [:]), options: .prettyPrinted)
 			: try? JSONSerialization.data(withJSONObject: (dto.params ?? []), options: .prettyPrinted)
 
-		Utils.print("************* REQUEST ALAMOFIRE **************")
+		Utils.print("************* REQUEST BACK **************")
 		Utils.print("Request Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
+		
 		if printData {
 			Utils.print("PARAMETERS: ")
 			Utils.print(String(data: data ?? Data(), encoding: .utf8) ?? "")
 			Utils.print("HEADERS: \(headers)")
 		}
+		
 		Utils.print("************* END *************")
 	}
 	
 	func printSuccessResponse(endpoint: String, data: Data, decryptedBytes: Data?, printData: Bool) {
-		Utils.print("*************************** ALAMOFIRE RESPONSE ***************************")
+		Utils.print("*************************** BACK RESPONSE ***************************")
 		Utils.print("Response Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
+		
 		if printData {
 			Utils.print(String(data: data, encoding: .utf8) ?? "")
 			if decryptedBytes != data {
 				Utils.print(String(data: decryptedBytes ?? Data(), encoding: .utf8) ?? "")
 			}
 		}
-
+		
 		Utils.print("********* END ***********")
 	}
 	
 	func printFailureResponse(endpoint: String, data: Data?, decryptedBytes: Data?, printData: Bool) {
 
-		Utils.print("*************************** ALAMOFIRE RESPONSE ***************************")
+		Utils.print("*************************** BACK RESPONSE ***************************")
 		Utils.print("Response Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
 

@@ -23,7 +23,7 @@ extension HomeInteractor: HomeInteractorInputProtocol {
 	
 	func getHome() {
 		
-		var dto = HomeDTO()
+		let dto = HomeDTO()
 		
 		self.homeProvider?.getHome(dto: dto, additionalHeaders: [:], success: { (serverModel) in
 			

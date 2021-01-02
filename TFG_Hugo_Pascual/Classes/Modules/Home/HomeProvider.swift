@@ -19,11 +19,10 @@ class HomeProvider: BaseProvider, HomeProviderProtocol {
 	func getHome(dto: HomeDTO, additionalHeaders: [String: String], success: @escaping (HomeServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = HomeProviderRequest.getHomeConstants(params: dto)
 		
-		_ = self.request(dto: providerDTO,
-						 additionalHeader: additionalHeaders,
+		self.genericRequest(dto: providerDTO,
 						 success: { (data) in
-							let serverModel = BaseProvider.parseToServerModel(parserModel: HomeServerModel.self, data: data)
-							success(serverModel)
+								let serverModel = BaseProvider.parseToServerModel(parserModel: HomeServerModel.self, data: data as? Data)
+								success(serverModel)
 		}, failure: { (error) in
 			failure(error)
 		})
@@ -34,14 +33,14 @@ class HomeProvider: BaseProvider, HomeProviderProtocol {
 // MARK: - Structs
 
 struct HomeDTO: BaseProviderParamsDTO {
-	var title: String = "Sin titulo"
+	
 }
 
 struct HomeProviderRequest {
 	static func getHomeConstants(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .get,
-						   urlContext: .heroku,
+						   urlContext: .local,
 						   endpoint: URLEndpoint.home)
 	}
 }

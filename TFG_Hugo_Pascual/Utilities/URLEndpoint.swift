@@ -32,21 +32,4 @@ extension URLEndpoint {
 			return "https://tfg-hugo-pascual-back.herokuapp.com"
 		}
 	}
-	
-	static func getVersion(urlContext: BaseURLContext) -> String {
-		
-		switch urlContext {
-		case .local:
-			return "v1"
-		case .heroku:
-			return "v1"
-		}
-	}
-}
-
-struct URLPaymentGateway {
-	
-	static let baseUrlPSP = "https://sc-icpdzpre.correos.es"
-	
-	static var postPspActionCorreos = "\(baseUrlPSP)/ilionx45Front/Custom/SCICPInterfaz/SCICPInterfaz.aspx"
 }
