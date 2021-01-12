@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProfileInteractorInputProtocol: BaseInteractorInputProtocol {
-	
+	func getProfile()
 }
 
 class ProfileInteractor: BaseInteractor {
@@ -20,4 +20,7 @@ class ProfileInteractor: BaseInteractor {
 
 extension ProfileInteractor: ProfileInteractorInputProtocol {
 	
+	func getProfile() {
+		print("llamada al servicio")
+	}
 }

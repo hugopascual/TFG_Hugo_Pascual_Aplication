@@ -23,16 +23,9 @@ final class ProfileAssembly: BaseAssembly {
 										  router: ProfileRouter.self,
 										  interactor: ProfileInteractor.self)
 		
-		viper.interactor.provider = profileProvider(interactor: viper.interactor)
+		viper.interactor.provider = DataAssembly.profileProvider(interactor: viper.interactor)
 		return view
 	}
-	
-	static func profileProvider(interactor: BaseInteractor) -> ProfileProviderProtocol {
-		let provider = ProfileProvider()
-		provider.delegate = interactor as? BaseProviderDelegate
-		return provider
-	}
-
 }
 
 //Struct that represents the transfer object of ProductDetail

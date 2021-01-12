@@ -10,7 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
-                <outlet property="titleLabel" destination="XZh-ln-Zih" id="WJ9-LX-7QD"/>
+                <outlet property="goToProfileButton" destination="dG4-MB-Xzj" id="9sg-OQ-Ze3"/>
+                <outlet property="mainImageView" destination="wXe-X4-bUI" id="dFl-n2-vpn"/>
+                <outlet property="serviceButton" destination="bAC-3i-Tlu" id="OMH-Sq-Cgj"/>
+                <outlet property="serviceTextLabel" destination="XZh-ln-Zih" id="ixY-Hj-n4S"/>
+                <outlet property="titleLabel" destination="GAG-8v-wgp" id="wEo-3u-2cR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Gxl-BP-Hid"/>
             </connections>
         </placeholder>
@@ -22,49 +26,57 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6" userLabel="Container View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Title Label">
+                            <rect key="frame" x="40" y="40" width="334" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Profile Button">
-                            <rect key="frame" x="60" y="209" width="94" height="30"/>
+                            <rect key="frame" x="60" y="140.5" width="86" height="30"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="Profile Button"/>
+                            <state key="normal" title="Go to Profile"/>
                             <connections>
-                                <action selector="profileNavigationBarButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
+                                <action selector="profileButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-3i-Tlu" userLabel="Provider Button">
-                            <rect key="frame" x="247" y="209" width="107" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-3i-Tlu" userLabel="Service Button">
+                            <rect key="frame" x="273" y="140.5" width="81" height="30"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="Provider Button"/>
+                            <state key="normal" title="Call Service"/>
                             <connections>
-                                <action selector="providerButtonPressed:" destination="-1" eventType="touchUpInside" id="gSc-nT-aZe"/>
+                                <action selector="serviceButtonPressed:" destination="-1" eventType="touchUpInside" id="gSc-nT-aZe"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Home Label">
-                            <rect key="frame" x="40" y="399" width="334" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-ln-Zih" userLabel="Service Text Label">
+                            <rect key="frame" x="40" y="602" width="334" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nada ha cambiado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-ln-Zih" userLabel="Title Label">
-                            <rect key="frame" x="40" y="579.5" width="334" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-X4-bUI" userLabel="Main Image View">
+                            <rect key="frame" x="80" y="220.5" width="254" height="301.5"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bAC-3i-Tlu" secondAttribute="trailing" constant="60" id="2d7-yp-Scm"/>
-                        <constraint firstItem="GAG-8v-wgp" firstAttribute="centerY" secondItem="YLn-mT-7p6" secondAttribute="centerY" id="HgI-tu-oV1"/>
+                        <constraint firstItem="bAC-3i-Tlu" firstAttribute="leading" secondItem="dG4-MB-Xzj" secondAttribute="trailing" constant="127" id="8fa-R0-Y6x"/>
+                        <constraint firstAttribute="trailing" secondItem="wXe-X4-bUI" secondAttribute="trailing" constant="80" id="Aih-u0-35G"/>
                         <constraint firstItem="GAG-8v-wgp" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="40" id="Kn2-u7-puF"/>
+                        <constraint firstItem="wXe-X4-bUI" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="80" id="Lu4-Z1-rwU"/>
                         <constraint firstItem="XZh-ln-Zih" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="40" id="PDc-4b-ZDS"/>
+                        <constraint firstItem="XZh-ln-Zih" firstAttribute="top" secondItem="wXe-X4-bUI" secondAttribute="bottom" constant="80" id="QA8-dE-J3e"/>
                         <constraint firstItem="dG4-MB-Xzj" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="60" id="SuL-DT-5LJ"/>
+                        <constraint firstItem="wXe-X4-bUI" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="160" id="Tfy-KD-wIB"/>
                         <constraint firstAttribute="trailing" secondItem="XZh-ln-Zih" secondAttribute="trailing" constant="40" id="a4P-EQ-b05"/>
-                        <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="dG4-MB-Xzj" secondAttribute="bottom" constant="160" id="anQ-cL-IXJ"/>
-                        <constraint firstItem="XZh-ln-Zih" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="160" id="eeb-me-AUx"/>
+                        <constraint firstItem="bAC-3i-Tlu" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="80" id="cM9-ai-hlU"/>
                         <constraint firstAttribute="trailing" secondItem="GAG-8v-wgp" secondAttribute="trailing" constant="40" id="oML-Bu-OwK"/>
-                        <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="bAC-3i-Tlu" secondAttribute="bottom" constant="160" id="zFS-97-E0U"/>
+                        <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="YLn-mT-7p6" secondAttribute="top" constant="40" id="pdl-9a-V96"/>
+                        <constraint firstItem="dG4-MB-Xzj" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="80" id="r1x-U3-exT"/>
+                        <constraint firstAttribute="bottom" secondItem="wXe-X4-bUI" secondAttribute="bottom" constant="296" id="t84-ga-3x3"/>
                     </constraints>
                 </view>
             </subviews>

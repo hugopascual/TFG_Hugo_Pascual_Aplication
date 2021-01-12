@@ -9,17 +9,21 @@ import Foundation
 
 class HomeViewModel: BaseViewModel {
 	
-	var title: String = "Sin titulo"
+	//TODO añadir localización
+	var title: String = "Home"
+	var goToProfileButtonTitle: String = "Go to Profile"
+	var serviceButtonTitle: String = "Call Service"
+	var mainImage: String = ImagesNamesConstants.etsit_logo
+	var text: String = "homeViewModelServiceText"
 	
 	required init(businessModel: BaseBusinessModel?) {
 		super.init(businessModel: businessModel)
 		
 		guard let businessModel = businessModel as? HomeBusinessModel else { return }
-		self.title = businessModel.title ?? "Sin titulo"
+		self.text = businessModel.text
 	}
 	
-	init(title: String) {
+	override init() {
 		super.init()
-		self.title = title
 	}
 }

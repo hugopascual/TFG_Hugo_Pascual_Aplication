@@ -28,13 +28,13 @@ extension HomeInteractor: HomeInteractorInputProtocol {
 		self.homeProvider?.getHome(dto: dto, additionalHeaders: [:], success: { (serverModel) in
 			
 			guard let businessModel = BaseInteractor.parseToBusinessModel(parserModel: HomeBusinessModel.self, serverModel: serverModel) else { return }
-			
-			self.homeModel = businessModel
-			self.presenter?.setHome(businessModel: businessModel)
+
+			self.presenter?.didGetHomeInfo(businessModel: businessModel)
 			
 		}, failure: { (error) in
 			
 			error.backendError.type = .homeFailure
+			self.presenter?.didNotGetHomeInfo()
 			self.presenter?.genericErrorHappened(error: error)
 			
 		})

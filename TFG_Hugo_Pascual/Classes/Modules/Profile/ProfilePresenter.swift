@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProfilePresenterProtocol: BasePresenterProtocol {
-	func homeNavigationBarButtonPressed()
+	func getProfile()
 }
 
 protocol ProfileInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -18,19 +18,37 @@ protocol ProfileInteractorOutputProtocol: BaseInteractorOutputProtocol {
 class ProfilePresenter: BasePresenter {
 	
 	weak var view: ProfileViewProtocol? { return super.baseView as? ProfileViewProtocol}
-	var interactor: ProfileInteractorOutputProtocol? { return super.baseInteractor as? ProfileInteractorOutputProtocol}
+	var interactor: ProfileInteractorInputProtocol? { return super.baseInteractor as? ProfileInteractorInputProtocol}
 	var router: ProfileRouterProtocol? { return super.baseRouter as? ProfileRouterProtocol}
 	
+	var viewModel = ProfileViewModel()
+	
+	func viewDidLoad() {
+		self.view?.setViewModel(viewModel)
+		self.view?.setNavigationBar(title: viewModel.title)
+		self.getProfile()
+	}
+	
+	func configureAndSetViewModel(businessModel: ProfileBusinessModel) {
+		self.viewModel = ProfileViewModel(businessModel: businessModel)
+		self.view?.setViewModel(viewModel)
+	}
 }
 
 extension ProfilePresenter: ProfilePresenterProtocol {
 	
-	func homeNavigationBarButtonPressed() {
-		router?.navigateToHome()
+	func getProfile() {
+		self.interactor?.getProfile()
 	}
-	
 }
 
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 	
+	func didGetHomeInfo(businessModel: ProfileBusinessModel) {
+		self.configureAndSetViewModel(businessModel: businessModel)
+	}
+	
+	func didNotGetHomeInfo() {
+		self.configureAndSetViewModel(businessModel: ProfileBusinessModel())
+	}
 }

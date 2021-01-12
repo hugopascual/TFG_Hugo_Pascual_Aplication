@@ -9,5 +9,5 @@ import Foundation
 
 struct HomeServerModel: BaseServerModel {
 	
-	let titulo: String
+	let text: String
 }

@@ -79,9 +79,7 @@ extension Date {
 		return self.yesterday.firstDayMonth
 	}
 	
-	public static func createDate(day: Int,
-								  month: Int,
-								  year: Int) -> Date {
+	public static func createDate(day: Int, month: Int, year: Int) -> Date {
 		
 		return Calendar.current.date(from: DateComponents(year: year, month: month, day: day))!
 	}

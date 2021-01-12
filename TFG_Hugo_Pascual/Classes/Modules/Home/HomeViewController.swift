@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeViewProtocol: BaseViewProtocol {
-	func setView(viewModel: HomeViewModel)
+
 }
 
 class HomeViewController: BaseViewController {
@@ -17,25 +17,36 @@ class HomeViewController: BaseViewController {
 	var presenter: HomePresenterProtocol? { return super.basePresenter as? HomePresenterProtocol}
 		
 	@IBOutlet weak var titleLabel: UILabel!
-	
-	@IBAction func profileNavigationBarButtonPressed(_ sender: Any) {
-		presenter?.profileNavigationBarButtonPressed()
-	}
-	
-	@IBAction func providerButtonPressed(_ sender: Any) {
-		presenter?.getHome()
-	}
+	@IBOutlet weak var goToProfileButton: UIButton!
+	@IBOutlet weak var serviceButton: UIButton!
+	@IBOutlet weak var mainImageView: UIImageView!
+	@IBOutlet weak var serviceTextLabel: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		self.presenter?.getHome()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
+	}
+	
+	@IBAction func profileButtonPressed(_ sender: Any) {
+		presenter?.profileButtonPressed()
+	}
+	
+	@IBAction func serviceButtonPressed(_ sender: Any) {
+		presenter?.getHome()
 	}
 }
 
 extension HomeViewController: HomeViewProtocol {
 	
-	func setView(viewModel: HomeViewModel) {
-		self.titleLabel.text = viewModel.title
+	func setViewModel(_ viewModel: Any) {
+		guard let model = viewModel as? HomeViewModel else { return }
+		self.titleLabel.text = model.title
+		self.goToProfileButton.setTitle(model.goToProfileButtonTitle, for: .normal)
+		self.serviceButton.setTitle(model.serviceButtonTitle, for: .normal)
+		self.mainImageView.image = UIImage(named: model.mainImage)
+		self.serviceTextLabel.text = model.text
 	}
 }

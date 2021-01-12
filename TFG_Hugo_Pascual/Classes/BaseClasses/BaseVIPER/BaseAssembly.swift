@@ -4,10 +4,10 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
+//swiftlint:disable large_tuple
 
 import Foundation
 import UIKit
-//swiftlint:disable large_tuple
 
 //Base class, it is declared as a good practice to implement new functions in a global way in the application.
 class BaseAssembly {
@@ -32,8 +32,6 @@ class BaseAssembly {
 		baseRouter.delegate = basePresenter
 
 		baseInteractor.basePresenter = basePresenter as? BaseInteractorOutputProtocol
-//		let notificationPushProvider = DataAssembly.notificationsProvider(interactor: baseInteractor)
-//		baseInteractor.notificationPushProvider = notificationPushProvider
 		return (baseView, basePresenter, baseInteractor, baseRouter)
 	}
 }

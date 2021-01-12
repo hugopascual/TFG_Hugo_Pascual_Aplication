@@ -6,7 +6,7 @@
 //
 
 public enum XibFile: String {
-	case xx = ""
+
 	case home = "HomeViewController"
 	case profile = "ProfileViewController"
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct ErrorLoginServerModel: BaseServerModel {
 	
 	var code: String?

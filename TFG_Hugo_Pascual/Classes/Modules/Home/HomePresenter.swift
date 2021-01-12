@@ -8,12 +8,13 @@
 import Foundation
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
-	func profileNavigationBarButtonPressed()
+	func profileButtonPressed()
 	func getHome()
 }
 
 protocol HomeInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	func setHome(businessModel: HomeBusinessModel)
+	func didGetHomeInfo(businessModel: HomeBusinessModel)
+	func didNotGetHomeInfo()
 }
 
 class HomePresenter: BasePresenter {
@@ -22,25 +23,37 @@ class HomePresenter: BasePresenter {
 	var interactor: HomeInteractorInputProtocol? { return super.baseInteractor as? HomeInteractorInputProtocol}
 	var router: HomeRouterProtocol? { return super.baseRouter as? HomeRouterProtocol}
 	
+	var viewModel = HomeViewModel()
+	
+	func viewDidLoad() {
+		self.view?.setViewModel(viewModel)
+		self.getHome()
+	}
+	
+	func configureAndSetViewModel(businessModel: HomeBusinessModel) {
+		self.viewModel = HomeViewModel(businessModel: businessModel)
+		self.view?.setViewModel(viewModel)
+	}
 }
 
 extension HomePresenter: HomePresenterProtocol {
 	
-	func profileNavigationBarButtonPressed() {
+	func profileButtonPressed() {
 		router?.navigateToProfile()
 	}
 	
 	func getHome() {
 		self.interactor?.getHome()
 	}
-	
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
 	
-	func setHome(businessModel: HomeBusinessModel) {
-		let viewModel = HomeViewModel(businessModel: businessModel)
-		
-		self.view?.setView(viewModel: viewModel)
+	func didGetHomeInfo(businessModel: HomeBusinessModel) {
+		self.configureAndSetViewModel(businessModel: businessModel)
+	}
+	
+	func didNotGetHomeInfo() {
+		self.configureAndSetViewModel(businessModel: HomeBusinessModel())
 	}
 }

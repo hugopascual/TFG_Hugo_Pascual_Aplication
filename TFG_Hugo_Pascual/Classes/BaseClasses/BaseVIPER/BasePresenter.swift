@@ -4,31 +4,30 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
+import UIKit
 
-import Foundation
-
+//Base class, it is declared as a good practice to implement new functions in a global way in the application.
 class BasePresenter {
 	
-	internal weak var baseView: BaseViewProtocol?
-	internal var baseRouter: BaseRouterProtocol?
-	internal var baseInteractor: BaseInteractorInputProtocol?
+	// Declared weak for the ARC to destroy them.
+	weak var baseView: BaseViewProtocol?
+	var baseRouter: BaseRouterProtocol?
+	var baseInteractor: BaseInteractorInputProtocol?
 	
-	required init() {}
-	
+	required init() {
+		
+	}
+
 	// MARK: BaseInteractorOutputProtocol
 	func genericErrorHappened(error: CustomErrorModel) {
-		print("ERROR")
-		//self.showError(error: error)
+		
 	}
-	
 }
 
 extension BasePresenter: BaseRouterDelegate {
 
 	func navigationDone() {
-		
 		// Do something every time a navigation is done
 		// If you cannot, for example, an invalid credentials error is displayed
-		//            BasePresenter.invalidCredentialsError()
 	}
 }
