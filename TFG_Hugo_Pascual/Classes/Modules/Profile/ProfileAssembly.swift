@@ -23,7 +23,7 @@ final class ProfileAssembly: BaseAssembly {
 										  router: ProfileRouter.self,
 										  interactor: ProfileInteractor.self)
 		
-		viper.interactor.provider = DataAssembly.profileProvider(interactor: viper.interactor)
+		viper.interactor.profileProvider = DataAssembly.profileProvider(interactor: viper.interactor)
 		return view
 	}
 }

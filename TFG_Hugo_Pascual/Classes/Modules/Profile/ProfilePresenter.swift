@@ -12,7 +12,8 @@ protocol ProfilePresenterProtocol: BasePresenterProtocol {
 }
 
 protocol ProfileInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	
+	func didGetProfileInfo(businessModel: ProfileBusinessModel)
+	func didNotGetProfileInfo()
 }
 
 class ProfilePresenter: BasePresenter {
@@ -44,11 +45,11 @@ extension ProfilePresenter: ProfilePresenterProtocol {
 
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 	
-	func didGetHomeInfo(businessModel: ProfileBusinessModel) {
+	func didGetProfileInfo(businessModel: ProfileBusinessModel) {
 		self.configureAndSetViewModel(businessModel: businessModel)
 	}
 	
-	func didNotGetHomeInfo() {
+	func didNotGetProfileInfo() {
 		self.configureAndSetViewModel(businessModel: ProfileBusinessModel())
 	}
 }

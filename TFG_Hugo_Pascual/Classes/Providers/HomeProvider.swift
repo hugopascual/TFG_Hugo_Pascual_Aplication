@@ -31,7 +31,6 @@ class HomeProvider: BaseProvider, HomeProviderProtocol {
 }
 
 // MARK: - Structs
-
 struct HomeDTO: BaseProviderParamsDTO {
 	
 }

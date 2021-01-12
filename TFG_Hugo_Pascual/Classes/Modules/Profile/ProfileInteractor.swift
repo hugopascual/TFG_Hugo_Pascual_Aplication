@@ -14,13 +14,28 @@ protocol ProfileInteractorInputProtocol: BaseInteractorInputProtocol {
 class ProfileInteractor: BaseInteractor {
 	
 	weak var presenter: ProfileInteractorOutputProtocol? { return super.basePresenter as? ProfileInteractorOutputProtocol }
-	var provider: ProfileProviderProtocol?
+	var profileProvider: ProfileProviderProtocol?
 	
 }
 
 extension ProfileInteractor: ProfileInteractorInputProtocol {
 	
 	func getProfile() {
-		print("llamada al servicio")
+		let dto = ProfileDTO()
+		
+		self.profileProvider?.getProfile(dto: dto, additionalHeaders: [:], success: { (serverModel) in
+			
+			guard let businessModel = BaseInteractor.parseToBusinessModel(parserModel: ProfileBusinessModel.self, serverModel: serverModel) else { return }
+
+			self.presenter?.didGetProfileInfo(businessModel: businessModel)
+			
+		}, failure: { (error) in
+			
+			error.backendError.type = .homeFailure
+			self.presenter?.didNotGetProfileInfo()
+			self.presenter?.genericErrorHappened(error: error)
+			
+		})
+		
 	}
 }

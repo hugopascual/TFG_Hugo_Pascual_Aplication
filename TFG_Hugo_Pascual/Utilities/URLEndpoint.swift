@@ -16,7 +16,7 @@ struct URLEndpoint {
 	}
 	
 	static var none = "none"
-	static var login = "login"
+	static var profile = "getProfile"
 	static var home = "getHome"
 	
 }
