@@ -39,6 +39,8 @@
 		FF54EB1025AD9C150034F275 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* ProfileViewModel.swift */; };
 		FF54EB1325AD9C4A0034F275 /* ProfileBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */; };
 		FF54EB1625AD9C550034F275 /* ProfileServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */; };
+		FF54EB1D25AE332F0034F275 /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB1C25AE332F0034F275 /* TabBarManager.swift */; };
+		FF54EB2125AE333D0034F275 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB2025AE333D0034F275 /* TabBarModel.swift */; };
 		FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF966207259A68C900404DB9 /* HomeServerModel.swift */; };
 		FF96620C259A696C00404DB9 /* HomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */; };
 		FFA041A2258E899F00C6928A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFA041A1258E899F00C6928A /* Alamofire */; };
@@ -97,6 +99,8 @@
 		FF54EB0F25AD9C150034F275 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessModel.swift; sourceTree = "<group>"; };
 		FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServerModel.swift; sourceTree = "<group>"; };
+		FF54EB1C25AE332F0034F275 /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		FF54EB2025AE333D0034F275 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		FF966207259A68C900404DB9 /* HomeServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServerModel.swift; sourceTree = "<group>"; };
 		FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessModel.swift; sourceTree = "<group>"; };
 		FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorModel.swift; sourceTree = "<group>"; };
@@ -263,6 +267,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FF54EB1B25AE33200034F275 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FF54EB1C25AE332F0034F275 /* TabBarManager.swift */,
+				FF54EB2025AE333D0034F275 /* TabBarModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		FF966206259A689B00404DB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +357,7 @@
 		FFD47C8525A25A1F00AC3431 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FF54EB1B25AE33200034F275 /* TabBar */,
 				FFD47C8625A25A2B00AC3431 /* NavigationBar */,
 			);
 			path = Managers;
@@ -485,12 +499,14 @@
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* ProfileViewController.swift in Sources */,
 				FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */,
+				FF54EB2125AE333D0034F275 /* TabBarModel.swift in Sources */,
 				FF54EB1325AD9C4A0034F275 /* ProfileBusinessModel.swift in Sources */,
 				FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */,
 				FFD47C9025A3CD3100AC3431 /* CustomColor.swift in Sources */,
 				FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */,
 				FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
+				FF54EB1D25AE332F0034F275 /* TabBarManager.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
