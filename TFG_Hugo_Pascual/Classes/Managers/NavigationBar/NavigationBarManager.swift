@@ -55,6 +55,7 @@ class NavigationBarManager {
 		if let backButton = model.backButton { self.setNavigationBarBackButton(backButton: backButton) }
 		if let arrayLeftButtons = model.arrayLeftButtons { self.setNavigationBarLeftButtonItems(arrayLeftButtons: arrayLeftButtons) }
 		if let arrayRightButtons = model.arrayRightButtons { self.setNavigationBarRightButtonItems(arrayRightButtons: arrayRightButtons) }
+		if let titleView = model.titleView { self.setNavigationBarTitleView(view: titleView) }
 		self.setNavigationBar(backgroundImage: model.backgroundImage ?? UIImage(named: "default"), backgroundColor: model.backGroundColor)
 		if model.isTransparent { self.setTransparent(isTransparent: model.isTransparent) }
 		if let title = model.title { self.title = title }
@@ -74,7 +75,7 @@ class NavigationBarManager {
 		navBar?.backIndicatorImage = backButton.image
 		navBar?.backIndicatorTransitionMaskImage = backButton.image
 		// TODO añadir la localización
-		self.navigationItem?.backBarButtonItem = UIBarButtonItem(title: "Atras", style: .plain, target: nil, action: nil)
+		self.navigationItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
 
 	//If leftBarButtonItem is nil, controller displays backItem
@@ -102,6 +103,11 @@ class NavigationBarManager {
 			navigationController?.navigationBar.shadowImage = UIImage()
 			navigationController?.navigationBar.isTranslucent = true
 		}
+	}
+	
+	func setNavigationBarTitleView(view: UIView?) {
+		
+		self.navigationItem?.titleView = view
 	}
 	
 	func getFrame() -> CGRect {

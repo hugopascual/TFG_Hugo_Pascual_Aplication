@@ -14,16 +14,18 @@ struct NavigationBarModel {
 	var backButton: NavigationBarButtonItem?
 	var arrayLeftButtons: [NavigationBarButtonItem]?
 	var arrayRightButtons: [NavigationBarButtonItem]?
+	var titleView: UIView?
 	var backgroundImage: UIImage?
 	var backGroundColor: UIColor?
 	var isTransparent = false
 	
-	init(title: String? = nil, backButton: NavigationBarButtonItem? = nil, arrayLeftButtons: [NavigationBarButtonItem]? = nil, arrayRightButtons: [NavigationBarButtonItem]? = nil, backgroundImage: UIImage? = nil, backGroundColor: UIColor? = nil, isTransparent: Bool = false) {
+	init(title: String? = nil, backButton: NavigationBarButtonItem? = nil, arrayLeftButtons: [NavigationBarButtonItem]? = nil, arrayRightButtons: [NavigationBarButtonItem]? = nil, titleView: UIView? = nil, backgroundImage: UIImage? = nil, backGroundColor: UIColor? = nil, isTransparent: Bool = false) {
 		
 		self.title = title
 		self.backButton = backButton
 		self.arrayLeftButtons = arrayLeftButtons
 		self.arrayRightButtons = arrayRightButtons
+		self.titleView = titleView
 		self.backgroundImage = backgroundImage
 		self.backGroundColor = backGroundColor
 		self.isTransparent = isTransparent

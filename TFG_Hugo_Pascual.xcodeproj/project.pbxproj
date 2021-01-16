@@ -64,6 +64,8 @@
 		FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041B7258FD96100C6928A /* NetworkManager.swift */; };
 		FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041BA258FDA9400C6928A /* ErrorLoginBusinessModel.swift */; };
 		FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */; };
+		FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */; };
+		FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */; };
 		FFC7915D25853D43008BDBDC /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */; };
 		FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */; };
 		FFC7916325853D68008BDBDC /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916225853D68008BDBDC /* ProfileRouter.swift */; };
@@ -136,6 +138,8 @@
 		FFA041B7258FD96100C6928A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFA041BA258FDA9400C6928A /* ErrorLoginBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoginBusinessModel.swift; sourceTree = "<group>"; };
 		FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		FFC7915C25853D43008BDBDC /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		FFC7915F25853D54008BDBDC /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		FFC7916225853D68008BDBDC /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		FF0F0A19257BCD82008A35C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FFBCCBA225AF526200338D0B /* Extensions */,
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
@@ -401,6 +406,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FFBCCBA225AF526200338D0B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
+				FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FFC7915B25853D2C008BDBDC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +592,7 @@
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
 				FF09056225B3699F00C0CDD1 /* ProductDetailAssembly.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* ProfileViewController.swift in Sources */,
+				FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */,
 				FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */,
 				FF54EB1325AD9C4A0034F275 /* ProfileBusinessModel.swift in Sources */,
 				FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */,
@@ -608,6 +623,7 @@
 				FF54EB1025AD9C150034F275 /* ProfileViewModel.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
+				FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */,
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF54EB1625AD9C550034F275 /* ProfileServerModel.swift in Sources */,

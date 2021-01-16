@@ -34,7 +34,7 @@ class ProfileViewController: BaseViewController {
 extension ProfileViewController: ProfileViewProtocol {
 	
 	func setNavigationBar(title: String) {
-		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: title, backButton: .backArrow, backGroundColor: CustomColor.viewHighlight.uiColor))
+		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: title, backButton: .backArrow /*arrayLeftButtons: [.backArrow]*/, backGroundColor: CustomColor.viewHighlight.uiColor))
 	}
 	
 	func setViewModel(_ viewModel: Any) {
