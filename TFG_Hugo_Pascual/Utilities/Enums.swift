@@ -9,4 +9,6 @@ public enum XibFile: String {
 
 	case home = "HomeViewController"
 	case profile = "ProfileViewController"
+	case addProduct = "AddProductViewController"
+	case productDetail = "ProductDetailViewController"
 }

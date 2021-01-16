@@ -26,31 +26,31 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6" userLabel="Container View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Title Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Title Label">
                             <rect key="frame" x="40" y="40" width="334" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Profile Button">
-                            <rect key="frame" x="60" y="140.5" width="86" height="30"/>
+                            <rect key="frame" x="60" y="140.5" width="92" height="30"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="Go to Profile"/>
+                            <state key="normal" title="*Go to Profile"/>
                             <connections>
-                                <action selector="profileButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
+                                <action selector="addProductButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-3i-Tlu" userLabel="Service Button">
-                            <rect key="frame" x="273" y="140.5" width="81" height="30"/>
+                            <rect key="frame" x="246" y="140.5" width="108" height="30"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="Call Service"/>
+                            <state key="normal" title="*Call To Service"/>
                             <connections>
                                 <action selector="serviceButtonPressed:" destination="-1" eventType="touchUpInside" id="gSc-nT-aZe"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-ln-Zih" userLabel="Service Text Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Service Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-ln-Zih" userLabel="Service Text Label">
                             <rect key="frame" x="40" y="602" width="334" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -63,7 +63,6 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bAC-3i-Tlu" secondAttribute="trailing" constant="60" id="2d7-yp-Scm"/>
-                        <constraint firstItem="bAC-3i-Tlu" firstAttribute="leading" secondItem="dG4-MB-Xzj" secondAttribute="trailing" constant="127" id="8fa-R0-Y6x"/>
                         <constraint firstAttribute="trailing" secondItem="wXe-X4-bUI" secondAttribute="trailing" constant="80" id="Aih-u0-35G"/>
                         <constraint firstItem="GAG-8v-wgp" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="40" id="Kn2-u7-puF"/>
                         <constraint firstItem="wXe-X4-bUI" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="80" id="Lu4-Z1-rwU"/>

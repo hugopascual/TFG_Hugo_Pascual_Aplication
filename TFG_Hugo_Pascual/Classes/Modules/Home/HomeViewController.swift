@@ -22,16 +22,12 @@ class HomeViewController: BaseViewController {
 	@IBOutlet weak var mainImageView: UIImageView!
 	@IBOutlet weak var serviceTextLabel: UILabel!
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
-	
 	override func viewWillAppear(_ animated: Bool) {
 		self.navigationController?.setNavigationBarHidden(true, animated: animated)
 	}
 	
-	@IBAction func profileButtonPressed(_ sender: Any) {
-		presenter?.profileButtonPressed()
+	@IBAction func addProductButtonPressed(_ sender: Any) {
+		presenter?.addProductButtonPressed()
 	}
 	
 	@IBAction func serviceButtonPressed(_ sender: Any) {
@@ -43,7 +39,9 @@ extension HomeViewController: HomeViewProtocol {
 	
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? HomeViewModel else { return }
-		self.titleLabel.text = model.title
+		self.title = model.title
+		
+		self.titleLabel.text = self.title
 		self.goToProfileButton.setTitle(model.goToProfileButtonTitle, for: .normal)
 		self.serviceButton.setTitle(model.serviceButtonTitle, for: .normal)
 		self.mainImageView.image = UIImage(named: model.mainImage)

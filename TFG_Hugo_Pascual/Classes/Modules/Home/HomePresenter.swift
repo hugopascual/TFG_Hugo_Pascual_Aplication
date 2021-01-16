@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol: BasePresenterProtocol {
-	func profileButtonPressed()
+	func addProductButtonPressed()
 	func getHome()
 }
 
@@ -26,7 +26,6 @@ class HomePresenter: BasePresenter {
 	var viewModel = HomeViewModel()
 	
 	func viewDidLoad() {
-		self.view?.setViewModel(viewModel)
 		self.getHome()
 	}
 	
@@ -38,8 +37,8 @@ class HomePresenter: BasePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
 	
-	func profileButtonPressed() {
-		router?.navigateToProfile()
+	func addProductButtonPressed() {
+		router?.navigateToAddProduct()
 	}
 	
 	func getHome() {
