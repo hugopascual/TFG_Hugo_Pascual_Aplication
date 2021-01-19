@@ -33,10 +33,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Product Detail Button">
-                            <rect key="frame" x="60" y="140.5" width="130" height="30"/>
+                            <rect key="frame" x="60" y="140.5" width="142" height="30"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="*Go to AddProduct"/>
+                            <state key="normal" title="*Go to ProductDetail"/>
                             <connections>
                                 <action selector="productDetailButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
                             </connections>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF00472225B7800C0058036B /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00472125B7800C0058036B /* CustomColor.swift */; };
+		FF00473125B78E980058036B /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00473025B78E980058036B /* ImagesNames.swift */; };
 		FF09055325B3695C00C0CDD1 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055225B3695C00C0CDD1 /* ProductDetailViewController.swift */; };
 		FF09055625B3696B00C0CDD1 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF09055525B3696B00C0CDD1 /* ProductDetailViewController.xib */; };
 		FF09055925B3697700C0CDD1 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055825B3697700C0CDD1 /* ProductDetailPresenter.swift */; };
@@ -42,7 +44,6 @@
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
-		FF32D3D225ACDB8C00B7CC04 /* ImagesNamesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32D3D125ACDB8C00B7CC04 /* ImagesNamesConstants.swift */; };
 		FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */; };
 		FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */; };
 		FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */; };
@@ -85,6 +86,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF00472125B7800C0058036B /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		FF00473025B78E980058036B /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
 		FF09055225B3695C00C0CDD1 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		FF09055525B3696B00C0CDD1 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		FF09055825B3697700C0CDD1 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -122,7 +125,6 @@
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
-		FF32D3D125ACDB8C00B7CC04 /* ImagesNamesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNamesConstants.swift; sourceTree = "<group>"; };
 		FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
 		FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductInteractor.swift; sourceTree = "<group>"; };
@@ -296,7 +298,7 @@
 				FF0F0ADF257C3E76008A35C7 /* Enums.swift */,
 				FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */,
 				FF0F0AE3257C3F88008A35C7 /* Utils.swift */,
-				FF32D3D125ACDB8C00B7CC04 /* ImagesNamesConstants.swift */,
+				FF00473025B78E980058036B /* ImagesNames.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -476,6 +478,7 @@
 		FFD47C8E25A3CD2500AC3431 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				FF00472125B7800C0058036B /* CustomColor.swift */,
 				FFD47C9225A3CF6300AC3431 /* CustomFont.swift */,
 			);
 			path = Style;
@@ -585,6 +588,7 @@
 			files = (
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
+				FF00472225B7800C0058036B /* CustomColor.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */,
 				FF09055C25B3698100C0CDD1 /* ProductDetailInteractor.swift in Sources */,
@@ -596,7 +600,6 @@
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */,
 				FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */,
-				FF32D3D225ACDB8C00B7CC04 /* ImagesNamesConstants.swift in Sources */,
 				FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */,
 				FF09056525B369BA00C0CDD1 /* ProductDetailViewModel.swift in Sources */,
 				FFA041B1258FD7F000C6928A /* ErrorLoginServerModel.swift in Sources */,
@@ -626,6 +629,7 @@
 				FF341E2225B0CD2B0065AA6F /* AddProductViewModel.swift in Sources */,
 				FF341E1C25B0CCF40065AA6F /* AddProductRouter.swift in Sources */,
 				FF0F0A35257BCD82008A35C7 /* BaseServerModel.swift in Sources */,
+				FF00473125B78E980058036B /* ImagesNames.swift in Sources */,
 				FF341E1F25B0CD010065AA6F /* AddProductAssembly.swift in Sources */,
 				FF09055325B3695C00C0CDD1 /* ProductDetailViewController.swift in Sources */,
 				FF09055F25B3699100C0CDD1 /* ProductDetailRouter.swift in Sources */,

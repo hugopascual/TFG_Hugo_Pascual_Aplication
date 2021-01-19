@@ -2,7 +2,7 @@
 //  ImagesNames.swift
 //  TFG_Hugo_Pascual
 //
-//  Created by Hugo Pascual Adan on 11/01/2021.
+//  Created by Hugo Pascual Adan on 19/01/2021.
 //
 //swiftlint:disable identifier_name
 
@@ -23,12 +23,3 @@ struct ImagesNamesConstants {
 	static let profile_logo: String = "profile_logo"
 }
 
-struct ColorsNamesConstants {
-	
-	// MARK: Color Views
-	static let viewGeneralBackground: String = "viewGeneralBackground"
-	static let viewPrimary: String = "viewPrimary"
-	
-	// MARK: Color Text
-	static let textNormal: String = "textNormal"
-}

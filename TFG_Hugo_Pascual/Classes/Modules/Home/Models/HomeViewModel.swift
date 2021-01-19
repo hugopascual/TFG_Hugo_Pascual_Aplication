@@ -11,7 +11,7 @@ class HomeViewModel: BaseViewModel {
 	
 	//TODO añadir localización
 	var title: String = "Home"
-	var goToProfileButtonTitle: String = "Go to AddProduct"
+	var goToProfileButtonTitle: String = "Go to ProductDetail"
 	var serviceButtonTitle: String = "Call To Service"
 	var mainImage: String = ImagesNamesConstants.etsit_logo
 	var text: String = "homeViewModelServiceText"

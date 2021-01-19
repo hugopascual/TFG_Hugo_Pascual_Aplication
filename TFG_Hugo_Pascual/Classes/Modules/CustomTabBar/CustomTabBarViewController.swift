@@ -34,8 +34,8 @@ class CustomTabBarViewController: BaseViewController {
 	
 	// MARK: UIViewController Functions
 	override func viewDidLoad() {
-		UITextField.appearance().tintColor = UIColor(named: ColorsNamesConstants.viewPrimary)
-		UITextView.appearance().tintColor = UIColor(named: ColorsNamesConstants.viewPrimary)
+		UITextField.appearance().tintColor = CustomColor.viewPrimary.uiColor
+		UITextView.appearance().tintColor = CustomColor.viewPrimary.uiColor
 		
 		super.viewDidLoad()
 		self.setupView()
@@ -50,13 +50,7 @@ class CustomTabBarViewController: BaseViewController {
 	
 	// MARK: Private Functions
 	func setupView() {
-		self.tabBarView.applyShadowWithCorner(cornerRadius: 28, opacity: 0.26, blur: 32)
-		
-		self.tabBarView.layer.cornerRadius = 28
-		
-		for button in self.tabBarButtonsArray {
-			button.layer.cornerRadius = 28
-		}
+		self.tabBarView.applyShadowWithCorner(cornerRadius: 28, opacity: 0.13, blur: 32)
 	}
 	
 	func selectTabButton(_ tab: Tab) {
@@ -66,7 +60,7 @@ class CustomTabBarViewController: BaseViewController {
 		let button = tabBarButtonsArray[tab.rawValue]
 		
 		button.isSelected = true
-		button.backgroundColor = UIColor(named: ColorsNamesConstants.viewPrimary)
+		button.backgroundColor = CustomColor.viewPrimary.uiColor
 		
 		switch tab {
 		case .home:
@@ -87,7 +81,7 @@ class CustomTabBarViewController: BaseViewController {
 		let button = tabBarButtonsArray[tab.rawValue]
 		
 		button.isSelected = false
-		button.backgroundColor = UIColor(named: ColorsNamesConstants.viewPrimary)
+		button.backgroundColor = CustomColor.viewGeneralBackground.uiColor
 		
 		switch tab {
 		case .home:

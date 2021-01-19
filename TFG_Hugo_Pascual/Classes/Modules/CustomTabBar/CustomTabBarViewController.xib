@@ -35,10 +35,10 @@
                             <rect key="frame" x="0.0" y="738" width="414" height="80"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ia-4W-Fpq" userLabel="TabBar View">
-                                    <rect key="frame" x="24" y="24" width="366" height="56"/>
+                                    <rect key="frame" x="0.0" y="24" width="414" height="56"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ROQ-hr-xwN">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-fX-png" userLabel="Home Button">
                                                     <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
@@ -58,7 +58,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uz-NJ-zqa" userLabel="Add Product Button">
-                                                    <rect key="frame" x="155" y="0.0" width="56" height="56"/>
+                                                    <rect key="frame" x="179" y="0.0" width="56" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="f02-dK-d5b"/>
                                                         <constraint firstAttribute="width" constant="56" id="yir-90-KcU"/>
@@ -74,7 +74,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD2-tY-SSi" userLabel="Profile Button">
-                                                    <rect key="frame" x="310" y="0.0" width="56" height="56"/>
+                                                    <rect key="frame" x="358" y="0.0" width="56" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="MiK-3K-3xf"/>
                                                         <constraint firstAttribute="width" constant="56" id="p8Q-h9-W7A"/>
@@ -106,10 +106,10 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="6Ia-4W-Fpq" firstAttribute="top" secondItem="DPS-dh-16a" secondAttribute="top" constant="24" id="3nR-Td-iFa"/>
-                                <constraint firstAttribute="trailing" secondItem="6Ia-4W-Fpq" secondAttribute="trailing" priority="750" constant="24" id="71U-st-KQu"/>
+                                <constraint firstAttribute="trailing" secondItem="6Ia-4W-Fpq" secondAttribute="trailing" priority="750" id="71U-st-KQu"/>
                                 <constraint firstAttribute="height" constant="80" id="D5V-Gn-EQy"/>
                                 <constraint firstAttribute="bottom" secondItem="6Ia-4W-Fpq" secondAttribute="bottom" id="IoQ-g5-Wwh"/>
-                                <constraint firstItem="6Ia-4W-Fpq" firstAttribute="leading" secondItem="DPS-dh-16a" secondAttribute="leading" priority="750" constant="24" id="bWR-Xy-Id5"/>
+                                <constraint firstItem="6Ia-4W-Fpq" firstAttribute="leading" secondItem="DPS-dh-16a" secondAttribute="leading" priority="750" id="bWR-Xy-Id5"/>
                                 <constraint firstItem="6Ia-4W-Fpq" firstAttribute="centerX" secondItem="DPS-dh-16a" secondAttribute="centerX" id="fIO-fK-Swc"/>
                             </constraints>
                         </view>
