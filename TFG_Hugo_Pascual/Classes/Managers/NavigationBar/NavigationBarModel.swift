@@ -37,7 +37,7 @@ class NavigationBarButtonItem {
 	private var icon: UIImage?
 	private var text: String?
 	private var font: CustomFont?
-	private var color: CustomColor?
+	private var color: UIColor?
 	var isEnabled = true
 	var type: NavigationButtonType
 	var resourceType: ResourceType
@@ -66,7 +66,7 @@ class NavigationBarButtonItem {
 		self.isEnabled = isEnabled
 	}
 
-	init(type: NavigationButtonType, text: String, font: CustomFont, color: CustomColor, isEnabled: Bool = true) {
+	init(type: NavigationButtonType, text: String, font: CustomFont, color: UIColor, isEnabled: Bool = true) {
 		self.resourceType = .freeText
 		self.type = type
 		self.text = text
@@ -99,7 +99,7 @@ class NavigationBarButtonItem {
 						style: .plain,
 						target: self,
 						action: #selector(navigationBarButtonItemPressed(sender:)))
-			self.uiBarButtonItem?.tintColor = self.color?.uiColor
+			self.uiBarButtonItem?.tintColor = self.color
 			if let font = self.font {
 				self.uiBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: font.uiFont], for: .normal)
 				self.uiBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: font.uiFont], for: .highlighted)

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
-                <outlet property="goToProfileButton" destination="dG4-MB-Xzj" id="9sg-OQ-Ze3"/>
+                <outlet property="goToProductDetailButton" destination="dG4-MB-Xzj" id="9sg-OQ-Ze3"/>
                 <outlet property="mainImageView" destination="wXe-X4-bUI" id="dFl-n2-vpn"/>
                 <outlet property="serviceButton" destination="bAC-3i-Tlu" id="OMH-Sq-Cgj"/>
                 <outlet property="serviceTextLabel" destination="XZh-ln-Zih" id="ixY-Hj-n4S"/>
@@ -32,13 +32,13 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Profile Button">
-                            <rect key="frame" x="60" y="140.5" width="92" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Product Detail Button">
+                            <rect key="frame" x="60" y="140.5" width="130" height="30"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="*Go to Profile"/>
+                            <state key="normal" title="*Go to AddProduct"/>
                             <connections>
-                                <action selector="addProductButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
+                                <action selector="productDetailButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-3i-Tlu" userLabel="Service Button">

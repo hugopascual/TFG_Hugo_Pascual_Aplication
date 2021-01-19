@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ProfileViewProtocol: BaseViewProtocol {
-	func setNavigationBar(title: String)
+
 }
 
 class ProfileViewController: BaseViewController {
@@ -20,26 +20,24 @@ class ProfileViewController: BaseViewController {
 	@IBOutlet weak var serviceButton: UIButton!
 	@IBOutlet weak var mainImageView: UIImageView!
 	@IBOutlet weak var serviceTextLabel: UILabel!
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
 	}
 	
 	@IBAction func serviceButtonPressed(_ sender: Any) {
 		self.presenter?.getProfile()
 	}
-	
 }
 
 extension ProfileViewController: ProfileViewProtocol {
 	
-	func setNavigationBar(title: String) {
-		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: title, backButton: .backArrow /*arrayLeftButtons: [.backArrow]*/, backGroundColor: CustomColor.viewHighlight.uiColor))
-	}
-	
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? ProfileViewModel else { return }
-		self.titleLabel.text = model.title
+		self.title = model.title
+		
+		self.titleLabel.text = self.title
 		self.serviceButton.setTitle(model.serviceButtonTitle, for: .normal)
 		self.mainImageView.image = UIImage(named: model.mainImage)
 		self.serviceTextLabel.text = model.text

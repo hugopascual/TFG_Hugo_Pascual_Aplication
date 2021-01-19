@@ -11,8 +11,6 @@ class AppInitializer: NSObject {
 	
 	//first we need to set up rootViewController
 	func installRootViewController() {
-		
-		BaseRouter.setRoot(navigationController: HomeAssembly.navigationController())
-
+		BaseRouter.setRoot(navigationController: CustomTabBarAssembly.navigationController())
 	}
 }

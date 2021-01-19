@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "ico_profile.pdf",
       "idiom" : "universal"
     }
   ],

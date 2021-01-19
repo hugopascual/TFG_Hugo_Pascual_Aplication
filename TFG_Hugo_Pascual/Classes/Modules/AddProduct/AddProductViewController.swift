@@ -9,14 +9,19 @@ import Foundation
 import UIKit
 
 protocol AddProductViewProtocol: BaseViewProtocol {
-	func setViewModel(_ viewModel: Any)
+	
 }
 
 class AddProductViewController: BaseViewController {
 	
-	var presenter: AddProductPresenterProtocol? { return super.basePresenter as? AddProductPresenterProtocol}
+	var presenter: AddProductPresenterProtocol? { return super.basePresenter as? AddProductPresenterProtocol }
 	
 	@IBOutlet weak var titleLabel: UILabel!
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
+	}
 }
 
 extension AddProductViewController: AddProductViewProtocol {

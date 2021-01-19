@@ -43,7 +43,6 @@
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
 		FF32D3D225ACDB8C00B7CC04 /* ImagesNamesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF32D3D125ACDB8C00B7CC04 /* ImagesNamesConstants.swift */; };
-		FF341E0A25B0CA2B0065AA6F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E0925B0CA2B0065AA6F /* CustomTabBar.swift */; };
 		FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */; };
 		FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */; };
 		FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */; };
@@ -54,6 +53,13 @@
 		FF54EB1025AD9C150034F275 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* ProfileViewModel.swift */; };
 		FF54EB1325AD9C4A0034F275 /* ProfileBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */; };
 		FF54EB1625AD9C550034F275 /* ProfileServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */; };
+		FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */; };
+		FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */; };
+		FF69EF1225B46B2C00E4981A /* CustomTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */; };
+		FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1425B46B3500E4981A /* CustomTabBarRouter.swift */; };
+		FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */; };
+		FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */; };
+		FF69EF2525B5E28500E4981A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF2425B5E28500E4981A /* UIView+Extension.swift */; };
 		FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF966207259A68C900404DB9 /* HomeServerModel.swift */; };
 		FF96620C259A696C00404DB9 /* HomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */; };
 		FFA041A2258E899F00C6928A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFA041A1258E899F00C6928A /* Alamofire */; };
@@ -75,7 +81,6 @@
 		FFC7918725854224008BDBDC /* ProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7918625854224008BDBDC /* ProfileProvider.swift */; };
 		FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */; };
 		FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */; };
-		FFD47C9025A3CD3100AC3431 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8F25A3CD3100AC3431 /* CustomColor.swift */; };
 		FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C9225A3CF6300AC3431 /* CustomFont.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +123,6 @@
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
 		FF32D3D125ACDB8C00B7CC04 /* ImagesNamesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNamesConstants.swift; sourceTree = "<group>"; };
-		FF341E0925B0CA2B0065AA6F /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
 		FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductInteractor.swift; sourceTree = "<group>"; };
@@ -129,6 +133,13 @@
 		FF54EB0F25AD9C150034F275 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessModel.swift; sourceTree = "<group>"; };
 		FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServerModel.swift; sourceTree = "<group>"; };
+		FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarPresenter.swift; sourceTree = "<group>"; };
+		FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarInteractor.swift; sourceTree = "<group>"; };
+		FF69EF1425B46B3500E4981A /* CustomTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarRouter.swift; sourceTree = "<group>"; };
+		FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarAssembly.swift; sourceTree = "<group>"; };
+		FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarViewController.xib; sourceTree = "<group>"; };
+		FF69EF2425B5E28500E4981A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF966207259A68C900404DB9 /* HomeServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServerModel.swift; sourceTree = "<group>"; };
 		FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusinessModel.swift; sourceTree = "<group>"; };
 		FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorModel.swift; sourceTree = "<group>"; };
@@ -149,7 +160,6 @@
 		FFC7918625854224008BDBDC /* ProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProvider.swift; sourceTree = "<group>"; };
 		FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
 		FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarManager.swift; sourceTree = "<group>"; };
-		FFD47C8F25A3CD3100AC3431 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		FFD47C9225A3CF6300AC3431 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +265,7 @@
 		FF0F0A2C257BCD82008A35C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF341E0E25B0CC6C0065AA6F /* AddProduct */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF341E0D25B0CB8B0065AA6F /* ProductDetail */,
@@ -293,7 +304,12 @@
 		FF341E0825B0C78A0065AA6F /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				FF341E0925B0CA2B0065AA6F /* CustomTabBar.swift */,
+				FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */,
+				FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */,
+				FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */,
+				FF69EF1425B46B3500E4981A /* CustomTabBarRouter.swift */,
+				FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */,
+				FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -411,6 +427,7 @@
 			children = (
 				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
 				FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */,
+				FF69EF2425B5E28500E4981A /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,7 +459,6 @@
 		FFD47C8525A25A1F00AC3431 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FFD47C8625A25A2B00AC3431 /* NavigationBar */,
 			);
 			path = Managers;
@@ -460,7 +476,6 @@
 		FFD47C8E25A3CD2500AC3431 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				FFD47C8F25A3CD3100AC3431 /* CustomColor.swift */,
 				FFD47C9225A3CF6300AC3431 /* CustomFont.swift */,
 			);
 			path = Style;
@@ -532,6 +547,7 @@
 			files = (
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
 				FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */,
+				FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* ProfileViewController.xib in Resources */,
 				FF341E2525B0CD490065AA6F /* AddProductViewController.xib in Resources */,
 				FF0F0ACE257C36E8008A35C7 /* HomeViewController.xib in Resources */,
@@ -570,6 +586,7 @@
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
+				FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */,
 				FF09055C25B3698100C0CDD1 /* ProductDetailInteractor.swift in Sources */,
 				FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */,
 				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
@@ -578,7 +595,6 @@
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* ProfileInteractor.swift in Sources */,
-				FF341E0A25B0CA2B0065AA6F /* CustomTabBar.swift in Sources */,
 				FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */,
 				FF32D3D225ACDB8C00B7CC04 /* ImagesNamesConstants.swift in Sources */,
 				FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */,
@@ -589,6 +605,7 @@
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
 				FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */,
+				FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
 				FF09056225B3699F00C0CDD1 /* ProductDetailAssembly.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* ProfileViewController.swift in Sources */,
@@ -596,10 +613,11 @@
 				FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */,
 				FF54EB1325AD9C4A0034F275 /* ProfileBusinessModel.swift in Sources */,
 				FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */,
-				FFD47C9025A3CD3100AC3431 /* CustomColor.swift in Sources */,
 				FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */,
 				FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
+				FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */,
+				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
@@ -622,6 +640,7 @@
 				FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */,
 				FF54EB1025AD9C150034F275 /* ProfileViewModel.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,
+				FF69EF2525B5E28500E4981A /* UIView+Extension.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
 				FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */,
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
@@ -630,6 +649,7 @@
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
 				FF96620C259A696C00404DB9 /* HomeBusinessModel.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,
+				FF69EF1225B46B2C00E4981A /* CustomTabBarInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

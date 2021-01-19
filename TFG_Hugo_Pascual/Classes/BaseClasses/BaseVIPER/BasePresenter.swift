@@ -17,6 +17,11 @@ class BasePresenter {
 	required init() {
 		
 	}
+	
+	// MARK: Errors
+	func showError(error: CustomErrorModel) {
+
+	}
 
 	// MARK: BaseInteractorOutputProtocol
 	func genericErrorHappened(error: CustomErrorModel) {

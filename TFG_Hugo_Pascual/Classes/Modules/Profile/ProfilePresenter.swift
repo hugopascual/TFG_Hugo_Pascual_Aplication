@@ -26,7 +26,6 @@ class ProfilePresenter: BasePresenter {
 	
 	func viewDidLoad() {
 		self.view?.setViewModel(viewModel)
-		self.view?.setNavigationBar(title: viewModel.title)
 		self.getProfile()
 	}
 	

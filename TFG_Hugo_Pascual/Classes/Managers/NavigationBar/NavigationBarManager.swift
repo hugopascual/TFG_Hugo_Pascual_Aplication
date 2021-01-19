@@ -65,7 +65,7 @@ class NavigationBarManager {
 	func setNavigationBar(backgroundImage: UIImage? = nil, backgroundColor: UIColor? = nil) {
 		let navBar = self.navigationController?.navigationBar
 		navBar?.setBackgroundImage(backgroundImage, for: UIBarMetrics.default)
-		navBar?.titleTextAttributes = [NSAttributedString.Key.font: CustomFont(fontType: .system, size: .XL, style: .regular).uiFont, NSAttributedString.Key.foregroundColor: CustomColor.textNormal.uiColor]
+		navBar?.titleTextAttributes = [NSAttributedString.Key.font: CustomFont(fontType: .system, size: .XL, style: .regular).uiFont, NSAttributedString.Key.foregroundColor: UIColor(named: ColorsNamesConstants.textNormal)]
 		navBar?.barTintColor = backgroundColor
 		navBar?.isTranslucent = false
 	}

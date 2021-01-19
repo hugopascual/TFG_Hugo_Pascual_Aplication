@@ -54,7 +54,7 @@ extension BaseInteractorOutputProtocol {
 
 // Protocol used to the Presenter can communicate with Router
 protocol BaseRouterProtocol: class {
-
+	func changeTabInCustomTabBar(tab: Tab)
 }
 
 // Delegate used to report that a navigation has been done. It will usually be implemented by the Presenter

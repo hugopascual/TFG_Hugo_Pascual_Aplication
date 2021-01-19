@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeRouterProtocol: BaseRouterProtocol {
-	func navigateToAddProduct()
+	func navigateToProductDetail()
 }
 
 class HomeRouter: BaseRouter {
@@ -19,8 +19,8 @@ class HomeRouter: BaseRouter {
 
 extension HomeRouter: HomeRouterProtocol {
 	
-	func navigateToAddProduct() {
-		self.pushViewController(AddProductAssembly.view(), animated: true)
+	func navigateToProductDetail() {
+		self.pushViewController(ProductDetailAssembly.view(), animated: true)
 	}
 	
 }
