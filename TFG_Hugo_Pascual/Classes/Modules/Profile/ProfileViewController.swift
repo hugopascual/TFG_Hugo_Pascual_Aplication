@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ProfileViewProtocol: BaseViewProtocol {
-
+	func setServiceData(businessModel: ProfileBusinessModel)
 }
 
 class ProfileViewController: BaseViewController {
@@ -40,6 +40,9 @@ extension ProfileViewController: ProfileViewProtocol {
 		self.titleLabel.text = self.title
 		self.serviceButton.setTitle(model.serviceButtonTitle, for: .normal)
 		self.mainImageView.image = UIImage(named: model.mainImage)
-		self.serviceTextLabel.text = model.text
+	}
+	
+	func setServiceData(businessModel: ProfileBusinessModel) {
+		self.serviceTextLabel.text = businessModel.text
 	}
 }

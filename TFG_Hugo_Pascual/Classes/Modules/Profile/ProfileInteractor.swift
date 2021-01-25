@@ -31,7 +31,7 @@ extension ProfileInteractor: ProfileInteractorInputProtocol {
 			
 		}, failure: { (error) in
 			
-			error.backendError.type = .homeFailure
+			error.backendError.type = .unknownError
 			self.presenter?.didNotGetProfileInfo()
 			self.presenter?.genericErrorHappened(error: error)
 			

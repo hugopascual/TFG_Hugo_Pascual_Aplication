@@ -29,9 +29,8 @@ class ProfilePresenter: BasePresenter {
 		self.getProfile()
 	}
 	
-	func configureAndSetViewModel(businessModel: ProfileBusinessModel) {
-		self.viewModel = ProfileViewModel(businessModel: businessModel)
-		self.view?.setViewModel(viewModel)
+	func setInteractorData(businessModel: ProfileBusinessModel) {
+		self.view?.setServiceData(businessModel: businessModel)
 	}
 }
 
@@ -45,10 +44,10 @@ extension ProfilePresenter: ProfilePresenterProtocol {
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 	
 	func didGetProfileInfo(businessModel: ProfileBusinessModel) {
-		self.configureAndSetViewModel(businessModel: businessModel)
+		self.setInteractorData(businessModel: businessModel)
 	}
 	
 	func didNotGetProfileInfo() {
-		self.configureAndSetViewModel(businessModel: ProfileBusinessModel())
+		
 	}
 }

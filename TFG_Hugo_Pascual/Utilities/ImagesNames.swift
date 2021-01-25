@@ -22,4 +22,3 @@ struct ImagesNamesConstants {
 	// MARK: Profile
 	static let profile_logo: String = "profile_logo"
 }
-

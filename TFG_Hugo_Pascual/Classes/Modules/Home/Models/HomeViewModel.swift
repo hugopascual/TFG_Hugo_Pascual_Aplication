@@ -14,13 +14,9 @@ class HomeViewModel: BaseViewModel {
 	var goToProfileButtonTitle: String = "Go to ProductDetail"
 	var serviceButtonTitle: String = "Call To Service"
 	var mainImage: String = ImagesNamesConstants.etsit_logo
-	var text: String = "homeViewModelServiceText"
 	
 	required init(businessModel: BaseBusinessModel?) {
 		super.init(businessModel: businessModel)
-		
-		guard let businessModel = businessModel as? HomeBusinessModel else { return }
-		self.text = businessModel.text
 	}
 	
 	override init() {

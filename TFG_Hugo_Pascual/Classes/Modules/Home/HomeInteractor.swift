@@ -33,7 +33,7 @@ extension HomeInteractor: HomeInteractorInputProtocol {
 			
 		}, failure: { (error) in
 			
-			error.backendError.type = .homeFailure
+			error.backendError.type = .unknownError
 			self.presenter?.didNotGetHomeInfo()
 			self.presenter?.genericErrorHappened(error: error)
 			

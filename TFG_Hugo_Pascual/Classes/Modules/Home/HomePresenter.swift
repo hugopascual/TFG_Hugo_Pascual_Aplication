@@ -26,12 +26,12 @@ class HomePresenter: BasePresenter {
 	var viewModel = HomeViewModel()
 	
 	func viewDidLoad() {
+		self.view?.setViewModel(self.viewModel)
 		self.getHome()
 	}
 	
-	func configureAndSetViewModel(businessModel: HomeBusinessModel) {
-		self.viewModel = HomeViewModel(businessModel: businessModel)
-		self.view?.setViewModel(viewModel)
+	func setInteractorData(businessModel: HomeBusinessModel) {
+		self.view?.setServiceData(businessModel: businessModel)
 	}
 }
 
@@ -49,10 +49,10 @@ extension HomePresenter: HomePresenterProtocol {
 extension HomePresenter: HomeInteractorOutputProtocol {
 	
 	func didGetHomeInfo(businessModel: HomeBusinessModel) {
-		self.configureAndSetViewModel(businessModel: businessModel)
+		self.setInteractorData(businessModel: businessModel)
 	}
 	
 	func didNotGetHomeInfo() {
-		self.configureAndSetViewModel(businessModel: HomeBusinessModel())
+
 	}
 }

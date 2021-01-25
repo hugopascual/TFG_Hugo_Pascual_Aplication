@@ -16,7 +16,7 @@ protocol ProfileProviderProtocol: BaseProviderProtocol {
 class ProfileProvider: BaseProvider, ProfileProviderProtocol {
 	
 	// MARK: Functions
-	func getProfile(dto: ProfileDTO, additionalHeaders: [String : String], success: @escaping (ProfileServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+	func getProfile(dto: ProfileDTO, additionalHeaders: [String: String], success: @escaping (ProfileServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = ProfileProviderRequest.getProfile(params: dto)
 		
 		self.genericRequest(dto: providerDTO,
@@ -38,7 +38,7 @@ struct ProfileProviderRequest {
 	static func getProfile(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .get,
-						   urlContext: .local,
+						   urlContext: .heroku,
 						   endpoint: URLEndpoint.profile)
 	}
 }

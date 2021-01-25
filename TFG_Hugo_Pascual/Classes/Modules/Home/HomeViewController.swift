@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeViewProtocol: BaseViewProtocol {
-
+	func setServiceData(businessModel: HomeBusinessModel)
 }
 
 class HomeViewController: BaseViewController {
@@ -46,6 +46,9 @@ extension HomeViewController: HomeViewProtocol {
 		self.goToProductDetailButton.setTitle(model.goToProfileButtonTitle, for: .normal)
 		self.serviceButton.setTitle(model.serviceButtonTitle, for: .normal)
 		self.mainImageView.image = UIImage(named: model.mainImage)
-		self.serviceTextLabel.text = model.text
+	}
+	
+	func setServiceData(businessModel: HomeBusinessModel) {
+		self.serviceTextLabel.text = businessModel.text
 	}
 }
