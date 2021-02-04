@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 // Protocol used to the Presenter can communicate with View
-protocol BaseViewProtocol: class {
+protocol BaseViewControllerProtocol: class {
 	func setViewModel(_ viewModel: Any)
 }
 
-extension BaseViewProtocol {
+extension BaseViewControllerProtocol {
 	func setViewModel(_ viewModel: Any) {}
 }
 

@@ -12,4 +12,5 @@ public enum XibFile: String {
 	case addProduct = "AddProductViewController"
 	case productDetail = "ProductDetailViewController"
 	case customTabBarViewController = "CustomTabBarViewController"
+	case registration = "RegistrationViewController"
 }

@@ -44,6 +44,16 @@
 		FF0F0AEB257C41D8008A35C7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
+		FF23EFFF25CC5CD700D25E54 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */; };
+		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
+		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
+		FF23F01A25CC86F600D25E54 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F01925CC86F600D25E54 /* RegistrationAssembly.swift */; };
+		FF23F01E25CC86FD00D25E54 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F01D25CC86FD00D25E54 /* RegistrationRouter.swift */; };
+		FF23F02125CC870500D25E54 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F02025CC870500D25E54 /* RegistrationInteractor.swift */; };
+		FF23F02425CC871500D25E54 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F02325CC871500D25E54 /* RegistrationPresenter.swift */; };
+		FF23F02725CC872700D25E54 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F02625CC872700D25E54 /* RegistrationViewController.swift */; };
+		FF23F02A25CC874000D25E54 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF23F02925CC874000D25E54 /* RegistrationViewController.xib */; };
+		FF23F02E25CC875D00D25E54 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F02D25CC875D00D25E54 /* RegistrationViewModel.swift */; };
 		FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */; };
 		FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */; };
 		FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */; };
@@ -125,6 +135,16 @@
 		FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
+		FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
+		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
+		FF23F01925CC86F600D25E54 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		FF23F01D25CC86FD00D25E54 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		FF23F02025CC870500D25E54 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
+		FF23F02325CC871500D25E54 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		FF23F02625CC872700D25E54 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FF23F02925CC874000D25E54 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		FF23F02D25CC875D00D25E54 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
 		FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductInteractor.swift; sourceTree = "<group>"; };
@@ -182,6 +202,7 @@
 			children = (
 				FF0F0AEA257C41D8008A35C7 /* HomeProvider.swift */,
 				FFC7918625854224008BDBDC /* ProfileProvider.swift */,
+				FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -219,12 +240,13 @@
 		FF0F0A19257BCD82008A35C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FFBCCBA225AF526200338D0B /* Extensions */,
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
+				FFBCCBA225AF526200338D0B /* Extensions */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
-				FF0F0A2C257BCD82008A35C7 /* Modules */,
-				FF0B0C2D25A7723F00D871F1 /* Providers */,
+				FF23F00D25CC604300D25E54 /* Common */,
+				FF0F0A2C257BCD82008A35C7 /* Presentation */,
+				FF23F00125CC5E4B00D25E54 /* Services */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -264,16 +286,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0F0A2C257BCD82008A35C7 /* Modules */ = {
+		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
+				FF23F01825CC86BD00D25E54 /* Registration */,
+				FF23F01725CC7F6F00D25E54 /* Login */,
 				FF341E0E25B0CC6C0065AA6F /* AddProduct */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF341E0D25B0CB8B0065AA6F /* ProductDetail */,
 				FFC7915B25853D2C008BDBDC /* Profile */,
 			);
-			path = Modules;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		FF0F0A2D257BCD82008A35C7 /* Home */ = {
@@ -301,6 +324,89 @@
 				FF00473025B78E980058036B /* ImagesNames.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FF23F00125CC5E4B00D25E54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F00225CC5E7A00D25E54 /* Models */,
+				FF0B0C2D25A7723F00D871F1 /* Providers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF23F00225CC5E7A00D25E54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F00F25CC608800D25E54 /* Home */,
+				FF23F01025CC60A500D25E54 /* Profile */,
+				FF23F00325CC5E8400D25E54 /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF23F00325CC5E8400D25E54 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */,
+				FF23F00425CC5E9600D25E54 /* UserServerModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		FF23F00D25CC604300D25E54 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FF23F00F25CC608800D25E54 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */,
+				FF966207259A68C900404DB9 /* HomeServerModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF23F01025CC60A500D25E54 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */,
+				FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FF23F01725CC7F6F00D25E54 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FF23F01825CC86BD00D25E54 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F02C25CC874B00D25E54 /* Models */,
+				FF23F01925CC86F600D25E54 /* RegistrationAssembly.swift */,
+				FF23F01D25CC86FD00D25E54 /* RegistrationRouter.swift */,
+				FF23F02025CC870500D25E54 /* RegistrationInteractor.swift */,
+				FF23F02325CC871500D25E54 /* RegistrationPresenter.swift */,
+				FF23F02625CC872700D25E54 /* RegistrationViewController.swift */,
+				FF23F02925CC874000D25E54 /* RegistrationViewController.xib */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		FF23F02C25CC874B00D25E54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F02D25CC875D00D25E54 /* RegistrationViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF341E0825B0C78A0065AA6F /* CustomTabBar */ = {
@@ -363,8 +469,6 @@
 		FF54EB0D25AD9BED0034F275 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FF54EB1225AD9C4A0034F275 /* ProfileBusinessModel.swift */,
-				FF54EB1525AD9C550034F275 /* ProfileServerModel.swift */,
 				FF54EB0F25AD9C150034F275 /* ProfileViewModel.swift */,
 			);
 			path = Models;
@@ -373,8 +477,6 @@
 		FF966206259A689B00404DB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FF96620B259A696C00404DB9 /* HomeBusinessModel.swift */,
-				FF966207259A68C900404DB9 /* HomeServerModel.swift */,
 				FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */,
 			);
 			path = Models;
@@ -549,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
+				FF23F02A25CC874000D25E54 /* RegistrationViewController.xib in Resources */,
 				FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */,
 				FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* ProfileViewController.xib in Resources */,
@@ -588,9 +691,11 @@
 			files = (
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
+				FF23F02725CC872700D25E54 /* RegistrationViewController.swift in Sources */,
 				FF00472225B7800C0058036B /* CustomColor.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */,
+				FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */,
 				FF09055C25B3698100C0CDD1 /* ProductDetailInteractor.swift in Sources */,
 				FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */,
 				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
@@ -607,6 +712,7 @@
 				FF09055925B3697700C0CDD1 /* ProductDetailPresenter.swift in Sources */,
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
+				FF23F01E25CC86FD00D25E54 /* RegistrationRouter.swift in Sources */,
 				FF966208259A68C900404DB9 /* HomeServerModel.swift in Sources */,
 				FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
@@ -622,11 +728,16 @@
 				FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */,
 				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
+				FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
+				FF23F02125CC870500D25E54 /* RegistrationInteractor.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
 				FF0F0A32257BCD82008A35C7 /* BaseAssembly.swift in Sources */,
+				FF23F02E25CC875D00D25E54 /* RegistrationViewModel.swift in Sources */,
+				FF23EFFF25CC5CD700D25E54 /* UserProvider.swift in Sources */,
 				FF341E2225B0CD2B0065AA6F /* AddProductViewModel.swift in Sources */,
+				FF23F02425CC871500D25E54 /* RegistrationPresenter.swift in Sources */,
 				FF341E1C25B0CCF40065AA6F /* AddProductRouter.swift in Sources */,
 				FF0F0A35257BCD82008A35C7 /* BaseServerModel.swift in Sources */,
 				FF00473125B78E980058036B /* ImagesNames.swift in Sources */,
@@ -639,6 +750,7 @@
 				FFA041AD258FD77A00C6928A /* KnownErrors.swift in Sources */,
 				FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */,
 				FFC7918725854224008BDBDC /* ProfileProvider.swift in Sources */,
+				FF23F01A25CC86F600D25E54 /* RegistrationAssembly.swift in Sources */,
 				FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */,
 				FFC7916325853D68008BDBDC /* ProfileRouter.swift in Sources */,
 				FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */,

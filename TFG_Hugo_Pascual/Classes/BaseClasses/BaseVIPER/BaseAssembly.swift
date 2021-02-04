@@ -24,7 +24,7 @@ class BaseAssembly {
 
 		baseView.basePresenter = basePresenter as? BasePresenterProtocol
 
-		basePresenter.baseView = baseView as? BaseViewProtocol
+		basePresenter.baseView = baseView as? BaseViewControllerProtocol
 		basePresenter.baseRouter = baseRouter as? BaseRouterProtocol
 		basePresenter.baseInteractor = baseInteractor as? BaseInteractorInputProtocol
 

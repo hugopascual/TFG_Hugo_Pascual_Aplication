@@ -10,7 +10,7 @@ import UIKit
 class BasePresenter {
 	
 	// Declared weak for the ARC to destroy them.
-	weak var baseView: BaseViewProtocol?
+	weak var baseView: BaseViewControllerProtocol?
 	var baseRouter: BaseRouterProtocol?
 	var baseInteractor: BaseInteractorInputProtocol?
 	

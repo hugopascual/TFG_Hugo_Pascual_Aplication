@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AddProductViewProtocol: BaseViewProtocol {
+protocol AddProductViewProtocol: BaseViewControllerProtocol {
 	
 }
 

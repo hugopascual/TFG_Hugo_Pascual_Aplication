@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ProductDetailViewProtocol: BaseViewProtocol {
+protocol ProductDetailViewProtocol: BaseViewControllerProtocol {
 	func setViewModel(_ viewModel: Any)
 }
 
