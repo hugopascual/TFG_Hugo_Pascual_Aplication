@@ -10,7 +10,7 @@ import Foundation
 class ProductDetailViewModel: BaseViewModel {
 	
 	//TODO añadir localización
-	var title: String = "ProductDetail"
+	var screenTitle: String = "ProductDetail"
 	
 	required init(businessModel: BaseBusinessModel?) {
 		super.init(businessModel: businessModel)

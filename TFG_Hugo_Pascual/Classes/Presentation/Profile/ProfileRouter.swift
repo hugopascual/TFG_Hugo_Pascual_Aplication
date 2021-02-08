@@ -13,14 +13,17 @@ protocol ProfileRouterProtocol: BaseRouterProtocol {
 
 class ProfileRouter: BaseRouter {
 	
+	// MARK: VIPER Dependencies
 	weak var view: ProfileViewController? { return super.baseView as? ProfileViewController }
+	
+	// MARK: Private Functions
 	
 }
 
+// MARK: Extensions declaration of all extension and implementations of protocols
 extension ProfileRouter: ProfileRouterProtocol {
 	
 	func navigateToHome() {
 		self.pushViewController(HomeAssembly.view(), animated: true)
 	}
-	
 }

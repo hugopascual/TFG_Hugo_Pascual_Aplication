@@ -10,12 +10,13 @@ import UIKit
 
 final class ProductDetailAssembly: BaseAssembly {
 	
-	static func navigationController() -> UINavigationController {
+	static func navigationController(dto: ProductDetailAssemblyDTO? = nil) -> UINavigationController {
 		let navigationController = UINavigationController(rootViewController: view())
 		return navigationController
 	}
 	
-	static func view() -> ProductDetailViewController {
+	static func view(dto: ProductDetailAssemblyDTO? = nil) -> ProductDetailViewController {
+		
 		let view = ProductDetailViewController(nibName: Utils.getXib(.addProduct), bundle: nil)
 		
 		let viper = BaseAssembly.assembly(baseView: view,
@@ -23,6 +24,13 @@ final class ProductDetailAssembly: BaseAssembly {
 										  router: ProductDetailRouter.self,
 										  interactor: ProductDetailInteractor.self)
 		
+		viper.interactor.assemblyDTO = dto
+		
 		return view
 	}
+}
+
+//Struct that represents the transfer object of Registration
+struct ProductDetailAssemblyDTO {
+	
 }

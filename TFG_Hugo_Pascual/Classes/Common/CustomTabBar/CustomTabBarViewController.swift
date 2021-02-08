@@ -15,7 +15,7 @@ enum Tab: Int {
 	case profile
 }
 
-protocol CustomTabBarViewProtocol: BaseViewProtocol {
+protocol CustomTabBarViewControllerProtocol: BaseViewControllerProtocol {
 	func selectTab(_ tab: Tab)
 	func deselectTabs(_ arrayTabs: [Tab])
 }
@@ -101,7 +101,7 @@ class CustomTabBarViewController: BaseViewController {
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
-extension CustomTabBarViewController: CustomTabBarViewProtocol {
+extension CustomTabBarViewController: CustomTabBarViewControllerProtocol {
 
 	func selectTab(_ tab: Tab) {
 		self.selectTabButton(tab)

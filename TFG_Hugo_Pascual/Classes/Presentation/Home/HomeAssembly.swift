@@ -10,12 +10,13 @@ import UIKit
 
 final class HomeAssembly: BaseAssembly {
 	
-	static func navigationController() -> UINavigationController {
-		let navigationController = UINavigationController(rootViewController: view())
+	static func navigationController(dto: HomeAssemblyDTO? = nil) -> UINavigationController {
+		let navigationController = UINavigationController(rootViewController: view(dto: dto))
 		return navigationController
 	}
 	
-	static func view() -> HomeViewController {
+	static func view(dto: HomeAssemblyDTO? = nil) -> HomeViewController {
+		
 		let view = HomeViewController(nibName: Utils.getXib(.home), bundle: nil)
 		
 		let viper = BaseAssembly.assembly(baseView: view,
@@ -23,8 +24,14 @@ final class HomeAssembly: BaseAssembly {
 										  router: HomeRouter.self,
 										  interactor: HomeInteractor.self)
 		
-		viper.interactor.homeProvider = DataAssembly.homeProvider(interactor: viper.interactor)
+		viper.interactor.assemblyDTO = dto
 		
 		return view
 	}
 }
+
+//Struct that represents the transfer object of Registration
+struct HomeAssemblyDTO {
+	
+}
+

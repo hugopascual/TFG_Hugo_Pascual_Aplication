@@ -15,7 +15,7 @@ final class AddProductAssembly: BaseAssembly {
 		return navigationController
 	}
 	
-	static func view() -> AddProductViewController {
+	static func view(dto: AddProductAssemblyDTO? = nil ) -> AddProductViewController {
 		let view = AddProductViewController(nibName: Utils.getXib(.addProduct), bundle: nil)
 		
 		let viper = BaseAssembly.assembly(baseView: view,
@@ -23,6 +23,12 @@ final class AddProductAssembly: BaseAssembly {
 										  router: AddProductRouter.self,
 										  interactor: AddProductInteractor.self)
 		
+		viper.interactor.assemblyDTO = dto
+		
 		return view
 	}
+}
+
+struct AddProductAssemblyDTO {
+	
 }

@@ -12,8 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
                 <outlet property="mainImageView" destination="Vpl-QP-zpj" id="KSV-Js-Tu2"/>
-                <outlet property="serviceButton" destination="l5H-oM-ACi" id="JNn-o0-kDf"/>
-                <outlet property="serviceTextLabel" destination="mbg-Sb-D6V" id="joj-v3-2cw"/>
                 <outlet property="titleLabel" destination="ABL-N0-4mT" id="9AU-w5-tN6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cqm-gX-Acv"/>
             </connections>
@@ -32,41 +30,19 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5H-oM-ACi" userLabel="Service Button">
-                            <rect key="frame" x="166.5" y="140.5" width="81" height="30"/>
-                            <color key="backgroundColor" name="viewPrimary"/>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <state key="normal" title="Call Service">
-                                <color key="titleColor" name="textNormal"/>
-                            </state>
-                            <connections>
-                                <action selector="serviceButtonPressed:" destination="-1" eventType="touchUpInside" id="eJD-S4-Ika"/>
-                            </connections>
-                        </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-QP-zpj" userLabel="Main Image View">
                             <rect key="frame" x="80" y="220.5" width="254" height="301.5"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbg-Sb-D6V" userLabel="Service Text Label">
-                            <rect key="frame" x="40" y="602" width="334" height="0.0"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
-                        <constraint firstItem="mbg-Sb-D6V" firstAttribute="top" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="80" id="9hP-Bf-Bif"/>
-                        <constraint firstItem="l5H-oM-ACi" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="80" id="ABh-Fn-3UA"/>
                         <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="40" id="K6J-vg-Ipw"/>
                         <constraint firstAttribute="trailing" secondItem="Vpl-QP-zpj" secondAttribute="trailing" constant="80" id="NXt-dg-IQD"/>
                         <constraint firstAttribute="bottom" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="296" id="RzM-GF-Uhx"/>
                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="80" id="Y6U-08-ZpQ"/>
-                        <constraint firstItem="l5H-oM-ACi" firstAttribute="centerX" secondItem="9yB-Ny-hkr" secondAttribute="centerX" id="YDj-KM-R7S"/>
                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="160" id="bIg-w8-hLU"/>
                         <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="9yB-Ny-hkr" secondAttribute="top" constant="40" id="i1A-Kv-nnk"/>
                         <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="40" id="m8K-RP-rCe"/>
-                        <constraint firstItem="mbg-Sb-D6V" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="40" id="wgJ-fl-LTg"/>
-                        <constraint firstAttribute="trailing" secondItem="mbg-Sb-D6V" secondAttribute="trailing" constant="40" id="zoO-Ka-kTZ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -82,18 +58,9 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="textNormal">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="viewGeneralBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="viewPrimary">
-            <color red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

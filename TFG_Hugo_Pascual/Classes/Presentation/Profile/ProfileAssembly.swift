@@ -10,12 +10,13 @@ import UIKit
 
 final class ProfileAssembly: BaseAssembly {
 	
-	static func navigationController() -> UINavigationController {
+	static func navigationController(dto: ProfileAssemblyDTO? = nil) -> UINavigationController {
 		let navigationController = UINavigationController(rootViewController: view())
 		return navigationController
 	}
 	
-	static func view() -> ProfileViewController {
+	static func view(dto: ProfileAssemblyDTO? = nil) -> ProfileViewController {
+		
 		let view = ProfileViewController(nibName: Utils.getXib(.profile), bundle: nil)
 		
 		let viper = BaseAssembly.assembly(baseView: view,
@@ -23,12 +24,13 @@ final class ProfileAssembly: BaseAssembly {
 										  router: ProfileRouter.self,
 										  interactor: ProfileInteractor.self)
 		
-		viper.interactor.profileProvider = DataAssembly.profileProvider(interactor: viper.interactor)
+		viper.interactor.assemblyDTO = dto
+		
 		return view
 	}
 }
 
 //Struct that represents the transfer object of ProductDetail
 struct ProfileAssemblyDTO {
-	var name: String
+	
 }

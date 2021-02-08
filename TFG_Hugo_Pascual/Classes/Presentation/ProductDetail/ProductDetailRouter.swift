@@ -13,10 +13,14 @@ protocol ProductDetailRouterProtocol: BaseRouterProtocol {
 
 class ProductDetailRouter: BaseRouter {
 	
+	// MARK: VIPER Dependencies
 	weak var view: ProductDetailViewController? { return super.baseView as? ProductDetailViewController }
 	
+	// MARK: Private Functions
+
 }
 
+// MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductDetailRouter: ProductDetailRouterProtocol {
 
 }

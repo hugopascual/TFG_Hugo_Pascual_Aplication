@@ -72,7 +72,7 @@ class BaseRouter {
 	func changeTabInCustomTabBar(tab: Tab) {
 		
 		guard let navigationViewController = self.baseView?.navigationController else { return }
-		let viewController = navigationViewController.viewControllers.filter { $0 as? CustomTabBarViewProtocol != nil }.first as? CustomTabBarViewController
+		let viewController = navigationViewController.viewControllers.filter { $0 as? CustomTabBarViewControllerProtocol != nil }.first as? CustomTabBarViewController
 		let presenter = viewController?.presenter as? CustomTabBarPresenter
 		presenter?.buttonTabPressed(tab)
 	}

@@ -14,6 +14,8 @@ protocol AddProductInteractorInputProtocol: BaseInteractorInputProtocol {
 class AddProductInteractor: BaseInteractor {
 	
 	weak var presenter: AddProductInteractorOutputProtocol? { return super.basePresenter as? AddProductInteractorOutputProtocol }
+	
+	var assemblyDTO: AddProductAssemblyDTO?
 }
 
 extension AddProductInteractor: AddProductInteractorInputProtocol {

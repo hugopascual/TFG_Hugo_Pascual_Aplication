@@ -22,7 +22,7 @@ protocol CustomTabBarInteractorOutputProtocol: BaseInteractorOutputProtocol {
 class CustomTabBarPresenter: BasePresenter {
 
 	// MARK: VIPER Dependencies
-	weak var view: CustomTabBarViewProtocol? { return super.baseView as? CustomTabBarViewProtocol }
+	weak var view: CustomTabBarViewControllerProtocol? { return super.baseView as? CustomTabBarViewControllerProtocol }
 	var router: CustomTabBarRouterProtocol? { return super.baseRouter as? CustomTabBarRouterProtocol }
 	var interactor: CustomTabBarInteractorInputProtocol? { return super.baseInteractor as? CustomTabBarInteractorInputProtocol }
 	

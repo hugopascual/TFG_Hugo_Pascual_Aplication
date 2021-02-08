@@ -8,34 +8,21 @@
 import Foundation
 
 protocol ProfileInteractorInputProtocol: BaseInteractorInputProtocol {
-	func getProfile()
+	
 }
 
 class ProfileInteractor: BaseInteractor {
 	
+	// MARK: VIPER Dependencies
 	weak var presenter: ProfileInteractorOutputProtocol? { return super.basePresenter as? ProfileInteractorOutputProtocol }
-	var profileProvider: ProfileProviderProtocol?
+	
+	var assemblyDTO: ProfileAssemblyDTO?
+	
+	// MARK: Private Functions
 	
 }
 
+// MARK: Extensions declaration of all extension and implementations of protocols
 extension ProfileInteractor: ProfileInteractorInputProtocol {
-	
-	func getProfile() {
-		let dto = ProfileDTO()
-		
-		self.profileProvider?.getProfile(dto: dto, additionalHeaders: [:], success: { (serverModel) in
-			
-			guard let businessModel = BaseInteractor.parseToBusinessModel(parserModel: ProfileBusinessModel.self, serverModel: serverModel) else { return }
 
-			self.presenter?.didGetProfileInfo(businessModel: businessModel)
-			
-		}, failure: { (error) in
-			
-			error.backendError.type = .unknownError
-			self.presenter?.didNotGetProfileInfo()
-			self.presenter?.genericErrorHappened(error: error)
-			
-		})
-		
-	}
 }

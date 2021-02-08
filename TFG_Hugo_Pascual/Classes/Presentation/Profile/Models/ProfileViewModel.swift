@@ -10,8 +10,7 @@ import Foundation
 class ProfileViewModel: BaseViewModel {
 	
 	//TODO añadir localización
-	var title: String = "Profile"
-	var serviceButtonTitle: String = "Call Service"
+	var screenTitle: String = "Profile"
 	var mainImage: String = ImagesNamesConstants.profile_logo
 	
 	required init(businessModel: BaseBusinessModel?) {

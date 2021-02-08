@@ -8,46 +8,32 @@
 import Foundation
 
 protocol ProfilePresenterProtocol: BasePresenterProtocol {
-	func getProfile()
+	
 }
 
 protocol ProfileInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	func didGetProfileInfo(businessModel: ProfileBusinessModel)
-	func didNotGetProfileInfo()
+
 }
 
 class ProfilePresenter: BasePresenter {
 	
+	// MARK: VIPER Dependencies
 	weak var view: ProfileViewProtocol? { return super.baseView as? ProfileViewProtocol}
 	var interactor: ProfileInteractorInputProtocol? { return super.baseInteractor as? ProfileInteractorInputProtocol}
 	var router: ProfileRouterProtocol? { return super.baseRouter as? ProfileRouterProtocol}
 	
 	var viewModel = ProfileViewModel()
 	
+	// MARK: Private Functions
 	func viewDidLoad() {
 		self.view?.setViewModel(viewModel)
-		self.getProfile()
-	}
-	
-	func setInteractorData(businessModel: ProfileBusinessModel) {
-		self.view?.setServiceData(businessModel: businessModel)
 	}
 }
 
 extension ProfilePresenter: ProfilePresenterProtocol {
-	
-	func getProfile() {
-		self.interactor?.getProfile()
-	}
+
 }
 
 extension ProfilePresenter: ProfileInteractorOutputProtocol {
 	
-	func didGetProfileInfo(businessModel: ProfileBusinessModel) {
-		self.setInteractorData(businessModel: businessModel)
-	}
-	
-	func didNotGetProfileInfo() {
-		
-	}
 }

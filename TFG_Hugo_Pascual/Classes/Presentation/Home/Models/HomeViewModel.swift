@@ -10,9 +10,8 @@ import Foundation
 class HomeViewModel: BaseViewModel {
 	
 	//TODO añadir localización
-	var title: String = "Home"
-	var goToProfileButtonTitle: String = "Go to ProductDetail"
-	var serviceButtonTitle: String = "Call To Service"
+	var screenTitle: String = "Home"
+	var goToProfileButtonTitle: String = "Detalle Producto"
 	var mainImage: String = ImagesNamesConstants.etsit_logo
 	
 	required init(businessModel: BaseBusinessModel?) {

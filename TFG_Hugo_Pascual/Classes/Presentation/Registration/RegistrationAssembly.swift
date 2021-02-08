@@ -1,29 +1,36 @@
-//
+//  
 //  RegistrationAssembly.swift
 //  TFG_Hugo_Pascual
 //
-//  Created by Hugo Pascual Adan on 04/02/2021.
+//  Created by Hugo Pascual Adan on 08/02/2021.
 //
 
 import Foundation
 import UIKit
 
-final class RegistrationAssembly: BaseAssembly {
+class RegistrationAssembly: BaseAssembly {
 	
-	static func navigationController() -> UINavigationController {
-		let navigationController = UINavigationController(rootViewController: view())
+	static func navigationController(dto: RegistrationAssemblyDTO? = nil) -> UINavigationController {
+		let navigationController = UINavigationController(rootViewController: view(dto: dto))
 		return navigationController
 	}
-	
-	static func view() -> RegistrationViewController {
-		let view = RegistrationViewController(nibName: Utils.getXib(.addProduct), bundle: nil)
-		
+
+	static func view(dto: RegistrationAssemblyDTO? = nil) -> RegistrationViewController {
+
+		let view = RegistrationViewController(nibName: Utils.getXib(.registration), bundle: nil)
+
 		let viper = BaseAssembly.assembly(baseView: view,
 										  presenter: RegistrationPresenter.self,
 										  router: RegistrationRouter.self,
 										  interactor: RegistrationInteractor.self)
 		
+		viper.interactor.assemblyDTO = dto
+		
 		return view
 	}
 }
 
+//Struct that represents the transfer object of Registration
+struct RegistrationAssemblyDTO {
+	
+}
