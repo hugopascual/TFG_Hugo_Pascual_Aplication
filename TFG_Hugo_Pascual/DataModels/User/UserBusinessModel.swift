@@ -12,9 +12,6 @@ class UserBusinessModel: BaseBusinessModel {
 	override init() { super.init() }
 	
 	required init(serverModel: BaseServerModel?) {
-		super.init(serverModel: serverModel)
-		
-		guard let serverModel = serverModel as? UserServerModel else { return }
-		
+		super.init(serverModel: serverModel)		
 	}
 }

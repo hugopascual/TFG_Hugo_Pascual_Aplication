@@ -283,11 +283,13 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF20D68825D890DF0040C27E /* Account */,
 				FF341E0E25B0CC6C0065AA6F /* AddProduct */,
 				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
+				FF7D545F25D888B8003588F2 /* Login */,
+				FFC7915B25853D2C008BDBDC /* MyProfile */,
 				FF341E0D25B0CB8B0065AA6F /* ProductDetail */,
+				FF7D547025D888E3003588F2 /* Register */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -325,16 +327,6 @@
 				FF7D547625D88907003588F2 /* RegisterViewModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FF20D68825D890DF0040C27E /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				FF7D545F25D888B8003588F2 /* Login */,
-				FFC7915B25853D2C008BDBDC /* MyProfile */,
-				FF7D547025D888E3003588F2 /* Register */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		FF23F00125CC5E4B00D25E54 /* DataModels */ = {
