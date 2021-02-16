@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +29,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
                         <constraint firstItem="hts-Mc-2gi" firstAttribute="leading" secondItem="gHZ-kH-UYg" secondAttribute="leading" constant="40" id="6EP-wM-sMQ"/>
                         <constraint firstAttribute="trailing" secondItem="hts-Mc-2gi" secondAttribute="trailing" constant="40" id="KNa-3P-T9Z"/>
@@ -38,7 +38,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="viewGeneralBackground"/>
             <constraints>
                 <constraint firstItem="gHZ-kH-UYg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0Zj-38-hz3"/>
                 <constraint firstItem="gHZ-kH-UYg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8Ch-Rs-t9b"/>
@@ -49,8 +49,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="viewGeneralBackground">
+            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

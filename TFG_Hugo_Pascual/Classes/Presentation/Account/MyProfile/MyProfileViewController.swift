@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  MyProfileViewController.swift
 //  TFG_Hugo_Pascual
 //
 //  Created by Hugo Pascual Adan on 12/12/2020.
@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-protocol ProfileViewProtocol: BaseViewControllerProtocol {
+protocol MyProfileViewProtocol: BaseViewControllerProtocol {
 
 }
 
-class ProfileViewController: BaseViewController {
+class MyProfileViewController: BaseViewController {
 	
 	// MARK: VIPER Dependencies
-	var presenter: ProfilePresenterProtocol? { return super.basePresenter as? ProfilePresenterProtocol}
+	var presenter: MyProfilePresenterProtocol? { return super.basePresenter as? MyProfilePresenterProtocol}
 	
 	// MARK: IBOutlets declaration of all controls
 	@IBOutlet weak var titleLabel: UILabel!
@@ -34,10 +34,10 @@ class ProfileViewController: BaseViewController {
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
-extension ProfileViewController: ProfileViewProtocol {
+extension MyProfileViewController: MyProfileViewProtocol {
 	
 	func setViewModel(_ viewModel: Any) {
-		guard let model = viewModel as? ProfileViewModel else { return }
+		guard let model = viewModel as? MyProfileViewModel else { return }
 		self.title = model.screenTitle
 		
 		self.titleLabel.text = self.title

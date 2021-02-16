@@ -15,10 +15,9 @@ struct URLEndpoint {
 		case heroku
 	}
 	
-	static var none = "none"
-	static var profile = "getProfile"
-	static var home = "getHome"
-	
+	static var none = ""
+	static var createUser = "users/create"
+	static var getAllUsers = "users"
 }
 
 extension URLEndpoint {
@@ -27,9 +26,9 @@ extension URLEndpoint {
 		
 		switch urlContext {
 		case .local:
-			return "http://localhost:5000"
+			return "http://localhost:5000/api"
 		case .heroku:
-			return "https://tfg-hugo-pascual-back.herokuapp.com"
+			return "https://tfg-hugo-pascual-back.herokuapp.com/api"
 		}
 	}
 }

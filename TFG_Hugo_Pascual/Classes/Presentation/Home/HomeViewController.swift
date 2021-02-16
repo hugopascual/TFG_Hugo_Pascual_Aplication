@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
 		
 	// MARK: IBOutlets declaration of all controls
 	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var goToProductDetailButton: UIButton!
+	@IBOutlet weak var auxButton: UIButton!
 	@IBOutlet weak var mainImageView: UIImageView!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
@@ -31,8 +31,8 @@ class HomeViewController: BaseViewController {
 	}
 	
 	// MARK: IBActions declaration of all the controls
-	@IBAction func productDetailButtonPressed(_ sender: Any) {
-		presenter?.productDetailButtonPressed()
+	@IBAction func auxButtonPressed(_ sender: Any) {
+		presenter?.auxButtonPressed()
 	}
 	
 	// MARK: Private Functions
@@ -47,7 +47,7 @@ extension HomeViewController: HomeViewProtocol {
 		self.title = model.screenTitle
 		
 		self.titleLabel.text = self.title
-		self.goToProductDetailButton.setTitle(model.goToProfileButtonTitle, for: .normal)
+		self.auxButton.setTitle(model.goToProfileButtonTitle, for: .normal)
 		self.mainImageView.image = UIImage(named: model.mainImage)
 	}
 }

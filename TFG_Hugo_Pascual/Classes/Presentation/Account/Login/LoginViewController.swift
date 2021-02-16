@@ -1,21 +1,21 @@
 //  
-//  RegistrationViewController.swift
+//  LoginViewController.swift
 //  TFG_Hugo_Pascual
 //
-//  Created by Hugo Pascual Adan on 08/02/2021.
+//  Created by Hugo Pascual Adan on 13/02/2021.
 //
 
 import Foundation
 import UIKit
 
-protocol RegistrationViewControllerProtocol: BaseViewControllerProtocol {
+protocol LoginViewControllerProtocol: BaseViewControllerProtocol {
 	
 }
 
-class RegistrationViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
 	
 	// MARK: VIPER Dependencies
-	var presenter: RegistrationPresenterProtocol? { return super.basePresenter as? RegistrationPresenterProtocol }
+	var presenter: LoginPresenterProtocol? { return super.basePresenter as? LoginPresenterProtocol }
 		
 	// MARK: IBOutlets declaration of all controls
 	
@@ -33,11 +33,10 @@ class RegistrationViewController: BaseViewController {
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
-extension RegistrationViewController: RegistrationViewControllerProtocol {
+extension LoginViewController: LoginViewControllerProtocol {
 	
 	func setViewModel(_ viewModel: Any) {
-		guard let model = viewModel as? RegistrationViewModel else { return }
+		guard let model = viewModel as? LoginViewModel else { return }
 		self.title = model.screenTitle
-		
 	}
 }

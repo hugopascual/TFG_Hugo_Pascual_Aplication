@@ -11,7 +11,5 @@ class BaseViewModel {
 
 	init() {}
 	
-	required init(businessModel: BaseBusinessModel?) {
-		
-	}
+	required init(businessModel: BaseBusinessModel?) {}
 }

@@ -74,7 +74,7 @@ class NavigationBarManager {
 		let navBar = self.navigationController?.navigationBar
 		navBar?.backIndicatorImage = backButton.image
 		navBar?.backIndicatorTransitionMaskImage = backButton.image
-		// TODO añadir la localización
+		// TODO añadir localización
 		self.navigationItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
 

@@ -5,11 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyProfileViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
                 <outlet property="mainImageView" destination="Vpl-QP-zpj" id="KSV-Js-Tu2"/>
                 <outlet property="titleLabel" destination="ABL-N0-4mT" id="9AU-w5-tN6"/>
@@ -25,29 +24,31 @@
                     <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
-                            <rect key="frame" x="40" y="40" width="334" height="20.5"/>
+                            <rect key="frame" x="24" y="24" width="366" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-QP-zpj" userLabel="Main Image View">
-                            <rect key="frame" x="80" y="220.5" width="254" height="301.5"/>
+                            <rect key="frame" x="80" y="84.5" width="254" height="254"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="254" id="LXZ-Wv-5Ul"/>
+                                <constraint firstAttribute="width" constant="254" id="Qfr-Sv-OeM"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="40" id="K6J-vg-Ipw"/>
-                        <constraint firstAttribute="trailing" secondItem="Vpl-QP-zpj" secondAttribute="trailing" constant="80" id="NXt-dg-IQD"/>
-                        <constraint firstAttribute="bottom" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="296" id="RzM-GF-Uhx"/>
-                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="80" id="Y6U-08-ZpQ"/>
-                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="160" id="bIg-w8-hLU"/>
-                        <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="9yB-Ny-hkr" secondAttribute="top" constant="40" id="i1A-Kv-nnk"/>
-                        <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="40" id="m8K-RP-rCe"/>
+                        <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="24" id="K6J-vg-Ipw"/>
+                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="centerX" secondItem="ABL-N0-4mT" secondAttribute="centerX" id="LEi-fa-fq7"/>
+                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="40" id="bIg-w8-hLU"/>
+                        <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="9yB-Ny-hkr" secondAttribute="top" constant="24" id="i1A-Kv-nnk"/>
+                        <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="24" id="m8K-RP-rCe"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="viewGeneralBackground"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9yB-Ny-hkr" secondAttribute="trailing" id="M4A-cf-Z8J"/>
                 <constraint firstItem="9yB-Ny-hkr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gOB-7s-VfP"/>
@@ -59,10 +60,7 @@
     </objects>
     <resources>
         <namedColor name="viewGeneralBackground">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

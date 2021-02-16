@@ -24,24 +24,5 @@ class HomeInteractor: BaseInteractor {
 
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension HomeInteractor: HomeInteractorInputProtocol {
-	
-//	func getHome() {
-//
-//		let dto = HomeDTO()
-//
-//		self.homeProvider?.getHome(dto: dto, additionalHeaders: [:], success: { (serverModel) in
-//
-//			guard let businessModel = BaseInteractor.parseToBusinessModel(parserModel: HomeBusinessModel.self, serverModel: serverModel) else { return }
-//
-//			self.presenter?.didGetHomeInfo(businessModel: businessModel)
-//
-//		}, failure: { (error) in
-//
-//			error.backendError.type = .unknownError
-//			self.presenter?.didNotGetHomeInfo()
-//			self.presenter?.genericErrorHappened(error: error)
-//
-//		})
-//
-//	}
+
 }

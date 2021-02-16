@@ -47,7 +47,7 @@ class NetworkManager {
 	func networkType() -> String {
 		
 		return NetworkManager.shared.reachabilityManager?.isReachableOnEthernetOrWiFi ?? false
-			? "connection_type_wifi"//TODO añadir la localización
-			: "connection_type_mobile"//TODO añadir la localización
+			? "connection_type_wifi"//TODO añadir localización
+			: "connection_type_mobile"//TODO añadir localización
 	}
 }

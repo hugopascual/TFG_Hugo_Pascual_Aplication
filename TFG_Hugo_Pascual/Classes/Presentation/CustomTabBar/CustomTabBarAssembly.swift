@@ -29,7 +29,7 @@ final class CustomTabBarAssembly: BaseAssembly {
 		viper.interactor.assemblyDTO = dto
 		viper.router.viewControllers = [HomeAssembly.view(),
 										AddProductAssembly.view(),
-										ProfileAssembly.view()]
+										MyProfileAssembly.view()]
 
 		return view
 	}

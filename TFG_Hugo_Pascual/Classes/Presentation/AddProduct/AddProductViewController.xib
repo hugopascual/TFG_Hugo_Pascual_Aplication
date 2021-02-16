@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,26 +19,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-xV-7K1">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-xV-7K1" userLabel="Content View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*AddProduct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok2-4s-vCk" userLabel="Title Label">
-                            <rect key="frame" x="40" y="40" width="334" height="21"/>
+                            <rect key="frame" x="24" y="24" width="366" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
-                        <constraint firstItem="ok2-4s-vCk" firstAttribute="top" secondItem="FBO-xV-7K1" secondAttribute="top" constant="40" id="Gzr-w9-Cb4"/>
-                        <constraint firstAttribute="trailing" secondItem="ok2-4s-vCk" secondAttribute="trailing" constant="40" id="n1w-47-Xvl"/>
-                        <constraint firstItem="ok2-4s-vCk" firstAttribute="leading" secondItem="FBO-xV-7K1" secondAttribute="leading" constant="40" id="nEx-8w-7jg"/>
+                        <constraint firstItem="ok2-4s-vCk" firstAttribute="top" secondItem="FBO-xV-7K1" secondAttribute="top" constant="24" id="Gzr-w9-Cb4"/>
+                        <constraint firstAttribute="trailing" secondItem="ok2-4s-vCk" secondAttribute="trailing" constant="24" id="n1w-47-Xvl"/>
+                        <constraint firstItem="ok2-4s-vCk" firstAttribute="leading" secondItem="FBO-xV-7K1" secondAttribute="leading" constant="24" id="nEx-8w-7jg"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="viewGeneralBackground"/>
             <constraints>
                 <constraint firstItem="FBO-xV-7K1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A4D-Fb-TcY"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FBO-xV-7K1" secondAttribute="trailing" id="Opc-Gi-4xu"/>
@@ -49,8 +49,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="viewGeneralBackground">
+            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

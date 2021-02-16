@@ -22,7 +22,7 @@ class CustomErrorModel: NSError {
 
 		self.httpClientError = HTTPClientError(code: httpClientError.rawValue)
 		self.backendError = BackendError(code: backendError.rawValue, serverMessage: "")
-		let defaultDomain = "error_generic_description"// TODO añadir la localización
+		let defaultDomain = "error_generic_description"// TODO añadir localización
 		
 		super.init(domain: defaultDomain, code: self.httpClientError.type.rawValue, userInfo: nil)
 
@@ -32,7 +32,7 @@ class CustomErrorModel: NSError {
 		
 		self.httpClientError = HTTPClientError(code: httpCode ?? -1)
 		
-		let defaultDomain = "error_generic_description"// TODO añadir la localización
+		let defaultDomain = "error_generic_description"// TODO añadir localización
 		let defaultCode = self.httpClientError.type.rawValue
 		
 		guard let data = data else {

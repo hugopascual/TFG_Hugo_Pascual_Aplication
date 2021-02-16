@@ -34,4 +34,3 @@ final class HomeAssembly: BaseAssembly {
 struct HomeAssemblyDTO {
 	
 }
-
