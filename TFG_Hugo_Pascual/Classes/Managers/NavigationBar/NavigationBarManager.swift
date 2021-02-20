@@ -59,7 +59,6 @@ class NavigationBarManager {
 		self.setNavigationBar(backgroundImage: model.backgroundImage ?? UIImage(named: "default"), backgroundColor: model.backGroundColor)
 		if model.isTransparent { self.setTransparent(isTransparent: model.isTransparent) }
 		if let title = model.title { self.title = title }
-
 	}
 	
 	func setNavigationBar(backgroundImage: UIImage? = nil, backgroundColor: UIColor? = nil) {

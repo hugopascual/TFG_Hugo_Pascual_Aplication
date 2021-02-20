@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		FF00472225B7800C0058036B /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00472125B7800C0058036B /* CustomColor.swift */; };
 		FF00473125B78E980058036B /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00473025B78E980058036B /* ImagesNames.swift */; };
-		FF09055325B3695C00C0CDD1 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055225B3695C00C0CDD1 /* ProductDetailViewController.swift */; };
-		FF09055625B3696B00C0CDD1 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF09055525B3696B00C0CDD1 /* ProductDetailViewController.xib */; };
-		FF09055925B3697700C0CDD1 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055825B3697700C0CDD1 /* ProductDetailPresenter.swift */; };
-		FF09055C25B3698100C0CDD1 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055B25B3698100C0CDD1 /* ProductDetailInteractor.swift */; };
-		FF09055F25B3699100C0CDD1 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09055E25B3699100C0CDD1 /* ProductDetailRouter.swift */; };
-		FF09056225B3699F00C0CDD1 /* ProductDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09056125B3699F00C0CDD1 /* ProductDetailAssembly.swift */; };
-		FF09056525B369BA00C0CDD1 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09056425B369BA00C0CDD1 /* ProductDetailViewModel.swift */; };
 		FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */; };
 		FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F09EB257BCC8B008A35C7 /* AppDelegate.swift */; };
 		FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */; };
@@ -46,13 +39,6 @@
 		FF23EFFF25CC5CD700D25E54 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
-		FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */; };
-		FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */; };
-		FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */; };
-		FF341E1C25B0CCF40065AA6F /* AddProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1B25B0CCF40065AA6F /* AddProductRouter.swift */; };
-		FF341E1F25B0CD010065AA6F /* AddProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E1E25B0CD010065AA6F /* AddProductAssembly.swift */; };
-		FF341E2225B0CD2B0065AA6F /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF341E2125B0CD2B0065AA6F /* AddProductViewModel.swift */; };
-		FF341E2525B0CD490065AA6F /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF341E2425B0CD490065AA6F /* AddProductViewController.xib */; };
 		FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */; };
 		FF67F32B25DC264D00D9A3EF /* CreateUserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F32A25DC264D00D9A3EF /* CreateUserServerModel.swift */; };
 		FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */; };
@@ -69,13 +55,13 @@
 		FF7D546B25D888C6003588F2 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D546425D888C6003588F2 /* LoginInteractor.swift */; };
 		FF7D546C25D888C6003588F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D546525D888C6003588F2 /* LoginViewModel.swift */; };
 		FF7D546D25D888C6003588F2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7D546625D888C6003588F2 /* LoginViewController.xib */; };
-		FF7D547825D88907003588F2 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547125D88907003588F2 /* RegisterPresenter.swift */; };
-		FF7D547925D88907003588F2 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547225D88907003588F2 /* RegisterRouter.swift */; };
-		FF7D547A25D88907003588F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547325D88907003588F2 /* RegisterViewController.swift */; };
-		FF7D547B25D88907003588F2 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547425D88907003588F2 /* RegisterAssembly.swift */; };
-		FF7D547C25D88907003588F2 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547525D88907003588F2 /* RegisterInteractor.swift */; };
-		FF7D547D25D88907003588F2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547625D88907003588F2 /* RegisterViewModel.swift */; };
-		FF7D547E25D88907003588F2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7D547725D88907003588F2 /* RegisterViewController.xib */; };
+		FF7D547825D88907003588F2 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547125D88907003588F2 /* RegistrationPresenter.swift */; };
+		FF7D547925D88907003588F2 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547225D88907003588F2 /* RegistrationRouter.swift */; };
+		FF7D547A25D88907003588F2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547325D88907003588F2 /* RegistrationViewController.swift */; };
+		FF7D547B25D88907003588F2 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547425D88907003588F2 /* RegistrationAssembly.swift */; };
+		FF7D547C25D88907003588F2 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547525D88907003588F2 /* RegistrationInteractor.swift */; };
+		FF7D547D25D88907003588F2 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D547625D88907003588F2 /* RegistrationViewModel.swift */; };
+		FF7D547E25D88907003588F2 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7D547725D88907003588F2 /* RegistrationViewController.xib */; };
 		FFA041A2258E899F00C6928A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FFA041A1258E899F00C6928A /* Alamofire */; };
 		FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */; };
 		FFA041AD258FD77A00C6928A /* KnownErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041AC258FD77A00C6928A /* KnownErrors.swift */; };
@@ -95,18 +81,18 @@
 		FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */; };
 		FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */; };
 		FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C9225A3CF6300AC3431 /* CustomFont.swift */; };
+		FFF64EFE25E11A04009B7E53 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */; };
+		FFF64EFF25E11A04009B7E53 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */; };
+		FFF64F0025E11A04009B7E53 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */; };
+		FFF64F0125E11A04009B7E53 /* ProductListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */; };
+		FFF64F0225E11A04009B7E53 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */; };
+		FFF64F0325E11A04009B7E53 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */; };
+		FFF64F0425E11A04009B7E53 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF00472125B7800C0058036B /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		FF00473025B78E980058036B /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
-		FF09055225B3695C00C0CDD1 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
-		FF09055525B3696B00C0CDD1 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
-		FF09055825B3697700C0CDD1 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
-		FF09055B25B3698100C0CDD1 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
-		FF09055E25B3699100C0CDD1 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
-		FF09056125B3699F00C0CDD1 /* ProductDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAssembly.swift; sourceTree = "<group>"; };
-		FF09056425B369BA00C0CDD1 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		FF0CEE63259D0E8C00D64514 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FF0F09E8257BCC8B008A35C7 /* TFG_Hugo_Pascual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFG_Hugo_Pascual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0F09EB257BCC8B008A35C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,13 +125,6 @@
 		FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
-		FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
-		FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
-		FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductInteractor.swift; sourceTree = "<group>"; };
-		FF341E1B25B0CCF40065AA6F /* AddProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductRouter.swift; sourceTree = "<group>"; };
-		FF341E1E25B0CD010065AA6F /* AddProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductAssembly.swift; sourceTree = "<group>"; };
-		FF341E2125B0CD2B0065AA6F /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
-		FF341E2425B0CD490065AA6F /* AddProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		FF67F32A25DC264D00D9A3EF /* CreateUserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserServerModel.swift; sourceTree = "<group>"; };
 		FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
@@ -162,13 +141,13 @@
 		FF7D546425D888C6003588F2 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		FF7D546525D888C6003588F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FF7D546625D888C6003588F2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		FF7D547125D88907003588F2 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
-		FF7D547225D88907003588F2 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
-		FF7D547325D88907003588F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		FF7D547425D88907003588F2 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
-		FF7D547525D88907003588F2 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
-		FF7D547625D88907003588F2 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		FF7D547725D88907003588F2 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FF7D547125D88907003588F2 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		FF7D547225D88907003588F2 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		FF7D547325D88907003588F2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FF7D547425D88907003588F2 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		FF7D547525D88907003588F2 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
+		FF7D547625D88907003588F2 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		FF7D547725D88907003588F2 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		FFA041A8258FD71A00C6928A /* CustomErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorModel.swift; sourceTree = "<group>"; };
 		FFA041AC258FD77A00C6928A /* KnownErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownErrors.swift; sourceTree = "<group>"; };
 		FFA041B0258FD7F000C6928A /* ErrorLoginServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoginServerModel.swift; sourceTree = "<group>"; };
@@ -187,6 +166,13 @@
 		FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
 		FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarManager.swift; sourceTree = "<group>"; };
 		FFD47C9225A3CF6300AC3431 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
+		FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListAssembly.swift; sourceTree = "<group>"; };
+		FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,13 +269,12 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF341E0E25B0CC6C0065AA6F /* AddProduct */,
+				FFF64EF625E119F4009B7E53 /* ProductList */,
 				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
-				FF341E0D25B0CB8B0065AA6F /* ProductDetail */,
-				FF7D547025D888E3003588F2 /* Register */,
+				FF7D547025D888E3003588F2 /* Registration */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -324,7 +309,7 @@
 		FF20D68625D88AB90040C27E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FF7D547625D88907003588F2 /* RegisterViewModel.swift */,
+				FF7D547625D88907003588F2 /* RegistrationViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,50 +354,6 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
-		FF341E0D25B0CB8B0065AA6F /* ProductDetail */ = {
-			isa = PBXGroup;
-			children = (
-				FF341E1125B0CC9E0065AA6F /* Models */,
-				FF09056125B3699F00C0CDD1 /* ProductDetailAssembly.swift */,
-				FF09055B25B3698100C0CDD1 /* ProductDetailInteractor.swift */,
-				FF09055825B3697700C0CDD1 /* ProductDetailPresenter.swift */,
-				FF09055E25B3699100C0CDD1 /* ProductDetailRouter.swift */,
-				FF09055225B3695C00C0CDD1 /* ProductDetailViewController.swift */,
-				FF09055525B3696B00C0CDD1 /* ProductDetailViewController.xib */,
-			);
-			path = ProductDetail;
-			sourceTree = "<group>";
-		};
-		FF341E0E25B0CC6C0065AA6F /* AddProduct */ = {
-			isa = PBXGroup;
-			children = (
-				FF341E0F25B0CC880065AA6F /* Models */,
-				FF341E1E25B0CD010065AA6F /* AddProductAssembly.swift */,
-				FF341E1825B0CCEB0065AA6F /* AddProductInteractor.swift */,
-				FF341E1525B0CCE20065AA6F /* AddProductPresenter.swift */,
-				FF341E1B25B0CCF40065AA6F /* AddProductRouter.swift */,
-				FF341E1225B0CCD00065AA6F /* AddProductViewController.swift */,
-				FF341E2425B0CD490065AA6F /* AddProductViewController.xib */,
-			);
-			path = AddProduct;
-			sourceTree = "<group>";
-		};
-		FF341E0F25B0CC880065AA6F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FF341E2125B0CD2B0065AA6F /* AddProductViewModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FF341E1125B0CC9E0065AA6F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FF09056425B369BA00C0CDD1 /* ProductDetailViewModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		FF54EB0D25AD9BED0034F275 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,18 +384,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF7D547025D888E3003588F2 /* Register */ = {
+		FF7D547025D888E3003588F2 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
 				FF20D68625D88AB90040C27E /* Models */,
-				FF7D547425D88907003588F2 /* RegisterAssembly.swift */,
-				FF7D547525D88907003588F2 /* RegisterInteractor.swift */,
-				FF7D547125D88907003588F2 /* RegisterPresenter.swift */,
-				FF7D547225D88907003588F2 /* RegisterRouter.swift */,
-				FF7D547325D88907003588F2 /* RegisterViewController.swift */,
-				FF7D547725D88907003588F2 /* RegisterViewController.xib */,
+				FF7D547425D88907003588F2 /* RegistrationAssembly.swift */,
+				FF7D547525D88907003588F2 /* RegistrationInteractor.swift */,
+				FF7D547125D88907003588F2 /* RegistrationPresenter.swift */,
+				FF7D547225D88907003588F2 /* RegistrationRouter.swift */,
+				FF7D547325D88907003588F2 /* RegistrationViewController.swift */,
+				FF7D547725D88907003588F2 /* RegistrationViewController.xib */,
 			);
-			path = Register;
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		FF966206259A689B00404DB9 /* Models */ = {
@@ -568,6 +509,28 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		FFF64EF625E119F4009B7E53 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				FFF64F0625E11A6E009B7E53 /* Models */,
+				FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */,
+				FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */,
+				FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */,
+				FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */,
+				FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */,
+				FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		FFF64F0625E11A6E009B7E53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,13 +597,12 @@
 			files = (
 				FF7D546D25D888C6003588F2 /* LoginViewController.xib in Resources */,
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
+				FFF64F0425E11A04009B7E53 /* ProductListViewController.xib in Resources */,
 				FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */,
 				FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* MyProfileViewController.xib in Resources */,
-				FF7D547E25D88907003588F2 /* RegisterViewController.xib in Resources */,
-				FF341E2525B0CD490065AA6F /* AddProductViewController.xib in Resources */,
+				FF7D547E25D88907003588F2 /* RegistrationViewController.xib in Resources */,
 				FF0F0ACE257C36E8008A35C7 /* HomeViewController.xib in Resources */,
-				FF09055625B3696B00C0CDD1 /* ProductDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,62 +635,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
+				FFF64F0025E11A04009B7E53 /* ProductListViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
 				FF00472225B7800C0058036B /* CustomColor.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */,
 				FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */,
-				FF09055C25B3698100C0CDD1 /* ProductDetailInteractor.swift in Sources */,
-				FF341E1625B0CCE30065AA6F /* AddProductPresenter.swift in Sources */,
 				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
+				FFF64EFF25E11A04009B7E53 /* ProductListRouter.swift in Sources */,
 				FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */,
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* MyProfileInteractor.swift in Sources */,
+				FFF64F0325E11A04009B7E53 /* ProductListViewModel.swift in Sources */,
 				FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */,
-				FF341E1325B0CCD00065AA6F /* AddProductViewController.swift in Sources */,
 				FF7D546A25D888C6003588F2 /* LoginAssembly.swift in Sources */,
-				FF09056525B369BA00C0CDD1 /* ProductDetailViewModel.swift in Sources */,
 				FFA041B1258FD7F000C6928A /* ErrorLoginServerModel.swift in Sources */,
 				FFC7916625853D7B008BDBDC /* MyProfilePresenter.swift in Sources */,
-				FF09055925B3697700C0CDD1 /* ProductDetailPresenter.swift in Sources */,
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
 				FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
-				FF09056225B3699F00C0CDD1 /* ProductDetailAssembly.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* MyProfileViewController.swift in Sources */,
 				FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */,
 				FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */,
 				FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */,
 				FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */,
-				FF7D547825D88907003588F2 /* RegisterPresenter.swift in Sources */,
+				FF7D547825D88907003588F2 /* RegistrationPresenter.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
 				FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */,
 				FF7D546C25D888C6003588F2 /* LoginViewModel.swift in Sources */,
+				FFF64F0125E11A04009B7E53 /* ProductListAssembly.swift in Sources */,
 				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
-				FF7D547D25D88907003588F2 /* RegisterViewModel.swift in Sources */,
+				FF7D547D25D88907003588F2 /* RegistrationViewModel.swift in Sources */,
 				FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */,
+				FFF64EFE25E11A04009B7E53 /* ProductListPresenter.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
 				FF0F0A32257BCD82008A35C7 /* BaseAssembly.swift in Sources */,
 				FF23EFFF25CC5CD700D25E54 /* UserProvider.swift in Sources */,
-				FF7D547C25D88907003588F2 /* RegisterInteractor.swift in Sources */,
-				FF341E2225B0CD2B0065AA6F /* AddProductViewModel.swift in Sources */,
-				FF341E1C25B0CCF40065AA6F /* AddProductRouter.swift in Sources */,
+				FF7D547C25D88907003588F2 /* RegistrationInteractor.swift in Sources */,
 				FF0F0A35257BCD82008A35C7 /* BaseServerModel.swift in Sources */,
 				FF00473125B78E980058036B /* ImagesNames.swift in Sources */,
-				FF341E1F25B0CD010065AA6F /* AddProductAssembly.swift in Sources */,
-				FF09055325B3695C00C0CDD1 /* ProductDetailViewController.swift in Sources */,
-				FF7D547B25D88907003588F2 /* RegisterAssembly.swift in Sources */,
-				FF09055F25B3699100C0CDD1 /* ProductDetailRouter.swift in Sources */,
+				FF7D547B25D88907003588F2 /* RegistrationAssembly.swift in Sources */,
 				FF0F0A39257BCD82008A35C7 /* BaseProvider.swift in Sources */,
+				FFF64F0225E11A04009B7E53 /* ProductListInteractor.swift in Sources */,
 				FF7D546725D888C6003588F2 /* LoginPresenter.swift in Sources */,
-				FF7D547925D88907003588F2 /* RegisterRouter.swift in Sources */,
-				FF7D547A25D88907003588F2 /* RegisterViewController.swift in Sources */,
+				FF7D547925D88907003588F2 /* RegistrationRouter.swift in Sources */,
+				FF7D547A25D88907003588F2 /* RegistrationViewController.swift in Sources */,
 				FFC7915D25853D43008BDBDC /* MyProfileAssembly.swift in Sources */,
 				FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */,
 				FFA041AD258FD77A00C6928A /* KnownErrors.swift in Sources */,
@@ -736,7 +693,6 @@
 				FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */,
 				FFC7916325853D68008BDBDC /* MyProfileRouter.swift in Sources */,
 				FF7D546825D888C6003588F2 /* LoginRouter.swift in Sources */,
-				FF341E1925B0CCEB0065AA6F /* AddProductInteractor.swift in Sources */,
 				FF7D546B25D888C6003588F2 /* LoginInteractor.swift in Sources */,
 				FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,

@@ -22,7 +22,7 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 		// MARK: Initialice navigation bar
 		self.navigationBarManager = NavigationBarManager(viewController: self)
 		self.navigationBarManager?.delegate = self
-		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: "prueba", backButton: .backArrow, backGroundColor: CustomColor.viewPrimary.uiColor))
+		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: "", backButton: .backArrow, backGroundColor: CustomColor.viewPrimary.uiColor))
 		
 		self.basePresenter?.viewDidLoad()
 	}

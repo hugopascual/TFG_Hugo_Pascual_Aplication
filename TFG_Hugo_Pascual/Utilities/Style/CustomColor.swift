@@ -16,6 +16,7 @@ enum CustomColor: String {
 	// MARK: View Colors
 	case viewGeneralBackground
 	case viewPrimary
+	case viewSecondary
 }
 
 extension CustomColor {
@@ -28,6 +29,8 @@ extension CustomColor {
 		case .viewGeneralBackground:
 			color = self.rawValue
 		case .viewPrimary:
+			color = self.rawValue
+		case .viewSecondary:
 			color = self.rawValue
 		}
 		return UIColor(named: color)!

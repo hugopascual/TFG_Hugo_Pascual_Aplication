@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="8HA-Y3-Nnf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="mmZ-8O-LCZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,34 +26,7 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-Jh-k3d" userLabel="Content View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9P-wm-Tjy">
-                                            <rect key="frame" x="24" y="24" width="366" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dvz-c3-FQv">
-                                            <rect key="frame" x="24" y="82" width="366" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-La-ZPu">
-                                            <rect key="frame" x="184" y="140" width="46" height="30"/>
-                                            <state key="normal" title="Button"/>
-                                        </button>
-                                    </subviews>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>
-                                    <constraints>
-                                        <constraint firstItem="Dvz-c3-FQv" firstAttribute="leading" secondItem="C9P-wm-Tjy" secondAttribute="leading" id="Ehq-4C-xvS"/>
-                                        <constraint firstAttribute="trailing" secondItem="C9P-wm-Tjy" secondAttribute="trailing" constant="24" id="IOW-oI-ZkT"/>
-                                        <constraint firstItem="C9P-wm-Tjy" firstAttribute="top" secondItem="aOk-Jh-k3d" secondAttribute="top" constant="24" id="Jre-iQ-QpE"/>
-                                        <constraint firstItem="JOO-La-ZPu" firstAttribute="centerX" secondItem="Dvz-c3-FQv" secondAttribute="centerX" id="TM2-EG-ZUe"/>
-                                        <constraint firstItem="JOO-La-ZPu" firstAttribute="top" secondItem="Dvz-c3-FQv" secondAttribute="bottom" constant="24" id="agO-cS-7dh"/>
-                                        <constraint firstItem="C9P-wm-Tjy" firstAttribute="leading" secondItem="aOk-Jh-k3d" secondAttribute="leading" constant="24" id="iOL-az-Sgm"/>
-                                        <constraint firstItem="Dvz-c3-FQv" firstAttribute="trailing" secondItem="C9P-wm-Tjy" secondAttribute="trailing" id="jDi-oY-s9S"/>
-                                        <constraint firstItem="Dvz-c3-FQv" firstAttribute="top" secondItem="C9P-wm-Tjy" secondAttribute="bottom" constant="24" id="si5-Zz-Fic"/>
-                                        <constraint firstAttribute="bottom" secondItem="JOO-La-ZPu" secondAttribute="bottom" constant="648" id="u60-Uq-F12"/>
-                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>

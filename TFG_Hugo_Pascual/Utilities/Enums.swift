@@ -14,9 +14,8 @@ public enum XibFile: String {
 	// MARK: Account Views
 	case login = "LoginViewController"
 	case myProfile = "MyProfileViewController"
-	case register = "RegisterViewController"
+	case registration = "RegistrationViewController"
 	
 	// MARK: Aux Views
-	case addProduct = "AddProductViewController"
-	case productDetail = "ProductDetailViewController"
+	case productList = "ProductListViewController"
 }

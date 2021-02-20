@@ -23,27 +23,53 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yB-Ny-hkr" userLabel="Container View">
                     <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
-                            <rect key="frame" x="24" y="24" width="366" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-QP-zpj" userLabel="Main Image View">
-                            <rect key="frame" x="80" y="84.5" width="254" height="254"/>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu8-Hb-gio">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-eS-znm" userLabel="Content View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
+                                            <rect key="frame" x="24" y="24" width="366" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpl-QP-zpj" userLabel="Main Image View">
+                                            <rect key="frame" x="80" y="68.5" width="254" height="254"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="254" id="LXZ-Wv-5Ul"/>
+                                                <constraint firstAttribute="width" constant="254" id="Qfr-Sv-OeM"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="viewGeneralBackground"/>
+                                    <constraints>
+                                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="24" id="8Zb-QH-ZsI"/>
+                                        <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="b2g-eS-znm" secondAttribute="top" constant="24" id="Bfm-Hj-uWv"/>
+                                        <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="b2g-eS-znm" secondAttribute="leading" constant="24" id="Eb0-cd-Z6n"/>
+                                        <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="24" id="oqk-rj-Gr0"/>
+                                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="centerX" secondItem="ABL-N0-4mT" secondAttribute="centerX" id="xNQ-1V-IVG"/>
+                                        <constraint firstAttribute="bottom" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="92" id="xog-X7-Yi2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="254" id="LXZ-Wv-5Ul"/>
-                                <constraint firstAttribute="width" constant="254" id="Qfr-Sv-OeM"/>
+                                <constraint firstAttribute="trailing" secondItem="b2g-eS-znm" secondAttribute="trailing" id="0No-RZ-W2t"/>
+                                <constraint firstItem="b2g-eS-znm" firstAttribute="leading" secondItem="Vu8-Hb-gio" secondAttribute="leading" id="3mx-vr-pwO"/>
+                                <constraint firstAttribute="bottom" secondItem="b2g-eS-znm" secondAttribute="bottom" id="O7d-6z-e6w"/>
+                                <constraint firstItem="b2g-eS-znm" firstAttribute="top" secondItem="Vu8-Hb-gio" secondAttribute="top" id="mFC-TJ-hM3"/>
+                                <constraint firstItem="b2g-eS-znm" firstAttribute="height" secondItem="Vu8-Hb-gio" secondAttribute="height" priority="250" id="nGF-iE-0Ng"/>
+                                <constraint firstItem="b2g-eS-znm" firstAttribute="width" secondItem="Vu8-Hb-gio" secondAttribute="width" id="rnJ-n7-KpD"/>
                             </constraints>
-                        </imageView>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="24" id="K6J-vg-Ipw"/>
-                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="centerX" secondItem="ABL-N0-4mT" secondAttribute="centerX" id="LEi-fa-fq7"/>
-                        <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="40" id="bIg-w8-hLU"/>
-                        <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="9yB-Ny-hkr" secondAttribute="top" constant="24" id="i1A-Kv-nnk"/>
-                        <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" constant="24" id="m8K-RP-rCe"/>
+                        <constraint firstAttribute="bottom" secondItem="Vu8-Hb-gio" secondAttribute="bottom" id="7j6-0z-KXi"/>
+                        <constraint firstAttribute="trailing" secondItem="Vu8-Hb-gio" secondAttribute="trailing" id="NWw-38-JIF"/>
+                        <constraint firstItem="Vu8-Hb-gio" firstAttribute="top" secondItem="9yB-Ny-hkr" secondAttribute="top" id="qCY-X9-afo"/>
+                        <constraint firstItem="Vu8-Hb-gio" firstAttribute="leading" secondItem="9yB-Ny-hkr" secondAttribute="leading" id="tbi-LL-ITS"/>
                     </constraints>
                 </view>
             </subviews>
@@ -60,7 +86,7 @@
     </objects>
     <resources>
         <namedColor name="viewGeneralBackground">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

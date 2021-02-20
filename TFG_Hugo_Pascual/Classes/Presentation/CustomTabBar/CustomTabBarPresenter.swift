@@ -26,7 +26,7 @@ class CustomTabBarPresenter: BasePresenter {
 	var router: CustomTabBarRouterProtocol? { return super.baseRouter as? CustomTabBarRouterProtocol }
 	var interactor: CustomTabBarInteractorInputProtocol? { return super.baseInteractor as? CustomTabBarInteractorInputProtocol }
 	
-	let arrayTabs = [Tab.home, Tab.addProduct, Tab.profile]
+	let arrayTabs = [Tab.home, Tab.productList, Tab.profile]
 	var selectedTab = Tab.home
 	// MARK: Private Functions
 	func viewDidLoad() {
@@ -59,8 +59,8 @@ extension CustomTabBarPresenter: CustomTabBarPresenterProtocol {
 			self.selectTab(.home)
 		case .profile:
 			self.selectTab(.profile)
-		case .addProduct:
-			self.selectTab(.addProduct)
+		case .productList:
+			self.selectTab(.productList)
 		default:
 			break
 		}

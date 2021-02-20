@@ -1,5 +1,5 @@
 //  
-//  RegisterInteractor.swift
+//  RegistrationInteractor.swift
 //  TFG_Hugo_Pascual
 //
 //  Created by Hugo Pascual Adan on 13/02/2021.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol RegisterInteractorInputProtocol: BaseInteractorInputProtocol {
-	func registerUser(dto: UserParamsDTO)
+protocol RegistrationInteractorInputProtocol: BaseInteractorInputProtocol {
+	func registrationUser(dto: UserParamsDTO)
 }
 
-class RegisterInteractor: BaseInteractor {
+class RegistrationInteractor: BaseInteractor {
 	
 	// MARK: VIPER Dependencies
-	weak var presenter: RegisterInteractorOutputProtocol? { return super.basePresenter as? RegisterInteractorOutputProtocol }
+	weak var presenter: RegistrationInteractorOutputProtocol? { return super.basePresenter as? RegistrationInteractorOutputProtocol }
 	
-	var assemblyDTO: RegisterAssemblyDTO?
+	var assemblyDTO: RegistrationAssemblyDTO?
 	var userProvider: UserProvider?
 	
 	// MARK: Private Functions
@@ -24,9 +24,9 @@ class RegisterInteractor: BaseInteractor {
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
-extension RegisterInteractor: RegisterInteractorInputProtocol {
+extension RegistrationInteractor: RegistrationInteractorInputProtocol {
 	
-	func registerUser(dto: UserParamsDTO) {
+	func registrationUser(dto: UserParamsDTO) {
 		self.userProvider?.createUser(dto: dto,
 									  additionalHeaders: [:],
 									  success: {

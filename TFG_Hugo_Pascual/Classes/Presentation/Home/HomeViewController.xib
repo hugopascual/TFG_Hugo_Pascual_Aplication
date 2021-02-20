@@ -29,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="492.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Title Label">
                                             <rect key="frame" x="24" y="24" width="366" height="20.5"/>
@@ -45,8 +45,11 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Aux Button">
-                                            <rect key="frame" x="191" y="356.5" width="32" height="30"/>
+                                            <rect key="frame" x="191" y="356.5" width="32" height="44"/>
                                             <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="UrR-7Y-1cD"/>
+                                            </constraints>
                                             <color key="tintColor" systemColor="labelColor"/>
                                             <state key="normal" title="*Aux">
                                                 <color key="titleColor" name="textNormal"/>
@@ -60,6 +63,7 @@
                                     <constraints>
                                         <constraint firstItem="GAG-8v-wgp" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="24" id="Kn2-u7-puF"/>
                                         <constraint firstItem="wXe-X4-bUI" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="32" id="Tfy-KD-wIB"/>
+                                        <constraint firstAttribute="bottom" secondItem="dG4-MB-Xzj" secondAttribute="bottom" constant="92" id="bS8-9f-wAt"/>
                                         <constraint firstItem="dG4-MB-Xzj" firstAttribute="top" secondItem="wXe-X4-bUI" secondAttribute="bottom" constant="24" id="fkf-Ul-5no"/>
                                         <constraint firstAttribute="trailing" secondItem="GAG-8v-wgp" secondAttribute="trailing" constant="24" id="oML-Bu-OwK"/>
                                         <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="YLn-mT-7p6" secondAttribute="top" constant="24" id="pdl-9a-V96"/>
@@ -78,7 +82,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
                         <constraint firstItem="IhV-zQ-Mii" firstAttribute="top" secondItem="lEL-GF-JH5" secondAttribute="top" id="Ssg-EQ-1UG"/>
                         <constraint firstAttribute="trailing" secondItem="IhV-zQ-Mii" secondAttribute="trailing" id="fWH-A6-aEO"/>
@@ -103,13 +107,10 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="viewGeneralBackground">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

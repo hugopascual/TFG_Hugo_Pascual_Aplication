@@ -11,7 +11,7 @@ import UIKit
 enum Tab: Int {
 	case undefined = -1
 	case home
-	case addProduct
+	case productList
 	case profile
 }
 
@@ -50,7 +50,7 @@ class CustomTabBarViewController: BaseViewController {
 	
 	// MARK: Private Functions
 	func setupView() {
-		self.tabBarView.applyShadowWithCorner(cornerRadius: 28, opacity: 0.13, blur: 32)
+		self.tabBarView.applyShadowWithCorner(cornerRadius: 0, opacity: 0.13, blur: 32)
 	}
 	
 	func selectTabButton(_ tab: Tab) {
@@ -65,8 +65,8 @@ class CustomTabBarViewController: BaseViewController {
 		switch tab {
 		case .home:
 			button.setImage(#imageLiteral(resourceName: "home_icon"), for: .normal)
-		case .addProduct:
-			button.setImage(#imageLiteral(resourceName: "add_product_icon"), for: .normal)
+		case .productList:
+			button.setImage(#imageLiteral(resourceName: "product_list"), for: .normal)
 		case .profile:
 			button.setImage(#imageLiteral(resourceName: "profile_icon"), for: .normal)
 		default:
@@ -81,13 +81,13 @@ class CustomTabBarViewController: BaseViewController {
 		let button = tabBarButtonsArray[tab.rawValue]
 		
 		button.isSelected = false
-		button.backgroundColor = CustomColor.viewGeneralBackground.uiColor
+		button.backgroundColor = CustomColor.viewSecondary.uiColor
 		
 		switch tab {
 		case .home:
 			button.setImage(#imageLiteral(resourceName: "home_icon"), for: .normal)
-		case .addProduct:
-			button.setImage(#imageLiteral(resourceName: "add_product_icon"), for: .normal)
+		case .productList:
+			button.setImage(#imageLiteral(resourceName: "product_list"), for: .normal)
 		case .profile:
 			button.setImage(#imageLiteral(resourceName: "profile_icon"), for: .normal)
 		default:
