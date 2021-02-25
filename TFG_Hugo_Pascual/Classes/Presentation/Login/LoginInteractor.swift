@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginInteractorInputProtocol: BaseInteractorInputProtocol {
-	
+	func loginUser(dto: UserParamsDTO)
 }
 
 class LoginInteractor: BaseInteractor {
@@ -17,6 +17,7 @@ class LoginInteractor: BaseInteractor {
 	weak var presenter: LoginInteractorOutputProtocol? { return super.basePresenter as? LoginInteractorOutputProtocol }
 	
 	var assemblyDTO: LoginAssemblyDTO?
+	var userProvider: UserProviderProtocol?
 	
 	// MARK: Private Functions
 
@@ -25,4 +26,14 @@ class LoginInteractor: BaseInteractor {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension LoginInteractor: LoginInteractorInputProtocol {
 	
+	func loginUser(dto: UserParamsDTO) {
+		self.userProvider?.loginUser(dto: dto,
+									  additionalHeaders: [:],
+									  success: {
+										self.presenter?.loginSucceeded()
+									  },
+									  failure: { error in
+										self.presenter?.loginNotSucceeded(error: error)
+									  })
+	}
 }

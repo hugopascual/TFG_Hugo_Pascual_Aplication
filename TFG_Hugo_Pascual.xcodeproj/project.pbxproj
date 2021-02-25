@@ -22,7 +22,6 @@
 		FF0F0A35257BCD82008A35C7 /* BaseServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A23257BCD82008A35C7 /* BaseServerModel.swift */; };
 		FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A24257BCD82008A35C7 /* BaseBusinessModel.swift */; };
 		FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A25257BCD82008A35C7 /* BaseRouter.swift */; };
-		FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A26257BCD82008A35C7 /* BaseModalViewController.swift */; };
 		FF0F0A39257BCD82008A35C7 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A27257BCD82008A35C7 /* BaseProvider.swift */; };
 		FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0A2E257BCD82008A35C7 /* HomeViewController.swift */; };
 		FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AC1257C1485008A35C7 /* HomePresenter.swift */; };
@@ -108,7 +107,6 @@
 		FF0F0A23257BCD82008A35C7 /* BaseServerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServerModel.swift; sourceTree = "<group>"; };
 		FF0F0A24257BCD82008A35C7 /* BaseBusinessModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBusinessModel.swift; sourceTree = "<group>"; };
 		FF0F0A25257BCD82008A35C7 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
-		FF0F0A26257BCD82008A35C7 /* BaseModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModalViewController.swift; sourceTree = "<group>"; };
 		FF0F0A27257BCD82008A35C7 /* BaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		FF0F0A2E257BCD82008A35C7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0F0AC1257C1485008A35C7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				FF0F0A1B257BCD82008A35C7 /* BaseVIPER */,
-				FF0F0A26257BCD82008A35C7 /* BaseModalViewController.swift */,
 				FF0F0A27257BCD82008A35C7 /* BaseProvider.swift */,
 				FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */,
 			);
@@ -649,7 +646,6 @@
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* MyProfileInteractor.swift in Sources */,
 				FFF64F0325E11A04009B7E53 /* ProductListViewModel.swift in Sources */,
-				FF0F0A38257BCD82008A35C7 /* BaseModalViewController.swift in Sources */,
 				FF7D546A25D888C6003588F2 /* LoginAssembly.swift in Sources */,
 				FFA041B1258FD7F000C6928A /* ErrorLoginServerModel.swift in Sources */,
 				FFC7916625853D7B008BDBDC /* MyProfilePresenter.swift in Sources */,

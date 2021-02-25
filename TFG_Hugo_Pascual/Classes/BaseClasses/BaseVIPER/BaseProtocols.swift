@@ -34,7 +34,7 @@ extension BasePresenterProtocol {
 
 // Protocol used to the Presenter can communicate with Interactor
 protocol BaseInteractorInputProtocol: class {
-
+	//func getUserLoginState() -> UserLoginState
 }
 
 // Protocol used to the Interactor can communicate with Presenter
@@ -43,6 +43,7 @@ protocol BaseInteractorOutputProtocol: class {
 	func asyncTaskStarted()
 	func asyncTaskFinished()
 	func networkErrorHappened()
+	func autologinErrorHappened(loginSuccess: @escaping (() -> Void), tabBarFunctionality: Bool)
 }
 
 extension BaseInteractorOutputProtocol {
@@ -50,10 +51,12 @@ extension BaseInteractorOutputProtocol {
 	func asyncTaskStarted() {}
 	func asyncTaskFinished() {}
 	func networkErrorHappened() {}
+	func autologinErrorHappened(loginSuccess: @escaping (() -> Void), tabBarFunctionality: Bool) {}
 }
 
 // Protocol used to the Presenter can communicate with Router
 protocol BaseRouterProtocol: class {
+//	func navigateToLogin(dto: LoginAssemblyDTO?)
 	func changeTabInCustomTabBar(tab: Tab)
 }
 

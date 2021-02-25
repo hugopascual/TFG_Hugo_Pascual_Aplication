@@ -25,9 +25,6 @@ final class RegistrationViewController: BaseViewController {
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
-	override func initializeUI() {
-		
-	}
 	
 	// MARK: IBActions declaration of all the controls
 	

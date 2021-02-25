@@ -11,6 +11,7 @@ import Foundation
 protocol UserProviderProtocol: BaseProviderProtocol {
 	func getUsers(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping ([UserServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
 	func createUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
+	func loginUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
 }
 
 // MARK: - Class
@@ -42,6 +43,19 @@ class UserProvider: BaseProvider, UserProviderProtocol {
 			failure(error)
 		})
 	}
+	
+	func loginUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+		let providerDTO = UserProviderRequest.loginUser(params: dto)
+		
+		self.genericRequest(dto: providerDTO,
+						 success: { _ in
+			
+								success()
+							
+		}, failure: { (error) in
+			failure(error)
+		})
+	}
 }
 
 // MARK: - Structs
@@ -59,5 +73,9 @@ struct UserProviderRequest {
 	
 	static func createUser(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(), method: .post, urlContext: .heroku, endpoint: URLEndpoint.createUser)
+	}
+	
+	static func loginUser(params: BaseProviderParamsDTO?) -> ProviderDTO {
+		return ProviderDTO(params: params?.encode(), method: .post, urlContext: .local, endpoint: URLEndpoint.loginUser)
 	}
 }

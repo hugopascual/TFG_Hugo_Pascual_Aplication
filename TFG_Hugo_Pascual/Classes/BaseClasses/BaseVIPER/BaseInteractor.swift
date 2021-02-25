@@ -13,9 +13,7 @@ class BaseInteractor: NSObject, BaseProviderDelegate {
 	// Declared weak for the ARC to destroy them.
 	weak var basePresenter: BaseInteractorOutputProtocol?
 	
-	required override init() {
-		
-	}
+	required override init() {}
 	
 	// MARK: BaseProviderDelegate
 	func requestDone(endpoint: String) {
@@ -30,6 +28,105 @@ class BaseInteractor: NSObject, BaseProviderDelegate {
 		self.basePresenter?.networkErrorHappened()
 	}
 
+}
+
+// MARK: Login and Logout
+extension BaseInteractor {
+
+	func removeDataForLogout() {
+
+//		DataPersisterHelper.standard.removeAllKeyChainLoginData()
+	}
+
+	func closeSessionRemindingUser() {
+
+//		let localUserData =  DataPersisterHelper.standard.localUserData
+//		localUserData.loginToken = ""
+//		DataPersisterHelper.standard.localUserData = localUserData
+	}
+
+	// MARK: Login
+	func checkSessionExpiredError(error: CustomErrorModel,
+								  provider: BaseProviderProtocol?,
+								  tabBarFunctionality: Bool,
+								  loginSuccess: @escaping (() -> Void),
+								  loginFailure: (() -> Void)? = nil) -> Bool {
+
+//		guard error.backendError.type == .invalidToken else { return false }
+//
+//		let username = DataPersisterHelper.standard.localUserData.username
+//		let password = DataPersisterHelper.standard.localUserData.password
+//
+//		guard !username.isEmpty, !password.isEmpty else {
+//				self.basePresenter?.autologinErrorHappened(loginSuccess: loginSuccess, tabBarFunctionality: tabBarFunctionality)
+//				return true
+//		}
+
+//		let paramsDTO = LoginDTO(username: username, password: password)
+//		let providerDTO = LoginProviderRequest.getLoginConstants(params: paramsDTO)
+//		provider?.genericRequest(
+//			dto: providerDTO,
+//			success: { serverModel in
+//
+//				guard let serverModel = serverModel as? LoginServerModel,
+//					let businessModel = BaseInteractor.parseToBusinessModel(parserModel: LoginBusinessModel.self, serverModel: serverModel),
+//					let userToken = businessModel.userToken else { return }
+//
+//				self.saveUserData(username: username, password: password, token: userToken, nickname: businessModel.nickname, oid: businessModel.oid)
+//
+//				loginSuccess()
+//		},
+//			failure: { _ in
+//
+//				guard let loginFailure = loginFailure else {
+//
+//					self.basePresenter?.autologinErrorHappened(loginSuccess: loginSuccess, tabBarFunctionality: tabBarFunctionality)
+//					return
+//				}
+//
+//				loginFailure()
+//		})
+		return true
+	}
+
+//	func getUserLoginState() -> UserLoginState {
+//		if !DataPersisterHelper.standard.localUserData.loginToken.isEmpty {
+//			return .logged
+//		} else if DataPersisterHelper.standard.localUserData.isReminded {
+//			return .reminded
+//		} else {
+//			return .noLogged
+//		}
+//	}
+
+//	func getUserToken() -> String {
+//		return DataPersisterHelper.standard.localUserData.loginToken
+//	}
+
+	func saveUserData(username: String? = nil,
+					  password: String? = nil,
+					  token: String? = nil,
+					  nickname: String? = nil,
+					  oid: String? = nil) {
+
+//		let localUserData = DataPersisterHelper.standard.localUserData
+//		if let username = username {
+//			localUserData.username = username
+//		}
+//		if let password = password {
+//			localUserData.password = password
+//		}
+//		if let loginToken = token {
+//			localUserData.loginToken = loginToken
+//		}
+//		if let nickname = nickname {
+//			localUserData.nickname = nickname
+//		}
+//		if let oid = oid {
+//			localUserData.oid = oid
+//		}
+//		DataPersisterHelper.standard.localUserData = localUserData
+	}
 }
 
 // MARK: Parser

@@ -8,11 +8,12 @@
 import Foundation
 
 protocol LoginPresenterProtocol: BasePresenterProtocol {
-	
+	func loginButtonPressed(email: String, password: String)
 }
 
 protocol LoginInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	
+	func loginSucceeded()
+	func loginNotSucceeded(error: CustomErrorModel)
 }
 
 class LoginPresenter: BasePresenter {
@@ -33,8 +34,19 @@ class LoginPresenter: BasePresenter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension LoginPresenter: LoginPresenterProtocol {
 	
+	func loginButtonPressed(email: String, password: String) {
+		let dto = UserParamsDTO(email: email, username: "", password: password)
+		self.interactor?.loginUser(dto: dto)
+	}
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
+	func loginSucceeded() {
+		print("USUARIO LOGADO")
+	}
+	
+	func loginNotSucceeded(error: CustomErrorModel) {
+		print(error)
+	}
 	
 }

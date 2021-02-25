@@ -17,7 +17,7 @@ class RegistrationInteractor: BaseInteractor {
 	weak var presenter: RegistrationInteractorOutputProtocol? { return super.basePresenter as? RegistrationInteractorOutputProtocol }
 	
 	var assemblyDTO: RegistrationAssemblyDTO?
-	var userProvider: UserProvider?
+	var userProvider: UserProviderProtocol?
 	
 	// MARK: Private Functions
 

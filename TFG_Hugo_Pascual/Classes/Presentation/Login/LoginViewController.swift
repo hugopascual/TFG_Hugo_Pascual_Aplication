@@ -18,15 +18,19 @@ final class LoginViewController: BaseViewController {
 	var presenter: LoginPresenterProtocol? { return super.basePresenter as? LoginPresenterProtocol }
 		
 	// MARK: IBOutlets declaration of all controls
+	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var loginButton: UIButton!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
-	override func initializeUI() {
-		
-	}
-	
+
 	// MARK: IBActions declaration of all the controls
+	@IBAction func loginButtonPressed(_ sender: Any) {
+		self.presenter?.loginButtonPressed(email: self.emailTextField.text ?? "",
+										   password: self.passwordTextField.text ?? "")
+	}
 	
 	// MARK: Private Functions
 	

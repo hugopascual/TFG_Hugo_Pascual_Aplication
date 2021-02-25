@@ -20,7 +20,7 @@ class HomeRouter: BaseRouter {
 extension HomeRouter: HomeRouterProtocol {
 	
 	func navigateToAux() {
-		self.pushViewController(RegistrationAssembly.view(), animated: true)
+		self.pushViewController(LoginAssembly.view(), animated: true)
 	}
 	
 }

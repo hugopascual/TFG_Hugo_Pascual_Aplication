@@ -4,14 +4,16 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
-// swiftlint:disable line_length
+// swiftlint:disable vertical_parameter_alignment
 
 import UIKit
 import Alamofire
 
 enum AcceptResponseType {
 	case json
+	case pdf
 	case xml
+	case text
 }
 
 struct ProviderDTO {
@@ -22,7 +24,11 @@ struct ProviderDTO {
 	var endpoint: String
 	var acceptType = AcceptResponseType.json
 	
-	init(params: [String: Any]?, method: HTTPMethod, urlContext: URLEndpoint.BaseURLContext, endpoint: String, acceptType: AcceptResponseType = .json) {
+	init(params: [String: Any]?,
+		 method: HTTPMethod,
+		 urlContext: URLEndpoint.BaseURLContext,
+		 endpoint: String,
+		 acceptType: AcceptResponseType = .json) {
 		
 		self.params = params
 		self.method = method
@@ -31,7 +37,11 @@ struct ProviderDTO {
 		self.acceptType = acceptType
 	}
 	
-	init(arrayParams: [[String: Any]]?, method: HTTPMethod, endpoint: String, urlContext: URLEndpoint.BaseURLContext, acceptType: AcceptResponseType = .json) {
+	init(arrayParams: [[String: Any]]?,
+		 method: HTTPMethod,
+		 endpoint: String,
+		 urlContext: URLEndpoint.BaseURLContext,
+		 acceptType: AcceptResponseType = .json) {
 		
 		self.arrayParams = arrayParams
 		self.method = method
@@ -43,29 +53,25 @@ struct ProviderDTO {
 class BaseProvider: NSObject {
 	
 	var task: URLSessionTask?
+	
 	weak var delegate: BaseProviderDelegate?
-
-	static func parseToServerModel<ServerModel: BaseServerModel>(parserModel: ServerModel.Type, data: Data?) -> ServerModel? {
-		guard let payload = data /* , let model = try? JSONDecoder().decode(parserModel, from: payload) */ else {
+	
+	static func parseToServerModel<Model: BaseServerModel>(parserModel: Model.Type, data: Data?) -> Model? {
+		
+		guard let payload = data, let model = try? JSONDecoder().decode(parserModel, from: payload) else {
 			return nil
-		}
-		var model: ServerModel?
-		do {
-			model = try JSONDecoder().decode(parserModel, from: payload)
-		} catch {
-			print(error)
 		}
 		return model
 	}
-
-	static func parseArrayToServerModel<ServerModel: BaseServerModel>(parserModel: [ServerModel].Type, data: Data?) -> [ServerModel]? {
-
+	
+	static func parseArrayToServerModel<Model: BaseServerModel>(parserModel: [Model].Type, data: Data?) -> [Model]? {
+		
 		guard let payload = data, let arrayModels = try? JSONDecoder().decode(parserModel, from: payload) else {
 			return nil
 		}
 		return arrayModels
 	}
-
+	
 	private var manager: Alamofire.SessionManager!
 	private func createManager(timeout: TimeInterval) -> Alamofire.SessionManager {
 		
@@ -78,10 +84,17 @@ class BaseProvider: NSObject {
 		let manager = Alamofire.SessionManager(configuration: configuration)
 		return manager
 	}
-
+	
 	// MARK: INTERNAL
-	internal func request(dto: ProviderDTO, timeout: TimeInterval = 60, loader: Bool = true, printLog: Bool = true, encrypted: Bool = false, additionalHeader: [String: String] = [:], success: @escaping(Data?) -> Void, failure: @escaping(CustomErrorModel) -> Void) -> URLSessionTask? {
-
+	internal func request(dto: ProviderDTO,
+						  timeout: TimeInterval = 60,
+						  loader: Bool = true,
+						  printLog: Bool = true,
+						  encrypted: Bool = false,
+						  additionalHeader: [String: String] = [:],
+						  success: @escaping(Data?) -> Void,
+						  failure: @escaping(CustomErrorModel) -> Void) -> URLSessionTask? {
+		
 		if !NetworkManager.shared.checkNetwork() {
 			self.delegate?.networkNotReachable(endpoint: dto.endpoint)
 			return nil
@@ -94,19 +107,19 @@ class BaseProvider: NSObject {
 		headers.merge(Utils.getLanguageHeader()) { (_, new) in new}
 		
 		let parameters: [String: Any]? = dto.params
-
-		//se añaden nuevas cabeceras si el parametro tiene elementos
+		
+		// Se añaden nuevas cabeceras si el parametro tiene elementos
 		if !additionalHeader.isEmpty {
 			for item in additionalHeader {
 				headers[item.key] = item.value
 			}
 		}
-
+		
 		// Crea el manager, en la primera ejecución del provider, o cuando el timeout se modifica.
 		if self.manager == nil || self.manager.session.configuration.timeoutIntervalForRequest != timeout {
 			self.manager = self.createManager(timeout: timeout)
 		}
-
+		
 		let request = self.manager.request(endpoint,
 										   method: dto.method,
 										   parameters: parameters,
@@ -114,6 +127,7 @@ class BaseProvider: NSObject {
 										   headers: headers)
 		
 		self.printRequest(dto: dto, endpoint: endpoint, headers: headers, printData: printLog)
+		
 		self.delegate?.requestDone(endpoint: dto.endpoint)
 		
 		request.responseJSON { response in
@@ -144,11 +158,11 @@ class BaseProvider: NSObject {
 				return
 			}
 		}
-
+		
 		self.task = request.task
 		return request.task
 	}
-
+	
 	fileprivate func convertToDictionary(text: String) -> [String: Any]? {
 		if let data = text.data(using: .utf8) {
 			do {
@@ -159,19 +173,19 @@ class BaseProvider: NSObject {
 		}
 		return nil
 	}
-
+	
 	fileprivate func apiResponseError(loader: Bool = true, responseData: Data?, responseStatusCode: Int?, failure: @escaping (CustomErrorModel) -> Void) {
-
+		
 		let errorModel = CustomErrorModel(data: responseData, httpCode: responseStatusCode)
-
+		
 		Utils.print(errorModel)
 		Utils.print("*************************** END ***************************")
-
+		
 		failure(errorModel)
 	}
-
+	
 	fileprivate func manageResponseData(data: Data?, encrypted: Bool, printLog: Bool) -> Data? {
-
+		
 		guard let data = data else { return nil }
 		var decryptedBytes: Data?
 		
@@ -180,87 +194,36 @@ class BaseProvider: NSObject {
 		} else {
 			decryptedBytes = data
 		}
-
+		
 		return decryptedBytes
 	}
-
+	
 	func getEncodingType(dto: ProviderDTO, encrypted: Bool) -> ParameterEncoding {
-
+		
 		switch dto.method {
 		case .get, .delete:
-
+			
 			return CustomGetEncoding(encrypted: encrypted)
-
+			
 		case .post, .put, .patch:
-
+			
 			if encrypted && dto.params != nil {
 				return CustomGetEncoding(params: dto.params, encrypted: encrypted)
 			}
-
+			
 			if !encrypted && dto.params != nil {
 				return JSONEncoding.default
 			}
-
+			
 			if dto.arrayParams != nil {
 				return CustomGetEncoding(arrayParams: dto.arrayParams, encrypted: encrypted)
 			}
-
+			
 		default:
 			return JSONEncoding.default
 		}
-
+		
 		return JSONEncoding.default
-	}
-
-	struct CustomGetEncoding: ParameterEncoding {
-
-		var params: [String: Any]?
-		var arrayParams: [[String: Any]]?
-		var encrypted: Bool
-
-		init(encrypted: Bool) {
-			self.encrypted = encrypted
-		}
-
-		init(params: [String: Any]?, encrypted: Bool) {
-			self.params = params
-			self.encrypted = encrypted
-		}
-
-		init(arrayParams: [[String: Any]]?, encrypted: Bool) {
-			self.arrayParams = arrayParams
-			self.encrypted = encrypted
-		}
-
-		func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
-
-			var request = try URLEncoding().encode(urlRequest, with: parameters)
-
-			if let params = self.params, let httpBody = try? JSONSerialization.data(withJSONObject: params) {
-
-				request.httpBody = self.getHTTPBody(data: httpBody, encrypted: encrypted)
-			}
-
-			if let arrayParams = self.arrayParams, let httpBody = try? JSONSerialization.data(withJSONObject: arrayParams) {
-
-				request.httpBody = self.getHTTPBody(data: httpBody, encrypted: encrypted)
-			}
-
-			request.url = URL(string: request.url!.absoluteString.replacingOccurrences(of: "%5B%5D=", with: "="))
-			return request
-		}
-
-		func getHTTPBody(data: Data, encrypted: Bool) -> Data? {
-
-			if encrypted {
-				// Encriptar
-				Utils.print("PARAMETERS ENCRYPTED: ")
-				Utils.print(String(data: Data(), encoding: .utf8) ?? "")
-				return Data()
-			} else {
-				return data
-			}
-		}
 	}
 	
 	func printRequest(dto: ProviderDTO, endpoint: String, headers: [String: Any], printData: Bool) {
@@ -268,7 +231,7 @@ class BaseProvider: NSObject {
 		let data = dto.arrayParams != nil
 			? try? JSONSerialization.data(withJSONObject: (dto.arrayParams ?? [:]), options: .prettyPrinted)
 			: try? JSONSerialization.data(withJSONObject: (dto.params ?? []), options: .prettyPrinted)
-
+		
 		Utils.print("************* REQUEST BACK **************")
 		Utils.print("Request Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
@@ -298,20 +261,68 @@ class BaseProvider: NSObject {
 	}
 	
 	func printFailureResponse(endpoint: String, data: Data?, decryptedBytes: Data?, printData: Bool) {
-
+		
 		Utils.print("*************************** BACK RESPONSE ***************************")
 		Utils.print("Response Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
-
+		
 		if printData {
 			Utils.print(String(data: data ?? Data(), encoding: .utf8) ?? "")
 			Utils.print(String(data: decryptedBytes ?? Data(), encoding: .utf8) ?? "")
 		}
-	 }
+	}
 	
 	func genericRequest(dto: ProviderDTO, success: @escaping (Any?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
-		
 		_ = self.request(dto: dto, success: success, failure: failure)
 	}
 	
+}
+
+struct CustomGetEncoding: ParameterEncoding {
+	
+	var params: [String: Any]?
+	var arrayParams: [[String: Any]]?
+	var encrypted: Bool
+	
+	init(encrypted: Bool) {
+		self.encrypted = encrypted
+	}
+	
+	init(params: [String: Any]?, encrypted: Bool) {
+		self.params = params
+		self.encrypted = encrypted
+	}
+	
+	init(arrayParams: [[String: Any]]?, encrypted: Bool) {
+		self.arrayParams = arrayParams
+		self.encrypted = encrypted
+	}
+	
+	func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+		
+		var request = try URLEncoding().encode(urlRequest, with: parameters)
+		
+		if let params = self.params, let httpBody = try? JSONSerialization.data(withJSONObject: params) {
+			request.httpBody = self.getHTTPBody(data: httpBody, encrypted: encrypted)
+		}
+		
+		if let arrayParams = self.arrayParams, let httpBody = try? JSONSerialization.data(withJSONObject: arrayParams) {
+			request.httpBody = self.getHTTPBody(data: httpBody, encrypted: encrypted)
+		}
+		
+		request.url = URL(string: request.url!.absoluteString.replacingOccurrences(of: "%5B%5D=", with: "="))
+		return request
+	}
+	
+	func getHTTPBody(data: Data, encrypted: Bool) -> Data? {
+		
+		if encrypted {
+			// Encriptar
+			Utils.print("PARAMETERS ENCRYPTED: ")
+			Utils.print(String(data: Data(), encoding: .utf8) ?? "")
+			return Data()
+		} else {
+			return data
+		}
+	}
 }
