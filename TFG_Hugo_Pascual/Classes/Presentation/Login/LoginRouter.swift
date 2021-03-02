@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LoginRouterProtocol: BaseRouterProtocol {
-	
+	func navigateToRegistration()
+	func backToPreviousScreen(completion: (() -> Swift.Void)?)
 }
 
 class LoginRouter: BaseRouter {
@@ -23,4 +24,11 @@ class LoginRouter: BaseRouter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension LoginRouter: LoginRouterProtocol {
 	
+	func navigateToRegistration() {
+		pushViewController(RegistrationAssembly.view(), animated: true)
+	}
+	
+	func backToPreviousScreen(completion: (() -> Swift.Void)?) {
+		self.dismiss(animated: true, completion: completion)
+	}
 }

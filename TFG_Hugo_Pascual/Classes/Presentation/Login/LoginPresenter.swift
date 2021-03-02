@@ -8,12 +8,13 @@
 import Foundation
 
 protocol LoginPresenterProtocol: BasePresenterProtocol {
-	func loginButtonPressed(email: String, password: String)
+	func registrationButtonPressed()
+	func loginButtonPressed(email: String?, password: String?)
 }
 
 protocol LoginInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	func loginSucceeded()
-	func loginNotSucceeded(error: CustomErrorModel)
+	func loginSuccess()
+	func loginFailure(error: CustomErrorModel)
 }
 
 class LoginPresenter: BasePresenter {
@@ -29,24 +30,35 @@ class LoginPresenter: BasePresenter {
 	func viewDidLoad() {
 		self.view?.setViewModel(self.viewModel)
 	}
+	
+	override func showError(error: CustomErrorModel) {
+		
+	}
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension LoginPresenter: LoginPresenterProtocol {
 	
-	func loginButtonPressed(email: String, password: String) {
-		let dto = UserParamsDTO(email: email, username: "", password: password)
-		self.interactor?.loginUser(dto: dto)
+	func registrationButtonPressed() {
+		self.router?.navigateToRegistration()
+	}
+	
+	func loginButtonPressed(email: String?, password: String?) {
+		self.interactor?.login(email: email ?? "", password: password ?? "")
 	}
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
-	func loginSucceeded() {
-		print("USUARIO LOGADO")
-	}
 	
-	func loginNotSucceeded(error: CustomErrorModel) {
-		print(error)
+	func loginSuccess() {
+		self.router?.backToPreviousScreen(completion: {
+			if let loginSuccess = self.interactor?.assemblyDTO?.loginSuccess {
+				loginSuccess()
+			}
+		})
 	}
-	
+
+	func loginFailure(error: CustomErrorModel) {
+		
+	}
 }

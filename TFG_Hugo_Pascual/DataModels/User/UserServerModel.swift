@@ -8,5 +8,9 @@
 import Foundation
 
 struct UserServerModel: BaseServerModel {
-	
+
+	var email: String
+	var username: String
+	var token: String
+	var id: String
 }

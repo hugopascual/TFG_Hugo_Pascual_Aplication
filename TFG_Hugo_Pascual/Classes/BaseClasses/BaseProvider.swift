@@ -163,6 +163,10 @@ class BaseProvider: NSObject {
 		return request.task
 	}
 	
+	func genericRequest(dto: ProviderDTO, success: @escaping (Any?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+		_ = self.request(dto: dto, success: success, failure: failure)
+	}
+	
 	fileprivate func convertToDictionary(text: String) -> [String: Any]? {
 		if let data = text.data(using: .utf8) {
 			do {
@@ -246,6 +250,7 @@ class BaseProvider: NSObject {
 	}
 	
 	func printSuccessResponse(endpoint: String, data: Data, decryptedBytes: Data?, printData: Bool) {
+		
 		Utils.print("*************************** BACK RESPONSE ***************************")
 		Utils.print("Response Date: \(Date().format(format: "dd/MM/yyyy-HH:mm:ss"))")
 		Utils.print("URL: \(endpoint)")
@@ -256,7 +261,7 @@ class BaseProvider: NSObject {
 				Utils.print(String(data: decryptedBytes ?? Data(), encoding: .utf8) ?? "")
 			}
 		}
-		
+
 		Utils.print("********* END ***********")
 	}
 	
@@ -271,11 +276,6 @@ class BaseProvider: NSObject {
 			Utils.print(String(data: decryptedBytes ?? Data(), encoding: .utf8) ?? "")
 		}
 	}
-	
-	func genericRequest(dto: ProviderDTO, success: @escaping (Any?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
-		_ = self.request(dto: dto, success: success, failure: failure)
-	}
-	
 }
 
 struct CustomGetEncoding: ParameterEncoding {

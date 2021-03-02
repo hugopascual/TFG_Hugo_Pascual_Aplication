@@ -13,6 +13,7 @@
                 <outlet property="emailTextField" destination="C9P-wm-Tjy" id="JBB-7Z-Dxe"/>
                 <outlet property="loginButton" destination="JOO-La-ZPu" id="YDc-5T-hD2"/>
                 <outlet property="passwordTextField" destination="Dvz-c3-FQv" id="0hl-2M-04J"/>
+                <outlet property="registrationButton" destination="lIL-d4-WBW" id="wcf-L0-dKV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8HA-Y3-Nnf"/>
             </connections>
         </placeholder>
@@ -47,6 +48,13 @@
                                                 <action selector="loginButtonPressed:" destination="-1" eventType="touchUpInside" id="FlI-k4-Zxc"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIL-d4-WBW" userLabel="Registration Button">
+                                            <rect key="frame" x="184" y="194" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="registrationButtonPressed:" destination="-1" eventType="touchUpInside" id="XNe-3M-fXX"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>
                                     <constraints>
@@ -54,11 +62,12 @@
                                         <constraint firstAttribute="trailing" secondItem="C9P-wm-Tjy" secondAttribute="trailing" constant="24" id="IOW-oI-ZkT"/>
                                         <constraint firstItem="C9P-wm-Tjy" firstAttribute="top" secondItem="aOk-Jh-k3d" secondAttribute="top" constant="24" id="Jre-iQ-QpE"/>
                                         <constraint firstItem="JOO-La-ZPu" firstAttribute="centerX" secondItem="Dvz-c3-FQv" secondAttribute="centerX" id="TM2-EG-ZUe"/>
-                                        <constraint firstItem="JOO-La-ZPu" firstAttribute="top" secondItem="Dvz-c3-FQv" secondAttribute="bottom" constant="24" id="agO-cS-7dh"/>
                                         <constraint firstItem="C9P-wm-Tjy" firstAttribute="leading" secondItem="aOk-Jh-k3d" secondAttribute="leading" constant="24" id="iOL-az-Sgm"/>
                                         <constraint firstItem="Dvz-c3-FQv" firstAttribute="trailing" secondItem="C9P-wm-Tjy" secondAttribute="trailing" id="jDi-oY-s9S"/>
+                                        <constraint firstItem="lIL-d4-WBW" firstAttribute="top" secondItem="JOO-La-ZPu" secondAttribute="bottom" constant="24" id="oYX-6Q-9ii"/>
                                         <constraint firstItem="Dvz-c3-FQv" firstAttribute="top" secondItem="C9P-wm-Tjy" secondAttribute="bottom" constant="24" id="si5-Zz-Fic"/>
                                         <constraint firstAttribute="bottom" secondItem="JOO-La-ZPu" secondAttribute="bottom" constant="648" id="u60-Uq-F12"/>
+                                        <constraint firstItem="lIL-d4-WBW" firstAttribute="centerX" secondItem="aOk-Jh-k3d" secondAttribute="centerX" id="xnm-th-e3J"/>
                                     </constraints>
                                 </view>
                             </subviews>

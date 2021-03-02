@@ -9,9 +9,20 @@ import Foundation
 
 class UserBusinessModel: BaseBusinessModel {
 	
+	var email: String?
+	var username: String?
+	var token: String?
+	var id: String?
+	
 	override init() { super.init() }
 	
 	required init(serverModel: BaseServerModel?) {
-		super.init(serverModel: serverModel)		
+		super.init(serverModel: serverModel)
+		guard let serverModel = serverModel as? UserServerModel else { return }
+		
+		self.email = serverModel.email
+		self.id = serverModel.id
+		self.username = serverModel.username
+		self.token = serverModel.token
 	}
 }

@@ -25,7 +25,7 @@ class LoginAssembly: BaseAssembly {
 										  interactor: LoginInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
-		viper.interactor.userProvider = UserProvider()
+		viper.interactor.userProvider = DataAssembly.userProvider(interactor: viper.interactor)
 		
 		return view
 	}
@@ -33,5 +33,6 @@ class LoginAssembly: BaseAssembly {
 
 //Struct that represents the transfer object of Login
 struct LoginAssemblyDTO {
-	
+	var loginSuccess: (() -> Void)?
+	var loginClosed: (() -> Void)?
 }

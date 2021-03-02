@@ -39,7 +39,6 @@
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
 		FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */; };
-		FF67F32B25DC264D00D9A3EF /* CreateUserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67F32A25DC264D00D9A3EF /* CreateUserServerModel.swift */; };
 		FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */; };
 		FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */; };
 		FF69EF1225B46B2C00E4981A /* CustomTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */; };
@@ -124,7 +123,6 @@
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
 		FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
-		FF67F32A25DC264D00D9A3EF /* CreateUserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserServerModel.swift; sourceTree = "<group>"; };
 		FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarPresenter.swift; sourceTree = "<group>"; };
 		FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarInteractor.swift; sourceTree = "<group>"; };
@@ -326,7 +324,6 @@
 				FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */,
 				FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */,
 				FF23F00425CC5E9600D25E54 /* UserServerModel.swift */,
-				FF67F32A25DC264D00D9A3EF /* CreateUserServerModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -697,7 +694,6 @@
 				FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */,
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
-				FF67F32B25DC264D00D9A3EF /* CreateUserServerModel.swift in Sources */,
 				FF7D546925D888C6003588F2 /* LoginViewController.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,

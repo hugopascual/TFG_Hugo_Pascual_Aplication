@@ -27,8 +27,7 @@ class RegistrationInteractor: BaseInteractor {
 extension RegistrationInteractor: RegistrationInteractorInputProtocol {
 	
 	func registrationUser(dto: UserParamsDTO) {
-		self.userProvider?.createUser(dto: dto,
-									  additionalHeaders: [:],
+		self.userProvider?.registerUser(dto: dto,
 									  success: {
 										self.presenter?.userCreated()
 									  },

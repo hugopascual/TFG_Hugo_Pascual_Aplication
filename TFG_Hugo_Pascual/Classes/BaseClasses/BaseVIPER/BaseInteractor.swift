@@ -103,27 +103,23 @@ extension BaseInteractor {
 //		return DataPersisterHelper.standard.localUserData.loginToken
 //	}
 
-	func saveUserData(username: String? = nil,
-					  password: String? = nil,
+	func saveUserData(email: String? = nil,
+					  username: String? = nil,
 					  token: String? = nil,
-					  nickname: String? = nil,
-					  oid: String? = nil) {
+					  id: String? = nil) {
 
 //		let localUserData = DataPersisterHelper.standard.localUserData
+//		if let email = email {
+//			localUserData.email = email
+//		}
 //		if let username = username {
 //			localUserData.username = username
 //		}
-//		if let password = password {
-//			localUserData.password = password
+//		if let token = token {
+//			localUserData.token = token
 //		}
-//		if let loginToken = token {
-//			localUserData.loginToken = loginToken
-//		}
-//		if let nickname = nickname {
-//			localUserData.nickname = nickname
-//		}
-//		if let oid = oid {
-//			localUserData.oid = oid
+//		if let id = id {
+//			localUserData.id = id
 //		}
 //		DataPersisterHelper.standard.localUserData = localUserData
 	}

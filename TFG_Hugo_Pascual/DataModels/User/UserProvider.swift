@@ -9,52 +9,39 @@ import Foundation
 
 // MARK: - Protocols
 protocol UserProviderProtocol: BaseProviderProtocol {
-	func getUsers(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping ([UserServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
-	func createUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
-	func loginUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
+	func registerUser(dto: UserParamsDTO, success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
+	func loginUser(dto: UserParamsDTO, success: @escaping (UserServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
 }
 
 // MARK: - Class
 class UserProvider: BaseProvider, UserProviderProtocol {
 	
 	// MARK: Functions
-	func getUsers(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping ([UserServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
-		let providerDTO = UserProviderRequest.getUsers(params: dto)
-		
-		self.genericRequest(dto: providerDTO,
-						 success: { (data) in
-								let serverModel = BaseProvider.parseArrayToServerModel(parserModel: [UserServerModel].self, data: data as? Data)
-								success(serverModel)
-		}, failure: { (error) in
-			failure(error)
-		})
-	}
-	
-	// MARK: Functions
-	func createUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+	func registerUser(dto: UserParamsDTO, success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = UserProviderRequest.createUser(params: dto)
 		
 		self.genericRequest(dto: providerDTO,
-						 success: { _ in
-			
+							success: { _ in
+								
 								success()
-							
-		}, failure: { (error) in
-			failure(error)
-		})
+								
+							}, failure: { (error) in
+								failure(error)
+							})
 	}
 	
-	func loginUser(dto: UserParamsDTO, additionalHeaders: [String: String], success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+	func loginUser(dto: UserParamsDTO, success: @escaping (UserServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = UserProviderRequest.loginUser(params: dto)
 		
-		self.genericRequest(dto: providerDTO,
-						 success: { _ in
-			
-								success()
+		_ = self.request(dto: providerDTO,
+						 success: { data in
 							
-		}, failure: { (error) in
-			failure(error)
-		})
+							let serverModel = BaseProvider.parseToServerModel(parserModel: UserServerModel.self, data: data)
+							success(serverModel)
+							
+						 }, failure: { (error) in
+							failure(error)
+						})
 	}
 }
 
@@ -62,20 +49,23 @@ class UserProvider: BaseProvider, UserProviderProtocol {
 struct UserParamsDTO: BaseProviderParamsDTO {
 	
 	var email: String
-	var username: String
+	var username: String?
 	var password: String
 }
 
 struct UserProviderRequest {
-	static func getUsers(params: BaseProviderParamsDTO?) -> ProviderDTO {
-		return ProviderDTO(params: params?.encode(), method: .get, urlContext: .heroku, endpoint: URLEndpoint.getAllUsers)
-	}
 	
 	static func createUser(params: BaseProviderParamsDTO?) -> ProviderDTO {
-		return ProviderDTO(params: params?.encode(), method: .post, urlContext: .heroku, endpoint: URLEndpoint.createUser)
+		return ProviderDTO(params: params?.encode(),
+						   method: .post,
+						   urlContext: .heroku,
+						   endpoint: URLEndpoint.createUser)
 	}
 	
 	static func loginUser(params: BaseProviderParamsDTO?) -> ProviderDTO {
-		return ProviderDTO(params: params?.encode(), method: .post, urlContext: .local, endpoint: URLEndpoint.loginUser)
+		return ProviderDTO(params: params?.encode(),
+						   method: .post,
+						   urlContext: .local,
+						   endpoint: URLEndpoint.loginUser)
 	}
 }
