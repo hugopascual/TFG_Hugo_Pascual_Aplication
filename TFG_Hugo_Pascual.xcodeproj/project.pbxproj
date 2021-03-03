@@ -403,6 +403,7 @@
 		FFA041A5258FD6DB00C6928A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FFAA245125EEFAC200612AC6 /* DataPersister */,
 				FFA041B6258FD92500C6928A /* NetworkManager */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 			);
@@ -442,6 +443,13 @@
 				FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFAA245125EEFAC200612AC6 /* DataPersister */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataPersister;
 			sourceTree = "<group>";
 		};
 		FFBCCBA225AF526200338D0B /* Extensions */ = {
