@@ -4,6 +4,7 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
+//swiftlint:disable vertical_parameter_alignment
 
 import Foundation
 import UIKit
