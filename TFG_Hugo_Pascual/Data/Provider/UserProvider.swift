@@ -59,7 +59,7 @@ struct UserProviderRequest {
 		return ProviderDTO(params: params?.encode(),
 						   method: .post,
 						   urlContext: .heroku,
-						   endpoint: URLEndpoint.createUser)
+						   endpoint: URLEndpoint.registerUser)
 	}
 	
 	static func loginUser(params: BaseProviderParamsDTO?) -> ProviderDTO {

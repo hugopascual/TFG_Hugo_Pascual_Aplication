@@ -18,8 +18,8 @@ struct URLEndpoint {
 	static var none = ""
 	
 	// MARK: Users
-	static var createUser = "users/registration"
-	static var loginUser = "users/login"
+	static var loginUser = "login"
+	static var registerUser = "users/create"
 }
 
 extension URLEndpoint {
