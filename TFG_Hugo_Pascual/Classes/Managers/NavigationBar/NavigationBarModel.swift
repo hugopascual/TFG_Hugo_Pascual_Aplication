@@ -54,7 +54,7 @@ class NavigationBarButtonItem {
 	enum NavigationButtonType {
 //		case logo
 		case back
-//		case close
+		case close
 //		case cancel
 //		case information
 //		case options
@@ -127,7 +127,7 @@ class NavigationBarButtonItem {
 extension NavigationBarButtonItem {
 //	static var logo = NavigationBarButtonItem(type: .logo, icon: #imageLiteral(resourceName: "etsitLogo"))
 	static var backArrow = NavigationBarButtonItem(type: .back, icon: #imageLiteral(resourceName: "back_arrow_icon"), isEnabled: true)
-//	static var closeButton = NavigationBarButtonItem(type: .close, icon: #imageLiteral(resourceName: "etsitLogo"), isEnabled: true)
+	static var closeButton = NavigationBarButtonItem(type: .close, icon: #imageLiteral(resourceName: "close_icon"), isEnabled: true)
 //  static var cancelButton = NavigationBarButtonItem(type: .cancel, icon: #imageLiteral(resourceName: "etsitLogo"), isEnabled: true)
 //	static var information = NavigationBarButtonItem(type: .information, icon: #imageLiteral(resourceName: "etsitLogo"), isEnabled: true)
 //	static var options = NavigationBarButtonItem(type: .options, icon: #imageLiteral(resourceName: "etsitLogo"), isEnabled: true)

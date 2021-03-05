@@ -4,7 +4,6 @@
 //
 //  Created by Hugo Pascual Adan on 29/11/2020.
 //
-//swiftlint:disable vertical_parameter_alignment
 
 import MapKit
 
@@ -36,14 +35,14 @@ extension BaseInteractor {
 
 	func removeDataForLogout() {
 
-//		DataPersisterHelper.standard.removeAllKeyChainLoginData()
+		DataPersisterHelper.standard.removeAllKeyChainLoginData()
 	}
 
 	func closeSessionRemindingUser() {
 
-//		let localUserData =  DataPersisterHelper.standard.localUserData
-//		localUserData.loginToken = ""
-//		DataPersisterHelper.standard.localUserData = localUserData
+		let localUserData =  DataPersisterHelper.standard.localUserData
+		localUserData.token = ""
+		DataPersisterHelper.standard.localUserData = localUserData
 	}
 
 	// MARK: Login
@@ -90,39 +89,37 @@ extension BaseInteractor {
 		return true
 	}
 
-//	func getUserLoginState() -> UserLoginState {
-//		if !DataPersisterHelper.standard.localUserData.loginToken.isEmpty {
-//			return .logged
-//		} else if DataPersisterHelper.standard.localUserData.isReminded {
-//			return .reminded
-//		} else {
-//			return .noLogged
-//		}
-//	}
+	func getUserLoginState() -> UserLoginState {
+		if !DataPersisterHelper.standard.localUserData.token.isEmpty {
+			return .logged
+		} else {
+			return .noLogged
+		}
+	}
 
-//	func getUserToken() -> String {
-//		return DataPersisterHelper.standard.localUserData.loginToken
-//	}
+	func getUserToken() -> String {
+		return DataPersisterHelper.standard.localUserData.token
+	}
 
 	func saveUserData(email: String? = nil,
 					  username: String? = nil,
 					  token: String? = nil,
 					  id: String? = nil) {
 
-//		let localUserData = DataPersisterHelper.standard.localUserData
-//		if let email = email {
-//			localUserData.email = email
-//		}
-//		if let username = username {
-//			localUserData.username = username
-//		}
-//		if let token = token {
-//			localUserData.token = token
-//		}
-//		if let id = id {
-//			localUserData.id = id
-//		}
-//		DataPersisterHelper.standard.localUserData = localUserData
+		let localUserData = DataPersisterHelper.standard.localUserData
+		if let email = email {
+			localUserData.email = email
+		}
+		if let username = username {
+			localUserData.username = username
+		}
+		if let token = token {
+			localUserData.token = token
+		}
+		if let id = id {
+			localUserData.id = id
+		}
+		DataPersisterHelper.standard.localUserData = localUserData
 	}
 }
 

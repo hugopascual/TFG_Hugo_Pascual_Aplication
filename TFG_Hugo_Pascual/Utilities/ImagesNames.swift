@@ -13,10 +13,11 @@ struct ImagesNamesConstants {
 	// MARK: Common
 	static let etsit_logo: String = "etsit_logo"
 	static let back_arrow_icon: String = "back_arrow_icon"
+	static let close_icon: String = "close_icon"
 	
 	// MARK: TabBar
 	static let home_icon: String = "home_icon"
-	static let add_product_icon: String = "add_product_icon"
+	static let product_list: String = "product_list"
 	static let profile_icon: String = "profile_icon"
 	
 	// MARK: Profile

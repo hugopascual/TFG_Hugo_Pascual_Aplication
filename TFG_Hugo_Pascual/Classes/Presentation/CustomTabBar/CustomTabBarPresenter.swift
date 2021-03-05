@@ -54,16 +54,23 @@ class CustomTabBarPresenter: BasePresenter {
 extension CustomTabBarPresenter: CustomTabBarPresenterProtocol {
 
 	func buttonTabPressed(_ tab: Tab) {
+		
+		let userLoginState = self.interactor?.getUserLoginState() ?? .noLogged
+		let userNotLogged = userLoginState != .logged
 		switch tab {
-		case .home:
-			self.selectTab(.home)
 		case .profile:
-			self.selectTab(.profile)
-		case .productList:
-			self.selectTab(.productList)
+			if userNotLogged {
+				self.router?.navigateToLogin(dto: LoginAssemblyDTO(
+					loginSuccess: {
+						self.selectTab(.profile)
+				}))
+				return
+			}
 		default:
 			break
 		}
+		
+		self.selectTab(tab)
 	}
 }
 

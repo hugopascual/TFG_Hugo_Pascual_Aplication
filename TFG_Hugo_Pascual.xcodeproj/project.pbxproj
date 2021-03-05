@@ -217,7 +217,7 @@
 				FFA041BD258FDB4700C6928A /* Extensions */,
 				FFC791852585417F008BDBDC /* CoreAPP */,
 				FF0F0A19257BCD82008A35C7 /* Classes */,
-				FF23F00125CC5E4B00D25E54 /* DataModels */,
+				FF23F00125CC5E4B00D25E54 /* Data */,
 				FF0F0ADE257C3E65008A35C7 /* Utilities */,
 				FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */,
 				FF0F0A02257BCD23008A35C7 /* LaunchScreen.storyboard */,
@@ -291,9 +291,9 @@
 			children = (
 				FF966206259A689B00404DB9 /* Models */,
 				FF0F0ADB257C3D31008A35C7 /* HomeAssembly.swift */,
+				FF0F0AC7257C149A008A35C7 /* HomeRouter.swift */,
 				FF0F0AC4257C148F008A35C7 /* HomeInteractor.swift */,
 				FF0F0AC1257C1485008A35C7 /* HomePresenter.swift */,
-				FF0F0AC7257C149A008A35C7 /* HomeRouter.swift */,
 				FF0F0A2E257BCD82008A35C7 /* HomeViewController.swift */,
 				FF0F0ACD257C36E8008A35C7 /* HomeViewController.xib */,
 			);
@@ -321,20 +321,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF23F00125CC5E4B00D25E54 /* DataModels */ = {
+		FF23F00125CC5E4B00D25E54 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */,
-				FF23F00325CC5E8400D25E54 /* User */,
+				FF40DBFD25F290E400C7ED28 /* Models */,
+				FF40DBFC25F290DA00C7ED28 /* Provider */,
 			);
-			path = DataModels;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		FF23F00325CC5E8400D25E54 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */,
-				FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */,
 				FF23F00425CC5E9600D25E54 /* UserServerModel.swift */,
 				FF957E1F25F1476E007FC6C8 /* UserLocalPersistedDataBusinessModel.swift */,
 			);
@@ -352,13 +352,29 @@
 			isa = PBXGroup;
 			children = (
 				FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */,
+				FF69EF1425B46B3500E4981A /* CustomTabBarRouter.swift */,
 				FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */,
 				FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */,
-				FF69EF1425B46B3500E4981A /* CustomTabBarRouter.swift */,
 				FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */,
 				FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		FF40DBFC25F290DA00C7ED28 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				FF23EFFE25CC5CD700D25E54 /* UserProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		FF40DBFD25F290E400C7ED28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F00325CC5E8400D25E54 /* User */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF54EB0D25AD9BED0034F275 /* Models */ = {
@@ -374,9 +390,9 @@
 			children = (
 				FF7D546F25D888CB003588F2 /* Models */,
 				FF7D546325D888C6003588F2 /* LoginAssembly.swift */,
+				FF7D546125D888C6003588F2 /* LoginRouter.swift */,
 				FF7D546425D888C6003588F2 /* LoginInteractor.swift */,
 				FF7D546025D888C6003588F2 /* LoginPresenter.swift */,
-				FF7D546125D888C6003588F2 /* LoginRouter.swift */,
 				FF7D546225D888C6003588F2 /* LoginViewController.swift */,
 				FF7D546625D888C6003588F2 /* LoginViewController.xib */,
 			);
@@ -396,9 +412,9 @@
 			children = (
 				FF20D68625D88AB90040C27E /* Models */,
 				FF7D547425D88907003588F2 /* RegistrationAssembly.swift */,
+				FF7D547225D88907003588F2 /* RegistrationRouter.swift */,
 				FF7D547525D88907003588F2 /* RegistrationInteractor.swift */,
 				FF7D547125D88907003588F2 /* RegistrationPresenter.swift */,
-				FF7D547225D88907003588F2 /* RegistrationRouter.swift */,
 				FF7D547325D88907003588F2 /* RegistrationViewController.swift */,
 				FF7D547725D88907003588F2 /* RegistrationViewController.xib */,
 			);
@@ -484,9 +500,9 @@
 			children = (
 				FF54EB0D25AD9BED0034F275 /* Models */,
 				FFC7915C25853D43008BDBDC /* MyProfileAssembly.swift */,
+				FFC7916225853D68008BDBDC /* MyProfileRouter.swift */,
 				FFC7915F25853D54008BDBDC /* MyProfileInteractor.swift */,
 				FFC7916525853D7B008BDBDC /* MyProfilePresenter.swift */,
-				FFC7916225853D68008BDBDC /* MyProfileRouter.swift */,
 				FFC7916825853D8D008BDBDC /* MyProfileViewController.swift */,
 				FFC7916B25853DAB008BDBDC /* MyProfileViewController.xib */,
 			);
@@ -533,9 +549,9 @@
 			children = (
 				FFF64F0625E11A6E009B7E53 /* Models */,
 				FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */,
+				FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */,
 				FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */,
 				FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */,
-				FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */,
 				FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */,
 				FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */,
 			);

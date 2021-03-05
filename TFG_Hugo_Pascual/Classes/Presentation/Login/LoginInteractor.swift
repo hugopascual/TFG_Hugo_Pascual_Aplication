@@ -11,7 +11,6 @@ protocol LoginInteractorInputProtocol: BaseInteractorInputProtocol {
 	func login(email: String, password: String)
 	func getEmail() -> String
 	func getUsername() -> String
-	func getPassword() -> String
 	
 	var assemblyDTO: LoginAssemblyDTO? { get set }
 }
@@ -49,17 +48,10 @@ extension LoginInteractor: LoginInteractorInputProtocol {
 	}
 	
 	func getEmail() -> String {
-//		return DataPersisterHelper.standard.localUserData.nickname
-		return ""
+		return DataPersisterHelper.standard.localUserData.email
 	}
 	
 	func getUsername() -> String {
-//		return DataPersisterHelper.standard.localUserData.username
-		return ""
-	}
-	
-	func getPassword() -> String {
-//		return DataPersisterHelper.standard.localUserData.password
-		return ""
+		return DataPersisterHelper.standard.localUserData.username
 	}
 }

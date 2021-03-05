@@ -26,6 +26,9 @@ final class LoginViewController: BaseViewController {
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(arrayLeftButtons: [.closeButton], backGroundColor: CustomColor.viewPrimary.uiColor, isTransparent: true))
+	}
 
 	// MARK: IBActions declaration of all the controls
 	@IBAction func loginButtonPressed(_ sender: Any) {
@@ -33,11 +36,13 @@ final class LoginViewController: BaseViewController {
 	}
 	
 	@IBAction func registrationButtonPressed(_ sender: Any) {
-		
+		self.presenter?.registrationButtonPressed()
 	}
 	
 	// MARK: Private Functions
-	
+	override func navigationBarLeftButtonItemPressed(buttonItem: NavigationBarButtonItem) {
+		self.presenter?.buttonClosePressed()
+	}
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols

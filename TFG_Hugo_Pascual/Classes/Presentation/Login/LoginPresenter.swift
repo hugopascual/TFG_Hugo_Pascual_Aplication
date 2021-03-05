@@ -10,6 +10,7 @@ import Foundation
 protocol LoginPresenterProtocol: BasePresenterProtocol {
 	func registrationButtonPressed()
 	func loginButtonPressed(email: String?, password: String?)
+	func buttonClosePressed()
 }
 
 protocol LoginInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -45,6 +46,14 @@ extension LoginPresenter: LoginPresenterProtocol {
 	
 	func loginButtonPressed(email: String?, password: String?) {
 		self.interactor?.login(email: email ?? "", password: password ?? "")
+	}
+	
+	func buttonClosePressed() {
+		self.router?.backToPreviousScreen(completion: {
+			if let loginClosed = self.interactor?.assemblyDTO?.loginClosed {
+				loginClosed()
+			}
+		})
 	}
 }
 

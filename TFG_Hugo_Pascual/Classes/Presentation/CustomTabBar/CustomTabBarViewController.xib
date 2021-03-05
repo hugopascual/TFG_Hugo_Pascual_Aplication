@@ -63,7 +63,7 @@
                                                         <constraint firstAttribute="height" constant="56" id="f02-dK-d5b"/>
                                                         <constraint firstAttribute="width" constant="56" id="yir-90-KcU"/>
                                                     </constraints>
-                                                    <state key="normal" image="add_product_icon"/>
+                                                    <state key="normal" image="product_list"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="tag">
                                                             <integer key="value" value="1"/>
@@ -138,8 +138,8 @@
         </view>
     </objects>
     <resources>
-        <image name="add_product_icon" width="24" height="25"/>
         <image name="home_icon" width="28" height="28"/>
+        <image name="product_list" width="24" height="24"/>
         <image name="profile_icon" width="28" height="28"/>
         <namedColor name="TextHighlighted">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

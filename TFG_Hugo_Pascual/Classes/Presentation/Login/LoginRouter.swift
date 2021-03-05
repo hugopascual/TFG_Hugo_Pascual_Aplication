@@ -25,7 +25,7 @@ class LoginRouter: BaseRouter {
 extension LoginRouter: LoginRouterProtocol {
 	
 	func navigateToRegistration() {
-		pushViewController(RegistrationAssembly.view(), animated: true)
+		self.pushViewController(RegistrationAssembly.view(), animated: true)
 	}
 	
 	func backToPreviousScreen(completion: (() -> Swift.Void)?) {

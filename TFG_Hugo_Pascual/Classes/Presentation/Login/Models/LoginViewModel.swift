@@ -10,7 +10,7 @@ import Foundation
 final class LoginViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "Login"
-	var loginButtonTitle: String = "Iniciar sesión"
-	var registrationButtonTittle: String = "¿No tienes una cuenta? Regístrate"
+	var screenTitle: String = "ÇLogin"
+	var loginButtonTitle: String = "ÇIniciar sesión"
+	var registrationButtonTittle: String = "Ç¿No tienes una cuenta? Regístrate"
 }

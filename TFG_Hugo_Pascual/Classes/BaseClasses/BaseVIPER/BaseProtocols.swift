@@ -11,6 +11,8 @@ import UIKit
 // Protocol used to the Presenter can communicate with View
 protocol BaseViewControllerProtocol: class {
 	func setViewModel(_ viewModel: Any)
+	func showLoading(fullScreen: Bool)
+	func hideLoading()
 }
 
 extension BaseViewControllerProtocol {
@@ -34,7 +36,7 @@ extension BasePresenterProtocol {
 
 // Protocol used to the Presenter can communicate with Interactor
 protocol BaseInteractorInputProtocol: class {
-	//func getUserLoginState() -> UserLoginState
+	func getUserLoginState() -> UserLoginState
 }
 
 // Protocol used to the Interactor can communicate with Presenter
@@ -56,7 +58,7 @@ extension BaseInteractorOutputProtocol {
 
 // Protocol used to the Presenter can communicate with Router
 protocol BaseRouterProtocol: class {
-//	func navigateToLogin(dto: LoginAssemblyDTO?)
+	func navigateToLogin(dto: LoginAssemblyDTO?)
 	func changeTabInCustomTabBar(tab: Tab)
 }
 

@@ -19,3 +19,8 @@ public enum XibFile: String {
 	// MARK: Aux Views
 	case productList = "ProductListViewController"
 }
+
+enum UserLoginState {
+	case logged
+	case noLogged
+}

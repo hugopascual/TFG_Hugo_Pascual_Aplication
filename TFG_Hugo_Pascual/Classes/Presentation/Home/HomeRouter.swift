@@ -1,5 +1,5 @@
 //
-//  HomeROuter.swift
+//  HomeRouter.swift
 //  TFG_Hugo_Pascual
 //
 //  Created by Hugo Pascual Adan on 05/12/2020.
@@ -20,7 +20,7 @@ class HomeRouter: BaseRouter {
 extension HomeRouter: HomeRouterProtocol {
 	
 	func navigateToAux() {
-		self.pushViewController(LoginAssembly.view(), animated: true)
+		
 	}
 	
 }

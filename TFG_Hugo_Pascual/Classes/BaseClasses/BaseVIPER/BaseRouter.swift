@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import MapKit
 
 //Base class, it is declared as a good practice to implement new functions in a global way in the application.
 class BaseRouter {
@@ -25,22 +24,22 @@ class BaseRouter {
 		window?.makeKeyAndVisible()
 	}
 	
-//	static func logout(viewController: UIViewController? = nil) {
-//
-//		if let navigationController = (UIApplication.shared.windows.first?.rootViewController as? UINavigationController) {
-//
-//			navigationController.popToRootViewController(animated: true)
-//
-//		} else {
-//
-//			if let viewController = viewController {
-//				viewController.dismiss(animated: true, completion: nil)
-//			}
-//			if let navigationController = (UIApplication.shared.windows.first?.rootViewController as? UINavigationController) {
-//				navigationController.popToRootViewController(animated: true)
-//			}
-//		}
-//	}
+	static func logout(viewController: UIViewController? = nil) {
+
+		if let navigationController = (UIApplication.shared.windows.first?.rootViewController as? UINavigationController) {
+
+			navigationController.popToRootViewController(animated: true)
+
+		} else {
+
+			if let viewController = viewController {
+				viewController.dismiss(animated: true, completion: nil)
+			}
+			if let navigationController = (UIApplication.shared.windows.first?.rootViewController as? UINavigationController) {
+				navigationController.popToRootViewController(animated: true)
+			}
+		}
+	}
 	
 	// MARK: PRIVATE BASE
 	internal func rootViewController(_ viewControllerToPresent: UIViewController, animated flag: Bool) {
@@ -86,11 +85,11 @@ class BaseRouter {
 		self.baseView?.presentingViewController?.dismiss(animated: flag, completion: completion)
 	}
 	
-//	func navigateToLogin(dto: LoginAssemblyDTO?) {
-//		self.delegate?.navigationDone()
-//
-//		self.present(LoginAssembly.navigationController(loginAssemblyDTO: dto), animated: true)
-//	}
+	func navigateToLogin(dto: LoginAssemblyDTO?) {
+		self.delegate?.navigationDone()
+
+		self.present(LoginAssembly.navigationController(dto: dto), animated: true)
+	}
 	
 	func changeTabInCustomTabBar(tab: Tab) {
 		
