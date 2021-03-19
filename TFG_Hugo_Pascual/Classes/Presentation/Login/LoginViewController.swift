@@ -32,7 +32,7 @@ final class LoginViewController: BaseViewController {
 
 	// MARK: IBActions declaration of all the controls
 	@IBAction func loginButtonPressed(_ sender: Any) {
-		
+		self.presenter?.loginButtonPressed(email: emailTextField.text, password: passwordTextField.text)
 	}
 	
 	@IBAction func registrationButtonPressed(_ sender: Any) {

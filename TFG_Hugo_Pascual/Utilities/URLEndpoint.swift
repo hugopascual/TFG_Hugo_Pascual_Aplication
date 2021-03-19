@@ -11,15 +11,14 @@ import UIKit
 struct URLEndpoint {
 	
 	public enum BaseURLContext {
-		case local
-		case heroku
+		case backend
 	}
 	
 	static var none = ""
 	
 	// MARK: Users
 	static var loginUser = "login"
-	static var registerUser = "users/create"
+	static var registerUser = "users/registration"
 }
 
 extension URLEndpoint {
@@ -27,9 +26,8 @@ extension URLEndpoint {
 	static func getBaseUrl(urlContext: BaseURLContext) -> String {
 		
 		switch urlContext {
-		case .local:
-			return "http://localhost:5000/api"
-		case .heroku:
+		case .backend:
+//			return "http://localhost:5000/api"
 			return "https://tfg-hugo-pascual-back.herokuapp.com/api"
 		}
 	}
