@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegistrationRouterProtocol: BaseRouterProtocol {
-
+	func backToRoot()
 }
 
 class RegistrationRouter: BaseRouter {
@@ -23,4 +23,7 @@ class RegistrationRouter: BaseRouter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension RegistrationRouter: RegistrationRouterProtocol {
 
+	func backToRoot() {
+		self.popToRootViewController()
+	}
 }

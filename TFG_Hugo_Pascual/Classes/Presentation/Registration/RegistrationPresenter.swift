@@ -43,7 +43,7 @@ extension RegistrationPresenter: RegistrationPresenterProtocol {
 extension RegistrationPresenter: RegistrationInteractorOutputProtocol {
 	
 	func userCreated() {
-		
+		self.router?.backToRoot()
 	}
 	
 	func userNotCreated(error: CustomErrorModel) {
