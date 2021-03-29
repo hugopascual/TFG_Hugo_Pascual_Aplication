@@ -28,8 +28,8 @@ extension URLEndpoint {
 		
 		switch urlContext {
 		case .backend:
-			return "http://localhost:5000/api"
-//			return "https://tfg-hugo-pascual-back.herokuapp.com/api"
+//			return "http://localhost:5000/api"
+			return "https://tfg-hugo-pascual-back.herokuapp.com/api"
 		}
 	}
 }
