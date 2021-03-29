@@ -20,7 +20,7 @@ protocol CustomTabBarInteractorOutputProtocol: BaseInteractorOutputProtocol {
 }
 
 class CustomTabBarPresenter: BasePresenter {
-
+	
 	// MARK: VIPER Dependencies
 	weak var view: CustomTabBarViewControllerProtocol? { return super.baseView as? CustomTabBarViewControllerProtocol }
 	var router: CustomTabBarRouterProtocol? { return super.baseRouter as? CustomTabBarRouterProtocol }
@@ -28,12 +28,14 @@ class CustomTabBarPresenter: BasePresenter {
 	
 	let arrayTabs = [Tab.home, Tab.productList, Tab.profile]
 	var selectedTab = Tab.home
+	
 	// MARK: Private Functions
 	func viewDidLoad() {
 		self.selectTab(.home)
 	}
 	
 	func viewWillAppear(isFirstPresentation: Bool) {
+		
 	}
 	
 	private func selectTab(_ tab: Tab) {
@@ -52,25 +54,28 @@ class CustomTabBarPresenter: BasePresenter {
 }
 
 extension CustomTabBarPresenter: CustomTabBarPresenterProtocol {
-
+	
 	func buttonTabPressed(_ tab: Tab) {
 		
-		let userLoginState = self.interactor?.getUserLoginState() ?? .noLogged
-		let userNotLogged = userLoginState != .logged
 		switch tab {
+		case .home:
+			self.selectTab(tab)
+		case .productList:
+			self.selectTab(tab)
 		case .profile:
-			if userNotLogged {
+			self.interactor?.checkLoginState(
+			checkSessionExpiresSuccess: {
+				self.selectTab(tab)
+			},
+			checkSessionExpiresFailure: {
 				self.router?.navigateToLogin(dto: LoginAssemblyDTO(
-					loginSuccess: {
-						self.selectTab(.profile)
-				}))
-				return
-			}
-		default:
+												loginSuccess: {
+													self.selectTab(.profile)
+												}))
+			})
+		case .undefined:
 			break
 		}
-		
-		self.selectTab(tab)
 	}
 }
 

@@ -27,7 +27,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-eS-znm" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
                                             <rect key="frame" x="24" y="24" width="366" height="20.5"/>
@@ -42,15 +42,27 @@
                                                 <constraint firstAttribute="width" constant="254" id="Qfr-Sv-OeM"/>
                                             </constraints>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAf-Z7-RTm" userLabel="Logout Button">
+                                            <rect key="frame" x="183" y="346.5" width="48" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="b3G-Zo-9jS"/>
+                                            </constraints>
+                                            <state key="normal" title="Logout"/>
+                                            <connections>
+                                                <action selector="logoutButtonPressed:" destination="-1" eventType="touchUpInside" id="awJ-WH-0tP"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>
                                     <constraints>
                                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="24" id="8Zb-QH-ZsI"/>
                                         <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="b2g-eS-znm" secondAttribute="top" constant="24" id="Bfm-Hj-uWv"/>
                                         <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="b2g-eS-znm" secondAttribute="leading" constant="24" id="Eb0-cd-Z6n"/>
+                                        <constraint firstItem="iAf-Z7-RTm" firstAttribute="top" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="24" id="Vij-Hc-GFn"/>
+                                        <constraint firstAttribute="bottom" secondItem="iAf-Z7-RTm" secondAttribute="bottom" constant="24" id="dff-9x-JdN"/>
                                         <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="24" id="oqk-rj-Gr0"/>
                                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="centerX" secondItem="ABL-N0-4mT" secondAttribute="centerX" id="xNQ-1V-IVG"/>
-                                        <constraint firstAttribute="bottom" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="92" id="xog-X7-Yi2"/>
+                                        <constraint firstItem="iAf-Z7-RTm" firstAttribute="centerX" secondItem="b2g-eS-znm" secondAttribute="centerX" id="yoC-Sf-ped"/>
                                     </constraints>
                                 </view>
                             </subviews>

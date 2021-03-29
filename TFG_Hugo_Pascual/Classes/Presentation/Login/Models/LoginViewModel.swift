@@ -11,6 +11,10 @@ final class LoginViewModel: BaseViewModel {
 
 	//TODO añadir localización
 	var screenTitle: String = "ÇLogin"
+	
+	var emailPlaceholder: String = "çCorreo electrónico"
+	var passworPlaceholder: String = "çContraseña"
+	
 	var loginButtonTitle: String = "ÇIniciar sesión"
 	var registrationButtonTittle: String = "Ç¿No tienes una cuenta? Regístrate"
 }

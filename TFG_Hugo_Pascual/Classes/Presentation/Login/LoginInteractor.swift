@@ -20,8 +20,9 @@ class LoginInteractor: BaseInteractor {
 	// MARK: VIPER Dependencies
 	weak var presenter: LoginInteractorOutputProtocol? { return super.basePresenter as? LoginInteractorOutputProtocol }
 	
+	var loginProvider: LoginProviderProtocol?
+	
 	var assemblyDTO: LoginAssemblyDTO?
-	var userProvider: UserProviderProtocol?
 	
 	// MARK: Private Functions
 
@@ -32,9 +33,9 @@ extension LoginInteractor: LoginInteractorInputProtocol {
 
 	func login(email: String, password: String) {
 		
-		let dto = UserParamsDTO(email: email, password: password)
+		let dto = LoginUserDTO(params: LoginUserDTO.Params(email: email, password: password))
 		
-		self.userProvider?.loginUser(
+		self.loginProvider?.loginUser(
 			dto: dto,
 			success: { serverModel in
 				

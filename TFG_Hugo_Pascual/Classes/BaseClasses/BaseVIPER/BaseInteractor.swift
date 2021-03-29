@@ -13,6 +13,8 @@ class BaseInteractor: NSObject, BaseProviderDelegate {
 	// Declared weak for the ARC to destroy them.
 	weak var basePresenter: BaseInteractorOutputProtocol?
 	
+	var checkSessionProvider: CheckSessionProviderProtocol?
+	
 	required override init() {}
 	
 	// MARK: BaseProviderDelegate
@@ -36,13 +38,6 @@ extension BaseInteractor {
 	func removeDataForLogout() {
 
 		DataPersisterHelper.standard.removeAllKeyChainLoginData()
-	}
-
-	func closeSessionRemindingUser() {
-
-		let localUserData =  DataPersisterHelper.standard.localUserData
-		localUserData.token = ""
-		DataPersisterHelper.standard.localUserData = localUserData
 	}
 
 	// MARK: Login
@@ -88,13 +83,19 @@ extension BaseInteractor {
 //		})
 		return true
 	}
-
-	func getUserLoginState() -> UserLoginState {
-		if !DataPersisterHelper.standard.localUserData.token.isEmpty {
-			return .logged
-		} else {
-			return .noLogged
-		}
+	
+	func checkLoginState(checkSessionExpiresSuccess: @escaping (() -> Void),
+						 checkSessionExpiresFailure: @escaping (() -> Void)) {
+		
+		let providerDTO = CheckSessionProviderRequest.checkSession()
+		
+		_ = self.checkSessionProvider?.genericRequest(
+			dto: providerDTO,
+			success: { _ in
+				checkSessionExpiresSuccess()
+			}, failure: { _ in
+				checkSessionExpiresFailure()
+			})
 	}
 
 	func getUserToken() -> String {

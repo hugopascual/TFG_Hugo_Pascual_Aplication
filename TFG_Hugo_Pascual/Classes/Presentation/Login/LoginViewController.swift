@@ -52,6 +52,9 @@ extension LoginViewController: LoginViewControllerProtocol {
 		guard let model = viewModel as? LoginViewModel else { return }
 		self.title = model.screenTitle
 		
+		self.emailTextField.placeholder = model.emailPlaceholder
+		self.passwordTextField.placeholder = model.passworPlaceholder
+		
 		self.loginButton.setTitle(model.loginButtonTitle, for: .normal)
 		self.registrationButton.setTitle(model.registrationButtonTittle, for: .normal)
 	}

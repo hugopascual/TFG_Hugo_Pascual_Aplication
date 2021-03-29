@@ -22,5 +22,5 @@ class CustomTabBarInteractor: BaseInteractor {
 }
 
 extension CustomTabBarInteractor: CustomTabBarInteractorInputProtocol {
-	
+
 }

@@ -9,11 +9,11 @@ import Foundation
 
 class UserLocalPersistedDataBusinessModel: Codable {
 	
+	var id = ""
 	var email = ""
 	var username = ""
 	var token = ""
-	var id = ""
-
+	
 	init() { }
 
 }

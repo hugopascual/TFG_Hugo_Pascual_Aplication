@@ -24,6 +24,6 @@ class MyProfileRouter: BaseRouter {
 extension MyProfileRouter: MyProfileRouterProtocol {
 	
 	func navigateToHome() {
-		self.pushViewController(HomeAssembly.view(), animated: true)
+		self.pushViewController(CustomTabBarAssembly.view(), animated: true)
 	}
 }

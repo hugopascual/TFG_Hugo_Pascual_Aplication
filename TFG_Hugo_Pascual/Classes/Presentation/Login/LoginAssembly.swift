@@ -25,7 +25,7 @@ class LoginAssembly: BaseAssembly {
 										  interactor: LoginInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
-		viper.interactor.userProvider = DataAssembly.userProvider(interactor: viper.interactor)
+		viper.interactor.loginProvider = DataAssembly.loginProvider(interactor: viper.interactor)
 		
 		return view
 	}

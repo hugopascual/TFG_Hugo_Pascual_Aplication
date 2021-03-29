@@ -36,7 +36,7 @@ extension BasePresenterProtocol {
 
 // Protocol used to the Presenter can communicate with Interactor
 protocol BaseInteractorInputProtocol: class {
-	func getUserLoginState() -> UserLoginState
+	func checkLoginState(checkSessionExpiresSuccess: @escaping (() -> Void), checkSessionExpiresFailure: @escaping (() -> Void))
 }
 
 // Protocol used to the Interactor can communicate with Presenter

@@ -32,6 +32,7 @@ class BaseAssembly {
 		baseRouter.delegate = basePresenter
 
 		baseInteractor.basePresenter = basePresenter as? BaseInteractorOutputProtocol
+		baseInteractor.checkSessionProvider = DataAssembly.checkSessionProvider(interactor: baseInteractor)
 		return (baseView, basePresenter, baseInteractor, baseRouter)
 	}
 }

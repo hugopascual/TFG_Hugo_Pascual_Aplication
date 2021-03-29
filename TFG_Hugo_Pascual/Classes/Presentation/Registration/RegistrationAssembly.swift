@@ -25,7 +25,7 @@ class RegistrationAssembly: BaseAssembly {
 										  interactor: RegistrationInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
-		viper.interactor.userProvider = UserProvider()
+		viper.interactor.registerProvider = DataAssembly.registerProvider(interactor: viper.interactor)
 		
 		return view
 	}

@@ -35,7 +35,7 @@ class RegistrationPresenter: BasePresenter {
 extension RegistrationPresenter: RegistrationPresenterProtocol {
 	
 	func registrationButtonPressed(email: String, username: String, password: String) {
-		let dto = UserParamsDTO(email: email, username: username, password: password)
+		let dto = RegisterUserDTO(params: RegisterUserDTO.Params(email: email, username: username, password: password))
 		self.interactor?.registrationUser(dto: dto)
 	}
 }

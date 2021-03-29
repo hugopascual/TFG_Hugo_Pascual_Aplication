@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RegistrationInteractorInputProtocol: BaseInteractorInputProtocol {
-	func registrationUser(dto: UserParamsDTO)
+	func registrationUser(dto: RegisterUserDTO)
 }
 
 class RegistrationInteractor: BaseInteractor {
@@ -16,8 +16,9 @@ class RegistrationInteractor: BaseInteractor {
 	// MARK: VIPER Dependencies
 	weak var presenter: RegistrationInteractorOutputProtocol? { return super.basePresenter as? RegistrationInteractorOutputProtocol }
 	
-	var assemblyDTO: RegistrationAssemblyDTO?
-	var userProvider: UserProviderProtocol?
+	var registerProvider: RegisterProviderProtocol?
+	
+	var assemblyDTO: RegistrationAssemblyDTO??
 	
 	// MARK: Private Functions
 
@@ -26,8 +27,8 @@ class RegistrationInteractor: BaseInteractor {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension RegistrationInteractor: RegistrationInteractorInputProtocol {
 	
-	func registrationUser(dto: UserParamsDTO) {
-		self.userProvider?.registerUser(dto: dto,
+	func registrationUser(dto: RegisterUserDTO) {
+		self.registerProvider?.registerUser(dto: dto,
 									  success: {
 										self.presenter?.userCreated()
 									  },

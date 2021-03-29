@@ -44,5 +44,9 @@ extension RegistrationViewController: RegistrationViewControllerProtocol {
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? RegistrationViewModel else { return }
 		self.title = model.screenTitle
+		
+		self.emailTextField.placeholder = model.emailPlaceholder
+		self.usernameTextField.placeholder = model.usernamePlaceholder
+		self.passwordTextField.placeholder = model.passworPlaceholder
 	}
 }

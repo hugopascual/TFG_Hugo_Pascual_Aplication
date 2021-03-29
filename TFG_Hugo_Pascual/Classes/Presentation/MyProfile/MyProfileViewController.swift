@@ -31,6 +31,9 @@ class MyProfileViewController: BaseViewController {
 	
 	// MARK: IBActions declaration of all the controls
 	
+	@IBAction func logoutButtonPressed(_ sender: Any) {
+		self.presenter?.logoutButtonPressed()
+	}
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols

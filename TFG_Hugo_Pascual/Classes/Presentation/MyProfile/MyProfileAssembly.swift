@@ -25,6 +25,7 @@ final class MyProfileAssembly: BaseAssembly {
 										  interactor: MyProfileInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
+		viper.interactor.loginProvider = DataAssembly.loginProvider(interactor: viper.interactor)
 		
 		return view
 	}
