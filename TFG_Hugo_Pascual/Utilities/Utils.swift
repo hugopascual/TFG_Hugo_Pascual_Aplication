@@ -9,7 +9,7 @@ import Foundation
 
 class Utils {
 	
-	static func getXib(_ xibFile: XibFile) -> String {
+	static func getXib(_ xibFile: NibName) -> String {
 		return xibFile.rawValue
 	}
 	static func getLanguageHeader() -> [String: String] {

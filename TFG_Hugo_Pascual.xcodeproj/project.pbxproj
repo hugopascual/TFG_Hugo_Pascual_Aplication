@@ -38,7 +38,10 @@
 		FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
+		FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */; };
+		FF3889BB262F55D900B53F4F /* ProductsHomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */; };
 		FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */; };
+		FF667DE926316CA0004D3D2F /* NibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF667DE826316CA0004D3D2F /* NibName.swift */; };
 		FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */; };
 		FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */; };
 		FF69EF1225B46B2C00E4981A /* CustomTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */; };
@@ -84,16 +87,16 @@
 		FFC7916625853D7B008BDBDC /* MyProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916525853D7B008BDBDC /* MyProfilePresenter.swift */; };
 		FFC7916925853D8D008BDBDC /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7916825853D8D008BDBDC /* MyProfileViewController.swift */; };
 		FFC7916C25853DAB008BDBDC /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7916B25853DAB008BDBDC /* MyProfileViewController.xib */; };
+		FFD2FC41262F503200212505 /* ProductsHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3A262F503200212505 /* ProductsHomePresenter.swift */; };
+		FFD2FC42262F503200212505 /* ProductsHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3B262F503200212505 /* ProductsHomeRouter.swift */; };
+		FFD2FC43262F503200212505 /* ProductsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3C262F503200212505 /* ProductsHomeViewController.swift */; };
+		FFD2FC44262F503200212505 /* ProductsHomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3D262F503200212505 /* ProductsHomeAssembly.swift */; };
+		FFD2FC45262F503200212505 /* ProductsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3E262F503200212505 /* ProductsHomeInteractor.swift */; };
+		FFD2FC46262F503200212505 /* ProductsHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2FC3F262F503200212505 /* ProductsHomeViewModel.swift */; };
+		FFD2FC47262F503200212505 /* ProductsHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD2FC40262F503200212505 /* ProductsHomeViewController.xib */; };
 		FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */; };
 		FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */; };
 		FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C9225A3CF6300AC3431 /* CustomFont.swift */; };
-		FFF64EFE25E11A04009B7E53 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */; };
-		FFF64EFF25E11A04009B7E53 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */; };
-		FFF64F0025E11A04009B7E53 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */; };
-		FFF64F0125E11A04009B7E53 /* ProductListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */; };
-		FFF64F0225E11A04009B7E53 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */; };
-		FFF64F0325E11A04009B7E53 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */; };
-		FFF64F0425E11A04009B7E53 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,7 +133,10 @@
 		FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
+		FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeCategoryCell.swift; sourceTree = "<group>"; };
+		FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsHomeCategoryCell.xib; sourceTree = "<group>"; };
 		FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
+		FF667DE826316CA0004D3D2F /* NibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibName.swift; sourceTree = "<group>"; };
 		FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		FF69EF0E25B46B2400E4981A /* CustomTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarPresenter.swift; sourceTree = "<group>"; };
 		FF69EF1125B46B2C00E4981A /* CustomTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarInteractor.swift; sourceTree = "<group>"; };
@@ -174,16 +180,16 @@
 		FFC7916525853D7B008BDBDC /* MyProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfilePresenter.swift; sourceTree = "<group>"; };
 		FFC7916825853D8D008BDBDC /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		FFC7916B25853DAB008BDBDC /* MyProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
+		FFD2FC3A262F503200212505 /* ProductsHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomePresenter.swift; sourceTree = "<group>"; };
+		FFD2FC3B262F503200212505 /* ProductsHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeRouter.swift; sourceTree = "<group>"; };
+		FFD2FC3C262F503200212505 /* ProductsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeViewController.swift; sourceTree = "<group>"; };
+		FFD2FC3D262F503200212505 /* ProductsHomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeAssembly.swift; sourceTree = "<group>"; };
+		FFD2FC3E262F503200212505 /* ProductsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeInteractor.swift; sourceTree = "<group>"; };
+		FFD2FC3F262F503200212505 /* ProductsHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeViewModel.swift; sourceTree = "<group>"; };
+		FFD2FC40262F503200212505 /* ProductsHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsHomeViewController.xib; sourceTree = "<group>"; };
 		FFD47C8725A25A5700AC3431 /* NavigationBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
 		FFD47C8B25A25A6600AC3431 /* NavigationBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarManager.swift; sourceTree = "<group>"; };
 		FFD47C9225A3CF6300AC3431 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
-		FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
-		FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
-		FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
-		FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListAssembly.swift; sourceTree = "<group>"; };
-		FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
-		FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +224,6 @@
 		FF0F09EA257BCC8B008A35C7 /* TFG_Hugo_Pascual */ = {
 			isa = PBXGroup;
 			children = (
-				FFA041BD258FDB4700C6928A /* Extensions */,
 				FFC791852585417F008BDBDC /* CoreAPP */,
 				FF0F0A19257BCD82008A35C7 /* Classes */,
 				FF23F00125CC5E4B00D25E54 /* Data */,
@@ -281,10 +286,10 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FFF64EF625E119F4009B7E53 /* ProductList */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
+				FFD2FC39262F502600212505 /* ProductsHome */,
 				FF7D547025D888E3003588F2 /* Registration */,
 			);
 			path = Presentation;
@@ -309,6 +314,7 @@
 			children = (
 				FFD47C8E25A3CD2500AC3431 /* Style */,
 				FFA041B3258FD8EC00C6928A /* Constants.swift */,
+				FF667DE826316CA0004D3D2F /* NibName.swift */,
 				FF0F0ADF257C3E76008A35C7 /* Enums.swift */,
 				FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */,
 				FF0F0AE3257C3F88008A35C7 /* Utils.swift */,
@@ -356,6 +362,7 @@
 		FF23F00D25CC604300D25E54 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FF3889B6262F556900B53F4F /* Custom Cells */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -371,6 +378,22 @@
 				FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		FF3889B6262F556900B53F4F /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		FF3889B7262F558600B53F4F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */,
+				FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FF40DBFC25F290DA00C7ED28 /* Provider */ = {
@@ -480,14 +503,6 @@
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
-		FFA041BD258FDB4700C6928A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		FFAA245125EEFAC200612AC6 /* DataPersister */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +517,7 @@
 		FFBCCBA225AF526200338D0B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */,
 				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
 				FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */,
 				FF69EF2425B5E28500E4981A /* UIView+Extension.swift */,
@@ -532,6 +548,29 @@
 			path = CoreAPP;
 			sourceTree = "<group>";
 		};
+		FFD2FC39262F502600212505 /* ProductsHome */ = {
+			isa = PBXGroup;
+			children = (
+				FF3889B7262F558600B53F4F /* Cells */,
+				FFD2FC49262F503800212505 /* Models */,
+				FFD2FC3D262F503200212505 /* ProductsHomeAssembly.swift */,
+				FFD2FC3B262F503200212505 /* ProductsHomeRouter.swift */,
+				FFD2FC3E262F503200212505 /* ProductsHomeInteractor.swift */,
+				FFD2FC3A262F503200212505 /* ProductsHomePresenter.swift */,
+				FFD2FC3C262F503200212505 /* ProductsHomeViewController.swift */,
+				FFD2FC40262F503200212505 /* ProductsHomeViewController.xib */,
+			);
+			path = ProductsHome;
+			sourceTree = "<group>";
+		};
+		FFD2FC49262F503800212505 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2FC3F262F503200212505 /* ProductsHomeViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FFD47C8525A25A1F00AC3431 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,28 +595,6 @@
 				FFD47C9225A3CF6300AC3431 /* CustomFont.swift */,
 			);
 			path = Style;
-			sourceTree = "<group>";
-		};
-		FFF64EF625E119F4009B7E53 /* ProductList */ = {
-			isa = PBXGroup;
-			children = (
-				FFF64F0625E11A6E009B7E53 /* Models */,
-				FFF64EFA25E11A04009B7E53 /* ProductListAssembly.swift */,
-				FFF64EF825E11A04009B7E53 /* ProductListRouter.swift */,
-				FFF64EFB25E11A04009B7E53 /* ProductListInteractor.swift */,
-				FFF64EF725E11A04009B7E53 /* ProductListPresenter.swift */,
-				FFF64EF925E11A04009B7E53 /* ProductListViewController.swift */,
-				FFF64EFD25E11A04009B7E53 /* ProductListViewController.xib */,
-			);
-			path = ProductList;
-			sourceTree = "<group>";
-		};
-		FFF64F0625E11A6E009B7E53 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FFF64EFC25E11A04009B7E53 /* ProductListViewModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,8 +665,9 @@
 			files = (
 				FF7D546D25D888C6003588F2 /* LoginViewController.xib in Resources */,
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
-				FFF64F0425E11A04009B7E53 /* ProductListViewController.xib in Resources */,
+				FFD2FC47262F503200212505 /* ProductsHomeViewController.xib in Resources */,
 				FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */,
+				FF3889BB262F55D900B53F4F /* ProductsHomeCategoryCell.xib in Resources */,
 				FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* MyProfileViewController.xib in Resources */,
 				FF7D547E25D88907003588F2 /* RegistrationViewController.xib in Resources */,
@@ -686,7 +704,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0F0A2F257BCD82008A35C7 /* BaseViewController.swift in Sources */,
-				FFF64F0025E11A04009B7E53 /* ProductListViewController.swift in Sources */,
 				FFA041B4258FD8EC00C6928A /* Constants.swift in Sources */,
 				FF00472225B7800C0058036B /* CustomColor.swift in Sources */,
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
@@ -694,12 +711,10 @@
 				FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */,
 				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
-				FFF64EFF25E11A04009B7E53 /* ProductListRouter.swift in Sources */,
 				FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */,
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
 				FFC7916025853D54008BDBDC /* MyProfileInteractor.swift in Sources */,
-				FFF64F0325E11A04009B7E53 /* ProductListViewModel.swift in Sources */,
 				FF7D546A25D888C6003588F2 /* LoginAssembly.swift in Sources */,
 				FFA041B1258FD7F000C6928A /* ErrorLoginServerModel.swift in Sources */,
 				FFC7916625853D7B008BDBDC /* MyProfilePresenter.swift in Sources */,
@@ -712,21 +727,23 @@
 				FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */,
 				FF957E1825F143F6007FC6C8 /* DPKeyChain.swift in Sources */,
 				FFA041A9258FD71A00C6928A /* CustomErrorModel.swift in Sources */,
+				FFD2FC46262F503200212505 /* ProductsHomeViewModel.swift in Sources */,
 				FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */,
 				FF7D547825D88907003588F2 /* RegistrationPresenter.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
+				FF667DE926316CA0004D3D2F /* NibName.swift in Sources */,
 				FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */,
 				FF7D546C25D888C6003588F2 /* LoginViewModel.swift in Sources */,
-				FFF64F0125E11A04009B7E53 /* ProductListAssembly.swift in Sources */,
+				FFD2FC41262F503200212505 /* ProductsHomePresenter.swift in Sources */,
 				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
 				FF7D547D25D88907003588F2 /* RegistrationViewModel.swift in Sources */,
 				FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */,
 				FFC0BF752612392D004F90CD /* CheckSessionProvider.swift in Sources */,
-				FFF64EFE25E11A04009B7E53 /* ProductListPresenter.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
+				FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */,
 				FF0F0A32257BCD82008A35C7 /* BaseAssembly.swift in Sources */,
 				FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */,
 				FF7D547C25D88907003588F2 /* RegistrationInteractor.swift in Sources */,
@@ -735,9 +752,9 @@
 				FF00473125B78E980058036B /* ImagesNames.swift in Sources */,
 				FF7D547B25D88907003588F2 /* RegistrationAssembly.swift in Sources */,
 				FF0F0A39257BCD82008A35C7 /* BaseProvider.swift in Sources */,
-				FFF64F0225E11A04009B7E53 /* ProductListInteractor.swift in Sources */,
 				FF7D546725D888C6003588F2 /* LoginPresenter.swift in Sources */,
 				FF7D547925D88907003588F2 /* RegistrationRouter.swift in Sources */,
+				FFD2FC42262F503200212505 /* ProductsHomeRouter.swift in Sources */,
 				FF7D547A25D88907003588F2 /* RegistrationViewController.swift in Sources */,
 				FFC7915D25853D43008BDBDC /* MyProfileAssembly.swift in Sources */,
 				FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */,
@@ -751,6 +768,7 @@
 				FF7D546825D888C6003588F2 /* LoginRouter.swift in Sources */,
 				FF7D546B25D888C6003588F2 /* LoginInteractor.swift in Sources */,
 				FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */,
+				FFD2FC44262F503200212505 /* ProductsHomeAssembly.swift in Sources */,
 				FF0F0A33257BCD82008A35C7 /* BasePresenter.swift in Sources */,
 				FF69EF2525B5E28500E4981A /* UIView+Extension.swift in Sources */,
 				FF0F0A30257BCD82008A35C7 /* BaseInteractor.swift in Sources */,
@@ -759,8 +777,10 @@
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF7D546925D888C6003588F2 /* LoginViewController.swift in Sources */,
+				FFD2FC45262F503200212505 /* ProductsHomeInteractor.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,
 				FF0F0AC5257C148F008A35C7 /* HomeInteractor.swift in Sources */,
+				FFD2FC43262F503200212505 /* ProductsHomeViewController.swift in Sources */,
 				FF69EF1225B46B2C00E4981A /* CustomTabBarInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

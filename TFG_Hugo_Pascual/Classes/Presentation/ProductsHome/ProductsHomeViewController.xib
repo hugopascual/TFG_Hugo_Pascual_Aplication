@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsHomeViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
+            <connections>
+                <outlet property="addProductButton" destination="gnv-QY-frZ" id="7aN-c7-9J2"/>
+                <outlet property="productCategoriesTableView" destination="DLE-dy-cyk" id="2fF-JM-qiD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ezx-L8-9YG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVq-YY-UHD" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnv-QY-frZ" userLabel="Add Product Button">
+                            <rect key="frame" x="24" y="24" width="366" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="addProductButtonPressed:" destination="-1" eventType="touchUpInside" id="9Zo-aT-t19"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DLE-dy-cyk" userLabel="Product Categories Table View">
+                            <rect key="frame" x="0.0" y="78" width="414" height="578"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" name="viewGeneralBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DLE-dy-cyk" secondAttribute="trailing" id="2RW-Q4-nsC"/>
+                        <constraint firstAttribute="trailing" secondItem="gnv-QY-frZ" secondAttribute="trailing" constant="24" id="3Y5-sq-huf"/>
+                        <constraint firstItem="gnv-QY-frZ" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" constant="24" id="3cg-S0-Tlb"/>
+                        <constraint firstItem="DLE-dy-cyk" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" id="F8y-ag-uqL"/>
+                        <constraint firstItem="gnv-QY-frZ" firstAttribute="top" secondItem="HVq-YY-UHD" secondAttribute="top" constant="24" id="X2b-ZR-zLe"/>
+                        <constraint firstItem="DLE-dy-cyk" firstAttribute="top" secondItem="gnv-QY-frZ" secondAttribute="bottom" constant="24" id="g3s-9B-r1g"/>
+                        <constraint firstAttribute="bottom" secondItem="DLE-dy-cyk" secondAttribute="bottom" constant="80" id="vJ9-Km-zIv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="viewGeneralBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HVq-YY-UHD" secondAttribute="trailing" id="4Jg-Il-5jG"/>
+                <constraint firstItem="HVq-YY-UHD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KAu-YN-EEh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HVq-YY-UHD" secondAttribute="bottom" id="N3c-Z4-YVr"/>
+                <constraint firstItem="HVq-YY-UHD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="erB-KW-ZJG"/>
+            </constraints>
+            <point key="canvasLocation" x="-212" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="viewGeneralBackground">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

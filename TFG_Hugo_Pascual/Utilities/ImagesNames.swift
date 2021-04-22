@@ -15,10 +15,16 @@ struct ImagesNamesConstants {
 	static let back_arrow_icon: String = "back_arrow_icon"
 	static let close_icon: String = "close_icon"
 	
-	// MARK: TabBar
+	// MARK: CustomTabBar
 	static let home_icon: String = "home_icon"
 	static let product_list: String = "product_list"
 	static let profile_icon: String = "profile_icon"
+	
+	// MARK: ProductsHome
+	static let motherboard_icon: String = "motherboard_icon"
+	static let gpu_icon: String = "gpu_icon"
+	static let cpu_icon: String = "cpu_icon"
+	static let ram_icon: String = "ram_icon"
 	
 	// MARK: Profile
 	static let profile_logo: String = "profile_logo"
