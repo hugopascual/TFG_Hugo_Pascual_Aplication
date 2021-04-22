@@ -40,6 +40,13 @@
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
 		FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */; };
 		FF3889BB262F55D900B53F4F /* ProductsHomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */; };
+		FF3E05AE2631938500033159 /* AddProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05A72631938500033159 /* AddProductPresenter.swift */; };
+		FF3E05AF2631938500033159 /* AddProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05A82631938500033159 /* AddProductRouter.swift */; };
+		FF3E05B02631938500033159 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05A92631938500033159 /* AddProductViewController.swift */; };
+		FF3E05B12631938500033159 /* AddProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05AA2631938500033159 /* AddProductAssembly.swift */; };
+		FF3E05B22631938500033159 /* AddProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05AB2631938500033159 /* AddProductInteractor.swift */; };
+		FF3E05B32631938500033159 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05AC2631938500033159 /* AddProductViewModel.swift */; };
+		FF3E05B42631938500033159 /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3E05AD2631938500033159 /* AddProductViewController.xib */; };
 		FF54EB1025AD9C150034F275 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */; };
 		FF667DE926316CA0004D3D2F /* NibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF667DE826316CA0004D3D2F /* NibName.swift */; };
 		FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */; };
@@ -135,6 +142,13 @@
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
 		FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeCategoryCell.swift; sourceTree = "<group>"; };
 		FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsHomeCategoryCell.xib; sourceTree = "<group>"; };
+		FF3E05A72631938500033159 /* AddProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPresenter.swift; sourceTree = "<group>"; };
+		FF3E05A82631938500033159 /* AddProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductRouter.swift; sourceTree = "<group>"; };
+		FF3E05A92631938500033159 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		FF3E05AA2631938500033159 /* AddProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductAssembly.swift; sourceTree = "<group>"; };
+		FF3E05AB2631938500033159 /* AddProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductInteractor.swift; sourceTree = "<group>"; };
+		FF3E05AC2631938500033159 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
+		FF3E05AD2631938500033159 /* AddProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		FF54EB0F25AD9C150034F275 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		FF667DE826316CA0004D3D2F /* NibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibName.swift; sourceTree = "<group>"; };
 		FF69EF0B25B46B1200E4981A /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +300,7 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FF3E05A62631935700033159 /* AddProduct */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
@@ -394,6 +409,28 @@
 				FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FF3E05A62631935700033159 /* AddProduct */ = {
+			isa = PBXGroup;
+			children = (
+				FF3E05B62631939500033159 /* Models */,
+				FF3E05AA2631938500033159 /* AddProductAssembly.swift */,
+				FF3E05A82631938500033159 /* AddProductRouter.swift */,
+				FF3E05AB2631938500033159 /* AddProductInteractor.swift */,
+				FF3E05A72631938500033159 /* AddProductPresenter.swift */,
+				FF3E05A92631938500033159 /* AddProductViewController.swift */,
+				FF3E05AD2631938500033159 /* AddProductViewController.xib */,
+			);
+			path = AddProduct;
+			sourceTree = "<group>";
+		};
+		FF3E05B62631939500033159 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF3E05AC2631938500033159 /* AddProductViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF40DBFC25F290DA00C7ED28 /* Provider */ = {
@@ -671,6 +708,7 @@
 				FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* MyProfileViewController.xib in Resources */,
 				FF7D547E25D88907003588F2 /* RegistrationViewController.xib in Resources */,
+				FF3E05B42631938500033159 /* AddProductViewController.xib in Resources */,
 				FF0F0ACE257C36E8008A35C7 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,16 +747,19 @@
 				FF0F0AC8257C149A008A35C7 /* HomeRouter.swift in Sources */,
 				FF69EF1525B46B3500E4981A /* CustomTabBarRouter.swift in Sources */,
 				FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */,
+				FF3E05AE2631938500033159 /* AddProductPresenter.swift in Sources */,
 				FF0CEE64259D0E8C00D64514 /* HomeViewModel.swift in Sources */,
 				FF0F0ADC257C3D31008A35C7 /* HomeAssembly.swift in Sources */,
 				FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */,
 				FF0F09EC257BCC8B008A35C7 /* AppDelegate.swift in Sources */,
 				FF0F0AE0257C3E76008A35C7 /* Enums.swift in Sources */,
+				FF3E05B02631938500033159 /* AddProductViewController.swift in Sources */,
 				FFC7916025853D54008BDBDC /* MyProfileInteractor.swift in Sources */,
 				FF7D546A25D888C6003588F2 /* LoginAssembly.swift in Sources */,
 				FFA041B1258FD7F000C6928A /* ErrorLoginServerModel.swift in Sources */,
 				FFC7916625853D7B008BDBDC /* MyProfilePresenter.swift in Sources */,
 				FF0F0A34257BCD82008A35C7 /* BaseViewModel.swift in Sources */,
+				FF3E05B32631938500033159 /* AddProductViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
 				FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
@@ -733,11 +774,13 @@
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
 				FF667DE926316CA0004D3D2F /* NibName.swift in Sources */,
 				FF69EF0C25B46B1200E4981A /* CustomTabBarViewController.swift in Sources */,
+				FF3E05B12631938500033159 /* AddProductAssembly.swift in Sources */,
 				FF7D546C25D888C6003588F2 /* LoginViewModel.swift in Sources */,
 				FFD2FC41262F503200212505 /* ProductsHomePresenter.swift in Sources */,
 				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
 				FF7D547D25D88907003588F2 /* RegistrationViewModel.swift in Sources */,
+				FF3E05B22631938500033159 /* AddProductInteractor.swift in Sources */,
 				FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */,
 				FFC0BF752612392D004F90CD /* CheckSessionProvider.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
@@ -754,6 +797,7 @@
 				FF0F0A39257BCD82008A35C7 /* BaseProvider.swift in Sources */,
 				FF7D546725D888C6003588F2 /* LoginPresenter.swift in Sources */,
 				FF7D547925D88907003588F2 /* RegistrationRouter.swift in Sources */,
+				FF3E05AF2631938500033159 /* AddProductRouter.swift in Sources */,
 				FFD2FC42262F503200212505 /* ProductsHomeRouter.swift in Sources */,
 				FF7D547A25D88907003588F2 /* RegistrationViewController.swift in Sources */,
 				FFC7915D25853D43008BDBDC /* MyProfileAssembly.swift in Sources */,
