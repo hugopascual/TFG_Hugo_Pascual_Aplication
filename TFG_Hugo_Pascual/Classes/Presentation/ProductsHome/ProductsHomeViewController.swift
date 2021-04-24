@@ -37,7 +37,7 @@ final class ProductsHomeViewController: BaseViewController {
 	}
 	
 	override func initializeUI() {
-		
+		self.addProductButton.roundedByDefault()
 	}
 	
 	// MARK: IBActions declaration of all the controls
@@ -60,6 +60,8 @@ extension ProductsHomeViewController: ProductsHomeViewControllerProtocol {
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? ProductsHomeViewModel else { return }
 		self.title = model.screenTitle
+		
+		self.addProductButton.setTitle(model.addProductButtonTitle, for: .normal)
 	}
 }
 
