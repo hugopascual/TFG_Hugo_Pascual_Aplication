@@ -25,6 +25,10 @@ final class ProductsHomeViewController: BaseViewController {
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.setToolbarHidden(true, animated: animated)
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		

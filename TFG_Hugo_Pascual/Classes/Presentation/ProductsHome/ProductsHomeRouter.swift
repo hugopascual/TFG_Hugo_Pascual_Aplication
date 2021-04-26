@@ -9,6 +9,7 @@ import Foundation
 
 protocol ProductsHomeRouterProtocol: BaseRouterProtocol {
 	func navigateToProductsList()
+	func navigateToAddProduct()
 }
 
 class ProductsHomeRouter: BaseRouter {
@@ -25,5 +26,9 @@ extension ProductsHomeRouter: ProductsHomeRouterProtocol {
 	
 	func navigateToProductsList() {
 		print("NAVEGACION")
+	}
+	
+	func navigateToAddProduct() {
+		
 	}
 }
