@@ -21,3 +21,23 @@ extension UIView {
 	}
 	
 }
+
+extension UIView {
+	
+	func roundedByDefault(radious: CGFloat? = nil,
+						  background: UIColor? = nil,
+						  borderWith: CGFloat = 0,
+						  borderColor: UIColor? = nil) {
+		
+		let radious = radious == nil ? self.frame.height / 2 : radious!
+		self.layer.cornerRadius = radious
+		
+		if let background = background {
+			self.backgroundColor = background
+		}
+		self.layer.borderWidth = borderWith
+		self.layer.borderColor = borderColor?.cgColor
+		
+		self.clipsToBounds = true
+	}
+}

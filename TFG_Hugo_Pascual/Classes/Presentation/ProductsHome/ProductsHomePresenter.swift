@@ -50,7 +50,7 @@ extension ProductsHomePresenter: ProductsHomePresenterProtocol {
 	}
 	
 	func addProductButtonPressed() {
-		
+		self.router?.navigateToAddProduct()
 	}
 }
 

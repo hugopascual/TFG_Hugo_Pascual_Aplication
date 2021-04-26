@@ -12,6 +12,8 @@ final class ProductsHomeViewModel: BaseViewModel {
 	//TODO añadir localización
 	var screenTitle: String = "ÇProductsHome"
 	
+	var addProductButtonTitle: String = "çPublicar producto"
+	
 	var categoryCells: [ProductsHomeCategoryCellViewModel] = []
 	
 	override init() {

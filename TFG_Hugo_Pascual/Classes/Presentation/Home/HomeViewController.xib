@@ -44,7 +44,7 @@
                                                 <constraint firstAttribute="height" constant="256" id="ZHW-uf-mOO"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Aux Button">
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Aux Button">
                                             <rect key="frame" x="191" y="356.5" width="32" height="44"/>
                                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                                             <constraints>
