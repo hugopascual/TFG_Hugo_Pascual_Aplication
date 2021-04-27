@@ -37,8 +37,6 @@ final class ProductsHomeViewController: BaseViewController {
 		self.productCategoriesTableView.delegate = self
 		
 		self.registerTableViewCells()
-		
-		self.initializeUI()
 	}
 	
 	override func initializeUI() {
