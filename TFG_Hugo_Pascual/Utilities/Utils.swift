@@ -47,13 +47,15 @@ class Utils {
 		#endif
 	}
 	
-	static func imgBase64Encoding(_ image: String) -> String {
-		let imageData = UIImage(named: image)?.jpegData(compressionQuality: 1)
+	static func imgBase64Encoding(_ image: String?) -> String {
+		guard let imageToCode = image else { return "" }
+		let imageData = UIImage(named: imageToCode)?.jpegData(compressionQuality: 1)
 		return imageData?.base64EncodedString() ?? ""
 	}
 	
-	static func imgBase64Decode(_ codedImage: String) -> UIImage {
-		guard let newImageData = Data(base64Encoded: codedImage) else { return UIImage() }
+	static func imgBase64Decode(_ codedImage: String?) -> UIImage {
+		guard let imageToDecode = codedImage else { return UIImage() }
+		guard let newImageData = Data(base64Encoded: imageToDecode) else { return UIImage() }
 		return UIImage(data: newImageData) ?? UIImage()
 	}
 }

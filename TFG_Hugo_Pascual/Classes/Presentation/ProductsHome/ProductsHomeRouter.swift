@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductsHomeRouterProtocol: BaseRouterProtocol {
-	func navigateToProductsList()
+	func navigateToProductsList(category: ProductCategory?)
 	func navigateToAddProduct()
 }
 
@@ -24,8 +24,8 @@ class ProductsHomeRouter: BaseRouter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductsHomeRouter: ProductsHomeRouterProtocol {
 	
-	func navigateToProductsList() {
-		print("NAVEGACION")
+	func navigateToProductsList(category: ProductCategory?) {
+		self.pushViewController(ProductsListAssembly.view(dto: ProductsListAssemblyDTO(listCategory: category)), animated: true)
 	}
 	
 	func navigateToAddProduct() {
