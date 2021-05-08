@@ -18,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYs-ZE-QeB" userLabel="Cell View">
-                        <rect key="frame" x="6" y="6" width="404" height="131"/>
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="133"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-9v-zd7" userLabel="Icon Image View">
-                                <rect key="frame" x="24" y="23.5" width="84" height="84"/>
+                                <rect key="frame" x="12" y="24.5" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="9uG-cY-oYi"/>
                                     <constraint firstAttribute="height" constant="84" id="bX8-0D-gBZ"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6K-0A-Vkz" userLabel="Texts View">
-                                <rect key="frame" x="124" y="16" width="256" height="99"/>
+                                <rect key="frame" x="112" y="16" width="292" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placas Madre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7u-fT-E6H" userLabel="Title Label">
-                                        <rect key="frame" x="0.0" y="8" width="256" height="21"/>
+                                        <rect key="frame" x="0.0" y="8" width="292" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="jwH-KT-ZT8"/>
                                         </constraints>
@@ -40,13 +40,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La parte que uno todo el resto de piezas del ordenador " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-4S-C8G" userLabel="Description Label">
-                                        <rect key="frame" x="0.0" y="33" width="256" height="66"/>
+                                        <rect key="frame" x="0.0" y="33" width="292" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="viewGeneralBackground"/>
+                                <color key="backgroundColor" name="viewSecondary"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MR1-4S-C8G" secondAttribute="bottom" id="A9x-2q-fwO"/>
                                     <constraint firstItem="Z7u-fT-E6H" firstAttribute="leading" secondItem="u6K-0A-Vkz" secondAttribute="leading" id="G0e-u8-Nu1"/>
@@ -58,27 +58,28 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="viewGeneralBackground"/>
+                        <color key="backgroundColor" name="viewSecondary"/>
                         <constraints>
-                            <constraint firstItem="r0s-9v-zd7" firstAttribute="leading" secondItem="FYs-ZE-QeB" secondAttribute="leading" constant="24" id="IZn-jA-yfv"/>
+                            <constraint firstItem="r0s-9v-zd7" firstAttribute="leading" secondItem="FYs-ZE-QeB" secondAttribute="leading" constant="12" id="IZn-jA-yfv"/>
                             <constraint firstItem="r0s-9v-zd7" firstAttribute="centerY" secondItem="u6K-0A-Vkz" secondAttribute="centerY" id="XW9-W1-UC4"/>
                             <constraint firstItem="u6K-0A-Vkz" firstAttribute="leading" secondItem="r0s-9v-zd7" secondAttribute="trailing" constant="16" id="YS8-bu-v7r"/>
                             <constraint firstItem="u6K-0A-Vkz" firstAttribute="centerY" secondItem="FYs-ZE-QeB" secondAttribute="centerY" id="coo-1E-Gla"/>
                             <constraint firstItem="u6K-0A-Vkz" firstAttribute="top" secondItem="FYs-ZE-QeB" secondAttribute="top" constant="16" id="e8r-Ge-E54"/>
-                            <constraint firstAttribute="trailing" secondItem="u6K-0A-Vkz" secondAttribute="trailing" constant="24" id="l9q-zW-qI1"/>
+                            <constraint firstAttribute="trailing" secondItem="u6K-0A-Vkz" secondAttribute="trailing" constant="12" id="l9q-zW-qI1"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" name="viewGeneralBackground"/>
                 <constraints>
-                    <constraint firstItem="FYs-ZE-QeB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="9nm-aw-cFC"/>
-                    <constraint firstItem="FYs-ZE-QeB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="9su-sO-1RB"/>
-                    <constraint firstAttribute="trailing" secondItem="FYs-ZE-QeB" secondAttribute="trailing" constant="6" id="H51-6C-7Qy"/>
-                    <constraint firstAttribute="bottom" secondItem="FYs-ZE-QeB" secondAttribute="bottom" constant="6" id="Ukt-OC-Mlr"/>
+                    <constraint firstItem="FYs-ZE-QeB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9nm-aw-cFC"/>
+                    <constraint firstItem="FYs-ZE-QeB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9su-sO-1RB"/>
+                    <constraint firstAttribute="trailing" secondItem="FYs-ZE-QeB" secondAttribute="trailing" id="H51-6C-7Qy"/>
+                    <constraint firstAttribute="bottom" secondItem="FYs-ZE-QeB" secondAttribute="bottom" constant="10" id="Ukt-OC-Mlr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellView" destination="FYs-ZE-QeB" id="5QJ-SR-eeA"/>
                 <outlet property="descriptionLabel" destination="MR1-4S-C8G" id="AZb-aq-Od8"/>
                 <outlet property="iconImageView" destination="r0s-9v-zd7" id="e0c-aG-9dq"/>
                 <outlet property="titleLabel" destination="Z7u-fT-E6H" id="Jkx-qQ-Swz"/>
@@ -90,6 +91,9 @@
         <image name="home_icon" width="28" height="28"/>
         <namedColor name="viewGeneralBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewSecondary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
