@@ -25,6 +25,7 @@ class ProductDetailAssembly: BaseAssembly {
 										  interactor: ProductDetailInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
+		viper.interactor.productProvider = DataAssembly.productProvider(interactor: viper.interactor)
 		
 		return view
 	}
@@ -32,5 +33,5 @@ class ProductDetailAssembly: BaseAssembly {
 
 //Struct that represents the transfer object of ProductDetail
 struct ProductDetailAssemblyDTO {
-	
+	var productId: Int?
 }

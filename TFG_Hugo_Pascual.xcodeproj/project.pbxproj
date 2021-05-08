@@ -358,12 +358,12 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF3E057F2631923F00033159 /* ProductDetail */,
 				FF3E05A62631935700033159 /* AddProduct */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
 				FF4F79252638865D0043F702 /* ProductChooseCategory */,
+				FF3E057F2631923F00033159 /* ProductDetail */,
 				FFD2FC39262F502600212505 /* ProductsHome */,
 				FF3E0593263192A600033159 /* ProductsList */,
 				FF7D547025D888E3003588F2 /* Registration */,

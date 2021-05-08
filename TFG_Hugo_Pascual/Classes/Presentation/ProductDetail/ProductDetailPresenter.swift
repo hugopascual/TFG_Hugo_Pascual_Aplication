@@ -12,7 +12,8 @@ protocol ProductDetailPresenterProtocol: BasePresenterProtocol {
 }
 
 protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	
+	func didGetProductDetailSuccess(businessModel: ProductBusinessModel)
+	func didGetProdutDetialFail(error: CustomErrorModel)
 }
 
 class ProductDetailPresenter: BasePresenter {
@@ -37,4 +38,11 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
 
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
 	
+	func didGetProductDetailSuccess(businessModel: ProductBusinessModel) {
+		
+	}
+	
+	func didGetProdutDetialFail(error: CustomErrorModel) {
+		self.genericErrorHappened(error: error)
+	}
 }
