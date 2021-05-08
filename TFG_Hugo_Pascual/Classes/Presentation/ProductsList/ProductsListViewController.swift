@@ -22,6 +22,12 @@ final class ProductsListViewController: BaseViewController {
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.setNavigationBar()
+	}
+
 	override func initializeUI() {
 		
 	}
@@ -29,7 +35,9 @@ final class ProductsListViewController: BaseViewController {
 	// MARK: IBActions declaration of all the controls
 	
 	// MARK: Private Functions
-	
+	func setNavigationBar() {
+		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: self.title))
+	}
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols

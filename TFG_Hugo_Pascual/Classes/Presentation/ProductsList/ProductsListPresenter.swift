@@ -12,7 +12,9 @@ protocol ProductsListPresenterProtocol: BasePresenterProtocol {
 }
 
 protocol ProductsListInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	
+	func didGetProductListSuccess(arrayBusinessModel: [ProductBusinessModel])
+	func didGetProductListFail(error: CustomErrorModel)
+
 }
 
 class ProductsListPresenter: BasePresenter {
@@ -37,4 +39,11 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
 
 extension ProductsListPresenter: ProductsListInteractorOutputProtocol {
 	
+	func didGetProductListSuccess(arrayBusinessModel: [ProductBusinessModel]) {
+		
+	}
+	
+	func didGetProductListFail(error: CustomErrorModel) {
+		self.genericErrorHappened(error: error)
+	}
 }

@@ -1,5 +1,5 @@
 //  
-//  ProductServerModel.swift
+//  ProductDetailServerModel.swift
 //  TFG_Hugo_Pascual
 //
 //  Created by Hugo Pascual Adan on 29/04/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductServerModel: BaseServerModel {
+struct ProductDetailServerModel: BaseServerModel {
 	
 	var id: String?
 	var category: String?

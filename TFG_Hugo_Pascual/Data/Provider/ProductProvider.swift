@@ -10,8 +10,8 @@ import Foundation
 // MARK: - Protocols
 protocol ProductProviderProtocol: BaseProviderProtocol {
 	func addProduct(dto: AddProductParamsDTO, success: @escaping () -> Void, failure: @escaping (CustomErrorModel) -> Void)
-	func getProductList(dto: GetProductListParamsDTO, success: @escaping ([ProductServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
-	func getProductDetail(dto: GetProductDetailParamsDTO, success: @escaping (ProductServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
+	func getProductList(dto: GetProductListParamsDTO, success: @escaping ([ProductsListServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
+	func getProductDetail(dto: GetProductDetailParamsDTO, success: @escaping (ProductDetailServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void)
 }
 
 // MARK: - Class
@@ -29,24 +29,24 @@ class ProductProvider: BaseProvider, ProductProviderProtocol {
 		})
 	}
 	
-	func getProductList(dto: GetProductListParamsDTO, success: @escaping ([ProductServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+	func getProductList(dto: GetProductListParamsDTO, success: @escaping ([ProductsListServerModel]?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = GetProductListProviderRequest.getProduct(params: dto)
 		
 		self.genericRequest(dto: providerDTO,
 						 success: { (data) in
-								let serverModel = BaseProvider.parseArrayToServerModel(parserModel: [ProductServerModel].self, data: data as? Data)
+								let serverModel = BaseProvider.parseArrayToServerModel(parserModel: [ProductsListServerModel].self, data: data as? Data)
 								success(serverModel)
 						 }, failure: { (error) in
 								failure(error)
 		})
 	}
 	
-	func getProductDetail(dto: GetProductDetailParamsDTO, success: @escaping (ProductServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
+	func getProductDetail(dto: GetProductDetailParamsDTO, success: @escaping (ProductDetailServerModel?) -> Void, failure: @escaping (CustomErrorModel) -> Void) {
 		let providerDTO = GetProductDetailProviderRequest.getProduct(params: dto)
 		
 		self.genericRequest(dto: providerDTO,
 						 success: { (data) in
-								let serverModel = BaseProvider.parseToServerModel(parserModel: ProductServerModel.self, data: data as? Data)
+								let serverModel = BaseProvider.parseToServerModel(parserModel: ProductDetailServerModel.self, data: data as? Data)
 								success(serverModel)
 						 }, failure: { (error) in
 								failure(error)
@@ -69,7 +69,7 @@ struct AddProductProviderRequest {
 	static func getProduct(params: BaseProviderParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .post,
-						   urlContext: .local,
+						   urlContext: .backend,
 						   endpoint: URLEndpoint.addProduct)
 	}
 }

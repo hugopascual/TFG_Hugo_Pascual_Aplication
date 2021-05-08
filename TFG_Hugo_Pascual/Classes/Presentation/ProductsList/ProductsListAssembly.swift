@@ -25,12 +25,13 @@ class ProductsListAssembly: BaseAssembly {
 										  interactor: ProductsListInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
-		
+		viper.interactor.productProvider = DataAssembly.productProvider(interactor: viper.interactor)
+
 		return view
 	}
 }
 
 //Struct that represents the transfer object of ProductsList
 struct ProductsListAssemblyDTO {
-	
+	var listCategory: ProductCategory?
 }

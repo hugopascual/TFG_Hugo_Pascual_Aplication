@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductsListInteractorInputProtocol: BaseInteractorInputProtocol {
-	
+	func getProductsList()
 }
 
 class ProductsListInteractor: BaseInteractor {
@@ -17,7 +17,8 @@ class ProductsListInteractor: BaseInteractor {
 	weak var presenter: ProductsListInteractorOutputProtocol? { return super.basePresenter as? ProductsListInteractorOutputProtocol }
 	
 	var assemblyDTO: ProductsListAssemblyDTO?
-	
+	var productProvider: ProductProviderProtocol?
+
 	// MARK: Private Functions
 
 }
@@ -25,4 +26,16 @@ class ProductsListInteractor: BaseInteractor {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductsListInteractor: ProductsListInteractorInputProtocol {
 	
+	func getProductsList() {
+		guard let category = self.assemblyDTO?.listCategory else { return }
+		self.productProvider?.getProductList(
+			dto: GetProductListParamsDTO(category: category.rawValue),
+			success: { arrayServerModel in
+				guard let arrayBusinessModel = BaseInteractor.parseArrayToBusinessModel(parserModel: [ProductBusinessModel].self, arrayServerModels: arrayServerModel) else { return }
+				self.presenter?.didGetProductListSuccess(arrayBusinessModel: arrayBusinessModel)
+			},
+			failure: { error in
+				self.presenter?.didGetProductListFail(error: error)
+			})
+	}
 }

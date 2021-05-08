@@ -45,8 +45,7 @@ extension ProductsHomePresenter: ProductsHomePresenterProtocol {
 	}
 	
 	func didRowPressed(index: Int) {
-		let type = self.viewModel.categoryCells[index].category
-		self.router?.navigateToProductsList()
+		self.router?.navigateToProductsList(category: self.viewModel.categoryCells[index].category)
 	}
 	
 	func addProductButtonPressed() {

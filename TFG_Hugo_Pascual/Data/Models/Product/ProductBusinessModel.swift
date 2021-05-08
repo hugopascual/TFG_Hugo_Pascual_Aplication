@@ -21,7 +21,7 @@ class ProductBusinessModel: BaseBusinessModel {
 	required init(serverModel: BaseServerModel?) {
 		super.init(serverModel: serverModel)
 		
-		guard let serverModel = serverModel as? ProductServerModel else { return }
+		guard let serverModel = serverModel as? ProductDetailServerModel else { return }
 		
 		self.id = serverModel.id
 		self.category = serverModel.category.map { ProductCategory(rawValue: $0) } as? ProductCategory

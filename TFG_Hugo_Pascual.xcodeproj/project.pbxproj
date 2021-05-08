@@ -55,7 +55,7 @@
 		FF3E05B32631938500033159 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05AC2631938500033159 /* AddProductViewModel.swift */; };
 		FF3E05B42631938500033159 /* AddProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3E05AD2631938500033159 /* AddProductViewController.xib */; };
 		FF4C9B5C263B377800C9331F /* ProductBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C9B59263B377800C9331F /* ProductBusinessModel.swift */; };
-		FF4C9B5D263B377800C9331F /* ProductServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C9B5A263B377800C9331F /* ProductServerModel.swift */; };
+		FF4C9B5D263B377800C9331F /* ProductDetailServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C9B5A263B377800C9331F /* ProductDetailServerModel.swift */; };
 		FF4C9B5E263B377800C9331F /* ProductProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C9B5B263B377800C9331F /* ProductProvider.swift */; };
 		FF4F792D2638868C0043F702 /* ProductChooseCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F79262638868C0043F702 /* ProductChooseCategoryPresenter.swift */; };
 		FF4F792E2638868C0043F702 /* ProductChooseCategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F79272638868C0043F702 /* ProductChooseCategoryRouter.swift */; };
@@ -101,6 +101,7 @@
 		FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041B7258FD96100C6928A /* NetworkManager.swift */; };
 		FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041BA258FDA9400C6928A /* ErrorLoginBusinessModel.swift */; };
 		FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */; };
+		FFA8E3EE26470AF00018D9EA /* ProductsListServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E3ED26470AF00018D9EA /* ProductsListServerModel.swift */; };
 		FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */; };
 		FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */; };
 		FFC0BF7226123920004F90CD /* RegisterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0BF7126123920004F90CD /* RegisterProvider.swift */; };
@@ -174,7 +175,7 @@
 		FF3E05AC2631938500033159 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
 		FF3E05AD2631938500033159 /* AddProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProductViewController.xib; sourceTree = "<group>"; };
 		FF4C9B59263B377800C9331F /* ProductBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBusinessModel.swift; sourceTree = "<group>"; };
-		FF4C9B5A263B377800C9331F /* ProductServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServerModel.swift; sourceTree = "<group>"; };
+		FF4C9B5A263B377800C9331F /* ProductDetailServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailServerModel.swift; sourceTree = "<group>"; };
 		FF4C9B5B263B377800C9331F /* ProductProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductProvider.swift; sourceTree = "<group>"; };
 		FF4F79262638868C0043F702 /* ProductChooseCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductChooseCategoryPresenter.swift; sourceTree = "<group>"; };
 		FF4F79272638868C0043F702 /* ProductChooseCategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductChooseCategoryRouter.swift; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		FFA041B7258FD96100C6928A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFA041BA258FDA9400C6928A /* ErrorLoginBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLoginBusinessModel.swift; sourceTree = "<group>"; };
 		FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		FFA8E3ED26470AF00018D9EA /* ProductsListServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListServerModel.swift; sourceTree = "<group>"; };
 		FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		FFC0BF7126123920004F90CD /* RegisterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProvider.swift; sourceTree = "<group>"; };
@@ -515,7 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4C9B59263B377800C9331F /* ProductBusinessModel.swift */,
-				FF4C9B5A263B377800C9331F /* ProductServerModel.swift */,
+				FFA8E3EC26470AC90018D9EA /* ServerModels */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -629,6 +631,15 @@
 				FFA041B7258FD96100C6928A /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		FFA8E3EC26470AC90018D9EA /* ServerModels */ = {
+			isa = PBXGroup;
+			children = (
+				FF4C9B5A263B377800C9331F /* ProductDetailServerModel.swift */,
+				FFA8E3ED26470AF00018D9EA /* ProductsListServerModel.swift */,
+			);
+			path = ServerModels;
 			sourceTree = "<group>";
 		};
 		FFAA245125EEFAC200612AC6 /* DataPersister */ = {
@@ -856,6 +867,7 @@
 				FF3E05B32631938500033159 /* AddProductViewModel.swift in Sources */,
 				FF0F0AE4257C3F88008A35C7 /* Utils.swift in Sources */,
 				FF69EF0F25B46B2400E4981A /* CustomTabBarPresenter.swift in Sources */,
+				FFA8E3EE26470AF00018D9EA /* ProductsListServerModel.swift in Sources */,
 				FF0F0A36257BCD82008A35C7 /* BaseBusinessModel.swift in Sources */,
 				FFC7916925853D8D008BDBDC /* MyProfileViewController.swift in Sources */,
 				FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */,
@@ -883,7 +895,7 @@
 				FFC0BF752612392D004F90CD /* CheckSessionProvider.swift in Sources */,
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
-				FF4C9B5D263B377800C9331F /* ProductServerModel.swift in Sources */,
+				FF4C9B5D263B377800C9331F /* ProductDetailServerModel.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
 				FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */,
 				FF0F0A32257BCD82008A35C7 /* BaseAssembly.swift in Sources */,
