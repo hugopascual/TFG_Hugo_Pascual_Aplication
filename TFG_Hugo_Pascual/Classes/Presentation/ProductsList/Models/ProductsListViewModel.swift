@@ -10,7 +10,7 @@ import Foundation
 final class ProductsListViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "ProductsList"
+	var screenTitle: String = "çProductsList"
 	
 	var productCells: [ProductsListCellViewModel] = []
 	

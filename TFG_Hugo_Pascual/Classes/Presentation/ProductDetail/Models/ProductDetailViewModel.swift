@@ -10,5 +10,5 @@ import Foundation
 final class ProductDetailViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "ProductDetail"
+	var screenTitle: String = "çProductDetail"
 }
