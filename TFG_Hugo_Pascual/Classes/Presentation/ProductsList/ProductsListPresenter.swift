@@ -30,6 +30,8 @@ class ProductsListPresenter: BasePresenter {
 	
 	// MARK: Private Functions
 	func viewDidLoad() {
+		self.interactor?.getProductsList()
+		
 		self.view?.setViewModel(self.viewModel)
 	}
 }
@@ -38,22 +40,29 @@ class ProductsListPresenter: BasePresenter {
 extension ProductsListPresenter: ProductsListPresenterProtocol {
 	
 	func getCellsNumber() -> Int {
-		1
+		self.viewModel.productCells.count
 	}
 	
 	func getCellViewModelForIndex(index: Int) -> ProductsListCellViewModel {
-		ProductsListCellViewModel(id: 1)
+		self.viewModel.productCells[index]
 	}
 	
 	func didRowPressed(index: Int) {
-		
+		guard let id = self.viewModel.productCells[index].id else { return }
+		self.router?.navigateToProductDetail(id: id)
 	}
 }
 
 extension ProductsListPresenter: ProductsListInteractorOutputProtocol {
 	
 	func didGetProductListSuccess(arrayBusinessModel: [ProductBusinessModel]) {
-		
+		arrayBusinessModel.forEach { businessModel in
+			self.viewModel.productCells.append(ProductsListCellViewModel(id: businessModel.id,
+																		image: businessModel.base64Image,
+																		title: businessModel.model,
+																		price: businessModel.price))
+		}
+		self.view?.refreshTableData()
 	}
 	
 	func didGetProductListFail(error: CustomErrorModel) {

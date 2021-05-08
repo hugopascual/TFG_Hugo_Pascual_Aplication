@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ProductsListViewControllerProtocol: BaseViewControllerProtocol {
-	
+	func refreshTableData()
 }
 
 final class ProductsListViewController: BaseViewController {
@@ -60,6 +60,10 @@ extension ProductsListViewController: ProductsListViewControllerProtocol {
 		guard let model = viewModel as? ProductsListViewModel else { return }
 		self.title = model.screenTitle
 	}
+	
+	func refreshTableData() {
+		self.productsListTableView.reloadData()
+	}
 }
 
 extension ProductsListViewController: UITableViewDelegate {
@@ -70,6 +74,7 @@ extension ProductsListViewController: UITableViewDelegate {
 }
 
 extension ProductsListViewController: UITableViewDataSource {
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.presenter?.getCellsNumber() ?? 0
 	}

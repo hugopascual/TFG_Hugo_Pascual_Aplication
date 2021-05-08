@@ -33,7 +33,6 @@ class ProductBusinessModel: BaseBusinessModel {
 	
 	override init() { super.init() }
 	
-	
 	func initWithProductDetailServerModel(serverModel: ProductDetailServerModel) {
 		self.id = serverModel.id
 		self.category = serverModel.category.map { ProductCategory(rawValue: $0) } as? ProductCategory

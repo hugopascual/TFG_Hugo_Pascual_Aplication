@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductsListRouterProtocol: BaseRouterProtocol {
-	
+	func navigateToProductDetail(id: Int)
 }
 
 class ProductsListRouter: BaseRouter {
@@ -22,5 +22,7 @@ class ProductsListRouter: BaseRouter {
 
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductsListRouter: ProductsListRouterProtocol {
-	
+	func navigateToProductDetail(id: Int) {
+		
+	}
 }

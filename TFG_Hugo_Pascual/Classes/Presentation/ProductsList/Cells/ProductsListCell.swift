@@ -31,12 +31,12 @@ class ProductsListCell: UITableViewCell {
 	}
 	
 	func setUpCellView() {
-		self.cellView.roundedByDefault(radious: 8)
+		self.cellView.roundedByDefault(radious: 16)
 	}
 	
 	func setUpCellViewModel(viewModel: ProductsListCellViewModel) {
 		self.iconImageView.image = Utils.imgBase64Decode(viewModel.image)
 		self.modelLabel.text = viewModel.model
-		self.priceLabel.text = viewModel.price
+		self.priceLabel.text = (viewModel.price ?? "") + " €"
 	}
 }

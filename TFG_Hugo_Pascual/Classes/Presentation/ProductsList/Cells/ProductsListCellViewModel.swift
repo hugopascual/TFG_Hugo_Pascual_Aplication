@@ -14,10 +14,10 @@ class ProductsListCellViewModel {
 	var model: String?
 	var price: String?
 	
-	init(id: Int? = 0, image: String? = nil, title: String? = nil, description: String? = nil) {
+	init(id: Int? = 0, image: String? = nil, title: String? = nil, price: String? = nil) {
 		self.id = id
 		self.image = image
 		self.model = title
-		self.price = description
+		self.price = price
 	}
 }
