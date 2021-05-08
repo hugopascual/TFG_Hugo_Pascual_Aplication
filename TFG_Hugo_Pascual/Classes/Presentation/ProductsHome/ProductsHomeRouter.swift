@@ -29,6 +29,6 @@ extension ProductsHomeRouter: ProductsHomeRouterProtocol {
 	}
 	
 	func navigateToAddProduct() {
-		
+		self.pushViewController(AddProductAssembly.view(), animated: true)
 	}
 }
