@@ -25,6 +25,7 @@ class AddProductAssembly: BaseAssembly {
 										  interactor: AddProductInteractor.self)
 		
 		viper.interactor.assemblyDTO = dto
+		viper.interactor.productProvider = DataAssembly.productProvider(interactor: viper.interactor)
 		
 		return view
 	}

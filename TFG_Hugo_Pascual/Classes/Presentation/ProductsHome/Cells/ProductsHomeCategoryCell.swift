@@ -12,7 +12,6 @@ class ProductsHomeCategoryCell: UITableViewCell {
 	@IBOutlet weak var iconImageView: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
-	
 
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +34,12 @@ class ProductsHomeCategoryCell: UITableViewCell {
 
 class ProductsHomeCategoryCellViewModel {
 
-	var category: ProductCategories?
+	var category: ProductCategory?
 	var image: String?
 	var title: String?
 	var description: String?
 	
-	init(category: ProductCategories? = nil, image: String? = nil, title: String? = nil, description: String? = nil) {
+	init(category: ProductCategory? = nil, image: String? = nil, title: String? = nil, description: String? = nil) {
 		self.category = category
 		self.image = image
 		self.title = title

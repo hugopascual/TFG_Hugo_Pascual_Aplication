@@ -22,6 +22,7 @@ public enum NibName: String {
 	case productsHome = "ProductsHomeViewController"
 	case productList = "ProductListViewController"
 	case addProduct = "AddProductViewController"
+	case productChooseCategory = "ProductChooseCategoryViewController"
 	
 	// MARK: Custom Cells
 	case productsHomeCategoryCell = "ProductsHomeCategoryCell"

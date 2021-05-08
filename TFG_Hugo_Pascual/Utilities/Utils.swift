@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utils {
 	
@@ -14,6 +15,20 @@ class Utils {
 	}
 	static func getLanguageHeader() -> [String: String] {
 		return [Constants.languageHeader: "ES"]
+	}
+	
+	static func getProductCategory(_ text: String) -> ProductCategory {
+		if text == ProductCategory.motherboard.rawValue {
+			return ProductCategory.motherboard
+		} else if text == ProductCategory.cpu.rawValue {
+			return ProductCategory.cpu
+		} else if text == ProductCategory.gpu.rawValue {
+			return ProductCategory.gpu
+		} else if text == ProductCategory.ram.rawValue {
+			return ProductCategory.ram
+		} else {
+			return ProductCategory.other
+		}
 	}
 
 	static func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {
@@ -32,4 +47,13 @@ class Utils {
 		#endif
 	}
 	
+	static func imgBase64Encoding(_ image: String) -> String {
+		let imageData = UIImage(named: image)?.jpegData(compressionQuality: 1)
+		return imageData?.base64EncodedString() ?? ""
+	}
+	
+	static func imgBase64Decode(_ codedImage: String) -> UIImage {
+		guard let newImageData = Data(base64Encoded: codedImage) else { return UIImage() }
+		return UIImage(data: newImageData) ?? UIImage()
+	}
 }

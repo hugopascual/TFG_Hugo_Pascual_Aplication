@@ -15,10 +15,10 @@ final class AddProductViewModel: BaseViewModel {
 	var categoryTitle: String = "çCategoría"
 	var categoryDescription: String = "çSin categoría"
 	var categoryImage: String = ImagesNamesConstants.no_category_icon
-	var categoryButtonTitle: String = "çEditar"
+	var categoryButtonTitle: String = "çElegir"
 	var modelTitle: String = "çModelo"
 	var priceTitle: String = "çPrecio"
-	var descriptionTitle: String = "çDescripción (max 500 caracteres)"
+	var descriptionTitle: String = "çDescripción"
 	var attachImageButtonTitle: String = "çAdjuntar imagen"
-	var addProductButtonTitle: String = "çAñadir productoß"
+	var addProductButtonTitle: String = "çAñadir producto"
 }

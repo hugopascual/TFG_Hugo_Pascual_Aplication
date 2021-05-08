@@ -35,7 +35,7 @@ class BasePresenter {
 	
 	// MARK: BaseInteractorOutputProtocol
 	func genericErrorHappened(error: CustomErrorModel) {
-		
+		self.showError(error: error)
 	}
 	
 	func asyncTaskStarted() {

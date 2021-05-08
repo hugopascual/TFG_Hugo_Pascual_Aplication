@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddProductViewControllerProtocol: BaseViewControllerProtocol {
-	
+	func setCategory(_ category: ProductCategory)
 }
 
 final class AddProductViewController: BaseViewController {
@@ -41,20 +41,20 @@ final class AddProductViewController: BaseViewController {
 	}
 	
 	override func initializeUI() {
-		
+		self.priceTextField.keyboardType = .decimalPad
 	}
 	
 	// MARK: IBActions declaration of all the controls
-	@IBAction func categoryButtonPressed(_ sender: Any) {
-		
+	@IBAction func chooseCategoryButtonPressed(_ sender: Any) {
+		self.presenter?.chooseCategoryButtonPressed()
 	}
 	
 	@IBAction func attachImageButtonPressed(_ sender: Any) {
-		
+		self.presenter?.attachImageButtonPressed()
 	}
 	
 	@IBAction func addProductButtonPressed(_ sender: Any) {
-		
+		self.presenter?.addProductButtonPressed(model: self.modelTextField.text ?? "", price: self.priceTextField.text ?? "", description: self.descriptionTextView.text)
 	}
 	
 	// MARK: Private Functions
@@ -79,5 +79,10 @@ extension AddProductViewController: AddProductViewControllerProtocol {
 		self.descriptionLabel.text = model.descriptionTitle
 		self.attachImageButton.setTitle(model.attachImageButtonTitle, for: .normal)
 		self.addProductButton.setTitle(model.addProductButtonTitle, for: .normal)
+	}
+	
+	func setCategory(_ category: ProductCategory) {
+		self.categoryDescriptionLabel.text = category.getLocalizedString()
+		self.categoryImageView.image = category.getAssociatedImage()
 	}
 }

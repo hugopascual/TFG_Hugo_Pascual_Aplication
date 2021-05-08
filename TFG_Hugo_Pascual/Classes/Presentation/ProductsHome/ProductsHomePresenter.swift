@@ -50,7 +50,16 @@ extension ProductsHomePresenter: ProductsHomePresenterProtocol {
 	}
 	
 	func addProductButtonPressed() {
-		self.router?.navigateToAddProduct()
+		self.interactor?.checkLoginState(
+		checkSessionExpiresSuccess: {
+			self.router?.navigateToAddProduct()
+		},
+		checkSessionExpiresFailure: {
+			self.router?.navigateToLogin(dto: LoginAssemblyDTO(
+											loginSuccess: {
+												self.router?.navigateToAddProduct()
+											}))
+		})
 	}
 }
 
