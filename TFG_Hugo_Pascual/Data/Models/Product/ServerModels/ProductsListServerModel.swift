@@ -9,7 +9,7 @@ import Foundation
 
 struct ProductsListServerModel: BaseServerModel {
 	
-	var id: String?
+	var id: Int?
 	var model: String?
 	var price: String?
 	var image: String?

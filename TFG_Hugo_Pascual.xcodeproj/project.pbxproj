@@ -104,6 +104,7 @@
 		FFA8E3EE26470AF00018D9EA /* ProductsListServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E3ED26470AF00018D9EA /* ProductsListServerModel.swift */; };
 		FFA8E3F526470C910018D9EA /* ProductsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E3F326470C910018D9EA /* ProductsListCell.swift */; };
 		FFA8E3F626470C910018D9EA /* ProductsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA8E3F426470C910018D9EA /* ProductsListCell.xib */; };
+		FFA8E3FA26470F260018D9EA /* ProductsListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E3F926470F260018D9EA /* ProductsListCellViewModel.swift */; };
 		FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */; };
 		FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */; };
 		FFC0BF7226123920004F90CD /* RegisterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0BF7126123920004F90CD /* RegisterProvider.swift */; };
@@ -224,6 +225,7 @@
 		FFA8E3ED26470AF00018D9EA /* ProductsListServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListServerModel.swift; sourceTree = "<group>"; };
 		FFA8E3F326470C910018D9EA /* ProductsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListCell.swift; sourceTree = "<group>"; };
 		FFA8E3F426470C910018D9EA /* ProductsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsListCell.xib; sourceTree = "<group>"; };
+		FFA8E3F926470F260018D9EA /* ProductsListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListCellViewModel.swift; sourceTree = "<group>"; };
 		FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		FFC0BF7126123920004F90CD /* RegisterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProvider.swift; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 		FFA8E3F226470C690018D9EA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FFA8E3F926470F260018D9EA /* ProductsListCellViewModel.swift */,
 				FFA8E3F326470C910018D9EA /* ProductsListCell.swift */,
 				FFA8E3F426470C910018D9EA /* ProductsListCell.xib */,
 			);
@@ -954,6 +957,7 @@
 				FFA041BB258FDA9400C6928A /* ErrorLoginBusinessModel.swift in Sources */,
 				FF0F0A31257BCD82008A35C7 /* BaseProtocols.swift in Sources */,
 				FF7D546925D888C6003588F2 /* LoginViewController.swift in Sources */,
+				FFA8E3FA26470F260018D9EA /* ProductsListCellViewModel.swift in Sources */,
 				FFD2FC45262F503200212505 /* ProductsHomeInteractor.swift in Sources */,
 				FFA8E3F526470C910018D9EA /* ProductsListCell.swift in Sources */,
 				FF0F0AC2257C1485008A35C7 /* HomePresenter.swift in Sources */,

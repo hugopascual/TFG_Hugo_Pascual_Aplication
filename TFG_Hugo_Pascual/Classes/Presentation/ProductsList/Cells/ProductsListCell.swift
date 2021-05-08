@@ -9,7 +9,12 @@ import UIKit
 
 class ProductsListCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var cellView: UIView!
+	@IBOutlet weak var iconImageView: UIImageView!
+	@IBOutlet weak var modelLabel: UILabel!
+	@IBOutlet weak var priceLabel: UILabel!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -20,4 +25,18 @@ class ProductsListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+	func configureCell(viewModel: ProductsListCellViewModel) {
+		self.setUpCellView()
+		self.setUpCellViewModel(viewModel: viewModel)
+	}
+	
+	func setUpCellView() {
+		self.cellView.roundedByDefault(radious: 8)
+	}
+	
+	func setUpCellViewModel(viewModel: ProductsListCellViewModel) {
+		self.iconImageView.image = Utils.imgBase64Decode(viewModel.image)
+		self.modelLabel.text = viewModel.model
+		self.priceLabel.text = viewModel.price
+	}
 }

@@ -24,12 +24,15 @@ class ProductsHomeCategoryCell: UITableViewCell {
         // Configure the view for the selected state
     }
 	
+	func configureCell(model: ProductsHomeCategoryCellViewModel) {
+		self.setUpCellViewModel(model: model)
+	}
+	
 	func setUpCellViewModel(model: ProductsHomeCategoryCellViewModel) {
 		self.iconImageView.image = UIImage(named: model.image ?? "")
 		self.titleLabel.text = model.title
 		self.descriptionLabel.text = model.description
 	}
-    
 }
 
 class ProductsHomeCategoryCellViewModel {

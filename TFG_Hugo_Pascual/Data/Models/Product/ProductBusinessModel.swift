@@ -9,7 +9,7 @@ import Foundation
 
 class ProductBusinessModel: BaseBusinessModel {
 	
-	var id: String?
+	var id: Int?
 	var category: ProductCategory?
 	var model: String?
 	var price: String?
@@ -21,8 +21,20 @@ class ProductBusinessModel: BaseBusinessModel {
 	required init(serverModel: BaseServerModel?) {
 		super.init(serverModel: serverModel)
 		
-		guard let serverModel = serverModel as? ProductDetailServerModel else { return }
-		
+		switch serverModel {
+		case let model as ProductDetailServerModel:
+			self.initWithProductDetailServerModel(serverModel: model)
+		case let model as ProductsListServerModel:
+			self.initWithProductsListServerModel(serverModel: model)
+		default:
+			return
+		}
+	}
+	
+	override init() { super.init() }
+	
+	
+	func initWithProductDetailServerModel(serverModel: ProductDetailServerModel) {
 		self.id = serverModel.id
 		self.category = serverModel.category.map { ProductCategory(rawValue: $0) } as? ProductCategory
 		self.model = serverModel.model
@@ -33,5 +45,11 @@ class ProductBusinessModel: BaseBusinessModel {
 		self.status = serverModel.status.map { ProductStatus(rawValue: $0) } as? ProductStatus
 	}
 	
-	override init() { super.init() }
+	func initWithProductsListServerModel(serverModel: ProductsListServerModel) {
+		self.id = serverModel.id
+		self.model = serverModel.model
+		self.price = serverModel.price
+		self.base64Image = serverModel.image
+		
+	}
 }

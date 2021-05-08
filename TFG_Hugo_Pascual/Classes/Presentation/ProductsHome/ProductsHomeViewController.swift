@@ -82,7 +82,7 @@ extension ProductsHomeViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if let cell = tableView.dequeueReusableCell(withIdentifier: NibName.productsHomeCategoryCell.rawValue) as? ProductsHomeCategoryCell {
-			cell.setUpCellViewModel(model: self.presenter?.getCellViewModelForIndex(index: indexPath.row) ?? ProductsHomeCategoryCellViewModel())
+			cell.configureCell(model: self.presenter?.getCellViewModelForIndex(index: indexPath.row) ?? ProductsHomeCategoryCellViewModel())
 			return cell
 		}
 		return UITableViewCell()

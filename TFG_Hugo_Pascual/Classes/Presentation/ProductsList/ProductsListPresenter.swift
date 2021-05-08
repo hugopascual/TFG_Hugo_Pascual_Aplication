@@ -8,7 +8,9 @@
 import Foundation
 
 protocol ProductsListPresenterProtocol: BasePresenterProtocol {
-	
+	func getCellsNumber() -> Int
+	func getCellViewModelForIndex(index: Int) -> ProductsListCellViewModel
+	func didRowPressed(index: Int)
 }
 
 protocol ProductsListInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -35,6 +37,17 @@ class ProductsListPresenter: BasePresenter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductsListPresenter: ProductsListPresenterProtocol {
 	
+	func getCellsNumber() -> Int {
+		1
+	}
+	
+	func getCellViewModelForIndex(index: Int) -> ProductsListCellViewModel {
+		ProductsListCellViewModel(id: 1)
+	}
+	
+	func didRowPressed(index: Int) {
+		
+	}
 }
 
 extension ProductsListPresenter: ProductsListInteractorOutputProtocol {
