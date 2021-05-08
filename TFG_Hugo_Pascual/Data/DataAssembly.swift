@@ -29,4 +29,11 @@ struct DataAssembly {
 		provider.delegate = interactor
 		return provider
 	}
+	
+	// MARK: Product Provider
+	static func productProvider(interactor: BaseInteractor) -> ProductProviderProtocol {
+		let provider = ProductProvider()
+		provider.delegate = interactor
+		return provider
+	}
 }

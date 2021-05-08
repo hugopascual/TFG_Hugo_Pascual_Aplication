@@ -12,6 +12,7 @@ struct URLEndpoint {
 	
 	public enum BaseURLContext {
 		case backend
+		case local
 	}
 	
 	static var none = ""
@@ -20,6 +21,11 @@ struct URLEndpoint {
 	static var loginUser = "login"
 	static var logoutUser = "logout"
 	static var registerUser = "users/registration"
+	
+	// MARK: Products
+	static var addProduct = "products/add"
+	static var getProductList = "products/getList"
+	static var getProductDetail = "products/getDetail"
 }
 
 extension URLEndpoint {
@@ -28,8 +34,9 @@ extension URLEndpoint {
 		
 		switch urlContext {
 		case .backend:
-//			return "http://localhost:5000/api"
 			return "https://tfg-hugo-pascual-back.herokuapp.com/api"
+		case .local:
+			return "http://localhost:5000/api"
 		}
 	}
 }

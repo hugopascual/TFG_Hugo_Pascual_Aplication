@@ -26,6 +26,9 @@ struct ImagesNamesConstants {
 	static let cpu_icon: String = "cpu_icon"
 	static let ram_icon: String = "ram_icon"
 	
+	// MARK: AddProduct
+	static let no_category_icon: String = "no_category_icon"
+	
 	// MARK: Profile
 	static let profile_logo: String = "profile_logo"
 }

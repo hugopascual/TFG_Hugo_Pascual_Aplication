@@ -17,7 +17,7 @@ class ProductDetailAssembly: BaseAssembly {
 
 	static func view(dto: ProductDetailAssemblyDTO? = nil) -> ProductDetailViewController {
 
-		let view = ProductDetailViewController(nibName: Utils.getXib(.), bundle: nil)
+		let view = ProductDetailViewController(nibName: Utils.getXib(.productDetail), bundle: nil)
 
 		let viper = BaseAssembly.assembly(baseView: view,
 										  presenter: ProductDetailPresenter.self,
