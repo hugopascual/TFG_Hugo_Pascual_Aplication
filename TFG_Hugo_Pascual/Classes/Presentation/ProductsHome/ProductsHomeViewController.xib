@@ -34,7 +34,7 @@
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DLE-dy-cyk" userLabel="Product Categories Table View">
-                            <rect key="frame" x="0.0" y="78" width="414" height="578"/>
+                            <rect key="frame" x="24" y="78" width="366" height="578"/>
                             <color key="backgroundColor" name="viewGeneralBackground"/>
                             <color key="separatorColor" name="viewGeneralBackground"/>
                             <color key="sectionIndexBackgroundColor" name="viewGeneralBackground"/>
@@ -42,10 +42,10 @@
                     </subviews>
                     <color key="backgroundColor" name="viewGeneralBackground"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="DLE-dy-cyk" secondAttribute="trailing" id="2RW-Q4-nsC"/>
+                        <constraint firstAttribute="trailing" secondItem="DLE-dy-cyk" secondAttribute="trailing" constant="24" id="2RW-Q4-nsC"/>
                         <constraint firstAttribute="trailing" secondItem="gnv-QY-frZ" secondAttribute="trailing" constant="24" id="3Y5-sq-huf"/>
                         <constraint firstItem="gnv-QY-frZ" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" constant="24" id="3cg-S0-Tlb"/>
-                        <constraint firstItem="DLE-dy-cyk" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" id="F8y-ag-uqL"/>
+                        <constraint firstItem="DLE-dy-cyk" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" constant="24" id="F8y-ag-uqL"/>
                         <constraint firstItem="gnv-QY-frZ" firstAttribute="top" secondItem="HVq-YY-UHD" secondAttribute="top" constant="24" id="X2b-ZR-zLe"/>
                         <constraint firstItem="DLE-dy-cyk" firstAttribute="top" secondItem="gnv-QY-frZ" secondAttribute="bottom" constant="24" id="g3s-9B-r1g"/>
                         <constraint firstAttribute="bottom" secondItem="DLE-dy-cyk" secondAttribute="bottom" constant="80" id="vJ9-Km-zIv"/>
