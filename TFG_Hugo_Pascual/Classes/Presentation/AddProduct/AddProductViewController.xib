@@ -115,11 +115,14 @@
                                         </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfl-Yl-fFq" userLabel="Attach Image Button">
                                             <rect key="frame" x="24" y="529.5" width="160" height="44"/>
+                                            <color key="backgroundColor" name="viewPrimary"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="25n-PN-MYQ"/>
                                                 <constraint firstAttribute="width" constant="160" id="7eB-QK-09O"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" name="textNormal"/>
+                                            </state>
                                             <connections>
                                                 <action selector="attachImageButtonPressed:" destination="-1" eventType="touchUpInside" id="U3C-Q5-Gr3"/>
                                             </connections>
@@ -132,10 +135,13 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQJ-1r-UhM" userLabel="Add Product Button">
                                             <rect key="frame" x="24" y="597.5" width="366" height="44"/>
+                                            <color key="backgroundColor" name="viewPrimary"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="aX1-Wp-5hg"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" name="textNormal"/>
+                                            </state>
                                             <connections>
                                                 <action selector="addProductButtonPressed:" destination="-1" eventType="touchUpInside" id="rVn-SK-18R"/>
                                             </connections>
@@ -214,8 +220,14 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="textNormal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="viewGeneralBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewPrimary">
+            <color red="0.60399997234344482" green="0.38999998569488525" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

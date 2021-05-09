@@ -42,6 +42,8 @@ final class AddProductViewController: BaseViewController {
 	
 	override func initializeUI() {
 		self.priceTextField.keyboardType = .decimalPad
+		self.attachImageButton.roundedByDefault()
+		self.addProductButton.roundedByDefault()
 	}
 	
 	// MARK: IBActions declaration of all the controls
