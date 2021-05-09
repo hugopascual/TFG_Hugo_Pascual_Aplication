@@ -10,6 +10,9 @@ import Foundation
 class MyProfileViewModel: BaseViewModel {
 	
 	//TODO añadir localización
-	var screenTitle: String = "Profile"
+	var screenTitle: String = "çProfile"
+	
 	var mainImage: String = ImagesNamesConstants.profile_logo
+	var logoutButtonTitle: String = "çCerrar sesión"
+	var myProductsButtonTitle: String = "çMis productos"
 }

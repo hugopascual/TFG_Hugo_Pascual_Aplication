@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
-                <outlet property="buyButton" destination="q0F-af-cV5" id="IdL-6k-49a"/>
+                <outlet property="bottomButton" destination="q0F-af-cV5" id="IdL-6k-49a"/>
                 <outlet property="descriptionLabel" destination="aaD-Tc-RMh" id="WaS-pn-C6K"/>
                 <outlet property="modelLabel" destination="nEa-V1-rnE" id="d2K-HR-BPD"/>
                 <outlet property="priceLabel" destination="zw5-si-ajf" id="IqD-0q-dD7"/>
@@ -53,7 +53,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-af-cV5" userLabel="Buy Button">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-af-cV5" userLabel="Bottom Button">
                                             <rect key="frame" x="24" y="750" width="366" height="44"/>
                                             <color key="backgroundColor" name="viewPrimary"/>
                                             <constraints>
@@ -62,6 +62,9 @@
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" name="textNormal"/>
                                             </state>
+                                            <connections>
+                                                <action selector="bottomButtonPressed:" destination="-1" eventType="touchUpInside" id="VKh-im-PUo"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>

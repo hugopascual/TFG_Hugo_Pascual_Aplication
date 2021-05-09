@@ -10,6 +10,8 @@ import UIKit
 
 protocol ProductDetailViewControllerProtocol: BaseViewControllerProtocol {
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel)
+	func setBuyButton(title: String)
+	func setDeleteButton(title: String)
 }
 
 final class ProductDetailViewController: BaseViewController {
@@ -22,7 +24,7 @@ final class ProductDetailViewController: BaseViewController {
 	@IBOutlet weak var productImageView: UIImageView!
 	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
-	@IBOutlet weak var buyButton: UIButton!
+	@IBOutlet weak var bottomButton: UIButton!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
@@ -34,10 +36,13 @@ final class ProductDetailViewController: BaseViewController {
 	}
 	
 	override func initializeUI() {
-		self.buyButton.roundedByDefault()
+		self.bottomButton.roundedByDefault()
 	}
 	
 	// MARK: IBActions declaration of all the controls
+	@IBAction func bottomButtonPressed(_ sender: Any) {
+		self.presenter?.bottomButtonPressed()
+	}
 	
 	// MARK: Private Functions
 	func setNavigationBar() {
@@ -51,8 +56,6 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? ProductDetailViewModel else { return }
 		self.title = model.screenTitle
-		
-		self.buyButton.setTitle(model.buyButtonTitle, for: .normal)
 	}
 	
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel) {
@@ -60,5 +63,13 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 		self.productImageView.image = Utils.imgBase64Decode(viewModel.productImageEncoded)
 		self.priceLabel.text = (viewModel.productPrice ?? "") + " €"
 		self.descriptionLabel.text = viewModel.productDescription
+	}
+	
+	func setBuyButton(title: String) {
+		self.bottomButton.setTitle(title, for: .normal)
+	}
+	
+	func setDeleteButton(title: String) {
+		self.bottomButton.setTitle(title, for: .normal)
 	}
 }

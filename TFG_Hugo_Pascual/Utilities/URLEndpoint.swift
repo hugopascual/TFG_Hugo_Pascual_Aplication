@@ -26,6 +26,8 @@ struct URLEndpoint {
 	static var addProduct = "products/add"
 	static var getProductList = "products/getList"
 	static var getProductDetail = "products/getDetail"
+	static var getProductsUserList = "products/getUserLists"
+	static var deleteProduct = "products/delete"
 }
 
 extension URLEndpoint {

@@ -40,7 +40,7 @@ extension LoginInteractor: LoginInteractorInputProtocol {
 			success: { serverModel in
 				
 				guard let businessModel = BaseInteractor.parseToBusinessModel(parserModel: UserBusinessModel.self, serverModel: serverModel) else { return }
-				self.saveUserData(email: businessModel.email, username: businessModel.email, token: businessModel.token, id: businessModel.id)
+				self.saveUserData(email: businessModel.email, username: businessModel.username, token: businessModel.token, id: businessModel.id)
 				self.presenter?.loginSuccess()
 			},
 			failure: { error in

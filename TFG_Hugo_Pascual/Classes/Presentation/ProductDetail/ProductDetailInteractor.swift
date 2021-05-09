@@ -9,6 +9,7 @@ import Foundation
 
 protocol ProductDetailInteractorInputProtocol: BaseInteractorInputProtocol {
 	func getProductDetail()
+	func deleteProduct()
 }
 
 class ProductDetailInteractor: BaseInteractor {
@@ -34,7 +35,18 @@ extension ProductDetailInteractor: ProductDetailInteractorInputProtocol {
 												self.presenter?.didGetProductDetailSuccess(businessModel: businessModel)
 											   },
 											   failure: { error in
-												self.presenter?.didGetProdutDetialFail(error: error)
+												self.presenter?.didGetProdutDetailFail(error: error)
 											   })
+	}
+	
+	func deleteProduct() {
+		guard let productId = self.assemblyDTO?.productId else { return }
+		self.productProvider?.deleteProduct(dto: DeleteProductParamsDTO(id: productId),
+											success: {
+												self.presenter?.didDeleteProductSuccess()
+											},
+											failure: { error in
+												self.presenter?.didDeleteProductFail(error: error)
+											})
 	}
 }

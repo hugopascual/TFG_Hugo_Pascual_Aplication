@@ -9,6 +9,7 @@ import Foundation
 
 protocol MyProfileRouterProtocol: BaseRouterProtocol {
 	func navigateToHome()
+	func navigateToProductsUserList()
 }
 
 class MyProfileRouter: BaseRouter {
@@ -25,5 +26,9 @@ extension MyProfileRouter: MyProfileRouterProtocol {
 	
 	func navigateToHome() {
 		self.pushViewController(CustomTabBarAssembly.view(), animated: true)
+	}
+	
+	func navigateToProductsUserList() {
+		self.pushViewController(ProductsUserListAssembly.view(), animated: true)
 	}
 }

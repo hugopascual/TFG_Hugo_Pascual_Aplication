@@ -13,6 +13,7 @@ final class ProductDetailViewModel: BaseViewModel {
 	var screenTitle: String = "çProductDetail"
 	
 	var buyButtonTitle: String = "çComprar"
+	var deleteButtonTitle: String = "çEliminar"
 	
 	var productModel: String?
 	var productImageEncoded: String?

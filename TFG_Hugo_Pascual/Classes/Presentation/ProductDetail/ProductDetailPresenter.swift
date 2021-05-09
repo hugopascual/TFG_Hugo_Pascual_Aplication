@@ -8,12 +8,14 @@
 import Foundation
 
 protocol ProductDetailPresenterProtocol: BasePresenterProtocol {
-	
+	func bottomButtonPressed()
 }
 
 protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol {
 	func didGetProductDetailSuccess(businessModel: ProductBusinessModel)
-	func didGetProdutDetialFail(error: CustomErrorModel)
+	func didGetProdutDetailFail(error: CustomErrorModel)
+	func didDeleteProductSuccess()
+	func didDeleteProductFail(error: CustomErrorModel)
 }
 
 class ProductDetailPresenter: BasePresenter {
@@ -24,6 +26,7 @@ class ProductDetailPresenter: BasePresenter {
 	var interactor: ProductDetailInteractorInputProtocol? { return super.baseInteractor as? ProductDetailInteractorInputProtocol }
 	
 	var viewModel = ProductDetailViewModel()
+	var isOwner: Bool?
 	
 	// MARK: Private Functions
 	func viewDidLoad() {
@@ -31,11 +34,28 @@ class ProductDetailPresenter: BasePresenter {
 		
 		self.interactor?.getProductDetail()
 	}
+	
+	func setUpBottomButton(owner: String) {
+		if owner != DataPersisterHelper.standard.localUserData.username {
+			self.isOwner = false
+			self.view?.setBuyButton(title: self.viewModel.buyButtonTitle)
+		} else {
+			self.isOwner = true
+			self.view?.setDeleteButton(title: self.viewModel.deleteButtonTitle)
+		}
+	}
 }
 
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductDetailPresenter: ProductDetailPresenterProtocol {
 	
+	func bottomButtonPressed() {
+		if self.isOwner ?? false {
+			self.interactor?.deleteProduct()
+		} else {
+			print("COMENZAR PROCESO DE PAGO")
+		}
+	}
 }
 
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
@@ -47,9 +67,19 @@ extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
 		self.viewModel.productDescription = businessModel.description
 		
 		self.view?.setUpProductDetail(self.viewModel)
+	
+		self.setUpBottomButton(owner: businessModel.owner ?? "")
 	}
 	
-	func didGetProdutDetialFail(error: CustomErrorModel) {
+	func didGetProdutDetailFail(error: CustomErrorModel) {
+		self.genericErrorHappened(error: error)
+	}
+	
+	func didDeleteProductSuccess() {
+		self.router?.navigateToHome()
+	}
+	
+	func didDeleteProductFail(error: CustomErrorModel) {
 		self.genericErrorHappened(error: error)
 	}
 }

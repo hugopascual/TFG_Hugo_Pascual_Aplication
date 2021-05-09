@@ -14,17 +14,16 @@ protocol ProductsListPresenterProtocol: BasePresenterProtocol {
 }
 
 protocol ProductsListInteractorOutputProtocol: BaseInteractorOutputProtocol {
-	func didGetProductListSuccess(arrayBusinessModel: [ProductBusinessModel])
-	func didGetProductListFail(error: CustomErrorModel)
-
+	func didGetProductsListSuccess(arrayBusinessModel: [ProductBusinessModel])
+	func didGetProductsListFail(error: CustomErrorModel)
 }
 
 class ProductsListPresenter: BasePresenter {
 	
 	// MARK: VIPER Dependencies
-	weak var view: ProductsListViewControllerProtocol? { return super.baseView as? ProductsListViewControllerProtocol }
-	var router: ProductsListRouterProtocol? { return super.baseRouter as? ProductsListRouterProtocol }
-	var interactor: ProductsListInteractorInputProtocol? { return super.baseInteractor as? ProductsListInteractorInputProtocol }
+	private weak var view: ProductsListViewControllerProtocol? { return super.baseView as? ProductsListViewControllerProtocol }
+	private var router: ProductsListRouterProtocol? { return super.baseRouter as? ProductsListRouterProtocol }
+	private var interactor: ProductsListInteractorInputProtocol? { return super.baseInteractor as? ProductsListInteractorInputProtocol }
 	
 	var viewModel = ProductsListViewModel()
 	
@@ -55,7 +54,7 @@ extension ProductsListPresenter: ProductsListPresenterProtocol {
 
 extension ProductsListPresenter: ProductsListInteractorOutputProtocol {
 	
-	func didGetProductListSuccess(arrayBusinessModel: [ProductBusinessModel]) {
+	func didGetProductsListSuccess(arrayBusinessModel: [ProductBusinessModel]) {
 		arrayBusinessModel.forEach { businessModel in
 			self.viewModel.productCells.append(ProductsListCellViewModel(id: businessModel.id,
 																		image: businessModel.base64Image,
@@ -65,7 +64,7 @@ extension ProductsListPresenter: ProductsListInteractorOutputProtocol {
 		self.view?.refreshTableData()
 	}
 	
-	func didGetProductListFail(error: CustomErrorModel) {
+	func didGetProductsListFail(error: CustomErrorModel) {
 		self.genericErrorHappened(error: error)
 	}
 }

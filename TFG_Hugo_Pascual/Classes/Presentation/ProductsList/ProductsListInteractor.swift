@@ -28,14 +28,14 @@ extension ProductsListInteractor: ProductsListInteractorInputProtocol {
 	
 	func getProductsList() {
 		guard let category = self.assemblyDTO?.listCategory else { return }
-		self.productProvider?.getProductList(
+		self.productProvider?.getProductsList(
 			dto: GetProductListParamsDTO(category: category.rawValue),
 			success: { arrayServerModel in
 				guard let arrayBusinessModel = BaseInteractor.parseArrayToBusinessModel(parserModel: [ProductBusinessModel].self, arrayServerModels: arrayServerModel) else { return }
-				self.presenter?.didGetProductListSuccess(arrayBusinessModel: arrayBusinessModel)
+				self.presenter?.didGetProductsListSuccess(arrayBusinessModel: arrayBusinessModel)
 			},
 			failure: { error in
-				self.presenter?.didGetProductListFail(error: error)
+				self.presenter?.didGetProductsListFail(error: error)
 			})
 	}
 }

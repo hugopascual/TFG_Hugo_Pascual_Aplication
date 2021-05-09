@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyProfileViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
+                <outlet property="logoutButton" destination="iAf-Z7-RTm" id="34j-ND-SHX"/>
                 <outlet property="mainImageView" destination="Vpl-QP-zpj" id="KSV-Js-Tu2"/>
+                <outlet property="myProductsButton" destination="P3c-S7-qyZ" id="DAC-8q-YYK"/>
                 <outlet property="titleLabel" destination="ABL-N0-4mT" id="9AU-w5-tN6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cqm-gX-Acv"/>
             </connections>
@@ -27,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-eS-znm" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="482.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
                                             <rect key="frame" x="24" y="24" width="366" height="20.5"/>
@@ -43,13 +45,26 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAf-Z7-RTm" userLabel="Logout Button">
-                                            <rect key="frame" x="183" y="346.5" width="48" height="30"/>
+                                            <rect key="frame" x="183" y="414.5" width="48" height="44"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="b3G-Zo-9jS"/>
+                                                <constraint firstAttribute="height" constant="44" id="b3G-Zo-9jS"/>
                                             </constraints>
                                             <state key="normal" title="Logout"/>
                                             <connections>
                                                 <action selector="logoutButtonPressed:" destination="-1" eventType="touchUpInside" id="awJ-WH-0tP"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3c-S7-qyZ" userLabel="My Products Button">
+                                            <rect key="frame" x="24" y="346.5" width="366" height="44"/>
+                                            <color key="backgroundColor" name="viewPrimary"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="bz2-tu-3l8"/>
+                                            </constraints>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" name="textNormal"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="myProductsButtonPressed:" destination="-1" eventType="touchUpInside" id="2Dy-am-C9E"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -58,8 +73,11 @@
                                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="top" secondItem="ABL-N0-4mT" secondAttribute="bottom" constant="24" id="8Zb-QH-ZsI"/>
                                         <constraint firstItem="ABL-N0-4mT" firstAttribute="top" secondItem="b2g-eS-znm" secondAttribute="top" constant="24" id="Bfm-Hj-uWv"/>
                                         <constraint firstItem="ABL-N0-4mT" firstAttribute="leading" secondItem="b2g-eS-znm" secondAttribute="leading" constant="24" id="Eb0-cd-Z6n"/>
-                                        <constraint firstItem="iAf-Z7-RTm" firstAttribute="top" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="24" id="Vij-Hc-GFn"/>
+                                        <constraint firstAttribute="trailing" secondItem="P3c-S7-qyZ" secondAttribute="trailing" constant="24" id="HZW-JX-9XC"/>
+                                        <constraint firstItem="P3c-S7-qyZ" firstAttribute="top" secondItem="Vpl-QP-zpj" secondAttribute="bottom" constant="24" id="Kl0-b0-hin"/>
+                                        <constraint firstItem="iAf-Z7-RTm" firstAttribute="top" secondItem="P3c-S7-qyZ" secondAttribute="bottom" constant="24" id="PuI-HI-TfL"/>
                                         <constraint firstAttribute="bottom" secondItem="iAf-Z7-RTm" secondAttribute="bottom" constant="24" id="dff-9x-JdN"/>
+                                        <constraint firstItem="P3c-S7-qyZ" firstAttribute="leading" secondItem="b2g-eS-znm" secondAttribute="leading" constant="24" id="hvm-lm-uwR"/>
                                         <constraint firstAttribute="trailing" secondItem="ABL-N0-4mT" secondAttribute="trailing" constant="24" id="oqk-rj-Gr0"/>
                                         <constraint firstItem="Vpl-QP-zpj" firstAttribute="centerX" secondItem="ABL-N0-4mT" secondAttribute="centerX" id="xNQ-1V-IVG"/>
                                         <constraint firstItem="iAf-Z7-RTm" firstAttribute="centerX" secondItem="b2g-eS-znm" secondAttribute="centerX" id="yoC-Sf-ped"/>
@@ -97,8 +115,14 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="textNormal">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="viewGeneralBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewPrimary">
+            <color red="0.60399997234344482" green="0.38999998569488525" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol MyProfilePresenterProtocol: BasePresenterProtocol {
+	func myProductsButtonPressed()
 	func logoutButtonPressed()
 }
 
@@ -33,6 +34,10 @@ class MyProfilePresenter: BasePresenter {
 
 extension MyProfilePresenter: MyProfilePresenterProtocol {
 
+	func myProductsButtonPressed() {
+		self.router?.navigateToProductsUserList()
+	}
+	
 	func logoutButtonPressed() {
 		self.interactor?.logout()
 	}

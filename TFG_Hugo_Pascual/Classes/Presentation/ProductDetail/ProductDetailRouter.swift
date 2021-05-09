@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductDetailRouterProtocol: BaseRouterProtocol {
-	
+	func navigateToHome()
 }
 
 class ProductDetailRouter: BaseRouter {
@@ -23,4 +23,7 @@ class ProductDetailRouter: BaseRouter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductDetailRouter: ProductDetailRouterProtocol {
 	
+	func navigateToHome() {
+		self.pushViewController(CustomTabBarAssembly.view(), animated: true)
+	}
 }

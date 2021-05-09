@@ -55,7 +55,7 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 		self.productToBeAdded.model = model
 		self.productToBeAdded.price = price
 		self.productToBeAdded.description = description
-		self.productToBeAdded.owner?.username = DataPersisterHelper.standard.localUserData.username
+		self.productToBeAdded.owner = DataPersisterHelper.standard.localUserData.username
 		self.productToBeAdded.base64Image = Utils.imgBase64Encoding(ImagesNamesConstants.no_category_icon)
 		
 		self.interactor?.addProduct(product: self.productToBeAdded)

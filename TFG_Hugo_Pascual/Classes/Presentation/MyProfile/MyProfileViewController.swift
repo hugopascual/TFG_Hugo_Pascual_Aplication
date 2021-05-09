@@ -20,6 +20,8 @@ class MyProfileViewController: BaseViewController {
 	// MARK: IBOutlets declaration of all controls
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var mainImageView: UIImageView!
+	@IBOutlet weak var logoutButton: UIButton!
+	@IBOutlet weak var myProductsButton: UIButton!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
@@ -29,7 +31,16 @@ class MyProfileViewController: BaseViewController {
 		self.navigationController?.setNavigationBarHidden(true, animated: animated)
 	}
 	
+	override func initializeUI() {
+		super.initializeUI()
+		
+		self.myProductsButton.roundedByDefault()
+	}
+	
 	// MARK: IBActions declaration of all the controls
+	@IBAction func myProductsButtonPressed(_ sender: Any) {
+		self.presenter?.myProductsButtonPressed()
+	}
 	
 	@IBAction func logoutButtonPressed(_ sender: Any) {
 		self.presenter?.logoutButtonPressed()
@@ -45,5 +56,7 @@ extension MyProfileViewController: MyProfileViewProtocol {
 		
 		self.titleLabel.text = self.title
 		self.mainImageView.image = UIImage(named: model.mainImage)
+		self.logoutButton.setTitle(model.logoutButtonTitle, for: .normal)
+		self.myProductsButton.setTitle(model.myProductsButtonTitle, for: .normal)
 	}
 }

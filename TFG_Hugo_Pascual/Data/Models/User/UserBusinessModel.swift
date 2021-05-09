@@ -25,4 +25,13 @@ class UserBusinessModel: BaseBusinessModel {
 		self.username = serverModel.username
 		self.token = serverModel.token
 	}
+	
+	internal init(email: String? = nil, username: String? = nil, token: String? = nil, id: String? = nil) {
+		super.init()
+		
+		self.email = email
+		self.username = username
+		self.token = token
+		self.id = id
+	}
 }
