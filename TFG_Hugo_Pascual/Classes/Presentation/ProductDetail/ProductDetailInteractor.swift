@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductDetailInteractorInputProtocol: BaseInteractorInputProtocol {
-	
+	func getProductDetail()
 }
 
 class ProductDetailInteractor: BaseInteractor {

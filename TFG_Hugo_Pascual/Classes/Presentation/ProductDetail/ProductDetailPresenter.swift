@@ -28,6 +28,8 @@ class ProductDetailPresenter: BasePresenter {
 	// MARK: Private Functions
 	func viewDidLoad() {
 		self.view?.setViewModel(self.viewModel)
+		
+		self.interactor?.getProductDetail()
 	}
 }
 
@@ -39,7 +41,12 @@ extension ProductDetailPresenter: ProductDetailPresenterProtocol {
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
 	
 	func didGetProductDetailSuccess(businessModel: ProductBusinessModel) {
+		self.viewModel.productModel = businessModel.model
+		self.viewModel.productPrice = businessModel.price
+		self.viewModel.productImageEncoded = businessModel.base64Image
+		self.viewModel.productDescription = businessModel.description
 		
+		self.view?.setUpProductDetail(self.viewModel)
 	}
 	
 	func didGetProdutDetialFail(error: CustomErrorModel) {

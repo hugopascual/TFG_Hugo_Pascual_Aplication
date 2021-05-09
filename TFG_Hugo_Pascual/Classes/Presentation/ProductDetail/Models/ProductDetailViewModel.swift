@@ -11,4 +11,11 @@ final class ProductDetailViewModel: BaseViewModel {
 
 	//TODO añadir localización
 	var screenTitle: String = "çProductDetail"
+	
+	var buyButtonTitle: String = "çComprar"
+	
+	var productModel: String?
+	var productImageEncoded: String?
+	var productPrice: String?
+	var productDescription: String?
 }

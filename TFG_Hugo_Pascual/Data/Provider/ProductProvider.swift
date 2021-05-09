@@ -83,7 +83,7 @@ struct GetProductListProviderRequest {
 	static func getProduct(params: GetProductListParamsDTO?) -> ProviderDTO {
 		return ProviderDTO(params: params?.encode(),
 						   method: .get,
-						   urlContext: .local,
+						   urlContext: .backend,
 						   endpoint: URLEndpoint.getProductList)
 	}
 }
