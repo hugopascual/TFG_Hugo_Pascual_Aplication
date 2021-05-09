@@ -22,6 +22,7 @@ class ProductsListRouter: BaseRouter {
 
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductsListRouter: ProductsListRouterProtocol {
+	
 	func navigateToProductDetail(id: Int) {
 		self.pushViewController(ProductDetailAssembly.view(dto: ProductDetailAssemblyDTO(productId: id)), animated: true)
 	}
