@@ -53,6 +53,11 @@ class Utils {
 		return imageData?.base64EncodedString() ?? ""
 	}
 	
+	static func imgBase64Encoding(_ image: UIImage) -> String {
+		let imageData = image.jpegData(compressionQuality: 1)
+		return imageData?.base64EncodedString() ?? ""
+	}
+	
 	static func imgBase64Decode(_ codedImage: String?) -> UIImage {
 		guard let imageToDecode = codedImage else { return UIImage() }
 		guard let newImageData = Data(base64Encoded: imageToDecode) else { return UIImage() }

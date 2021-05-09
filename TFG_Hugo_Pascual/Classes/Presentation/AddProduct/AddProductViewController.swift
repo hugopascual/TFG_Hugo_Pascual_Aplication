@@ -10,6 +10,7 @@ import UIKit
 
 protocol AddProductViewControllerProtocol: BaseViewControllerProtocol {
 	func setCategory(_ category: ProductCategory)
+	func imageAttached(text: String)
 }
 
 final class AddProductViewController: BaseViewController {
@@ -29,15 +30,19 @@ final class AddProductViewController: BaseViewController {
 	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var descriptionTextView: UITextView!
 	@IBOutlet weak var attachImageButton: UIButton!
+	@IBOutlet weak var attachImageLabel: UILabel!
 	@IBOutlet weak var addProductButton: UIButton!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
+	var imagePicker: ImagePicker!
 	
 	// MARK: UIViewController Functions
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		self.setNavigationBar()
+		
+		self.imagePicker = ImagePicker(presentationController: self, delegate: self)
 	}
 	
 	override func initializeUI() {
@@ -52,7 +57,8 @@ final class AddProductViewController: BaseViewController {
 	}
 	
 	@IBAction func attachImageButtonPressed(_ sender: Any) {
-		self.presenter?.attachImageButtonPressed()
+		guard let button = sender as? UIButton else { return }
+		self.imagePicker.present(from: button)
 	}
 	
 	@IBAction func addProductButtonPressed(_ sender: Any) {
@@ -80,11 +86,23 @@ extension AddProductViewController: AddProductViewControllerProtocol {
 		self.priceLabel.text = model.priceTitle
 		self.descriptionLabel.text = model.descriptionTitle
 		self.attachImageButton.setTitle(model.attachImageButtonTitle, for: .normal)
+		self.attachImageLabel.text = model.nonAttachedImage
 		self.addProductButton.setTitle(model.addProductButtonTitle, for: .normal)
 	}
 	
 	func setCategory(_ category: ProductCategory) {
 		self.categoryDescriptionLabel.text = category.getLocalizedString()
 		self.categoryImageView.image = category.getAssociatedImage()
+	}
+	
+	func imageAttached(text: String) {
+		self.attachImageLabel.text = text
+	}
+}
+
+extension AddProductViewController: ImagePickerDelegate {
+
+	func didSelect(image: UIImage?) {
+		self.presenter?.imageSelected(imageEncoded: Utils.imgBase64Encoding(image ?? UIImage()))
 	}
 }

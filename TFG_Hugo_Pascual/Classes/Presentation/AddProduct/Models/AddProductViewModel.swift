@@ -20,5 +20,7 @@ final class AddProductViewModel: BaseViewModel {
 	var priceTitle: String = "çPrecio"
 	var descriptionTitle: String = "çDescripción"
 	var attachImageButtonTitle: String = "çAdjuntar imagen"
+	var nonAttachedImage: String = "çSin imagen adjunta"
+	var attachedImage: String = "çImagen adjunta"
 	var addProductButtonTitle: String = "çAñadir producto"
 }

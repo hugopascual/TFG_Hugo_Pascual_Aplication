@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="addProductButton" destination="fQJ-1r-UhM" id="ne4-BK-KAd"/>
                 <outlet property="attachImageButton" destination="Nfl-Yl-fFq" id="CST-uc-LjV"/>
+                <outlet property="attachImageLabel" destination="Qsb-vG-x1c" id="1Oq-TK-hUd"/>
                 <outlet property="categoryButton" destination="NNh-dk-BBb" id="FRn-gQ-Zou"/>
                 <outlet property="categoryDescriptionLabel" destination="6PP-J6-EPB" id="neT-XZ-2Re"/>
                 <outlet property="categoryImageView" destination="fTZ-s9-B4A" id="GEc-6G-ZZv"/>
@@ -127,7 +128,7 @@
                                                 <action selector="attachImageButtonPressed:" destination="-1" eventType="touchUpInside" id="U3C-Q5-Gr3"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsb-vG-x1c" userLabel="Attach Image Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsb-vG-x1c" userLabel="Attach Image Label">
                                             <rect key="frame" x="208" y="551.5" width="182" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>

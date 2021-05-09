@@ -35,8 +35,8 @@ extension AddProductInteractor: AddProductInteractorInputProtocol {
 																  owner: product.owner),
 		success: {
 			self.presenter?.didAddProductSucess()
-		}, failure: { (_) in
-			self.presenter?.didAddProductFailure()
+		}, failure: { error in
+			self.presenter?.didAddProductFailure(error: error)
 		})
 	}
 }

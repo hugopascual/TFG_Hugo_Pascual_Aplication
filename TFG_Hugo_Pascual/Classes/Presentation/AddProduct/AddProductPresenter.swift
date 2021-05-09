@@ -9,13 +9,13 @@ import Foundation
 
 protocol AddProductPresenterProtocol: BasePresenterProtocol {
 	func chooseCategoryButtonPressed()
-	func attachImageButtonPressed()
+	func imageSelected(imageEncoded: String)
 	func addProductButtonPressed(model: String, price: String, description: String)
 }
 
 protocol AddProductInteractorOutputProtocol: BaseInteractorOutputProtocol {
 	func didAddProductSucess()
-	func didAddProductFailure()
+	func didAddProductFailure(error: CustomErrorModel)
 }
 
 class AddProductPresenter: BasePresenter {
@@ -46,8 +46,11 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 		))
 	}
 	
-	func attachImageButtonPressed() {
-		
+	func imageSelected(imageEncoded: String) {
+		self.productToBeAdded.base64Image = imageEncoded
+		if !imageEncoded.isEmpty {
+			self.view?.imageAttached(text: self.viewModel.attachedImage)
+		}
 	}
 	
 	func addProductButtonPressed(model: String, price: String, description: String) {
@@ -56,7 +59,7 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 		self.productToBeAdded.price = price
 		self.productToBeAdded.description = description
 		self.productToBeAdded.owner = DataPersisterHelper.standard.localUserData.username
-		self.productToBeAdded.base64Image = Utils.imgBase64Encoding(ImagesNamesConstants.no_category_icon)
+//		self.productToBeAdded.base64Image = Utils.imgBase64Encoding(ImagesNamesConstants.no_category_icon)
 		
 		self.interactor?.addProduct(product: self.productToBeAdded)
 	}
@@ -68,7 +71,7 @@ extension AddProductPresenter: AddProductInteractorOutputProtocol {
 		self.router?.back()
 	}
 	
-	func didAddProductFailure() {
-		print("Error al añadir el producto")
+	func didAddProductFailure(error: CustomErrorModel) {
+		self.genericErrorHappened(error: error)
 	}
 }

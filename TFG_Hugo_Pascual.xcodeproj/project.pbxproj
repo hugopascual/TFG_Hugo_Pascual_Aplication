@@ -35,6 +35,7 @@
 		FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
+		FF1643A926484E8E003C4036 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1643A826484E8E003C4036 /* ImagePicker.swift */; };
 		FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
@@ -169,6 +170,7 @@
 		FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
+		FF1643A826484E8E003C4036 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
@@ -406,6 +408,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		FF1643A726484E4F003C4036 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				FF1643A826484E8E003C4036 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		FF20D68625D88AB90040C27E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +427,7 @@
 		FF211C3D260D05FC0002B348 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF1643A726484E4F003C4036 /* ImagePicker */,
 				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 			);
 			path = Modules;
@@ -966,6 +977,7 @@
 				FF7D546C25D888C6003588F2 /* LoginViewModel.swift in Sources */,
 				FFD2FC41262F503200212505 /* ProductsHomePresenter.swift in Sources */,
 				FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */,
+				FF1643A926484E8E003C4036 /* ImagePicker.swift in Sources */,
 				FFD47C8C25A25A6600AC3431 /* NavigationBarManager.swift in Sources */,
 				FF7D547D25D88907003588F2 /* RegistrationViewModel.swift in Sources */,
 				FF3E05872631926200033159 /* ProductDetailPresenter.swift in Sources */,
