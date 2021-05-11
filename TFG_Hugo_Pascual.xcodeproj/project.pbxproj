@@ -318,12 +318,11 @@
 		FF0F0A19257BCD82008A35C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FF211C3D260D05FC0002B348 /* Modules */,
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
+				FF23F00D25CC604300D25E54 /* Common */,
 				FFBCCBA225AF526200338D0B /* Extensions */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
-				FF23F00D25CC604300D25E54 /* Common */,
 				FF0F0A2C257BCD82008A35C7 /* Presentation */,
 			);
 			path = Classes;
@@ -366,8 +365,8 @@
 		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FFA8E4112647F4CD0018D9EA /* ProductsUserList */,
 				FF3E05A62631935700033159 /* AddProduct */,
+				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
@@ -375,6 +374,7 @@
 				FF3E057F2631923F00033159 /* ProductDetail */,
 				FFD2FC39262F502600212505 /* ProductsHome */,
 				FF3E0593263192A600033159 /* ProductsList */,
+				FFA8E4112647F4CD0018D9EA /* ProductsUserList */,
 				FF7D547025D888E3003588F2 /* Registration */,
 			);
 			path = Presentation;
@@ -424,15 +424,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF211C3D260D05FC0002B348 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				FF1643A726484E4F003C4036 /* ImagePicker */,
-				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		FF23F00125CC5E4B00D25E54 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,8 +438,8 @@
 			isa = PBXGroup;
 			children = (
 				FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */,
-				FF23F00425CC5E9600D25E54 /* UserServerModel.swift */,
 				FF957E1F25F1476E007FC6C8 /* UserLocalPersistedDataBusinessModel.swift */,
+				FFA9D934264AE3550003ACD6 /* ServerModels */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -456,7 +447,6 @@
 		FF23F00D25CC604300D25E54 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FF3889B6262F556900B53F4F /* Custom Cells */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -472,13 +462,6 @@
 				FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */,
 			);
 			path = CustomTabBar;
-			sourceTree = "<group>";
-		};
-		FF3889B6262F556900B53F4F /* Custom Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 		FF3889B7262F558600B53F4F /* Cells */ = {
@@ -665,8 +648,9 @@
 			isa = PBXGroup;
 			children = (
 				FFAA245125EEFAC200612AC6 /* DataPersister */,
-				FFA041B6258FD92500C6928A /* NetworkManager */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
+				FF1643A726484E4F003C4036 /* ImagePicker */,
+				FFA041B6258FD92500C6928A /* NetworkManager */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -725,6 +709,14 @@
 				FFA8E4122647F4F30018D9EA /* ProductsUserListPresenter.swift */,
 			);
 			path = ProductsUserList;
+			sourceTree = "<group>";
+		};
+		FFA9D934264AE3550003ACD6 /* ServerModels */ = {
+			isa = PBXGroup;
+			children = (
+				FF23F00425CC5E9600D25E54 /* UserServerModel.swift */,
+			);
+			path = ServerModels;
 			sourceTree = "<group>";
 		};
 		FFAA245125EEFAC200612AC6 /* DataPersister */ = {
