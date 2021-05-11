@@ -117,6 +117,9 @@
 		FFA8E4192647F4F30018D9EA /* ProductsUserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E4122647F4F30018D9EA /* ProductsUserListPresenter.swift */; };
 		FFA8E41C2647F4F30018D9EA /* ProductsUserListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E4152647F4F30018D9EA /* ProductsUserListAssembly.swift */; };
 		FFA8E41D2647F4F30018D9EA /* ProductsUserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8E4162647F4F30018D9EA /* ProductsUserListInteractor.swift */; };
+		FFA9D93E264AE52F0003ACD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFA9D940264AE52F0003ACD6 /* Localizable.strings */; };
+		FFA9D945264AE6260003ACD6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA9D944264AE6260003ACD6 /* String+Extension.swift */; };
+		FFA9D948264AE66D0003ACD6 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA9D947264AE66D0003ACD6 /* LocalizedKeys.swift */; };
 		FFBCCBA425AF528C00338D0B /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */; };
 		FFBCCBA725AF52A400338D0B /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */; };
 		FFC0BF7226123920004F90CD /* RegisterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0BF7126123920004F90CD /* RegisterProvider.swift */; };
@@ -250,6 +253,10 @@
 		FFA8E4122647F4F30018D9EA /* ProductsUserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUserListPresenter.swift; sourceTree = "<group>"; };
 		FFA8E4152647F4F30018D9EA /* ProductsUserListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUserListAssembly.swift; sourceTree = "<group>"; };
 		FFA8E4162647F4F30018D9EA /* ProductsUserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUserListInteractor.swift; sourceTree = "<group>"; };
+		FFA9D93F264AE52F0003ACD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FFA9D942264AE5660003ACD6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FFA9D944264AE6260003ACD6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FFA9D947264AE66D0003ACD6 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
 		FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		FFC0BF7126123920004F90CD /* RegisterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProvider.swift; sourceTree = "<group>"; };
@@ -308,6 +315,7 @@
 				FF0F0A19257BCD82008A35C7 /* Classes */,
 				FF23F00125CC5E4B00D25E54 /* Data */,
 				FF0F0ADE257C3E65008A35C7 /* Utilities */,
+				FFA9D939264AE4DA0003ACD6 /* Resources */,
 				FF0F09F1257BCC8C008A35C7 /* Assets.xcassets */,
 				FF0F0A02257BCD23008A35C7 /* LaunchScreen.storyboard */,
 				FF0F09F9257BCC8C008A35C7 /* Info.plist */,
@@ -404,6 +412,7 @@
 				FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */,
 				FF0F0AE3257C3F88008A35C7 /* Utils.swift */,
 				FF00473025B78E980058036B /* ImagesNames.swift */,
+				FFA9D947264AE66D0003ACD6 /* LocalizedKeys.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -719,6 +728,14 @@
 			path = ServerModels;
 			sourceTree = "<group>";
 		};
+		FFA9D939264AE4DA0003ACD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FFA9D940264AE52F0003ACD6 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FFAA245125EEFAC200612AC6 /* DataPersister */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +750,7 @@
 		FFBCCBA225AF526200338D0B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FFA9D944264AE6260003ACD6 /* String+Extension.swift */,
 				FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */,
 				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
 				FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */,
@@ -859,6 +877,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = FF0F09DF257BCC8B008A35C7;
 			packageReferences = (
@@ -889,6 +908,7 @@
 				FF3E05A1263192BB00033159 /* ProductsListViewController.xib in Resources */,
 				FFC7916C25853DAB008BDBDC /* MyProfileViewController.xib in Resources */,
 				FF4F79332638868C0043F702 /* ProductChooseCategoryViewController.xib in Resources */,
+				FFA9D93E264AE52F0003ACD6 /* Localizable.strings in Resources */,
 				FF7D547E25D88907003588F2 /* RegistrationViewController.xib in Resources */,
 				FFA8E3F626470C910018D9EA /* ProductsListCell.xib in Resources */,
 				FF3E05B42631938500033159 /* AddProductViewController.xib in Resources */,
@@ -982,6 +1002,7 @@
 				FF0F0A3A257BCD82008A35C7 /* HomeViewController.swift in Sources */,
 				FFA8E40326472D9A0018D9EA /* ProductsHomeCategoryCellViewModel.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
+				FFA9D945264AE6260003ACD6 /* String+Extension.swift in Sources */,
 				FF4C9B5D263B377800C9331F /* ProductDetailServerModel.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
 				FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */,
@@ -1008,6 +1029,7 @@
 				FF3E058A2631926200033159 /* ProductDetailAssembly.swift in Sources */,
 				FF3E05A0263192BB00033159 /* ProductsListViewModel.swift in Sources */,
 				FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */,
+				FFA9D948264AE66D0003ACD6 /* LocalizedKeys.swift in Sources */,
 				FF957E1225F143D4007FC6C8 /* DPDataPersister.swift in Sources */,
 				FF4F792E2638868C0043F702 /* ProductChooseCategoryRouter.swift in Sources */,
 				FF4F79312638868C0043F702 /* ProductChooseCategoryInteractor.swift in Sources */,
@@ -1043,11 +1065,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FFA9D940264AE52F0003ACD6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFA9D93F264AE52F0003ACD6 /* en */,
+				FFA9D942264AE5660003ACD6 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FF0F09FA257BCC8C008A35C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1109,6 +1144,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
