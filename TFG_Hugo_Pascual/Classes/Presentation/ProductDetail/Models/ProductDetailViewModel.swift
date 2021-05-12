@@ -10,10 +10,10 @@ import Foundation
 final class ProductDetailViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "çProductDetail"
+	var screenTitle: String = LocalizedKeys.ProductDetail.product_detail
 	
-	var buyButtonTitle: String = "çComprar"
-	var deleteButtonTitle: String = "çEliminar"
+	var buyButtonTitle: String = LocalizedKeys.Common.buy
+	var deleteButtonTitle: String = LocalizedKeys.Common.delete
 	
 	var productModel: String?
 	var productImageEncoded: String?

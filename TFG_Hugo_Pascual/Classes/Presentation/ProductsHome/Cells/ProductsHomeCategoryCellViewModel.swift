@@ -23,8 +23,8 @@ class ProductsHomeCategoryCellViewModel {
 }
 
 extension ProductsHomeCategoryCellViewModel {
-	static let motherboard = ProductsHomeCategoryCellViewModel(category: .motherboard, image: ImagesNamesConstants.motherboard_icon, title: "ÇPlacas Base", description: "çEl corazón de tu ordenador donde todo debe encajar.")
-	static let cpu = ProductsHomeCategoryCellViewModel(category: .cpu, image: ImagesNamesConstants.cpu_icon, title: "ÇPorcesadores", description: "çEl cerebro de tu ordenador que todo lo controla.")
-	static let gpu = ProductsHomeCategoryCellViewModel(category: .gpu, image: ImagesNamesConstants.gpu_icon, title: "ÇTarjetas gráficas", description: "çEl precesador de lo visual y que te da tus fps.")
-	static let ram = ProductsHomeCategoryCellViewModel(category: .ram, image: ImagesNamesConstants.ram_icon, title: "ÇModulos RAM", description: "çDonde se cargan las ordenes de tu procesador.")
+	static let motherboard = ProductsHomeCategoryCellViewModel(category: .motherboard, image: ImagesNamesConstants.motherboard_icon, title: LocalizedKeys.ProductsHome.motherboard_title, description: LocalizedKeys.ProductsHome.motherboard_description)
+	static let cpu = ProductsHomeCategoryCellViewModel(category: .cpu, image: ImagesNamesConstants.cpu_icon, title: LocalizedKeys.ProductsHome.cpu_title, description: LocalizedKeys.ProductsHome.cpu_description)
+	static let gpu = ProductsHomeCategoryCellViewModel(category: .gpu, image: ImagesNamesConstants.gpu_icon, title: LocalizedKeys.ProductsHome.gpu_title, description: LocalizedKeys.ProductsHome.gpu_description)
+	static let ram = ProductsHomeCategoryCellViewModel(category: .ram, image: ImagesNamesConstants.ram_icon, title: LocalizedKeys.ProductsHome.ram_title, description: LocalizedKeys.ProductsHome.ram_description)
 }

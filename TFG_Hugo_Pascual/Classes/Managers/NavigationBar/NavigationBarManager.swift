@@ -73,7 +73,6 @@ class NavigationBarManager {
 		let navBar = self.navigationController?.navigationBar
 		navBar?.backIndicatorImage = backButton.image
 		navBar?.backIndicatorTransitionMaskImage = backButton.image
-		// TODO añadir localización
 		self.navigationItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
 
@@ -119,8 +118,7 @@ extension NavigationBarManager {
 	
 	//Put text Cancel To the Button Cancel
 	func setNavigationBarCancelButton(cancelButton: NavigationBarButtonItem) {
-		//TODO añadir localización
-		let cancelButtonCustom = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: nil)
+		let cancelButtonCustom = UIBarButtonItem(title: LocalizedKeys.Common.cancel, style: .plain, target: self, action: nil)
 		cancelButtonCustom.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cartero-Bold", size: 14)!], for: UIControl.State.normal)
 		cancelButtonCustom.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cartero-Bold", size: 14)!], for: UIControl.State.selected)
 		self.navigationItem?.rightBarButtonItem = cancelButtonCustom

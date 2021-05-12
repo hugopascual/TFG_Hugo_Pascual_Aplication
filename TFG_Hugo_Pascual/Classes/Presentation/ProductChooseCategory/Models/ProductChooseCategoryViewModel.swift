@@ -10,10 +10,9 @@ import Foundation
 final class ProductChooseCategoryViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "çProductChooseCategory"
+	var screenTitle: String = LocalizedKeys.ProductChooseCategory.choose_category
 	
-	var addProductButtonTitle: String = "çPublicar producto"
-	
+	var addProductButtonTitle: String = LocalizedKeys.ProductsHome.add_product_button_title
 	var categoryCells: [ProductsHomeCategoryCellViewModel] = []
 	
 	override init() {

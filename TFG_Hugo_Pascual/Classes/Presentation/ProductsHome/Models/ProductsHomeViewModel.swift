@@ -10,9 +10,9 @@ import Foundation
 final class ProductsHomeViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "ÇProductsHome"
+	var screenTitle: String = LocalizedKeys.ProductsHome.products
 	
-	var addProductButtonTitle: String = "çPublicar producto"
+	var addProductButtonTitle: String = LocalizedKeys.ProductsHome.add_product_button_title
 	
 	var categoryCells: [ProductsHomeCategoryCellViewModel] = []
 	

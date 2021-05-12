@@ -18,8 +18,6 @@ class HomeViewController: BaseViewController {
 	var presenter: HomePresenterProtocol? { return super.basePresenter as? HomePresenterProtocol}
 		
 	// MARK: IBOutlets declaration of all controls
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var auxButton: UIButton!
 	@IBOutlet weak var mainImageView: UIImageView!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
@@ -44,10 +42,7 @@ extension HomeViewController: HomeViewProtocol {
 	
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? HomeViewModel else { return }
-		self.title = model.screenTitle
-		
-		self.titleLabel.text = self.title
-		self.auxButton.setTitle(model.goToProfileButtonTitle, for: .normal)
+
 		self.mainImageView.image = UIImage(named: model.mainImage)
 	}
 }

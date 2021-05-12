@@ -10,11 +10,11 @@ import Foundation
 final class LoginViewModel: BaseViewModel {
 
 	//TODO añadir localización
-	var screenTitle: String = "ÇLogin"
+	var screenTitle: String = LocalizedKeys.Login.login
 	
-	var emailPlaceholder: String = "çCorreo electrónico"
-	var passworPlaceholder: String = "çContraseña"
+	var emailPlaceholder: String = LocalizedKeys.Common.email
+	var passworPlaceholder: String = LocalizedKeys.Common.password
 	
-	var loginButtonTitle: String = "ÇIniciar sesión"
-	var registrationButtonTittle: String = "Ç¿No tienes una cuenta? Regístrate"
+	var loginButtonTitle: String = LocalizedKeys.Login.login
+	var registrationButtonTittle: String = LocalizedKeys.Login.no_account
 }

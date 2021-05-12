@@ -5,15 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TFG_Hugo_Pascual" customModuleProvider="target">
             <connections>
-                <outlet property="auxButton" destination="dG4-MB-Xzj" id="9sg-OQ-Ze3"/>
                 <outlet property="mainImageView" destination="wXe-X4-bUI" id="dFl-n2-vpn"/>
-                <outlet property="titleLabel" destination="GAG-8v-wgp" id="wEo-3u-2cR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Gxl-BP-Hid"/>
             </connections>
         </placeholder>
@@ -29,46 +26,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLn-mT-7p6" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="492.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-8v-wgp" userLabel="Title Label">
-                                            <rect key="frame" x="24" y="24" width="366" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-X4-bUI" userLabel="Main Image View">
-                                            <rect key="frame" x="79" y="76.5" width="256" height="256"/>
+                                            <rect key="frame" x="79" y="24" width="256" height="256"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="256" id="4b5-6c-o70"/>
                                                 <constraint firstAttribute="height" constant="256" id="ZHW-uf-mOO"/>
                                             </constraints>
                                         </imageView>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-MB-Xzj" userLabel="Aux Button">
-                                            <rect key="frame" x="191" y="356.5" width="32" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="UrR-7Y-1cD"/>
-                                            </constraints>
-                                            <color key="tintColor" systemColor="labelColor"/>
-                                            <state key="normal" title="*Aux">
-                                                <color key="titleColor" name="textNormal"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="auxButtonPressed:" destination="-1" eventType="touchUpInside" id="Ca6-3Z-l7c"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>
                                     <constraints>
-                                        <constraint firstItem="GAG-8v-wgp" firstAttribute="leading" secondItem="YLn-mT-7p6" secondAttribute="leading" constant="24" id="Kn2-u7-puF"/>
-                                        <constraint firstItem="wXe-X4-bUI" firstAttribute="top" secondItem="GAG-8v-wgp" secondAttribute="bottom" constant="32" id="Tfy-KD-wIB"/>
-                                        <constraint firstAttribute="bottom" secondItem="dG4-MB-Xzj" secondAttribute="bottom" constant="92" id="bS8-9f-wAt"/>
-                                        <constraint firstItem="dG4-MB-Xzj" firstAttribute="top" secondItem="wXe-X4-bUI" secondAttribute="bottom" constant="24" id="fkf-Ul-5no"/>
-                                        <constraint firstAttribute="trailing" secondItem="GAG-8v-wgp" secondAttribute="trailing" constant="24" id="oML-Bu-OwK"/>
-                                        <constraint firstItem="GAG-8v-wgp" firstAttribute="top" secondItem="YLn-mT-7p6" secondAttribute="top" constant="24" id="pdl-9a-V96"/>
-                                        <constraint firstItem="wXe-X4-bUI" firstAttribute="centerX" secondItem="GAG-8v-wgp" secondAttribute="centerX" id="ttj-OZ-qd5"/>
-                                        <constraint firstItem="dG4-MB-Xzj" firstAttribute="centerX" secondItem="GAG-8v-wgp" secondAttribute="centerX" id="xyB-26-wUr"/>
+                                        <constraint firstItem="wXe-X4-bUI" firstAttribute="centerX" secondItem="YLn-mT-7p6" secondAttribute="centerX" id="NaF-xd-xsh"/>
+                                        <constraint firstItem="wXe-X4-bUI" firstAttribute="top" secondItem="YLn-mT-7p6" secondAttribute="top" constant="24" id="jt7-ks-M7B"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -103,17 +74,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="textNormal">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="viewGeneralBackground">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

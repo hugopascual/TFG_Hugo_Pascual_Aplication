@@ -1,7 +1,63 @@
-/* 
+/*
   Localizable.strings
   TFG_Hugo_Pascual
 
   Created by Hugo Pascual Adan on 11/05/2021.
   
 */
+
+/*-------- Common --------*/
+"common_buy" = "Comprar";
+"common_delete" = "Eliminar";
+"common_cancel" = "Cancelar";
+"common_email" = "Correo electrónico";
+"common_username" = "Nombre de usuario";
+"common_password" = "Contraseña";
+
+/*-------- Error --------*/
+"error_generic_description" = "Ha ocurrido un error";
+
+/*-------- Login --------*/
+"login_screen_title" = "Iniciar sesión";
+"login_no_account" = "¿No tienes una cuenta? Regístrate";
+
+/*-------- Registration --------*/
+"registration_screen_title" = "Registrate";
+
+/*-------- MyProfile --------*/
+"my_profile_screen_title" = "Perfil";
+"my_profile_logout" = "Cerrar sesión";
+"my_profile_my_products_button_title" = "Mis productos";
+
+/*-------- ProductsHome --------*/
+"products_home_screen_title" = "Produtos";
+"products_home_add_product_button_title" = "Publicar producto";
+"products_home_motherboard_title" = "Placa Madre";
+"products_home_motherboard_description" = "El corazón de tu ordenador que comunica el resto de componentes.";
+"products_home_cpu_title" = "Procesador";
+"products_home_cpu_description" = "El cerebro de tu ordenador que todo lo controla.";
+"products_home_gpu_title" = "Tarjeta gráfica";
+"products_home_gpu_description" = "El procesador de lo visual y que te da tus fps.";
+"products_home_ram_title" = "Modulo RAM";
+"products_home_ram_description" = "Donde se cargan las ordenes de tu procesador.";
+
+/*-------- ProductsList --------*/
+"products_list_screen_title" = "Lista de productos";
+
+/*-------- AddProduct --------*/
+"add_product_screen_title" = "Añadir producto";
+"add_product_category_section_title" = "Categoría";
+"add_product_no_category_choosen" = "Sin categoría";
+"add_product_choose_category" = "Elegir";
+"add_product_model_section_title" = "Modelo";
+"add_product_price_section_title" = "Precio";
+"add_product_description_section_title" = "Descripción";
+"add_product_attach_image_button_title" = "Adjuntar imagen";
+"add_product_no_attached_image" = "Sin imagen adjunta";
+"add_product_attached_image" = "Imagen adjunta";
+
+/*-------- ProductChooseCategory --------*/
+"product_choose_category_screen_title" = "Elige categoria";
+
+/*-------- ProductDetail --------*/
+"product_detail_screen_title" = "Detalle del producto";

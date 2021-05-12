@@ -9,10 +9,9 @@ import Foundation
 
 final class RegistrationViewModel: BaseViewModel {
 
-	//TODO añadir localización
-	var screenTitle: String = "çRegistration"
+	var screenTitle: String = LocalizedKeys.Registration.registration
 	
-	var emailPlaceholder: String = "çCorreo electrónico"
-	var usernamePlaceholder: String = "çNombre de usuario"
-	var passworPlaceholder: String = "çContraseña"
+	var emailPlaceholder: String = LocalizedKeys.Common.email
+	var usernamePlaceholder: String = LocalizedKeys.Common.username
+	var passworPlaceholder: String = LocalizedKeys.Common.password
 }
