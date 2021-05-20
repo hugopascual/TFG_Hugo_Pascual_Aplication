@@ -9,7 +9,7 @@ import Foundation
 
 protocol AddProductRouterProtocol: BaseRouterProtocol {
 	func presentChooseCategoryModal(dto: ProductChooseCategoryAssemblyDTO)
-	func back()
+	func navigateBack()
 }
 
 class AddProductRouter: BaseRouter {
@@ -25,11 +25,10 @@ class AddProductRouter: BaseRouter {
 extension AddProductRouter: AddProductRouterProtocol {
 
 	func presentChooseCategoryModal(dto: ProductChooseCategoryAssemblyDTO) {
-//		self.present(ProductChooseCategoryAssembly.view(), animated: true)
-		self.pushViewController(ProductChooseCategoryAssembly.view(dto: dto), animated: true)
+		self.present(ProductChooseCategoryAssembly.navigationController(dto: dto), animated: true)
 	}
 	
-	func back() {
+	func navigateBack() {
 		self.popViewController(animated: true)
 	}
 }

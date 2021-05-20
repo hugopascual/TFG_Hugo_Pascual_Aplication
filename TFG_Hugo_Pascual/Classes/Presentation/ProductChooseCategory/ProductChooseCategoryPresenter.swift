@@ -11,6 +11,7 @@ protocol ProductChooseCategoryPresenterProtocol: BasePresenterProtocol {
 	func getCellsNumber() -> Int
 	func getCellViewModelForIndex(index: Int) -> ProductsHomeCategoryCellViewModel
 	func didRowPressed(index: Int)
+	func closeModalButtonPressed()
 }
 
 protocol ProductChooseCategoryInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -47,6 +48,10 @@ extension ProductChooseCategoryPresenter: ProductChooseCategoryPresenterProtocol
 		if let categorySelected = self.interactor?.assemblyDTO?.categorySelected {
 			categorySelected(self.viewModel.categoryCells[index].category ?? .other)
 		}
+		self.router?.navigateBack()
+	}
+	
+	func closeModalButtonPressed() {
 		self.router?.navigateBack()
 	}
 }

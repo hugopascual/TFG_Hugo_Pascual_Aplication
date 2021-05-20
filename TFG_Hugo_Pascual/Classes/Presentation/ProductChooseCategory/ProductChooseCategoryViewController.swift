@@ -52,7 +52,11 @@ final class ProductChooseCategoryViewController: BaseViewController {
 	}
 	
 	func setNavigationBar() {
-		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: self.title))
+		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(title: self.title, arrayLeftButtons: [.closeButton]))
+	}
+	
+	override func navigationBarLeftButtonItemPressed(buttonItem: NavigationBarButtonItem) {
+		self.presenter?.closeModalButtonPressed()
 	}
 }
 

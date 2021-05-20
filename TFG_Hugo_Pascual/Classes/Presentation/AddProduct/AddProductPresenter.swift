@@ -68,7 +68,7 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 extension AddProductPresenter: AddProductInteractorOutputProtocol {
 	
 	func didAddProductSucess() {
-		self.router?.back()
+		self.router?.navigateBack()
 	}
 	
 	func didAddProductFailure(error: CustomErrorModel) {

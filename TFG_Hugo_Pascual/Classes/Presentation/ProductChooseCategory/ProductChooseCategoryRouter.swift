@@ -24,6 +24,6 @@ class ProductChooseCategoryRouter: BaseRouter {
 extension ProductChooseCategoryRouter: ProductChooseCategoryRouterProtocol {
 	
 	func navigateBack() {
-		self.popViewController(animated: true)
+		self.dismiss(animated: true)
 	}
 }
