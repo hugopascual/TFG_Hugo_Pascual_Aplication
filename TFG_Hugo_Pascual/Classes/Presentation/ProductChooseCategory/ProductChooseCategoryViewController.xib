@@ -23,7 +23,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-kq-yEE" userLabel="Category Table View">
-                            <rect key="frame" x="0.0" y="24" width="414" height="794"/>
+                            <rect key="frame" x="24" y="24" width="366" height="794"/>
                             <color key="backgroundColor" name="viewGeneralBackground"/>
                             <color key="sectionIndexBackgroundColor" name="viewGeneralBackground"/>
                         </tableView>
@@ -32,8 +32,8 @@
                     <constraints>
                         <constraint firstItem="ih2-kq-yEE" firstAttribute="top" secondItem="HVq-YY-UHD" secondAttribute="top" constant="24" id="0d9-09-cCv"/>
                         <constraint firstAttribute="bottom" secondItem="ih2-kq-yEE" secondAttribute="bottom" id="7JS-vG-e11"/>
-                        <constraint firstAttribute="trailing" secondItem="ih2-kq-yEE" secondAttribute="trailing" id="G1Y-Ut-GlY"/>
-                        <constraint firstItem="ih2-kq-yEE" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" id="NdC-AM-y5Y"/>
+                        <constraint firstAttribute="trailing" secondItem="ih2-kq-yEE" secondAttribute="trailing" constant="24" id="G1Y-Ut-GlY"/>
+                        <constraint firstItem="ih2-kq-yEE" firstAttribute="leading" secondItem="HVq-YY-UHD" secondAttribute="leading" constant="24" id="NdC-AM-y5Y"/>
                     </constraints>
                 </view>
             </subviews>
