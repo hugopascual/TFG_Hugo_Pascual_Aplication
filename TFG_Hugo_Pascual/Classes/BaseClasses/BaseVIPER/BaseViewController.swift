@@ -54,13 +54,13 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 
 	// MARK: Loader
 	func showLoading(fullScreen: Bool) {
-		print("CARGANDO APARECE")
-//		Loader.showProgressHud()
+//		print("CARGANDO APARECE")
+		Loader.showProgressHud()
 	}
 	
 	func hideLoading() {
-		print("CARGANDO OCULTO")
-//		Loader.hideProgressHud()
+//		print("CARGANDO OCULTO")
+		Loader.hideProgressHud()
 	}
 	
 	func show(actionSheet: UIAlertController?,
