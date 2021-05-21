@@ -42,15 +42,13 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-La-ZPu" userLabel="Login Button">
-                                            <rect key="frame" x="184" y="140" width="46" height="30"/>
-                                            <state key="normal" title="Button"/>
+                                            <rect key="frame" x="192" y="140" width="30" height="30"/>
                                             <connections>
                                                 <action selector="loginButtonPressed:" destination="-1" eventType="touchUpInside" id="FlI-k4-Zxc"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIL-d4-WBW" userLabel="Registration Button">
-                                            <rect key="frame" x="184" y="194" width="46" height="30"/>
-                                            <state key="normal" title="Button"/>
+                                            <rect key="frame" x="192" y="194" width="30" height="30"/>
                                             <connections>
                                                 <action selector="registrationButtonPressed:" destination="-1" eventType="touchUpInside" id="XNe-3M-fXX"/>
                                             </connections>

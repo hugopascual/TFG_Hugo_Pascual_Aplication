@@ -39,73 +39,72 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-Jh-k3d" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="665.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="583.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-st-Cqg" userLabel="Category Label">
-                                            <rect key="frame" x="24" y="24" width="366" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-st-Cqg" userLabel="Category Label">
+                                            <rect key="frame" x="24" y="24" width="366" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTZ-s9-B4A" userLabel="Category Image View">
-                                            <rect key="frame" x="24" y="52" width="56" height="56"/>
+                                            <rect key="frame" x="24" y="31.5" width="56" height="56"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="AzZ-aQ-Zir"/>
                                                 <constraint firstAttribute="height" constant="56" id="aho-gy-rcX"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PP-J6-EPB" userLabel="Category Description Label">
-                                            <rect key="frame" x="104" y="70" width="202" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PP-J6-EPB" userLabel="Category Description Label">
+                                            <rect key="frame" x="104" y="59.5" width="202" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-dk-BBb" userLabel="Category Button">
-                                            <rect key="frame" x="318" y="65" width="72" height="30"/>
+                                            <rect key="frame" x="318" y="44.5" width="72" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="72" id="HKC-oi-cxu"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="chooseCategoryButtonPressed:" destination="-1" eventType="touchUpInside" id="2a6-dL-r8r"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-4J-etH" userLabel="Model Label">
-                                            <rect key="frame" x="24" y="132" width="366" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-4J-etH" userLabel="Model Label">
+                                            <rect key="frame" x="24" y="111.5" width="366" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rIg-AL-G3W" userLabel="Model Text Field">
-                                            <rect key="frame" x="24" y="164.5" width="366" height="34"/>
+                                            <rect key="frame" x="24" y="123.5" width="366" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="INa-lp-HiI"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osN-R1-Twg" userLabel="Price Label">
-                                            <rect key="frame" x="24" y="222.5" width="366" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osN-R1-Twg" userLabel="Price Label">
+                                            <rect key="frame" x="24" y="181.5" width="366" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-8U-wu9" userLabel="Price Text Field">
-                                            <rect key="frame" x="24" y="255" width="366" height="34"/>
+                                            <rect key="frame" x="24" y="193.5" width="366" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="34" id="9Qm-24-lED"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQw-eX-hwj" userLabel="Description Label">
-                                            <rect key="frame" x="24" y="313" width="366" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQw-eX-hwj" userLabel="Description Label">
+                                            <rect key="frame" x="24" y="251.5" width="366" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RST-mX-A5U" userLabel="Description Text View">
-                                            <rect key="frame" x="24" y="345.5" width="366" height="160"/>
+                                            <rect key="frame" x="24" y="263.5" width="366" height="160"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="160" id="ruk-A2-czS"/>
@@ -115,13 +114,13 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfl-Yl-fFq" userLabel="Attach Image Button">
-                                            <rect key="frame" x="24" y="529.5" width="160" height="44"/>
+                                            <rect key="frame" x="24" y="447.5" width="160" height="44"/>
                                             <color key="backgroundColor" name="viewPrimary"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="25n-PN-MYQ"/>
                                                 <constraint firstAttribute="width" constant="160" id="7eB-QK-09O"/>
                                             </constraints>
-                                            <state key="normal" title="Button">
+                                            <state key="normal">
                                                 <color key="titleColor" name="textNormal"/>
                                             </state>
                                             <connections>
@@ -129,18 +128,18 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsb-vG-x1c" userLabel="Attach Image Label">
-                                            <rect key="frame" x="208" y="551.5" width="182" height="0.0"/>
+                                            <rect key="frame" x="208" y="469.5" width="182" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQJ-1r-UhM" userLabel="Add Product Button">
-                                            <rect key="frame" x="24" y="597.5" width="366" height="44"/>
+                                            <rect key="frame" x="24" y="515.5" width="366" height="44"/>
                                             <color key="backgroundColor" name="viewPrimary"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="aX1-Wp-5hg"/>
                                             </constraints>
-                                            <state key="normal" title="Button">
+                                            <state key="normal">
                                                 <color key="titleColor" name="textNormal"/>
                                             </state>
                                             <connections>
@@ -228,7 +227,7 @@
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="viewPrimary">
-            <color red="0.60399997234344482" green="0.38999998569488525" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70399999618530273" green="0.91900002956390381" blue="1" alpha="0.96700000762939453" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
