@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			self.appInitializer.installRootViewController()
 		}
 		
+		DataPersisterHelper.standard.removeAllKeyChainData()
+		
 		return true
 	}
 }

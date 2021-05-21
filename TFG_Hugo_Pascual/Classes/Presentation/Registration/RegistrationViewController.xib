@@ -55,11 +55,10 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etj-xh-G92" userLabel="Send Button">
-                                            <rect key="frame" x="182.5" y="198" width="49" height="30"/>
+                                            <rect key="frame" x="192" y="198" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Ezs-g3-oRP"/>
                                             </constraints>
-                                            <state key="normal" title="*Enviar"/>
                                             <connections>
                                                 <action selector="sendButtonPressed:" destination="-1" eventType="touchUpInside" id="tdQ-5L-O3C"/>
                                             </connections>

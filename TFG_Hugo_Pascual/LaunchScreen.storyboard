@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,37 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugo Pascual Adán" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-c6-Yf5" userLabel="TFG Author Label">
-                                <rect key="frame" x="24" y="293.5" width="366" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP Compraventa iOS TFG" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaQ-fI-Sb3" userLabel="TFG Name Label">
-                                <rect key="frame" x="24" y="180" width="366" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etsit_logo" translatesAutoresizingMaskIntoConstraints="NO" id="32Z-Tq-pWJ">
-                                <rect key="frame" x="88" y="534" width="238" height="240"/>
+                                <rect key="frame" x="24" y="80" width="366" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="KJq-D8-2QA"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP Compraventa iOS TFG" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaQ-fI-Sb3" userLabel="TFG Name Label">
+                                <rect key="frame" x="24" y="400" width="366" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugo Pascual Adán" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-c6-Yf5" userLabel="TFG Author Label">
+                                <rect key="frame" x="24" y="513.5" width="366" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wtC-iy-YSz"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.70404834541599626" green="0.91879270950239245" blue="1" alpha="0.96652128067484666" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PaQ-fI-Sb3" firstAttribute="top" secondItem="32Z-Tq-pWJ" secondAttribute="bottom" constant="80" id="439-H9-Whs"/>
                             <constraint firstItem="PaQ-fI-Sb3" firstAttribute="leading" secondItem="wtC-iy-YSz" secondAttribute="leading" constant="24" id="51p-s6-Dd8"/>
-                            <constraint firstItem="wtC-iy-YSz" firstAttribute="bottom" secondItem="32Z-Tq-pWJ" secondAttribute="bottom" constant="88" id="CFu-Kk-je7"/>
-                            <constraint firstItem="PaQ-fI-Sb3" firstAttribute="top" secondItem="wtC-iy-YSz" secondAttribute="top" constant="136" id="E8h-L8-VMk"/>
+                            <constraint firstItem="2yp-c6-Yf5" firstAttribute="top" secondItem="PaQ-fI-Sb3" secondAttribute="bottom" constant="80" id="7e2-G1-1VK"/>
+                            <constraint firstItem="32Z-Tq-pWJ" firstAttribute="top" secondItem="wtC-iy-YSz" secondAttribute="top" constant="36" id="8mh-UB-4gT"/>
                             <constraint firstItem="2yp-c6-Yf5" firstAttribute="trailing" secondItem="PaQ-fI-Sb3" secondAttribute="trailing" id="GoJ-QU-SPp"/>
-                            <constraint firstItem="2yp-c6-Yf5" firstAttribute="top" secondItem="PaQ-fI-Sb3" secondAttribute="bottom" constant="80" id="L5K-Oh-vLx"/>
-                            <constraint firstItem="wtC-iy-YSz" firstAttribute="trailing" secondItem="32Z-Tq-pWJ" secondAttribute="trailing" constant="88" id="Rdv-NH-18s"/>
+                            <constraint firstItem="32Z-Tq-pWJ" firstAttribute="leading" secondItem="wtC-iy-YSz" secondAttribute="leading" constant="24" id="V9P-Bi-qQh"/>
                             <constraint firstItem="wtC-iy-YSz" firstAttribute="trailing" secondItem="PaQ-fI-Sb3" secondAttribute="trailing" constant="24" id="aup-e0-x3e"/>
-                            <constraint firstItem="32Z-Tq-pWJ" firstAttribute="leading" secondItem="wtC-iy-YSz" secondAttribute="leading" constant="88" id="eHI-w6-cJG"/>
                             <constraint firstItem="2yp-c6-Yf5" firstAttribute="leading" secondItem="PaQ-fI-Sb3" secondAttribute="leading" id="wuE-eG-XRU"/>
+                            <constraint firstItem="32Z-Tq-pWJ" firstAttribute="centerX" secondItem="wtC-iy-YSz" secondAttribute="centerX" id="ypU-w5-vtJ"/>
+                            <constraint firstItem="wtC-iy-YSz" firstAttribute="trailing" secondItem="32Z-Tq-pWJ" secondAttribute="trailing" constant="24" id="zJJ-3h-D9b"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -57,8 +57,5 @@
     </scenes>
     <resources>
         <image name="etsit_logo" width="1537" height="1697"/>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
