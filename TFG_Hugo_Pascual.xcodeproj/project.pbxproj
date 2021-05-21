@@ -81,6 +81,8 @@
 		FF69EF1825B46B3E00E4981A /* CustomTabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */; };
 		FF69EF1C25B46B7E00E4981A /* CustomTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */; };
 		FF69EF2525B5E28500E4981A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69EF2425B5E28500E4981A /* UIView+Extension.swift */; };
+		FF70FA1426581EEA0094893D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70FA1326581EEA0094893D /* Loader.swift */; };
+		FF70FA1826581F200094893D /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF70FA1726581F200094893D /* Loader.xib */; };
 		FF7D546725D888C6003588F2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D546025D888C6003588F2 /* LoginPresenter.swift */; };
 		FF7D546825D888C6003588F2 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D546125D888C6003588F2 /* LoginRouter.swift */; };
 		FF7D546925D888C6003588F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D546225D888C6003588F2 /* LoginViewController.swift */; };
@@ -219,6 +221,8 @@
 		FF69EF1725B46B3E00E4981A /* CustomTabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarAssembly.swift; sourceTree = "<group>"; };
 		FF69EF1B25B46B7E00E4981A /* CustomTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarViewController.xib; sourceTree = "<group>"; };
 		FF69EF2425B5E28500E4981A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FF70FA1326581EEA0094893D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		FF70FA1726581F200094893D /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
 		FF7D546025D888C6003588F2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FF7D546125D888C6003588F2 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FF7D546225D888C6003588F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -609,6 +613,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FF70FA1226581ED40094893D /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				FF70FA1326581EEA0094893D /* Loader.swift */,
+				FF70FA1726581F200094893D /* Loader.xib */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		FF7D545F25D888B8003588F2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +669,7 @@
 		FFA041A5258FD6DB00C6928A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FF70FA1226581ED40094893D /* Loader */,
 				FFAA245125EEFAC200612AC6 /* DataPersister */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 				FF1643A726484E4F003C4036 /* ImagePicker */,
@@ -900,6 +914,7 @@
 			files = (
 				FF7D546D25D888C6003588F2 /* LoginViewController.xib in Resources */,
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
+				FF70FA1826581F200094893D /* Loader.xib in Resources */,
 				FFD2FC47262F503200212505 /* ProductsHomeViewController.xib in Resources */,
 				FF3E058D2631926200033159 /* ProductDetailViewController.xib in Resources */,
 				FF0F09F2257BCC8C008A35C7 /* Assets.xcassets in Resources */,
@@ -979,6 +994,7 @@
 				FFD2FC46262F503200212505 /* ProductsHomeViewModel.swift in Sources */,
 				FF3E058B2631926200033159 /* ProductDetailInteractor.swift in Sources */,
 				FFA041B8258FD96100C6928A /* NetworkManager.swift in Sources */,
+				FF70FA1426581EEA0094893D /* Loader.swift in Sources */,
 				FF7D547825D88907003588F2 /* RegistrationPresenter.swift in Sources */,
 				FF0F0AD9257C3CA9008A35C7 /* AppInitializer.swift in Sources */,
 				FFA8E4192647F4F30018D9EA /* ProductsUserListPresenter.swift in Sources */,
