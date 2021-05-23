@@ -9,7 +9,6 @@ import Foundation
 
 final class LoginViewModel: BaseViewModel {
 
-	//TODO añadir localización
 	var screenTitle: String = LocalizedKeys.Login.login
 	
 	var emailPlaceholder: String = LocalizedKeys.Common.email

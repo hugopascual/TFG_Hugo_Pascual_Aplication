@@ -9,7 +9,6 @@ import Foundation
 
 final class ProductDetailViewModel: BaseViewModel {
 
-	//TODO añadir localización
 	var screenTitle: String = LocalizedKeys.ProductDetail.product_detail
 	
 	var buyButtonTitle: String = LocalizedKeys.Common.buy
