@@ -34,10 +34,6 @@ final class ProductsListViewController: BaseViewController {
 		self.registerTableViewCells()
 	}
 
-	override func initializeUI() {
-		
-	}
-	
 	// MARK: IBActions declaration of all the controls
 	
 	// MARK: Private Functions

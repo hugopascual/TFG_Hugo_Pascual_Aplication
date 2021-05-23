@@ -22,7 +22,7 @@
 "login_no_account" = "¿No tienes una cuenta? Regístrate";
 
 /*-------- Registration --------*/
-"registration_screen_title" = "Registrate";
+"registration_screen_title" = "Registrarse";
 
 /*-------- MyProfile --------*/
 "my_profile_screen_title" = "Perfil";
@@ -35,11 +35,11 @@
 "products_home_motherboard_title" = "Placa Madre";
 "products_home_motherboard_description" = "El corazón de tu ordenador que comunica el resto de componentes.";
 "products_home_cpu_title" = "Procesador";
-"products_home_cpu_description" = "El cerebro de tu ordenador que todo lo controla.";
+"products_home_cpu_description" = "El cerebro de tu ordenador que realiza los calculos.";
 "products_home_gpu_title" = "Tarjeta gráfica";
 "products_home_gpu_description" = "El procesador de lo visual y que te da tus fps.";
 "products_home_ram_title" = "Modulo RAM";
-"products_home_ram_description" = "Donde se cargan las ordenes de tu procesador.";
+"products_home_ram_description" = "La memoria mas r'apida de tu ordenador que guarda las ordenes del procesador.";
 
 /*-------- ProductsList --------*/
 "products_list_screen_title" = "Lista de productos";

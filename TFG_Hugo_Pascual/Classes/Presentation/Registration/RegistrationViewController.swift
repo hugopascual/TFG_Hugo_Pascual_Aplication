@@ -21,14 +21,18 @@ final class RegistrationViewController: BaseViewController {
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var registrationButton: UIButton!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
 	// MARK: UIViewController Functions
 	
+	override func initializeUI() {
+		self.registrationButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
+	}
 	// MARK: IBActions declaration of all the controls
 	
-	@IBAction func sendButtonPressed(_ sender: Any) {
+	@IBAction func registrationButtonPressed(_ sender: Any) {
 		self.presenter?.registrationButtonPressed(email: self.emailTextField.text ?? "",
 											  username: self.usernameTextField.text ?? "",
 											  password: self.passwordTextField.text ?? "")
@@ -48,5 +52,6 @@ extension RegistrationViewController: RegistrationViewControllerProtocol {
 		self.emailTextField.placeholder = model.emailPlaceholder
 		self.usernameTextField.placeholder = model.usernamePlaceholder
 		self.passwordTextField.placeholder = model.passworPlaceholder
+		self.registrationButton.setTitle(LocalizedKeys.Registration.registration, for: .normal)
 	}
 }

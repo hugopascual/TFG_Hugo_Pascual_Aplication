@@ -29,6 +29,11 @@ final class LoginViewController: BaseViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		self.navigationBarManager?.configureNavigationBar(model: NavigationBarModel(arrayLeftButtons: [.closeButton], backGroundColor: CustomColor.viewPrimary.uiColor, isTransparent: true))
 	}
+	
+	override func initializeUI() {
+		self.loginButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
+		self.registrationButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
+	}
 
 	// MARK: IBActions declaration of all the controls
 	@IBAction func loginButtonPressed(_ sender: Any) {

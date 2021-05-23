@@ -7,57 +7,57 @@
 */
 
 /*-------- Common --------*/
-"common_buy" = "Comprar";
-"common_delete" = "Eliminar";
-"common_cancel" = "Cancelar";
-"common_email" = "Correo electrónico";
-"common_username" = "Nombre de usuario";
-"common_password" = "Contraseña";
+"common_buy" = "Buy";
+"common_delete" = "Delete";
+"common_cancel" = "Cancel";
+"common_email" = "Email";
+"common_username" = "Username";
+"common_password" = "Password";
 
 /*-------- Error --------*/
-"error_generic_description" = "Ha ocurrido un error";
+"error_generic_description" = "An error happen";
 
 /*-------- Login --------*/
-"login_screen_title" = "Iniciar sesión";
-"login_no_account" = "¿No tienes una cuenta? Regístrate";
+"login_screen_title" = "Log in";
+"login_no_account" = " Don't have an account? Resgister now";
 
 /*-------- Registration --------*/
-"registration_screen_title" = "Registrate";
+"registration_screen_title" = "Register";
 
 /*-------- MyProfile --------*/
-"my_profile_screen_title" = "Perfil";
-"my_profile_logout" = "Cerrar sesión";
-"my_profile_my_products_button_title" = "Mis productos";
+"my_profile_screen_title" = "Profile";
+"my_profile_logout" = "Log out";
+"my_profile_my_products_button_title" = "My products";
 
 /*-------- ProductsHome --------*/
-"products_home_screen_title" = "Produtos";
-"products_home_add_product_button_title" = "Publicar producto";
-"products_home_motherboard_title" = "Placa Madre";
-"products_home_motherboard_description" = "El corazón de tu ordenador que comunica el resto de componentes.";
-"products_home_cpu_title" = "Procesador";
-"products_home_cpu_description" = "El cerebro de tu ordenador que todo lo controla.";
-"products_home_gpu_title" = "Tarjeta gráfica";
-"products_home_gpu_description" = "El procesador de lo visual y que te da tus fps.";
-"products_home_ram_title" = "Modulo RAM";
-"products_home_ram_description" = "Donde se cargan las ordenes de tu procesador.";
+"products_home_screen_title" = "Products";
+"products_home_add_product_button_title" = "Publish product";
+"products_home_motherboard_title" = "Motherboard";
+"products_home_motherboard_description" = "The heart of your computer that comunicate the rest of the components.";
+"products_home_cpu_title" = "CPU";
+"products_home_cpu_description" = "The brain of your computer that make the calculations.";
+"products_home_gpu_title" = "Graphics Card";
+"products_home_gpu_description" = "The visual processor and the one who gives you your fps.";
+"products_home_ram_title" = "RAM modules";
+"products_home_ram_description" = "The fastest memory of your computer that contains the cpu orders.";
 
 /*-------- ProductsList --------*/
-"products_list_screen_title" = "Lista de productos";
+"products_list_screen_title" = "Products list";
 
 /*-------- AddProduct --------*/
-"add_product_screen_title" = "Añadir producto";
-"add_product_category_section_title" = "Categoría";
-"add_product_no_category_choosen" = "Sin categoría";
-"add_product_choose_category" = "Elegir";
-"add_product_model_section_title" = "Modelo";
-"add_product_price_section_title" = "Precio";
-"add_product_description_section_title" = "Descripción";
-"add_product_attach_image_button_title" = "Adjuntar imagen";
-"add_product_no_attached_image" = "Sin imagen adjunta";
-"add_product_attached_image" = "Imagen adjunta";
+"add_product_screen_title" = "Add product";
+"add_product_category_section_title" = "Category";
+"add_product_no_category_choosen" = "No category";
+"add_product_choose_category" = "Choose";
+"add_product_model_section_title" = "Model";
+"add_product_price_section_title" = "Price";
+"add_product_description_section_title" = "Description";
+"add_product_attach_image_button_title" = "Attach image";
+"add_product_no_attached_image" = "No attached image";
+"add_product_attached_image" = "Attached image";
 
 /*-------- ProductChooseCategory --------*/
-"product_choose_category_screen_title" = "Elige categoria";
+"product_choose_category_screen_title" = "Choose category";
 
 /*-------- ProductDetail --------*/
-"product_detail_screen_title" = "Detalle del producto";
+"product_detail_screen_title" = "Product detail";

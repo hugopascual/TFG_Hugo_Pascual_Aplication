@@ -37,6 +37,7 @@ final class ProductDetailViewController: BaseViewController {
 	
 	override func initializeUI() {
 		self.bottomButton.roundedByDefault()
+		self.bottomButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
 	}
 	
 	// MARK: IBActions declaration of all the controls

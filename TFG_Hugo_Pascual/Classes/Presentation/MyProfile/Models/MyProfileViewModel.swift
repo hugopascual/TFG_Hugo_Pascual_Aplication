@@ -9,7 +9,6 @@ import Foundation
 
 class MyProfileViewModel: BaseViewModel {
 	
-	//TODO añadir localización
 	var screenTitle: String = LocalizedKeys.MyProfile.profile
 	
 	var mainImage: String = ImagesNamesConstants.profile_logo

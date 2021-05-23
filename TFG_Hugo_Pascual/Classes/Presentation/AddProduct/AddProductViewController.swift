@@ -49,6 +49,9 @@ final class AddProductViewController: BaseViewController {
 		self.priceTextField.keyboardType = .decimalPad
 		self.attachImageButton.roundedByDefault()
 		self.addProductButton.roundedByDefault()
+		self.categoryButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
+		self.attachImageButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
+		self.addProductButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
 	}
 	
 	// MARK: IBActions declaration of all the controls

@@ -12,6 +12,7 @@ enum CustomColor: String {
 	
 	// MARK: Text Colors
 	case textNormal
+	case textHighlighted
 	
 	// MARK: View Colors
 	case viewGeneralBackground
@@ -25,6 +26,8 @@ extension CustomColor {
 		var color: String
 		switch self {
 		case .textNormal:
+			color = self.rawValue
+		case .textHighlighted:
 			color = self.rawValue
 		case .viewGeneralBackground:
 			color = self.rawValue

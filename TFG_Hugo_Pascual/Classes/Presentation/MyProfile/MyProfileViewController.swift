@@ -35,6 +35,8 @@ class MyProfileViewController: BaseViewController {
 		super.initializeUI()
 		
 		self.myProductsButton.roundedByDefault()
+		self.myProductsButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
+		self.logoutButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
 	}
 	
 	// MARK: IBActions declaration of all the controls

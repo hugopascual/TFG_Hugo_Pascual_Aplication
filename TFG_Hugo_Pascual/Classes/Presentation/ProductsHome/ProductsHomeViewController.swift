@@ -41,6 +41,7 @@ final class ProductsHomeViewController: BaseViewController {
 	
 	override func initializeUI() {
 		self.addProductButton.roundedByDefault()
+		self.addProductButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
 	}
 	
 	// MARK: IBActions declaration of all the controls

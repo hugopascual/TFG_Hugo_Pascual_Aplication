@@ -37,10 +37,6 @@ final class ProductChooseCategoryViewController: BaseViewController {
 		self.setNavigationBar()
 	}
 	
-	override func initializeUI() {
-		
-	}
-	
 	// MARK: IBActions declaration of all the controls
 	
 	// MARK: Private Functions

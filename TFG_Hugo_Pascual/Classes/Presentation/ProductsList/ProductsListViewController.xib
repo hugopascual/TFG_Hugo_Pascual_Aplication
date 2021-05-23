@@ -26,7 +26,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="THp-0z-xXR">
-                                    <rect key="frame" x="24" y="12" width="366" height="806"/>
+                                    <rect key="frame" x="24" y="12" width="366" height="794"/>
                                     <color key="backgroundColor" name="viewGeneralBackground"/>
                                     <color key="sectionIndexBackgroundColor" name="viewGeneralBackground"/>
                                 </tableView>
@@ -36,7 +36,7 @@
                                 <constraint firstItem="THp-0z-xXR" firstAttribute="leading" secondItem="aOk-Jh-k3d" secondAttribute="leading" constant="24" id="0JE-SE-avW"/>
                                 <constraint firstAttribute="trailing" secondItem="THp-0z-xXR" secondAttribute="trailing" constant="24" id="9VZ-9b-Rr2"/>
                                 <constraint firstItem="THp-0z-xXR" firstAttribute="top" secondItem="aOk-Jh-k3d" secondAttribute="top" constant="12" id="E5b-qQ-GRe"/>
-                                <constraint firstAttribute="bottom" secondItem="THp-0z-xXR" secondAttribute="bottom" id="t8m-Ds-EGU"/>
+                                <constraint firstAttribute="bottom" secondItem="THp-0z-xXR" secondAttribute="bottom" constant="12" id="t8m-Ds-EGU"/>
                             </constraints>
                         </view>
                     </subviews>
