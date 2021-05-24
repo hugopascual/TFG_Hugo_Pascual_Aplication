@@ -35,7 +35,7 @@
 		FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
-		FF12F6F9265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */; };
+		FF12F725265BC77000F4DF22 /* ProductDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF12F724265BC77000F4DF22 /* ProductDetailInteractorTest.swift */; };
 		FF1643A926484E8E003C4036 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1643A826484E8E003C4036 /* ImagePicker.swift */; };
 		FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
@@ -187,8 +187,8 @@
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
 		FF12F6F6265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFG_Hugo_Pascual_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFG_Hugo_Pascual_Tests.swift; sourceTree = "<group>"; };
 		FF12F6FA265BB9FF00F4DF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF12F724265BC77000F4DF22 /* ProductDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractorTest.swift; sourceTree = "<group>"; };
 		FF1643A826484E8E003C4036 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
@@ -447,10 +447,26 @@
 		FF12F6F7265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */,
+				FF12F721265BC6EA00F4DF22 /* Modules */,
 				FF12F6FA265BB9FF00F4DF22 /* Info.plist */,
 			);
 			path = TFG_Hugo_Pascual_Tests;
+			sourceTree = "<group>";
+		};
+		FF12F721265BC6EA00F4DF22 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FF12F723265BC70800F4DF22 /* ProductDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FF12F723265BC70800F4DF22 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FF12F724265BC77000F4DF22 /* ProductDetailInteractorTest.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		FF1643A726484E4F003C4036 /* ImagePicker */ = {
@@ -934,6 +950,7 @@
 					};
 					FF12F6F5265BB9FF00F4DF22 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = FF0F09E7257BCC8B008A35C7;
 					};
 				};
@@ -1145,7 +1162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF12F6F9265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift in Sources */,
+				FF12F725265BC77000F4DF22 /* ProductDetailInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,6 +1353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQK2W4X36B;
@@ -1348,6 +1366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-Hugo-Pascual-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFG_Hugo_Pascual.app/TFG_Hugo_Pascual";
@@ -1358,6 +1377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQK2W4X36B;

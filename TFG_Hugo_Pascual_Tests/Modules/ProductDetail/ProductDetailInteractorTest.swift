@@ -1,5 +1,5 @@
 //
-//  TFG_Hugo_Pascual_Tests.swift
+//  ProductDetailInteractorTest.swift
 //  TFG_Hugo_Pascual_Tests
 //
 //  Created by Hugo Pascual Adan on 24/05/2021.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-class TFG_Hugo_Pascual_Tests: XCTestCase {
+class ProductDetailInteractorTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,7 +24,7 @@ class TFG_Hugo_Pascual_Tests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
