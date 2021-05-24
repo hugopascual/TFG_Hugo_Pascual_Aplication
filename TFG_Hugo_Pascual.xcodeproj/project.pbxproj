@@ -35,6 +35,7 @@
 		FF0F0AE8257C4192008A35C7 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */; };
 		FF0F0AEE257C4244008A35C7 /* BaseProviderParamsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */; };
 		FF0F0AF1257C4282008A35C7 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */; };
+		FF12F6F9265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */; };
 		FF1643A926484E8E003C4036 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1643A826484E8E003C4036 /* ImagePicker.swift */; };
 		FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
@@ -144,6 +145,16 @@
 		FFD47C9325A3CF6300AC3431 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD47C9225A3CF6300AC3431 /* CustomFont.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FF12F6FB265BB9FF00F4DF22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF0F09E0257BCC8B008A35C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF0F09E7257BCC8B008A35C7;
+			remoteInfo = TFG_Hugo_Pascual;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FF00472125B7800C0058036B /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		FF00473025B78E980058036B /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
@@ -175,6 +186,9 @@
 		FF0F0AE7257C4192008A35C7 /* DataAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProviderParamsDTO.swift; sourceTree = "<group>"; };
 		FF0F0AF0257C4282008A35C7 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
+		FF12F6F6265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFG_Hugo_Pascual_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFG_Hugo_Pascual_Tests.swift; sourceTree = "<group>"; };
+		FF12F6FA265BB9FF00F4DF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1643A826484E8E003C4036 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
@@ -293,6 +307,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF12F6F3265BB9FF00F4DF22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -300,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0F09EA257BCC8B008A35C7 /* TFG_Hugo_Pascual */,
+				FF12F6F7265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests */,
 				FF0F09E9257BCC8B008A35C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -308,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0F09E8257BCC8B008A35C7 /* TFG_Hugo_Pascual.app */,
+				FF12F6F6265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -419,6 +442,15 @@
 				FFA9D947264AE66D0003ACD6 /* LocalizedKeys.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FF12F6F7265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF12F6F8265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift */,
+				FF12F6FA265BB9FF00F4DF22 /* Info.plist */,
+			);
+			path = TFG_Hugo_Pascual_Tests;
 			sourceTree = "<group>";
 		};
 		FF1643A726484E4F003C4036 /* ImagePicker */ = {
@@ -870,17 +902,39 @@
 			productReference = FF0F09E8257BCC8B008A35C7 /* TFG_Hugo_Pascual.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FF12F6F5265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF12F6FF265BB9FF00F4DF22 /* Build configuration list for PBXNativeTarget "TFG_Hugo_Pascual_Tests" */;
+			buildPhases = (
+				FF12F6F2265BB9FF00F4DF22 /* Sources */,
+				FF12F6F3265BB9FF00F4DF22 /* Frameworks */,
+				FF12F6F4265BB9FF00F4DF22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF12F6FC265BB9FF00F4DF22 /* PBXTargetDependency */,
+			);
+			name = TFG_Hugo_Pascual_Tests;
+			productName = TFG_Hugo_Pascual_Tests;
+			productReference = FF12F6F6265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FF0F09E0257BCC8B008A35C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					FF0F09E7257BCC8B008A35C7 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					FF12F6F5265BB9FF00F4DF22 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FF0F09E7257BCC8B008A35C7;
 					};
 				};
 			};
@@ -903,6 +957,7 @@
 			projectRoot = "";
 			targets = (
 				FF0F09E7257BCC8B008A35C7 /* TFG_Hugo_Pascual */,
+				FF12F6F5265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -928,6 +983,13 @@
 				FFA8E3F626470C910018D9EA /* ProductsListCell.xib in Resources */,
 				FF3E05B42631938500033159 /* AddProductViewController.xib in Resources */,
 				FF0F0ACE257C36E8008A35C7 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF12F6F4265BB9FF00F4DF22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,7 +1141,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF12F6F2265BB9FF00F4DF22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF12F6F9265BB9FF00F4DF22 /* TFG_Hugo_Pascual_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF12F6FC265BB9FF00F4DF22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF0F09E7257BCC8B008A35C7 /* TFG_Hugo_Pascual */;
+			targetProxy = FF12F6FB265BB9FF00F4DF22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FFA9D940264AE52F0003ACD6 /* Localizable.strings */ = {
@@ -1254,6 +1332,50 @@
 			};
 			name = Release;
 		};
+		FF12F6FD265BB9FF00F4DF22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQK2W4X36B;
+				INFOPLIST_FILE = TFG_Hugo_Pascual_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-Hugo-Pascual-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFG_Hugo_Pascual.app/TFG_Hugo_Pascual";
+			};
+			name = Debug;
+		};
+		FF12F6FE265BB9FF00F4DF22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQK2W4X36B;
+				INFOPLIST_FILE = TFG_Hugo_Pascual_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-Hugo-Pascual-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFG_Hugo_Pascual.app/TFG_Hugo_Pascual";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1271,6 +1393,15 @@
 			buildConfigurations = (
 				FF0F09FD257BCC8C008A35C7 /* Debug */,
 				FF0F09FE257BCC8C008A35C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF12F6FF265BB9FF00F4DF22 /* Build configuration list for PBXNativeTarget "TFG_Hugo_Pascual_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF12F6FD265BB9FF00F4DF22 /* Debug */,
+				FF12F6FE265BB9FF00F4DF22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
