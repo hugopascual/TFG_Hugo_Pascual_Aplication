@@ -1219,14 +1219,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = viewPrimary;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TFG_Hugo_Pascual\"";
-				DEVELOPMENT_TEAM = TQK2W4X36B;
+				DEVELOPMENT_TEAM = M6HVKB5ATQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TFG_Hugo_Pascual/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-App-Compraventa";
+				PRODUCT_BUNDLE_IDENTIFIER = upm.etsit.dit.hugopascual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1240,14 +1240,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = viewPrimary;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TFG_Hugo_Pascual\"";
-				DEVELOPMENT_TEAM = TQK2W4X36B;
+				DEVELOPMENT_TEAM = M6HVKB5ATQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TFG_Hugo_Pascual/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-App-Compraventa";
+				PRODUCT_BUNDLE_IDENTIFIER = upm.etsit.dit.hugopascual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
