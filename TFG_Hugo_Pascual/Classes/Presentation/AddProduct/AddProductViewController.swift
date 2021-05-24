@@ -43,6 +43,7 @@ final class AddProductViewController: BaseViewController {
 		self.setNavigationBar()
 		
 		self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+		self.descriptionTextView.delegate = self
 	}
 	
 	override func initializeUI() {
@@ -91,6 +92,11 @@ extension AddProductViewController: AddProductViewControllerProtocol {
 		self.attachImageButton.setTitle(model.attachImageButtonTitle, for: .normal)
 		self.attachImageLabel.text = model.nonAttachedImage
 		self.addProductButton.setTitle(model.addProductButtonTitle, for: .normal)
+		
+		self.modelTextField.placeholder = LocalizedKeys.AddProduct.model_placeholder
+		self.priceTextField.placeholder = LocalizedKeys.AddProduct.price_placeholder
+		self.descriptionTextView.text = LocalizedKeys.AddProduct.description_placeholder
+		self.descriptionTextView.textColor = CustomColor.textPlaceholder.uiColor
 	}
 	
 	func setCategory(_ category: ProductCategory) {
@@ -107,5 +113,29 @@ extension AddProductViewController: ImagePickerDelegate {
 
 	func didSelect(image: UIImage?) {
 		self.presenter?.imageSelected(imageEncoded: Utils.imgBase64Encoding(image ?? UIImage()))
+	}
+}
+
+extension AddProductViewController: UITextViewDelegate {
+	
+	func textViewDidBeginEditing(_ textView: UITextView) {
+		if textView.text == LocalizedKeys.AddProduct.description_placeholder {
+			textView.text = ""
+			textView.textColor = CustomColor.textNormal.uiColor
+		}
+	}
+	
+	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+		if text == "\n" {
+			textView.resignFirstResponder()
+		}
+		return true
+	}
+	
+	func textViewDidEndEditing(_ textView: UITextView) {
+		if textView.text == "" {
+			textView.text = LocalizedKeys.AddProduct.description_placeholder
+			textView.textColor = CustomColor.textPlaceholder.uiColor
+		}
 	}
 }

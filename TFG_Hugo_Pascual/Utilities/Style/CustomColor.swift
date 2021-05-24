@@ -13,6 +13,7 @@ enum CustomColor: String {
 	// MARK: Text Colors
 	case textNormal
 	case textHighlighted
+	case textPlaceholder
 	
 	// MARK: View Colors
 	case viewGeneralBackground
@@ -29,6 +30,8 @@ extension CustomColor {
 			color = self.rawValue
 		case .textHighlighted:
 			color = self.rawValue
+		case .textPlaceholder:
+			color = self.rawValue
 		case .viewGeneralBackground:
 			color = self.rawValue
 		case .viewPrimary:
@@ -36,6 +39,7 @@ extension CustomColor {
 		case .viewSecondary:
 			color = self.rawValue
 		}
-		return UIColor(named: color)!
+		
+		return UIColor(named: color) ?? UIColor.clear
 	}
 }

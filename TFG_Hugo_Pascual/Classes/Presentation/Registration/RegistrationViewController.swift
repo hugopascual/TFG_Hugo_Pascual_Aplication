@@ -28,6 +28,9 @@ final class RegistrationViewController: BaseViewController {
 	// MARK: UIViewController Functions
 	
 	override func initializeUI() {
+		self.emailTextField.textContentType = .emailAddress
+		self.passwordTextField.textContentType = .password
+		self.usernameTextField.textContentType = .username
 		self.registrationButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
 	}
 	// MARK: IBActions declaration of all the controls

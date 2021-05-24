@@ -13,6 +13,7 @@
 "common_email" = "Email";
 "common_username" = "Username";
 "common_password" = "Password";
+"common_others" = "Others";
 
 /*-------- Error --------*/
 "error_generic_description" = "An error happen";
@@ -50,8 +51,11 @@
 "add_product_no_category_choosen" = "No category";
 "add_product_choose_category" = "Choose";
 "add_product_model_section_title" = "Model";
+"add_product_model_placeholder" = "Product model";
 "add_product_price_section_title" = "Price";
+"add_product_price_placeholder" = "Selling price";
 "add_product_description_section_title" = "Description";
+"add_product_description_placeholder" = "Write here the description of your product";
 "add_product_attach_image_button_title" = "Attach image";
 "add_product_no_attached_image" = "No attached image";
 "add_product_attached_image" = "Attached image";

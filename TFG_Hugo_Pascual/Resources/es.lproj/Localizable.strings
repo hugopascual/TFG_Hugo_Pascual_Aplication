@@ -13,6 +13,7 @@
 "common_email" = "Correo electrónico";
 "common_username" = "Nombre de usuario";
 "common_password" = "Contraseña";
+"common_others" = "Otros";
 
 /*-------- Error --------*/
 "error_generic_description" = "Ha ocurrido un error";
@@ -50,8 +51,11 @@
 "add_product_no_category_choosen" = "Sin categoría";
 "add_product_choose_category" = "Elegir";
 "add_product_model_section_title" = "Modelo";
+"add_product_model_placeholder" = "Modelo del producto";
 "add_product_price_section_title" = "Precio";
+"add_product_price_placeholder" = "Precio de venta";
 "add_product_description_section_title" = "Descripción";
+"add_product_description_placeholder" = "Escribe aqui la despcripción del producto";
 "add_product_attach_image_button_title" = "Adjuntar imagen";
 "add_product_no_attached_image" = "Sin imagen adjunta";
 "add_product_attached_image" = "Imagen adjunta";

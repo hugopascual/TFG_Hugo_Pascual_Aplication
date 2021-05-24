@@ -23,15 +23,15 @@ enum ProductCategory: String {
 	func getLocalizedString() -> String {
 		switch self {
 		case .motherboard:
-			return "*Placa Madre"
+			return LocalizedKeys.ProductsHome.motherboard_title
 		case .cpu:
-			return "*Procesador"
+			return LocalizedKeys.ProductsHome.cpu_title
 		case .gpu:
-			return "*Tarjeta Gráfica"
+			return LocalizedKeys.ProductsHome.gpu_title
 		case .ram:
-			return "*RAM"
+			return LocalizedKeys.ProductsHome.ram_title
 		case .other:
-			return "*Otros"
+			return LocalizedKeys.Common.other
 		}
 	}
 	

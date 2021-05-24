@@ -21,7 +21,7 @@ struct LocalizedKeys {
 		static let email = "common_email".localized //"Correo electrónico"
 		static let username = "common_username".localized //"Nombre de usuario"
 		static let password = "common_password".localized //"Contraseña"
-		
+		static let other = "common_others".localized //"Otros"
 	}
 	
 	struct Error {
@@ -68,6 +68,9 @@ struct LocalizedKeys {
 		static let model_section_title = "add_product_model_section_title".localized //"Modelo"
 		static let price_section_title = "add_product_price_section_title".localized //"Precio"
 		static let description_section_title = "add_product_description_section_title".localized //"Descripción"
+		static let model_placeholder = "add_product_model_placeholder".localized //"Modelo del producto"
+		static let price_placeholder = "add_product_price_placeholder".localized //"Precio de venta"
+		static let description_placeholder = "add_product_description_placeholder".localized //"Escribe aqui la despcripción del producto"
 		static let attach_image_button_title = "add_product_attach_image_button_title".localized //"Adjuntar imagen"
 		static let no_attached_image = "add_product_no_attached_image".localized //"Sin imagen adjunta"
 		static let attached_image = "add_product_attached_image".localized //"Imagen adjunta"

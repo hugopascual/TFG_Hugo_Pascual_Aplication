@@ -33,6 +33,9 @@ final class LoginViewController: BaseViewController {
 	override func initializeUI() {
 		self.loginButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
 		self.registrationButton.setTitleColor(CustomColor.textHighlighted.uiColor, for: .normal)
+		self.emailTextField.textContentType = .emailAddress
+		self.passwordTextField.textContentType = .password
+		self.passwordTextField.isSecureTextEntry = true
 	}
 
 	// MARK: IBActions declaration of all the controls
