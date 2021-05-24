@@ -358,7 +358,7 @@
 				FFBCCBA225AF526200338D0B /* Extensions */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
-				FF0F0A2C257BCD82008A35C7 /* Presentation */,
+				FF0F0A2C257BCD82008A35C7 /* Modules */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -397,11 +397,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0F0A2C257BCD82008A35C7 /* Presentation */ = {
+		FF0F0A2C257BCD82008A35C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				FF3E05A62631935700033159 /* AddProduct */,
-				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
@@ -412,7 +411,7 @@
 				FFA8E4112647F4CD0018D9EA /* ProductsUserList */,
 				FF7D547025D888E3003588F2 /* Registration */,
 			);
-			path = Presentation;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		FF0F0A2D257BCD82008A35C7 /* Home */ = {
@@ -605,10 +604,10 @@
 		FF40DBFC25F290DA00C7ED28 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				FF4C9B5B263B377800C9331F /* ProductProvider.swift */,
-				FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */,
-				FFC0BF7126123920004F90CD /* RegisterProvider.swift */,
 				FFC0BF742612392D004F90CD /* CheckSessionProvider.swift */,
+				FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */,
+				FF4C9B5B263B377800C9331F /* ProductProvider.swift */,
+				FFC0BF7126123920004F90CD /* RegisterProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -717,10 +716,11 @@
 		FFA041A5258FD6DB00C6928A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FF70FA1226581ED40094893D /* Loader */,
+				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FFAA245125EEFAC200612AC6 /* DataPersister */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 				FF1643A726484E4F003C4036 /* ImagePicker */,
+				FF70FA1226581ED40094893D /* Loader */,
 				FFA041B6258FD92500C6928A /* NetworkManager */,
 			);
 			path = Helpers;
@@ -803,8 +803,8 @@
 			children = (
 				FF957E0E25F143BD007FC6C8 /* DataPersisterHelper.swift */,
 				FF957E1125F143D4007FC6C8 /* DPDataPersister.swift */,
-				FF957E1425F143E6007FC6C8 /* DPUserDefault.swift */,
 				FF957E1725F143F6007FC6C8 /* DPKeyChain.swift */,
+				FF957E1425F143E6007FC6C8 /* DPUserDefault.swift */,
 			);
 			path = DataPersister;
 			sourceTree = "<group>";
@@ -812,10 +812,10 @@
 		FFBCCBA225AF526200338D0B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FFA9D944264AE6260003ACD6 /* String+Extension.swift */,
 				FFA041BE258FDB5F00C6928A /* Date+Extensions.swift */,
-				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
+				FFA9D944264AE6260003ACD6 /* String+Extension.swift */,
 				FFBCCBA625AF52A400338D0B /* UINavigationBar+Extension.swift */,
+				FFBCCBA325AF528C00338D0B /* UINavigationController+Extension.swift */,
 				FF69EF2425B5E28500E4981A /* UIView+Extension.swift */,
 			);
 			path = Extensions;
@@ -1314,14 +1314,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = viewPrimary;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TFG_Hugo_Pascual\"";
-				DEVELOPMENT_TEAM = TQK2W4X36B;
+				DEVELOPMENT_TEAM = M6HVKB5ATQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TFG_Hugo_Pascual/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-App-Compraventa";
+				PRODUCT_BUNDLE_IDENTIFIER = upm.etsit.dit.hugopascual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1335,14 +1335,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = viewPrimary;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TFG_Hugo_Pascual\"";
-				DEVELOPMENT_TEAM = TQK2W4X36B;
+				DEVELOPMENT_TEAM = M6HVKB5ATQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TFG_Hugo_Pascual/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "upm.etsit.dit.hugopascual.TFG-App-Compraventa";
+				PRODUCT_BUNDLE_IDENTIFIER = upm.etsit.dit.hugopascual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
