@@ -377,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3E05A62631935700033159 /* AddProduct */,
+				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FF0F0A2D257BCD82008A35C7 /* Home */,
 				FF7D545F25D888B8003588F2 /* Login */,
 				FFC7915B25853D2C008BDBDC /* MyProfile */,
@@ -660,7 +661,6 @@
 		FFA041A5258FD6DB00C6928A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FF341E0825B0C78A0065AA6F /* CustomTabBar */,
 				FFAA245125EEFAC200612AC6 /* DataPersister */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 				FF1643A726484E4F003C4036 /* ImagePicker */,
