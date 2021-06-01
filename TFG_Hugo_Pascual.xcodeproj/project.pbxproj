@@ -331,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
-				FF23F00D25CC604300D25E54 /* Common */,
 				FFBCCBA225AF526200338D0B /* Extensions */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
@@ -454,13 +453,6 @@
 				FFA9D934264AE3550003ACD6 /* ServerModels */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		FF23F00D25CC604300D25E54 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		FF341E0825B0C78A0065AA6F /* CustomTabBar */ = {
