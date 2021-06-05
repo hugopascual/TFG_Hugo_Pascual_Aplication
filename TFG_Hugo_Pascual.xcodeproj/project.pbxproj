@@ -39,6 +39,10 @@
 		FF23EFFF25CC5CD700D25E54 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */; };
 		FF23F00525CC5E9600D25E54 /* UserServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00425CC5E9600D25E54 /* UserServerModel.swift */; };
 		FF23F00925CC5EA200D25E54 /* UserBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */; };
+		FF27351B266BDF9800BB4AD4 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27351A266BDF9800BB4AD4 /* ToastView.swift */; };
+		FF27351F266BDFB900BB4AD4 /* ToastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27351E266BDFB900BB4AD4 /* ToastViewModel.swift */; };
+		FF273523266BDFE100BB4AD4 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF273522266BDFE100BB4AD4 /* ToastView.xib */; };
+		FF273526266BE07B00BB4AD4 /* BaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF273525266BE07B00BB4AD4 /* BaseComponent.swift */; };
 		FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */; };
 		FF3889BB262F55D900B53F4F /* ProductsHomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */; };
 		FF3E05872631926200033159 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E05802631926200033159 /* ProductDetailPresenter.swift */; };
@@ -179,6 +183,10 @@
 		FF23EFFE25CC5CD700D25E54 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		FF23F00425CC5E9600D25E54 /* UserServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServerModel.swift; sourceTree = "<group>"; };
 		FF23F00825CC5EA200D25E54 /* UserBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusinessModel.swift; sourceTree = "<group>"; };
+		FF27351A266BDF9800BB4AD4 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		FF27351E266BDFB900BB4AD4 /* ToastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModel.swift; sourceTree = "<group>"; };
+		FF273522266BDFE100BB4AD4 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
+		FF273525266BE07B00BB4AD4 /* BaseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseComponent.swift; sourceTree = "<group>"; };
 		FF3889B8262F55D900B53F4F /* ProductsHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsHomeCategoryCell.swift; sourceTree = "<group>"; };
 		FF3889B9262F55D900B53F4F /* ProductsHomeCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsHomeCategoryCell.xib; sourceTree = "<group>"; };
 		FF3E05802631926200033159 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -331,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0F0A1A257BCD82008A35C7 /* BaseClasses */,
+				FF273517266BDF4B00BB4AD4 /* Components */,
 				FFBCCBA225AF526200338D0B /* Extensions */,
 				FFA041A5258FD6DB00C6928A /* Helpers */,
 				FFD47C8525A25A1F00AC3431 /* Managers */,
@@ -343,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0F0A1B257BCD82008A35C7 /* BaseVIPER */,
+				FF273525266BE07B00BB4AD4 /* BaseComponent.swift */,
 				FF0F0A27257BCD82008A35C7 /* BaseProvider.swift */,
 				FF0F0AED257C4244008A35C7 /* BaseProviderParamsDTO.swift */,
 			);
@@ -454,6 +464,32 @@
 				FFA9D934264AE3550003ACD6 /* ServerModels */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		FF273517266BDF4B00BB4AD4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF273518266BDF6000BB4AD4 /* Toast */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF273518266BDF6000BB4AD4 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				FF273519266BDF6800BB4AD4 /* Models */,
+				FF27351A266BDF9800BB4AD4 /* ToastView.swift */,
+				FF273522266BDFE100BB4AD4 /* ToastView.xib */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		FF273519266BDF6800BB4AD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF27351E266BDFB900BB4AD4 /* ToastViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF341E0825B0C78A0065AA6F /* CustomTabBar */ = {
@@ -905,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7D546D25D888C6003588F2 /* LoginViewController.xib in Resources */,
+				FF273523266BDFE100BB4AD4 /* ToastView.xib in Resources */,
 				FF0F0A03257BCD23008A35C7 /* LaunchScreen.storyboard in Resources */,
 				FF70FA1826581F200094893D /* Loader.xib in Resources */,
 				FFD2FC47262F503200212505 /* ProductsHomeViewController.xib in Resources */,
@@ -1011,6 +1048,7 @@
 				FFA8E40326472D9A0018D9EA /* ProductsHomeCategoryCellViewModel.swift in Sources */,
 				FFA041BF258FDB5F00C6928A /* Date+Extensions.swift in Sources */,
 				FFA9D945264AE6260003ACD6 /* String+Extension.swift in Sources */,
+				FF273526266BE07B00BB4AD4 /* BaseComponent.swift in Sources */,
 				FF4C9B5D263B377800C9331F /* ProductDetailServerModel.swift in Sources */,
 				FFD47C8825A25A5700AC3431 /* NavigationBarModel.swift in Sources */,
 				FF3889BA262F55D900B53F4F /* ProductsHomeCategoryCell.swift in Sources */,
@@ -1041,9 +1079,11 @@
 				FF957E1225F143D4007FC6C8 /* DPDataPersister.swift in Sources */,
 				FF4F792E2638868C0043F702 /* ProductChooseCategoryRouter.swift in Sources */,
 				FF4F79312638868C0043F702 /* ProductChooseCategoryInteractor.swift in Sources */,
+				FF27351B266BDF9800BB4AD4 /* ToastView.swift in Sources */,
 				FFC0BF7226123920004F90CD /* RegisterProvider.swift in Sources */,
 				FF0F0A37257BCD82008A35C7 /* BaseRouter.swift in Sources */,
 				FFC7916325853D68008BDBDC /* MyProfileRouter.swift in Sources */,
+				FF27351F266BDFB900BB4AD4 /* ToastViewModel.swift in Sources */,
 				FF7D546825D888C6003588F2 /* LoginRouter.swift in Sources */,
 				FF7D546B25D888C6003588F2 /* LoginInteractor.swift in Sources */,
 				FF3E059C263192BB00033159 /* ProductsListRouter.swift in Sources */,
