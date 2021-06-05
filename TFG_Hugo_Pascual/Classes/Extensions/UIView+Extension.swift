@@ -76,4 +76,67 @@ extension UIView {
 		
 		subView.layoutIfNeeded()
 	}
+	
+	func addSubviewWithConstraintsWithoutBottom(_ insets: UIEdgeInsets, subView: UIView) {
+		
+		self.addSubview(subView)
+		subView.translatesAutoresizingMaskIntoConstraints = false
+		
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .top,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .top,
+											  multiplier: 1.0,
+											  constant: insets.top))
+		
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .trailing,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .trailing,
+											  multiplier: 1.0,
+											  constant: insets.right))
+				
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .leading,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .leading,
+											  multiplier: 1.0,
+											  constant: insets.left))
+		
+		subView.layoutIfNeeded()
+	}
+	
+	func addSubviewWithoutTopConstraint(_ insets: UIEdgeInsets, subView: UIView) {
+		self.addSubview(subView)
+		subView.translatesAutoresizingMaskIntoConstraints = false
+		
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .trailing,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .trailing,
+											  multiplier: 1.0,
+											  constant: insets.right))
+		
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .bottom,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .bottom,
+											  multiplier: 1.0,
+											  constant: insets.bottom))
+				
+		self.addConstraint(NSLayoutConstraint(item: subView,
+											  attribute: .leading,
+											  relatedBy: .equal,
+											  toItem: self,
+											  attribute: .leading,
+											  multiplier: 1.0,
+											  constant: insets.left))
+		
+		subView.layoutIfNeeded()
+	}
 }

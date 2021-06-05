@@ -54,12 +54,10 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 
 	// MARK: Loader
 	func showLoading(fullScreen: Bool) {
-//		print("CARGANDO APARECE")
 		Loader.showProgressHud()
 	}
 	
 	func hideLoading() {
-//		print("CARGANDO OCULTO")
 		Loader.hideProgressHud()
 	}
 	
@@ -79,9 +77,14 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 		
 		self.present(actionSheet, animated: true)
 	}
-}
-
-// MARK: BaseViewControllerProtocol
-extension BaseViewController {
 	
+	func showToast(viewModel: ToastViewModel) {
+		guard let toast = ToastView.initFromNib() else { return }
+		toast.configure(viewModel: viewModel)
+
+		UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.addSubviewWithConstraintsWithoutBottom(UIEdgeInsets(top: 40, left: 24, bottom: 0, right: -24), subView: toast)
+		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+			toast.removeFromSuperview()
+		}
+	}
 }

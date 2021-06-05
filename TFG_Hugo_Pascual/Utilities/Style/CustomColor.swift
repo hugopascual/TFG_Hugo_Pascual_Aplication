@@ -19,27 +19,13 @@ enum CustomColor: String {
 	case viewGeneralBackground
 	case viewPrimary
 	case viewSecondary
+	case viewInfoToast
+	case viewSucessToast
+	case viewFailureToast
 }
 
 extension CustomColor {
 	var uiColor: UIColor {
-		
-		var color: String
-		switch self {
-		case .textNormal:
-			color = self.rawValue
-		case .textHighlighted:
-			color = self.rawValue
-		case .textPlaceholder:
-			color = self.rawValue
-		case .viewGeneralBackground:
-			color = self.rawValue
-		case .viewPrimary:
-			color = self.rawValue
-		case .viewSecondary:
-			color = self.rawValue
-		}
-		
-		return UIColor(named: color) ?? UIColor.clear
+		return UIColor(named: self.rawValue) ?? UIColor.clear
 	}
 }
