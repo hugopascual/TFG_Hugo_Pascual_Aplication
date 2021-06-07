@@ -72,6 +72,6 @@ extension AddProductPresenter: AddProductInteractorOutputProtocol {
 	}
 	
 	func didAddProductFailure(error: CustomErrorModel) {
-		self.genericErrorHappened(error: error)
+		self.view?.showToast(viewModel: ToastViewModel(type: .error, title: viewModel.addProductSucess))
 	}
 }

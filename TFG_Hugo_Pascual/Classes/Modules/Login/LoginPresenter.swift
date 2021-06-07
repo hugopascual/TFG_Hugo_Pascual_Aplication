@@ -68,6 +68,6 @@ extension LoginPresenter: LoginInteractorOutputProtocol {
 	}
 
 	func loginFailure(error: CustomErrorModel) {
-		
+		self.view?.showToast(viewModel: ToastViewModel(type: .error, title: viewModel.loginErrorMessage))
 	}
 }

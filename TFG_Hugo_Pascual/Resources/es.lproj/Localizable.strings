@@ -6,6 +6,10 @@
   
 */
 
+/*-------- TFG --------*/
+"tfg_title" = "Desarrollo de un servicio de compraventa de productos de segunda mano para terminales iOS";
+"tfg_author_name" = "Hugo Pascual Adán";
+
 /*-------- Common --------*/
 "common_buy" = "Comprar";
 "common_delete" = "Eliminar";
@@ -68,3 +72,4 @@
 
 /*-------- ProductDetail --------*/
 "product_detail_screen_title" = "Detalle del producto";
+"product_detail_delete_sucess" = "Producto eliminado con éxito";

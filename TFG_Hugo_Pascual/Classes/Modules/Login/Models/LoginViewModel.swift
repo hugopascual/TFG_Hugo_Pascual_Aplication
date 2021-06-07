@@ -16,4 +16,6 @@ final class LoginViewModel: BaseViewModel {
 	
 	var loginButtonTitle: String = LocalizedKeys.Login.login
 	var registrationButtonTittle: String = LocalizedKeys.Login.no_account
+	
+	var loginErrorMessage: String = LocalizedKeys.Common.error_message
 }

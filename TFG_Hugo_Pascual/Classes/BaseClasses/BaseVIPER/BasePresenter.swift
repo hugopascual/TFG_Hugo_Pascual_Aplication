@@ -47,7 +47,7 @@ class BasePresenter {
 	}
 	
 	func networkErrorHappened() {
-		self.baseView?.showToast(viewModel: ToastViewModel(type: .error, title: ""))
+		self.baseView?.showToast(viewModel: ToastViewModel(type: .error, title: LocalizedKeys.Common.network_error_message))
 	}
 }
 

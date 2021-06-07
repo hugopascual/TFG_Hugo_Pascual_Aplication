@@ -19,6 +19,8 @@ class HomeViewController: BaseViewController {
 		
 	// MARK: IBOutlets declaration of all controls
 	@IBOutlet weak var mainImageView: UIImageView!
+	@IBOutlet weak var tfgNameLabel: UILabel!
+	@IBOutlet weak var authorNameLabel: UILabel!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
@@ -44,5 +46,7 @@ extension HomeViewController: HomeViewProtocol {
 		guard let model = viewModel as? HomeViewModel else { return }
 
 		self.mainImageView.image = UIImage(named: model.mainImage)
+		self.tfgNameLabel.text = model.tfgTitle
+		self.authorNameLabel.text = model.authorName
 	}
 }

@@ -76,10 +76,12 @@ extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
 	}
 	
 	func didDeleteProductSuccess() {
+		self.view?.showToast(viewModel: ToastViewModel(type: .success, title: viewModel.deleteProductSucess))
 		self.router?.navigateToHome()
 	}
 	
 	func didDeleteProductFail(error: CustomErrorModel) {
+		self.view?.showToast(viewModel: ToastViewModel(type: .error, title: viewModel.deleteProductError))
 		self.genericErrorHappened(error: error)
 	}
 }

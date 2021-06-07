@@ -14,6 +14,11 @@ import Foundation
 
 struct LocalizedKeys {
 	
+	struct TFG {
+		static let title = "tfg_title".localized //""
+		static let author_name = "tfg_author_name".localized //"Hugo Pascual Adán"
+	}
+	
 	struct Common {
 		static let buy = "common_buy".localized //"Comprar"
 		static let delete = "common_delete".localized //"Eliminar"
@@ -85,5 +90,6 @@ struct LocalizedKeys {
 	
 	struct ProductDetail {
 		static let product_detail = "product_detail_screen_title".localized //"Detalle del producto"
+		static let delete_sucess = "product_detail_delete_sucess".localized //"Producto eliminado con éxito"
 	}
 }

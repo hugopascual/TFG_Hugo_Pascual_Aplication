@@ -14,6 +14,9 @@ final class ProductDetailViewModel: BaseViewModel {
 	var buyButtonTitle: String = LocalizedKeys.Common.buy
 	var deleteButtonTitle: String = LocalizedKeys.Common.delete
 	
+	var deleteProductSucess: String = LocalizedKeys.ProductDetail.delete_sucess
+	var deleteProductError: String = LocalizedKeys.Common.error_message
+		
 	var productModel: String?
 	var productImageEncoded: String?
 	var productPrice: String?
