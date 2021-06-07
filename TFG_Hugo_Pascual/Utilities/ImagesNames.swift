@@ -15,6 +15,8 @@ struct ImagesNamesConstants {
 	static let back_arrow_icon: String = "back_arrow_icon"
 	static let close_icon: String = "close_icon"
 	static let info_icon: String = "info_icon"
+	static let error_icon: String = "error_icon"
+	static let success_icon: String = "success_icon"
 	
 	// MARK: CustomTabBar
 	static let home_icon: String = "home_icon"

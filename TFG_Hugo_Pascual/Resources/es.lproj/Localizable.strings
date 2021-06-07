@@ -15,6 +15,7 @@
 "common_password" = "Contraseña";
 "common_others" = "Otros";
 "common_error_message" = "Lo sentimos, ha ocurrido un error";
+"common_network_error_message" = "Sin conexión a Internet";
 
 /*-------- Error --------*/
 "error_generic_description" = "Ha ocurrido un error";

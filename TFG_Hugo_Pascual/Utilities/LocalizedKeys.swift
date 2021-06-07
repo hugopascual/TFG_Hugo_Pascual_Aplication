@@ -23,6 +23,7 @@ struct LocalizedKeys {
 		static let password = "common_password".localized //"Contraseña"
 		static let other = "common_others".localized //"Otros"
 		static let error_message = "common_error_message".localized //"Lo sentimos, ha ocurrido un error"
+		static let network_error_message = "common_network_error_message".localized //"Sin conexión a Internet"
 	}
 	
 	struct Error {
