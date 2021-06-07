@@ -61,23 +61,7 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 		Loader.hideProgressHud()
 	}
 	
-	func show(actionSheet: UIAlertController?,
-			  parent: UIView,
-			  over subView: UIView) {
-		
-		guard let actionSheet = actionSheet else { return }
-		
-		// For iPad
-		if let popoverController = actionSheet.popoverPresentationController {
-			
-			popoverController.sourceView = self.view
-			let frame = parent.convert(subView.frame, to: self.view)
-			popoverController.sourceRect = frame
-		}
-		
-		self.present(actionSheet, animated: true)
-	}
-	
+	// MARK: Toast
 	func showToast(viewModel: ToastViewModel) {
 		guard let toast = ToastView.initFromNib() else { return }
 		toast.configure(viewModel: viewModel)
@@ -86,5 +70,17 @@ class BaseViewController: UIViewController, NavigationBarManagerDelegate {
 		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
 			toast.removeFromSuperview()
 		}
+	}
+	
+	func showInfoToast(viewModel: ToastViewModel) {
+		guard let toast = ToastView.initFromNib() else { return }
+		toast.configure(viewModel: viewModel)
+		
+		UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.addSubviewWithConstraintsWithoutBottom(UIEdgeInsets(top: 40, left: 24, bottom: 0, right: -24), subView: toast)
+	}
+	
+	// MARK: Error
+	func showError(error: CustomErrorModel) {
+		self.showToast(viewModel: ToastViewModel(type: .error, title: error.backendError.serverMessage))
 	}
 }

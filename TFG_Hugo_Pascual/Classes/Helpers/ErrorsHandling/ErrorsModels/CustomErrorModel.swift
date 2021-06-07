@@ -14,6 +14,7 @@ class CustomErrorModel: NSError {
 	var originalObject: Any?
 	var httpClientError = HTTPClientError(code: -1)
 	var backendError = BackendError(code: "", serverMessage: "")
+	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}

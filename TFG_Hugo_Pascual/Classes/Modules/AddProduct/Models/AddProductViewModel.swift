@@ -22,4 +22,5 @@ final class AddProductViewModel: BaseViewModel {
 	var nonAttachedImage: String = LocalizedKeys.AddProduct.no_attached_image
 	var attachedImage: String = LocalizedKeys.AddProduct.attached_image
 	var addProductButtonTitle: String = LocalizedKeys.AddProduct.add_product
+	var addProductSucess: String = LocalizedKeys.AddProduct.sucess
 }

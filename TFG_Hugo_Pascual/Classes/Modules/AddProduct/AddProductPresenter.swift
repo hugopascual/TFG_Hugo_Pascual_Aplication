@@ -59,7 +59,6 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 		self.productToBeAdded.price = price
 		self.productToBeAdded.description = description
 		self.productToBeAdded.owner = DataPersisterHelper.standard.localUserData.username
-//		self.productToBeAdded.base64Image = Utils.imgBase64Encoding(ImagesNamesConstants.no_category_icon)
 		
 		self.interactor?.addProduct(product: self.productToBeAdded)
 	}
@@ -68,6 +67,7 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 extension AddProductPresenter: AddProductInteractorOutputProtocol {
 	
 	func didAddProductSucess() {
+		self.view?.showToast(viewModel: ToastViewModel(type: .success, title: viewModel.addProductSucess))
 		self.router?.navigateBack()
 	}
 	

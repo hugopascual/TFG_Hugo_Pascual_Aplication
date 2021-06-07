@@ -3,83 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="cartero_regular.otf">
-            <string>Cartero-Regular</string>
-        </array>
-    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastView" customModule="TFG_Hugo_Pascual" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7e5-So-typ" customClass="ToastView" customModule="TFG_Hugo_Pascual">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGm-vG-F6K" userLabel="Conatiner View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nNC-vD-2uc" userLabel="Icon Image View">
-                            <rect key="frame" x="16" y="30.5" width="20" height="20"/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Los símbolos permitidos son @ # $ % ^ &amp; * - _ + = [ ] { } | \: ‘? / ` ~ &quot; ( ) ; ." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCJ-NK-Sc7" userLabel="Info Label">
-                            <rect key="frame" x="52" y="16" width="346" height="49"/>
-                            <fontDescription key="fontDescription" name="Cartero-Regular" family="Cartero" pointSize="12"/>
-                            <color key="textColor" name="textNormal"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHq-CC-RcT" userLabel="Close Button">
-                            <rect key="frame" x="384" y="16" width="14" height="14"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="14" id="jhl-0e-2b0"/>
-                                <constraint firstAttribute="width" constant="14" id="mZx-Wn-2p8"/>
-                            </constraints>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
-                            <state key="normal" image="close_icon"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" name="viewInfoToast"/>
-                    <constraints>
-                        <constraint firstItem="HHq-CC-RcT" firstAttribute="top" secondItem="tGm-vG-F6K" secondAttribute="top" constant="16" id="AUQ-4O-I78"/>
-                        <constraint firstItem="XCJ-NK-Sc7" firstAttribute="leading" secondItem="nNC-vD-2uc" secondAttribute="trailing" constant="16" id="Dqn-g8-ULb"/>
-                        <constraint firstItem="nNC-vD-2uc" firstAttribute="centerY" secondItem="tGm-vG-F6K" secondAttribute="centerY" id="Gur-n0-IOk"/>
-                        <constraint firstAttribute="trailing" secondItem="HHq-CC-RcT" secondAttribute="trailing" constant="16" id="PGn-77-i6l"/>
-                        <constraint firstItem="nNC-vD-2uc" firstAttribute="leading" secondItem="tGm-vG-F6K" secondAttribute="leading" constant="16" id="Pmb-xs-Gki"/>
-                        <constraint firstItem="nNC-vD-2uc" firstAttribute="top" secondItem="XCJ-NK-Sc7" secondAttribute="top" id="UFB-aN-zpu"/>
-                        <constraint firstItem="XCJ-NK-Sc7" firstAttribute="top" secondItem="tGm-vG-F6K" secondAttribute="top" constant="16" id="Xve-4f-CYR"/>
-                        <constraint firstAttribute="bottom" secondItem="XCJ-NK-Sc7" secondAttribute="bottom" constant="16" id="Yzz-q4-DF4"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XCJ-NK-Sc7" secondAttribute="trailing" constant="16" id="jmC-1M-gOu"/>
-                        <constraint firstItem="HHq-CC-RcT" firstAttribute="leading" secondItem="XCJ-NK-Sc7" secondAttribute="trailing" constant="20" id="t9X-FU-x5f"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="UFB-aN-zpu"/>
-                            <exclude reference="t9X-FU-x5f"/>
-                        </mask>
-                    </variation>
-                </view>
-            </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="tGm-vG-F6K" secondAttribute="trailing" id="SrX-Yo-qKy"/>
-                <constraint firstItem="tGm-vG-F6K" firstAttribute="leading" secondItem="7e5-So-typ" secondAttribute="leading" id="gXX-LY-dzG"/>
-                <constraint firstItem="tGm-vG-F6K" firstAttribute="top" secondItem="7e5-So-typ" secondAttribute="top" id="tLo-jk-mMN"/>
-                <constraint firstAttribute="bottom" secondItem="tGm-vG-F6K" secondAttribute="bottom" id="zfU-9k-iUd"/>
-            </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="137.68115942028987" y="408.14732142857139"/>
-        </view>
     </objects>
-    <resources>
-        <image name="close_icon" width="14" height="14"/>
-        <image name="info_icon" width="20" height="20"/>
-        <namedColor name="textNormal">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="viewInfoToast">
-            <color red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

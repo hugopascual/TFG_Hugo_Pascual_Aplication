@@ -13,6 +13,9 @@ protocol BaseViewControllerProtocol: class {
 	func setViewModel(_ viewModel: Any)
 	func showLoading(fullScreen: Bool)
 	func hideLoading()
+	func showError(error: CustomErrorModel)
+	func showToast(viewModel: ToastViewModel)
+	func showInfoToast(viewModel: ToastViewModel)
 }
 
 extension BaseViewControllerProtocol {

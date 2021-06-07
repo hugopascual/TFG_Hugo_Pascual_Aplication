@@ -30,7 +30,7 @@ class BasePresenter {
 	}
 	
 	func showError(error: CustomErrorModel) {
-	
+		self.baseView?.showError(error: error)
 	}
 	
 	// MARK: BaseInteractorOutputProtocol

@@ -20,8 +20,8 @@ enum CustomColor: String {
 	case viewPrimary
 	case viewSecondary
 	case viewInfoToast
-	case viewSucessToast
-	case viewFailureToast
+	case viewSucess
+	case viewFailure
 }
 
 extension CustomColor {

@@ -14,6 +14,7 @@
 "common_username" = "Nombre de usuario";
 "common_password" = "Contraseña";
 "common_others" = "Otros";
+"common_error_message" = "Lo sentimos, ha ocurrido un error";
 
 /*-------- Error --------*/
 "error_generic_description" = "Ha ocurrido un error";
@@ -40,7 +41,7 @@
 "products_home_gpu_title" = "Tarjeta gráfica";
 "products_home_gpu_description" = "El procesador de lo visual y que te da tus fps.";
 "products_home_ram_title" = "Modulo RAM";
-"products_home_ram_description" = "La memoria mas r'apida de tu ordenador que guarda las ordenes del procesador.";
+"products_home_ram_description" = "La memoria mas rápida de tu ordenador que guarda las ordenes del procesador.";
 
 /*-------- ProductsList --------*/
 "products_list_screen_title" = "Lista de productos";
@@ -59,6 +60,7 @@
 "add_product_attach_image_button_title" = "Adjuntar imagen";
 "add_product_no_attached_image" = "Sin imagen adjunta";
 "add_product_attached_image" = "Imagen adjunta";
+"add_product_sucess" = "El producto se ha añadido correctamente";
 
 /*-------- ProductChooseCategory --------*/
 "product_choose_category_screen_title" = "Elige categoria";

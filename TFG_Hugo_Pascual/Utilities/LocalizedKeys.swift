@@ -22,6 +22,7 @@ struct LocalizedKeys {
 		static let username = "common_username".localized //"Nombre de usuario"
 		static let password = "common_password".localized //"Contraseña"
 		static let other = "common_others".localized //"Otros"
+		static let error_message = "common_error_message".localized //"Lo sentimos, ha ocurrido un error"
 	}
 	
 	struct Error {
@@ -74,6 +75,7 @@ struct LocalizedKeys {
 		static let attach_image_button_title = "add_product_attach_image_button_title".localized //"Adjuntar imagen"
 		static let no_attached_image = "add_product_no_attached_image".localized //"Sin imagen adjunta"
 		static let attached_image = "add_product_attached_image".localized //"Imagen adjunta"
+		static let sucess = "add_product_sucess".localized //"El producto se ha añadido correctamente"
 	}
 
 	struct ProductChooseCategory {
