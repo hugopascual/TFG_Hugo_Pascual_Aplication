@@ -30,6 +30,7 @@
 
 /*-------- Registration --------*/
 "registration_screen_title" = "Register";
+"registration_user_creation_success" = "User registered successfully";
 
 /*-------- MyProfile --------*/
 "my_profile_screen_title" = "Welcome, %@";

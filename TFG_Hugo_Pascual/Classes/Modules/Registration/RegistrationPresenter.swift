@@ -43,10 +43,11 @@ extension RegistrationPresenter: RegistrationPresenterProtocol {
 extension RegistrationPresenter: RegistrationInteractorOutputProtocol {
 	
 	func userCreated() {
+		self.view?.showToast(viewModel: ToastViewModel(type: .success, title: LocalizedKeys.Registration.user_creation_success))
 		self.router?.backToRoot()
 	}
 	
 	func userNotCreated(error: CustomErrorModel) {
-		
+		self.view?.showToast(viewModel: ToastViewModel(type: .error, title: LocalizedKeys.Common.error_message))
 	}
 }

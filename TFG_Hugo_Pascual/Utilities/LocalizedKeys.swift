@@ -42,6 +42,7 @@ struct LocalizedKeys {
 
 	struct Registration {
 		static let registration = "registration_screen_title".localized //"Registrate"
+		static let user_creation_success = "registration_user_creation_success".localized
 	}
 
 	struct MyProfile {
