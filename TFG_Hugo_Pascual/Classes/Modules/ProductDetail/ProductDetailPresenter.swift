@@ -35,7 +35,7 @@ class ProductDetailPresenter: BasePresenter {
 	}
 	
 	func setUpBottomButton(owner: String) {
-		if owner == DataPersisterHelper.standard.localUserData.username {
+		if owner == DataPersisterHelper.standard.localUserData.email {
 			self.view?.setDeleteButton(title: self.viewModel.deleteButtonTitle)
 		} else {
 			self.view?.hideDeleteButton()
@@ -58,10 +58,11 @@ extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
 		self.viewModel.productPrice = businessModel.price
 		self.viewModel.productImageEncoded = businessModel.base64Image
 		self.viewModel.productDescription = businessModel.description
+		self.viewModel.ownerContactEmail = businessModel.ownerEmail
 		
 		self.view?.setUpProductDetail(self.viewModel)
 	
-		self.setUpBottomButton(owner: businessModel.owner ?? "")
+		self.setUpBottomButton(owner: businessModel.ownerEmail ?? "")
 	}
 	
 	func didGetProdutDetailFail(error: CustomErrorModel) {

@@ -58,7 +58,7 @@ extension AddProductPresenter: AddProductPresenterProtocol {
 		self.productToBeAdded.model = model
 		self.productToBeAdded.price = price
 		self.productToBeAdded.description = description
-		self.productToBeAdded.owner = DataPersisterHelper.standard.localUserData.username
+		self.productToBeAdded.ownerEmail = DataPersisterHelper.standard.localUserData.email
 		
 		self.interactor?.addProduct(product: self.productToBeAdded)
 	}

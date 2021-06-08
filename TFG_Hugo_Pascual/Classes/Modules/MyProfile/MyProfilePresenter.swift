@@ -28,6 +28,7 @@ class MyProfilePresenter: BasePresenter {
 	
 	// MARK: Private Functions
 	func viewDidLoad() {
+		self.viewModel.screenTitle = self.viewModel.screenTitle.replacingOccurrences(of: "%@", with: "\(DataPersisterHelper.standard.localUserData.username)")
 		self.view?.setViewModel(viewModel)
 	}
 }

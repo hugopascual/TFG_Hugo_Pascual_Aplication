@@ -32,7 +32,7 @@ extension AddProductInteractor: AddProductInteractorInputProtocol {
 																  price: product.price,
 																  description: product.description,
 																  image: product.base64Image,
-																  owner: product.owner),
+																  owner: product.ownerEmail),
 		success: {
 			self.presenter?.didAddProductSucess()
 		}, failure: { error in

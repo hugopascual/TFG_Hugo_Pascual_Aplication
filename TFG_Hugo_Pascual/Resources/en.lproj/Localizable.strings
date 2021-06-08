@@ -32,7 +32,7 @@
 "registration_screen_title" = "Register";
 
 /*-------- MyProfile --------*/
-"my_profile_screen_title" = "Profile";
+"my_profile_screen_title" = "Welcome, %@";
 "my_profile_logout" = "Log out";
 "my_profile_my_products_button_title" = "My products";
 

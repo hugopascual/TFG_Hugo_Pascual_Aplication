@@ -28,7 +28,7 @@ extension ProductsUserListInteractor: ProductsUserListInteractorInputProtocol {
 	
 	func getProductsUserList() {
 		self.productProvider?.getProductsUserList(
-			dto: GetProductsUserListParamsDTO(username: DataPersisterHelper.standard.localUserData.username),
+			dto: GetProductsUserListParamsDTO(email: DataPersisterHelper.standard.localUserData.email),
 			success: { arrayServerModel in
 				guard let arrayBusinessModel = BaseInteractor.parseArrayToBusinessModel(parserModel: [ProductBusinessModel].self, arrayServerModels: arrayServerModel) else { return }
 				self.presenter?.didGetProductsListSuccess(arrayBusinessModel: arrayBusinessModel)

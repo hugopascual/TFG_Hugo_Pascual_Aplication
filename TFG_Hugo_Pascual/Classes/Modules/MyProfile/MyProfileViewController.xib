@@ -13,8 +13,8 @@
                 <outlet property="logoutButton" destination="iAf-Z7-RTm" id="34j-ND-SHX"/>
                 <outlet property="mainImageView" destination="Vpl-QP-zpj" id="KSV-Js-Tu2"/>
                 <outlet property="myProductsButton" destination="P3c-S7-qyZ" id="DAC-8q-YYK"/>
-                <outlet property="titleLabel" destination="ABL-N0-4mT" id="9AU-w5-tN6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cqm-gX-Acv"/>
+                <outlet property="welcomeLabel" destination="ABL-N0-4mT" id="9AU-w5-tN6"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,7 +31,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-eS-znm" userLabel="Content View">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Title Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-N0-4mT" userLabel="Welcome Label">
                                             <rect key="frame" x="24" y="24" width="366" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>

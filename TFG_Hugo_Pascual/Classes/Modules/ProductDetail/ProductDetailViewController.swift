@@ -65,7 +65,7 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 		guard let model = viewModel as? ProductDetailViewModel else { return }
 		self.title = model.screenTitle
 		
-		self.ownerContactTitleLabel = model.
+		self.ownerContactTitleLabel.text = model.ownerContactTitle
 	}
 	
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel) {
@@ -73,6 +73,7 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 		self.productImageView.image = Utils.imgBase64Decode(viewModel.productImageEncoded)
 		self.priceLabel.text = (viewModel.productPrice ?? "") + " €"
 		self.descriptionLabel.text = viewModel.productDescription
+		self.ownerContactEmailLabel.text = viewModel.ownerContactEmail
 	}
 	
 	func setDeleteButton(title: String) {

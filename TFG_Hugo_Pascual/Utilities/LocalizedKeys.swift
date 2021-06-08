@@ -45,7 +45,7 @@ struct LocalizedKeys {
 	}
 
 	struct MyProfile {
-		static let profile = "my_profile_screen_title".localized //"Perfil"
+		static let profile = "my_profile_screen_title".localized //"Bienvenido, %@"
 		static let logout = "my_profile_logout".localized //"Cerrar sesión"
 		static let my_products_button_title = "my_profile_my_products_button_title".localized //"Mis productos"
 	}

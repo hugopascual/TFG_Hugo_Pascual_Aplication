@@ -15,7 +15,7 @@ class ProductBusinessModel: BaseBusinessModel {
 	var price: String?
 	var description: String?
 	var base64Image: String?
-	var owner: String?
+	var ownerEmail: String?
 	var status: ProductStatus?
 	
 	required init(serverModel: BaseServerModel?) {
@@ -40,7 +40,7 @@ class ProductBusinessModel: BaseBusinessModel {
 		self.price = serverModel.price
 		self.description = serverModel.description
 		self.base64Image = serverModel.image
-		self.owner = serverModel.owner
+		self.ownerEmail = serverModel.owner
 		self.status = serverModel.status.map { ProductStatus(rawValue: $0) } as? ProductStatus
 	}
 	

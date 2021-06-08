@@ -18,7 +18,7 @@ class MyProfileViewController: BaseViewController {
 	var presenter: MyProfilePresenterProtocol? { return super.basePresenter as? MyProfilePresenterProtocol}
 	
 	// MARK: IBOutlets declaration of all controls
-	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var welcomeLabel: UILabel!
 	@IBOutlet weak var mainImageView: UIImageView!
 	@IBOutlet weak var logoutButton: UIButton!
 	@IBOutlet weak var myProductsButton: UIButton!
@@ -56,7 +56,7 @@ extension MyProfileViewController: MyProfileViewProtocol {
 		guard let model = viewModel as? MyProfileViewModel else { return }
 		self.title = model.screenTitle
 		
-		self.titleLabel.text = self.title
+		self.welcomeLabel.text = self.title
 		self.mainImageView.image = UIImage(named: model.mainImage)
 		self.logoutButton.setTitle(model.logoutButtonTitle, for: .normal)
 		self.myProductsButton.setTitle(model.myProductsButtonTitle, for: .normal)

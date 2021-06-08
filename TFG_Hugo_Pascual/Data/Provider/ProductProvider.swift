@@ -128,7 +128,7 @@ struct GetProductListProviderRequest {
 }
 
 struct GetProductsUserListParamsDTO: BaseProviderParamsDTO {
-	var username: String
+	var email: String
 }
 
 struct GetProductsUserListProviderRequest {
