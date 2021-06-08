@@ -11,7 +11,8 @@ final class ProductDetailViewModel: BaseViewModel {
 
 	var screenTitle: String = LocalizedKeys.ProductDetail.product_detail
 	
-	var buyButtonTitle: String = LocalizedKeys.Common.buy
+	var ownerContactTitle: String = LocalizedKeys.ProductDetail.seller_contact
+	
 	var deleteButtonTitle: String = LocalizedKeys.Common.delete
 	
 	var deleteProductSucess: String = LocalizedKeys.ProductDetail.delete_sucess

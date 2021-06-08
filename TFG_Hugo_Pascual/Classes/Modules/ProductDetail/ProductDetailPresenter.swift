@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductDetailPresenterProtocol: BasePresenterProtocol {
-	func bottomButtonPressed()
+	func deleteButtonPressed()
 }
 
 protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol {
@@ -26,7 +26,6 @@ class ProductDetailPresenter: BasePresenter {
 	var interactor: ProductDetailInteractorInputProtocol? { return super.baseInteractor as? ProductDetailInteractorInputProtocol }
 	
 	var viewModel = ProductDetailViewModel()
-	var isOwner: Bool?
 	
 	// MARK: Private Functions
 	func viewDidLoad() {
@@ -36,12 +35,10 @@ class ProductDetailPresenter: BasePresenter {
 	}
 	
 	func setUpBottomButton(owner: String) {
-		if owner != DataPersisterHelper.standard.localUserData.username {
-			self.isOwner = false
-			self.view?.setBuyButton(title: self.viewModel.buyButtonTitle)
-		} else {
-			self.isOwner = true
+		if owner == DataPersisterHelper.standard.localUserData.username {
 			self.view?.setDeleteButton(title: self.viewModel.deleteButtonTitle)
+		} else {
+			self.view?.hideDeleteButton()
 		}
 	}
 }
@@ -49,12 +46,8 @@ class ProductDetailPresenter: BasePresenter {
 // MARK: Extensions declaration of all extension and implementations of protocols
 extension ProductDetailPresenter: ProductDetailPresenterProtocol {
 	
-	func bottomButtonPressed() {
-		if self.isOwner ?? false {
-			self.interactor?.deleteProduct()
-		} else {
-			print("COMENZAR PROCESO DE PAGO")
-		}
+	func deleteButtonPressed() {
+		self.interactor?.deleteProduct()
 	}
 }
 

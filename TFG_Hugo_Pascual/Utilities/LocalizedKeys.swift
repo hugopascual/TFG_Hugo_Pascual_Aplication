@@ -91,5 +91,6 @@ struct LocalizedKeys {
 	struct ProductDetail {
 		static let product_detail = "product_detail_screen_title".localized //"Detalle del producto"
 		static let delete_sucess = "product_detail_delete_sucess".localized //"Producto eliminado con éxito"
+		static let seller_contact = "product_detail_seller_contact".localized //"Contacto del vendedor"
 	}
 }

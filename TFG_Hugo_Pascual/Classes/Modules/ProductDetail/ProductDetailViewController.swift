@@ -10,8 +10,8 @@ import UIKit
 
 protocol ProductDetailViewControllerProtocol: BaseViewControllerProtocol {
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel)
-	func setBuyButton(title: String)
 	func setDeleteButton(title: String)
+	func hideDeleteButton()
 }
 
 final class ProductDetailViewController: BaseViewController {
@@ -24,7 +24,14 @@ final class ProductDetailViewController: BaseViewController {
 	@IBOutlet weak var productImageView: UIImageView!
 	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
-	@IBOutlet weak var bottomButton: UIButton!
+	@IBOutlet weak var ownerContactTitleLabel: UILabel!
+	@IBOutlet weak var ownerContactEmailLabel: UILabel!
+	
+	@IBOutlet weak var deleteButton: UIButton!
+	@IBOutlet weak var buttonView: UIView!
+	@IBOutlet weak var buttonViewTopToScrollViewBottomConstraint: NSLayoutConstraint!
+	
+	@IBOutlet weak var scrollViewBottomToContainerViewBottomConstraint: NSLayoutConstraint!
 	
 	// MARK: Fileprivate Variables all variables must be for internal use, we should only have access to controls from the presenter
 	
@@ -36,13 +43,13 @@ final class ProductDetailViewController: BaseViewController {
 	}
 	
 	override func initializeUI() {
-		self.bottomButton.roundedByDefault()
-		self.bottomButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
+		self.deleteButton.roundedByDefault()
+		self.deleteButton.setTitleColor(CustomColor.textNormal.uiColor, for: .normal)
 	}
 	
 	// MARK: IBActions declaration of all the controls
-	@IBAction func bottomButtonPressed(_ sender: Any) {
-		self.presenter?.bottomButtonPressed()
+	@IBAction func deleteButtonPressed(_ sender: Any) {
+		self.presenter?.deleteButtonPressed()
 	}
 	
 	// MARK: Private Functions
@@ -57,6 +64,8 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 	func setViewModel(_ viewModel: Any) {
 		guard let model = viewModel as? ProductDetailViewModel else { return }
 		self.title = model.screenTitle
+		
+		self.ownerContactTitleLabel = model.
 	}
 	
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel) {
@@ -66,11 +75,16 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 		self.descriptionLabel.text = viewModel.productDescription
 	}
 	
-	func setBuyButton(title: String) {
-		self.bottomButton.setTitle(title, for: .normal)
+	func setDeleteButton(title: String) {
+		self.buttonView.isHidden = false
+		self.scrollViewBottomToContainerViewBottomConstraint.isActive = false
+		self.buttonViewTopToScrollViewBottomConstraint.isActive = true
+		self.deleteButton.setTitle(title, for: .normal)
 	}
 	
-	func setDeleteButton(title: String) {
-		self.bottomButton.setTitle(title, for: .normal)
+	func hideDeleteButton() {
+		self.buttonView.isHidden = true
+		self.buttonViewTopToScrollViewBottomConstraint.isActive = false
+		self.scrollViewBottomToContainerViewBottomConstraint.isActive = true
 	}
 }

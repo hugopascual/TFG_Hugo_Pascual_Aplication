@@ -73,3 +73,4 @@
 /*-------- ProductDetail --------*/
 "product_detail_screen_title" = "Detalle del producto";
 "product_detail_delete_sucess" = "Producto eliminado con éxito";
+"product_detail_seller_contact" = "Contacto del vendedor";
