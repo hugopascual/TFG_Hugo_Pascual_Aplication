@@ -37,6 +37,7 @@ class ProductsListCell: UITableViewCell {
 	func setUpCellViewModel(viewModel: ProductsListCellViewModel) {
 		self.iconImageView.image = Utils.imgBase64Decode(viewModel.image)
 		self.modelLabel.text = viewModel.model
-		self.priceLabel.text = (viewModel.price ?? "") + " €"
+		self.priceLabel.text = Utils.localiceCurrency(value: Double(viewModel.price ?? "0") ?? 0)
 	}
 }
+

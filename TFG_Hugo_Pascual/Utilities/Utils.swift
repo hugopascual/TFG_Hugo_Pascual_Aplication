@@ -63,4 +63,13 @@ class Utils {
 		guard let newImageData = Data(base64Encoded: imageToDecode) else { return UIImage() }
 		return UIImage(data: newImageData) ?? UIImage()
 	}
+	
+	static func localiceCurrency(value: Double) -> String {
+		let price = value as NSNumber
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .currency
+		formatter.currencyCode = "EUR"
+		formatter.locale = Locale.current
+		return formatter.string(from: price) ?? ""
+	}
 }

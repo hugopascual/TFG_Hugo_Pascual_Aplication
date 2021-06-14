@@ -701,7 +701,6 @@
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 				FF1643A726484E4F003C4036 /* ImagePicker */,
 				FF70FA1226581ED40094893D /* Loader */,
-				FFA041B6258FD92500C6928A /* NetworkManager */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -850,6 +849,7 @@
 		FFD47C8525A25A1F00AC3431 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FFA041B6258FD92500C6928A /* NetworkManager */,
 				FFD47C8625A25A2B00AC3431 /* NavigationBar */,
 			);
 			path = Managers;

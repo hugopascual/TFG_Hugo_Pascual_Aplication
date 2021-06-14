@@ -71,7 +71,7 @@ extension ProductDetailViewController: ProductDetailViewControllerProtocol {
 	func setUpProductDetail(_ viewModel: ProductDetailViewModel) {
 		self.modelLabel.text = viewModel.productModel
 		self.productImageView.image = Utils.imgBase64Decode(viewModel.productImageEncoded)
-		self.priceLabel.text = (viewModel.productPrice ?? "") + " €"
+		self.priceLabel.text = Utils.localiceCurrency(value: Double(viewModel.productPrice ?? "0") ?? 0)
 		self.descriptionLabel.text = viewModel.productDescription
 		self.ownerContactEmailLabel.text = viewModel.ownerContactEmail
 	}
