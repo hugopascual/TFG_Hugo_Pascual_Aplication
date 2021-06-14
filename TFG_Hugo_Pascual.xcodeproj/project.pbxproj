@@ -469,6 +469,7 @@
 		FF273517266BDF4B00BB4AD4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF70FA1226581ED40094893D /* Loader */,
 				FF273518266BDF6000BB4AD4 /* Toast */,
 			);
 			path = Components;
@@ -700,7 +701,6 @@
 				FFAA245125EEFAC200612AC6 /* DataPersister */,
 				FFA041A6258FD6E900C6928A /* ErrorsHandling */,
 				FF1643A726484E4F003C4036 /* ImagePicker */,
-				FF70FA1226581ED40094893D /* Loader */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
